@@ -1,0 +1,409 @@
+%---------------------------------------------------------
+% Arquivo: apendice-metodo-SdH.tex
+% Autor:	 Ivan Ramos Pagnossin
+%---------------------------------------------------------
+	
+	Complementando o que foi exposto na seção~\ref{sec:mobil-SdH}, este apêndice dedica-se a orientar o leitor entre os meandros matemáticos que nos levaram à equação~\eqref{eq:mobil-SdH}, na página~\pageref{eq:mobil-SdH}, desde
+	\begin{equation}\tag{\ref{eq:metodo-SdH}}	
+	F_H(\omega) \doteq \FT{\rhoxx\,h(t)} = \sum_s K_s(\alpha_s^2+\omega_s^2)^{r/2}\,\FT{e^{-\alpha_s t}\cos(\omega_st+\theta_s)\,h(t)}.
+	\end{equation}
+	
+	Faremos isto na íntegra por três boas razões: Primeiro por que \textbf{não existe} na literatura uma tal dedução. Ao invés disso, geralmente as explicações são bastante vagas, como em \cite[p.~487]{koenraad}: ``\foreign{The quantum mobility can be obtained from the magnetic field dependence of the amplitude of the SdH oscillations};'' Segundo por que os cálculos a seguir representam um percurso exclusivo do autor, obtido sem base em qualquer outra literatura (se ela existir). E finalmente por que este desenvolvimento, aliado ao script que nos auxiliou nos cálculos (veja a seção~\ref{sec:mobil-SdH}), trouxe-nos conhecimentos inestimáveis sobre este método.
+	
+	\index{Janela!Hanning ou Hann}
+	Mas antes de continuarmos, vamos recapitular o significado de cada símbolo da equação acima: $\rho^\text{(r)}$ é a $r$-ésima derivada da resistividade com relação a $t\doteq 1/B$ (lembre-se de que a resistividade é uma função do inverso do campo magnético); $h(t)$ é a representação da janela Hanning (contínua) no domínio do tempo e $F_H(\omega)$ é a transformada {\bfseries contínua} de Fourier de $\rho^\text{(r)}$ utilizando janela Hanning; $\mu_s$ ($\alpha_s\doteq\pi\,s/\mu_s$) e $n_s$ ($\omega_s\doteq\pi\,h\,n_s/e$) são a mobilidade e a concentração quânticas da $s$-ésima sub-banda. $\theta_s$ é uma fase (veja a equação~\eqref{eq:rho} na página~\pageref{eq:rho}) e $K_s$, uma constante; A somatória é feita sobre todas as sub-bandas ocupadas e $\omega$ é a variável independente do espectro de freqüências.
+	
+	Utilizando o teorema da convolução (apêndice~\ref{sec:convolucao}), podemos reescrever a equação acima na seguinte forma mais maleável:	
+	\begin{equation}\label{eq:FT}
+	\FT{\rhoxx\,h(t)} = \sum_s K_s\,(\alpha_s^2+\omega_s^2)^{r/2}\,
+		\mathscr F^\star[e^{-\alpha_s t}\,]\otimes \FT{\cos(\omega_st+\theta_s)}\otimes \FT{h(t)}.
+	\end{equation}
+	
+	O símbolo $\star$ na primeira transformada serve para lembrar que a exponencial é nula quando $t<0$ (veja o apêndice~\ref{sec:FT-exp} para maiores detalhes). 
+	
+	Para resolvermos esta expressão precisamos conhecer cada uma das três transformadas de Fourier envolvidas, e os apêndices~\ref{sec:FT-exp}, \ref{sec:FT-cos} e~\ref{sec:FT-hanning} dão conta disso. Resumimos seus resultados abaixo:
+	\begin{align*}
+	\mathscr F^\star\left[e^{-\alpha_st}\,\right] &= \frac{C_F}{\alpha_s-i\,\omega};\\
+	\FT{cos(\omega_s\,t+\theta_s)} &= \pi\, C_F\,\big[ e^{-i\theta_s}\,\delta(\omega-\omega_s)
+	 +e^{i\theta_s}\,\delta(\omega+\omega_s)\big];\\
+	H(\omega)\doteq\FT{h(t)} &= \frac{1}{2}\,b\,C_F\,e^{i\omega\tmedio} \big\{  2\,\,\senc(\omega b)
+		+ \senc[(\omega+\omega_\bullet)\,b] + \senc[(\omega-\omega_\bullet)\,b] \big\},
+	\end{align*}
+	lembrando que $\senc(x)=\sen(x)/x$; $t_1$ e $t_N$ são os limites inferior e superior de aplicação da janela Hanning, respectivamente. Então, $\tmedio=(t_1+t_N)/2$ é o ponto médio dessa janela e $b=(t_N-t_1)/2$ é sua semi-largura; O índice $N$ é o número de pontos experimentais sobre os quais efetuamos a transformada {\bfseries discreta} de Fourier (equação~\eqref{eq:def-DFT}); $C_F$ é uma constante que depende da implementação do algorítmo da \textsc{dft} (veja apêndice~\ref{sec:convolucao}).
+	
+	Devido à associatividade da operação de convolução, podemos resolver~\eqref{eq:FT} paulatinamente. Começamos por determinar
+	\begin{align}
+	\begin{split}
+	\FT{\cos(\omega_st+\theta_s)}\otimes \FT{h(t)} &= \smash{\frac{1}{2\pi\,C_F}
+			\intII \pi\,C_F\big[e^{-i\theta_s}\,\delta(\omega-\omega_s-\lambda) +} \\
+								 				&\rule{4cm}{0pt} + e^{i\theta_s}\,\delta(\omega+\omega_s-\lambda) \big]\cdot H(\lambda)\,d\lambda 
+	\end{split}\notag\\
+			&= \frac{1}{2}\,e^{-i\theta_s}\,H(\omega-\omega_s) + \frac{1}{2}\,e^{i\theta_s}\,H(\omega+\omega_s).	\label{eq:partes+-}
+	\end{align}
+	
+	Com o intuito de simplificar a visualização dos cálculos seguintes, façamos
+	\begin{equation*}
+	\Big(\FT{\cos(\omega_st+\theta_s)}\otimes \FT{h(t)}\Big)_\cpm = \frac{1}{2}\,e^{\cpm i\theta_s}\,H(\omega\cpm\omega_s),
+	\end{equation*}
+	de modo que (veja a equação~\eqref{eq:FT})
+	{\allowdisplaybreaks
+	\begin{align}
+		\begin{split}
+		&\mathscr F^\star[e^{-\alpha_s t}]\otimes \Big(\FT{\cos(\omega_st+\theta_s)}\otimes \FT{h(t)}\Big)_\cpm	=											
+			\frac{1}{2\pi\,C_F}\intII\Big[\frac{C_F}{\alpha_s-i(\omega-\lambda)}\Big]\cdot\\
+			& \rule{8cm}{0pt}\cdot\Big[\frac{1}{2}\,e^{\cpm i\theta_s} H(\lambda\cpm\omega_s)\Big]d\lambda =	
+		\end{split}\notag\\
+		\begin{split}
+		&= \frac{1}{4\pi}\,e^{\cpm i\theta_s}\,\intII
+						\frac{1}{i[\lambda-(\omega+i\,\alpha_s)]}\,\frac{1}{2}\,b\,C_F\,e^{i(\lambda\cpm\omega_s)\tmedio}
+								\big\{ 2\,\,\senc[(\lambda\cpm\omega_s)\,b]+\senc[(\lambda\cpm\omega_s+\omega_\bullet)\,b]+\\
+										&\rule{8cm}{0pt}+\senc[(\lambda\cpm\omega_s-\omega_\bullet)\,b] \big\}\,d\lambda =				
+		\end{split}\notag\\
+		\begin{split}\label{eq:1}
+		&=	-\frac{i}{8\pi}\,C_F\,e^{\cpm i(\omega_s\tmedio+\theta_s)}\,\Big\llbracket 
+				2\intII\frac{b\,e^{i\lambda\tmedio}}{\lambda-(\omega+i\,\alpha_s)}\senc\big[(\lambda\cpm\omega_s)\,b\big]d\lambda\, + \\
+		& \rule{5cm}{0cm}
+	+\intII\frac{b\,e^{i\lambda\tmedio}}{\lambda-(\omega+i\,\alpha_s)}\senc\big\{[\lambda\cpm(\omega_s-\omega_\bullet)]\,b\big\}d\lambda\,+\\
+		& \rule{5cm}{0cm}+
+		 \intII\frac{b\,e^{i\lambda\tmedio}}{\lambda-(\omega+i\,\alpha_s)}\senc\big\{[\lambda\cpm(\omega_s+\omega_\bullet)]\,b\big\}
+					d\lambda\, \Big\rrbracket.
+		\end{split}			
+	\end{align}
+		
+	Mas, conforme o apêndice~\ref{sec:sigma(A,B)},
+	\begin{equation*}
+	\sigma(A,B)\doteq\intII\frac{b\,e^{i\lambda\tmedio}}{\lambda-A}\,\senc\big[(\lambda-B)\,b\big]d\lambda =
+		\frac{\pi}{A-B}\left[e^{i(t_N A-b B)}-e^{i(t_1 A+b B)}\right].
+	\end{equation*}
+	}
+	
+	Levando isto à equação~\eqref{eq:1} obtemos
+	\begin{multline}
+	\mathscr F^\star[e^{-\alpha_s t}]\otimes \Big(\FT{\cos(\omega_st+\theta_s)}\otimes \FT{h(t)}\Big)_\cpm =
+		-\frac{i}{8\pi}\,C_F\,e^{\cpm i(\omega_s\tmedio+\theta_s)}\cdot\\
+		\cdot\Big[2\,\sigma(\omega_s+i\,\alpha_s,\cpm\omega_s) + \sigma(\omega_s+i\,\alpha_s,\cpm(\omega_s-\omega_\bullet)) + 		
+				\sigma(\omega_s+i\,\alpha_s,\cpm(\omega_s+\omega_\bullet))\Big].	\notag
+	\end{multline}
+	
+	Finalmente, colocando este resultado na equação~\eqref{eq:partes+-} concluímos que
+	\begin{multline*}		
+	F_H(\omega) =
+	 -\frac{i}{8\pi}\,C_F\sum_s K_s\,(\alpha_s^2+\omega_s^2)^{r/2}  									
+	 	 e^{-i(\omega_s\tmedio+\theta_s)}\Big[2\,\sigma(\omega+i\,\alpha_s,\,\omega_s)+ \\
+		 \sigma(\omega+i\,\alpha_s,\,\omega_s-\omega_\bullet) + \sigma(\omega+i\,\alpha_s,\,\omega_s+\omega_\bullet)\Big] - \\		
+	 -\frac{i}{8\pi}\,C_F\sum_s K_s\,(\alpha_s^2+\omega_s^2)^{r/2}									
+	 	 e^{i(\omega_s\tmedio+\theta_s)}\Big[2\,\sigma(\omega+i\,\alpha_s,-\omega_s)+ \\
+		 \sigma(\omega+i\,\alpha_s,-\omega_s+\omega_\bullet) + \sigma(\omega+i\,\alpha_s,-\omega_s-\omega_\bullet)\Big]. 		
+	\end{multline*}
+		
+	Embora esta equação seja a solução exata de~\eqref{eq:FT}, ela é inútil no sentido de atingirmos nosso objetivo: determinar $\mu_s$; Precisamos de uma forma conveniente e, com este intuito, fazemos nossa {\bfseries primeira aproximação}: O espectro de freqüências, dado pela equação anterior, consiste numa série de picos em cada $\omega_s$\footnote{Lembre-se de que $\omega_s$ dá a concentração da $s$-ésima sub-banda {\bfseries ocupada}, de tal forma que teremos tantos picos quantos forem as sub-bandas populadas.} (fig.~\ref{fig:CFT-exp-cos}), donde concluímos que $|F_H(\omega)|$ cai rapidamente a zero quando $\omega\ne\omega_s$. Então, desde que não tenhamos algum $\omega_s\approx0$, a parte negativa desse espectro influi muito pouco na parte positiva (e vice-versa) e, neste caso, podemos ignorá-la completamente. Isto equivale a excluirmos da equação anterior a segunda somatória. Ficamos com
+	\begin{align*}
+	\begin{split}
+		F_H(\omega) &= \smash{-\frac{i}{8\pi}\,C_F\sum_s K_s\,(\alpha_s^2+\omega_s^2)^{r/2}  									
+	 		e^{-i(\omega_s\tmedio+\theta_s)}\Big[2\,\sigma(\omega+i\,\alpha_s,\,\omega_s)+} \\
+			&\rule{6cm}{0cm}+\sigma(\omega+i\,\alpha_s,\,\omega_s-\omega_\bullet) + \sigma(\omega+i\,\alpha_s,\,\omega_s+\omega_\bullet)\Big] 		
+	\end{split}\\
+		&= \sum_s R_s(\omega).
+	\end{align*}
+
+	Nossa {\bfseries segunda aproximação} consiste em dizer que $|R_s(\omega_j)|\approx0$ para qualquer $s\ne j$ (cada parcela $s$ da somatória influi muito pouco sobre uma {\bfseries outra} parcela $j$ qualquer), isto é, que cada ``pico'' no espectro influi pouco nos seus vizinhos. Neste caso, a desigualdade triangular nos permite escrever
+	\begin{equation*}
+	|F_H(\omega_j)| = |R_j(\omega_j) + \sum_{s\ne j} R_s(\omega_s)| \le |R_j(\omega_j)| + \sum_{s\ne j} |R_s(\omega_j)| 
+		\quad \Rightarrow \quad |F_H(\omega_j)| \approx |R_j(\omega_j)|.
+	\end{equation*}
+	
+	Com isso, a partir de agora podemos ignorar a somatória em $s$:
+	\begin{multline}\label{eq:FH(rhoxx)}
+	|F_H(\omega)| \approx  \Big|-\frac{i}{8\pi}\,C_F\, K_s\,(\alpha_s^2+\omega_s^2)^{r/2}  									
+	 	e^{-i(\omega_s\tmedio+\theta_s)}\Big[2\,\sigma(\omega+i\,\alpha_s,\,\omega_s)+ \\
+		+ \sigma(\omega+i\,\alpha_s,\,\omega_s-\omega_\bullet) + \sigma(\omega+i\,\alpha_s,\,\omega_s+\omega_\bullet)\Big]\Big|.
+	\end{multline}
+	
+	As informações que estamos interessados encontram-se nos picos do espectro de freqüências (veja apêndice~\ref{sec:FT-exp}) e, por isso, vamos avaliar a equação~\eqref{eq:FH(rhoxx)} em $\omega=\omega_s$. Para simplificar este trabalho, ajuizaremos primeiro $\sigma(\omega_s+i\,\alpha_s,\,\omega_s\pm\xi)$. O parâmetro $\xi$ será depois substituído por zero ou $\omega_\bullet$, de modo que todas as três funções $\sigma(\ldots)$ anteriores serão calculadas de uma só vez:
+	\begin{align*}
+		\sigma(\omega_s+i\,\alpha_s,\,\omega_s\pm\xi) &= 
+			\frac{\pi}{\omega_s+i\alpha_s-(\omega_s\pm\xi)}\Big\{ e^{i[t_N(\omega_s+i\alpha_s)-b(\omega_s\pm\xi)]}- 
+				 -e^{i[t_1(\omega_s+i\alpha_s)+b(\omega_s\pm\xi)]} \Big\}\\
+			&= \frac{\pi}{i\alpha_s\mp\xi}\Big[ e^{-\alpha_st_N}\,e^{i(t_N-b)\omega_s}\, e^{\mp i\xi b} - 
+					 e^{-\alpha_st_1}\,e^{i(t_1+b)\omega_s}\, e^{\pm i\xi b} \Big].
+	\end{align*}
+	
+	Notando que $t_1+b=t_N-b=\tmedio$,
+	$$
+	\sigma(\omega_s+i\,\alpha_s,\,\omega_s\pm\xi) = \frac{\pi}{i\alpha_s\mp\xi}\,e^{i\omega_s\tmedio}\Big( e^{-\alpha_st_N}e^{\mp i\xi b} - 
+		e^{-\alpha_st_1}e^{\pm i\xi b} \Big).
+	$$
+	
+	Agora fazemos $\xi=0$ para obtermos
+	\begin{equation}\label{eq:sigma1}
+	\sigma(\omega_s+i\alpha_s,\,\omega_s) = \frac{\pi}{i\alpha_s}\,e^{i\omega_s\tmedio}\big(e^{-\alpha_st_N}-e^{-\alpha_st_1}\big).
+	\end{equation}
+	
+	Do mesmo modo, $\xi=\omega_\bullet$ (e notando que $\omega_\bullet b=\pi$) nos leva a
+	\begin{equation}\label{eq:sigma2}
+	\sigma(\omega_s+i\alpha_s,\,\omega_s\pm\omega_\bullet) = \frac{\pi}{i\alpha_s\pm\omega_\bullet}\,e^{i\omega_s\tmedio}
+		\big( e^{-\alpha_st_N}-e^{-\alpha_st_1} \big).
+	\end{equation}
+	
+	Retornando~\eqref{eq:sigma1} e~\eqref{eq:sigma2} em~\eqref{eq:FH(rhoxx)},
+	\begin{align*}
+	|F_H(\omega_s)| &= \Big|-\frac{i}{8}\,C_F\,K_s\,(\alpha_s^2+\omega_s^2)^{r/2}\,e^{-i\theta_s}
+		\Big(\frac{2}{i\,\alpha_s}-\frac{1}{i\alpha_s-\omega_\bullet}-\frac{1}{i\alpha_s+\omega_\bullet}\Big)\,\big( e^{-\alpha_st_1}-e^{-\alpha_st_N} \big)\Big| \\
+		&= \frac{1}{4}\,K_s\,C_F\, \frac{\omega_\bullet^2(\alpha_s^2+\omega_s^2)^{r/2}}{\alpha_s(\alpha_s^2+\omega_\bullet^2)}\, \big( e^{-\alpha_st_1}-e^{-\alpha_st_N} \big)	\\
+		&= \frac{1}{4}\,K_s\,C_F\,\frac{\omega_\bullet^2(\alpha_s^2+\omega_s^2)^{r/2}}{\alpha_s(\alpha_s^2+\omega_\bullet^2)}\, 
+				e^{-\alpha_st_1}\,\big[1-e^{-\alpha_s(t_N-t_1)} \big].
+	\end{align*}
+	
+	\index{Janela!Hanning ou Hann!largura}
+	Chamando $\Delta\doteq t_N-t_1$ de a {\bfseries largura da janela Hanning}, vemos que 
+$\omega_\bullet \equiv \omega_\bullet(\Delta) = 2\pi/(t_N-t_1)$. Da mesma forma, a exponencial mais à direita na expressão anterior também possui $\Delta$ como argumento, de modo que podemos reorganizar a expressão da seguinte forma:
+	\begin{equation*}
+	\ln |F_H(\omega_s)| = -\alpha_st_1 + \ln\Big[\frac{1}{4}\,K_s\,C_F\,
+		\frac{(\alpha_s^2+\omega_s^2)^{r/2}}{\alpha_s}\Big] + \ln\Big[ \frac{\omega_\bullet^2}{\alpha_s^2+\omega_\bullet^2}\,
+			\big(1-e^{-\alpha_s\Delta}\big)\Big].
+	\end{equation*}
+	
+	Como a segunda parcela só depende de constantes (características da $s$-ésima sub-banda) e a terceira é uma função de $\Delta$,
+	\begin{equation*}
+	\rule[-1.5pt]{0pt}{13pt}\ln |F_H(\omega_s)| = -\alpha_st_1 + Q_s(\Delta),	\qquad\qquad	Q_s(\Delta) = \text{constante} + 
+		\ln\left[\frac{\omega_\bullet^2}{\alpha_s^2+\omega_\bullet^2}\,\left(1-e^{-\alpha_s\Delta}\right)\right],
+	\end{equation*}
+	e o nosso objetivo está cumprido.
+	
+	%-------------------------------------------------------------------------------------
+	%	O teorema da convolução
+	%-------------------------------------------------------------------------------------				
+	\section{O teorema da convolução}\label{sec:convolucao}
+	
+	A definição mais comum da transformada \enfase{contínua} de Fourier é
+	$$
+	F(\omega)\doteq\FT{f(t)} = \frac{1}{\sqrt{2\pi}}\intII f(t)\,e^{i\omega t}\, dt,
+	$$
+	
+	Não obstante, quando desejamos calcular transformadas \enfase{discretas}, não dispomos de uma função analítica $f(t)$, mas sim de um conjunto discreto e \enfase{finito} de pares ordenados: 
+	$$
+	\{(t_1,f_1),(t_2,f_2),\ldots,(t_N,f_N)\}.
+	$$ 
+	
+	Decorre daí que o fator de normalização $1/\sqrt{2\pi}$ precisa ser alterado~\cite[p.~207]{smith}. Esse fator pode ter qualquer valor desde que a anti-transformada da transformada seja a função original, \ie, desde que $f(t)=\mathscr F^{-1}[\mathscr F[f(t)]]$. Essa é a única exigência. Por conta disso, os algorítmos responsáveis por calcular as transformadas discretas de Fourier têm uma certa liberdade de escolha: Os softwares {\slshape Mathematica} e {\slshape MathCAD}, por exemplo, utilizam $1/\sqrt{N}$. Já o {\slshape Microcal Origin} utiliza $1$ quando a opção \texttt{normalização} não está ativa, e $1/N$ do contrário. Deste modo, para não ficarmos à mercê desse ``desacordo'', utilizamos um fator genérico $C_F$:	
+	\begin{equation}\label{eq:nova-def-FT}
+	F(\omega)\doteq\FT{f(t)} = C_F\intII f(t)\,e^{i\omega t}\, dt.
+	\end{equation}
+		
+	Mas quando fazemos isso, o teorema da convolução, utilizado extensamente neste apêndice, deixa de ter sua forma usual
+	\begin{equation}\tag{\ref{eq:convolucao-usual}},
+		\FT{f(t)g(t)}= F(\omega)\otimes G(\omega) = \frac{1}{\sqrt{2\pi}}\intII F(\omega-\lambda)\,G(\lambda)\,d\lambda,
+	\end{equation}
+	e precisamos descobrir qual a sua nova expressão. Então o que fazemos é deduzir este teorema para a nova definição~\eqref{eq:nova-def-FT}: Dados 
+	\begin{equation*}
+	F(\omega) = C_F\intII f(t)e^{i\omega t}\,dt \qquad \text{e} \qquad G(\omega) = C_F\intII g(t')e^{i\omega t'}\,dt',
+	\end{equation*}	
+	então
+	{\allowdisplaybreaks
+	\begin{gather*}
+	\intII F(\omega-\lambda)G(\lambda)\, d\lambda
+			= \intII \Big( C_F\intII f(t)e^{i(\omega-\lambda)t}\,dt\Big)\Big( C_F\intII g(t')e^{i\lambda t'}\,dt'\Big)\, d\lambda = \\
+			= C_F^2 \!\intII \intII f(t)e^{i\omega t}\,dt\!\intII g(t')\,dt'\,e^{-i\lambda t}e^{i\lambda t'}\, d\lambda
+			= C_F^2 \!\intII f(t)e^{i\omega t}\,dt\!\intII g(t')\,dt'\!\intII e^{i(t'-t)\lambda}\, d\lambda = \\
+			= C_F^2 \!\intII f(t)e^{i\omega t}\,dt\!\intII g(t')\,dt'\, 2\pi\,\delta(t'-t)
+			= 2\pi\, C_F^2 \!\intII f(t)e^{i\omega t}\,dt\!\intII g(t')\,\delta(t'-t)\,dt' = \\
+			= 2\pi\, C_F^2 \!\intII f(t)g(t) e^{i\omega t}\, dt 
+			= 2\pi\, C_F\, \Big(C_F\!\intII f(t)g(t) e^{i\omega t}\, dt\Big) 
+			= 2\pi\, C_F\, \FT{f(t)\,g(t)}.
+	\end{gather*}
+	}
+
+	Concluimos, então, que
+	\begin{equation*}
+	\FT{f(t)\,g(t)} = \frac{1}{2\pi\, C_F} \intII F(\omega-\lambda) G(\lambda)\, d\lambda.
+	\end{equation*}		
+	
+	Note que se fizermos $C_F=1/\sqrt{2\pi}$ encontraremos a expressão usual, equação~\eqref{eq:convolucao-usual}.
+	
+	%-------------------------------------------------------------------------------------
+	%	A transformada de Fourier de $e^{-a_s\,t}$
+	%-------------------------------------------------------------------------------------			
+	\section{A transformada de Fourier de $e^{-\alpha_s\,t}$}\label{sec:FT-exp}
+
+	A transformada analítica de Fourier de uma exponencial não existe no intervalo $(-\infty,+\infty)$. No entanto, como nosso resultado de magnetoresistividade está sempre limitado ao intervalo $[t_1,t_N]$ com $t_1,t_N\ge0$ (lembre-se que $t\doteq 1/B$), podemos utilizar a seguinte definição para a exponencial:
+	\begin{equation*}
+	f(t) = 
+	\begin{cases}
+		e^{-\alpha_st},	&t\ge0	\\
+		0,					&t<0,
+	\end{cases}
+	\end{equation*}
+
+	Donde inferimos que
+	\begin{equation*}
+	\FT{f(t)} \doteq \mathscr F^\star[e^{-{\color{red}\alpha_s}t};{\color{blue}\omega}]= 
+		C_F\int\limits_0^\infty e^{-\alpha_st}\,e^{i\omega t}\,dt = C_F\mathscr L[e^{i{\color{blue}\omega} t};{\color{red}\alpha_s}] = \frac{C_F}{\alpha_s-i\omega},
+	\end{equation*}
+	sendo $\mathscr L[f(t),\alpha_s]$ a \novotermo{transformada de Laplace} de $f(t)$.
+	\index{Transformada!de Laplace}
+	
+	%-------------------------------------------------------------------------------------
+	%	A transformada de Fourier de $\cos\left(\omega_s\,t+\phi_s\right)$
+	%-------------------------------------------------------------------------------------				
+	\section{A transformada de $\cos\left(\omega_s\,t+\phi_s\right)$}\label{sec:FT-cos}
+	
+	Lembrando que $\cos(x)=(e^{ix}+e^{-ix})/2$,
+	\begin{align*}
+		\FT{\cos(\omega_st+\theta_s)} &= C_F\!\intII\cos(\omega_st+\theta_s)\,e^{i\omega t}\,dt = 
+			\frac{1}{2}\,C_F\!\intII \left[e^{i(\omega_st+\theta_s)}+e^{-i(\omega_s\,t+\theta_s)}\right]\,e^{i\omega t}\,dt \\
+			&= \frac{1}{2}\,C_F\,\left[e^{i\theta_s}\!\intII e^{i(\omega+\omega_s)t}\,dt 
+					+ e^{-i\theta_s}\!\intII e^{i(\omega-\omega_s)t}\,dt  \right] \\
+			&= \pi\,C_F\left[e^{i\theta_s}\,\delta(\omega+\omega_s) + e^{-i\theta_s}\,\delta(\omega-\omega_s) \right].
+	\end{align*}	
+	
+	%-------------------------------------------------------------------------------------
+	%	A transformada de Fourier da janela Hanning
+	%-------------------------------------------------------------------------------------		
+	\section{A Transformada de Fourier da janela Hanning}\label{sec:FT-hanning}
+
+	A janela Hanning (ou Hann) é definida por
+	\begin{equation*}
+	h(t)=
+	\begin{cases}
+		\frac{1}{2}\big[1-\cos(\omega_\bullet\,t+\theta_\bullet)\big],	&t\in[t_1,t_N] \\
+		0,																														&t\notin[t_1,t_N],
+	\end{cases}
+	\end{equation*}
+	com $\omega_\bullet=2\pi/(t_N-t_1)$ e $\theta_\bullet=-\omega_\bullet\,t_1$. Assim,
+	
+	\begin{align*}
+	\FT{h(t)} &= C_F\intII h(t)\,e^{i\omega t}\,dt = C_F\Int\frac{1}{2}\,\left[ 1-\cos(\omega_\bullet\,t+\theta_\bullet) \right]\,
+				e^{i\omega t}\,dt	\\
+		&= \frac{1}{2}\,C_F\,\left[ \Int e^{i\omega t}dt - \Int e^{i\omega t}\, \cos(\omega_\bullet\,t + 						
+			\theta_\bullet)\,dt\right]
+	\end{align*}
+	
+	Lembrando que $\cos(x)=(e^{ix}+e^{-ix})/2$, a segunda integral fica
+	\begin{align*}
+	\Int e^{i\omega t}\,\cos(\omega_\bullet\,t+\theta_\bullet)\,dt &= 
+		\frac{1}{2}\Big[e^{i\theta_\bullet}\Int e^{i(\omega+\omega_\bullet)t}\,dt + 
+		e^{-i\theta_\bullet}\Int e^{i(\omega-\omega_\bullet)t}\,dt\Big] \\
+			&= \frac{1}{2}\,\Big[ e^{i\theta_\bullet}\,\frac{e^{i(\omega+\omega_\bullet)t}}{i(\omega+\omega_\bullet)} +
+			e^{-i\theta_\bullet}\,\frac{e^{i(\omega-\omega_\bullet)t}}{i(\omega-\omega_\bullet)} \Big]_{t_1}^{t_N}
+	\end{align*}
+
+	Então
+	\begin{align*}
+	\FT{h(t)} &= \frac{1}{2}\,C_F\, \Big[\frac{e^{i\omega t}}{i\omega} - 
+			\frac{1}{2}e^{i\theta_\bullet}\,\frac{e^{i(\omega+\omega_\bullet)t}}{i(\omega+\omega_\bullet)} -
+			\frac{1}{2}e^{-i\theta_\bullet}\,\frac{e^{i(\omega-\omega_\bullet)t}}{i(\omega-\omega_\bullet)} \Big]_{t_1}^{t_N} \\
+		\begin{split}
+		&= \frac{1}{2i}\,C_F\, \Big[ \frac{1}{\omega}\,\Big( e^{i\omega t_N}-e^{i\omega t_1} \Big) -
+			\frac{e^{i\theta_\bullet}}{2\,(\omega+\omega_\bullet)}\,\Big( e^{i(\omega+\omega_\bullet)\,t_N} -
+				e^{i(\omega+\omega_\bullet)\,t_1} \Big) - \\
+			& \rule{5cm}{0cm} \frac{e^{-i\theta_\bullet}}{2\,(\omega-\omega_\bullet)}\,\Big( e^{i(\omega-\omega_\bullet)\,t_N} -
+				e^{i(\omega-\omega_\bullet)\,t_1} \Big) \Big]
+		\end{split}
+	\end{align*}
+	
+	Notando que $t_1=\tmedio-b$ e $t_N=\tmedio+b$ (pois $\tmedio=(t_1+t_N)/2$ e $b=(t_N-t_1)/2$),
+	\begin{align*}
+	\begin{split}
+	\FT{h(t)} &= \frac{1}{2i}\,C_F\, \Big[ \frac{e^{i\omega\tmedio}}{\omega}\,\Big( e^{i\omega b}-e^{-i\omega b} \Big) -
+			\frac{e^{i\theta_\bullet}\,e^{i(\omega+\omega_\bullet)\tmedio}}{2\,(\omega+\omega_\bullet)}\,
+				\Big( e^{i(\omega+\omega_\bullet) b} -	e^{-i(\omega+\omega_\bullet) b} \Big) - \\
+			& \rule{5cm}{0cm} \frac{e^{-i\theta_\bullet}\,e^{i(\omega-\omega_\bullet)\tmedio}}{2\,(\omega-\omega_\bullet)}\,
+				\Big( e^{i(\omega-\omega_\bullet) b} -	e^{-i(\omega-\omega_\bullet) b} \Big) \Big]
+	\end{split}\\
+	\begin{split}
+		&= \frac{1}{2}\,C_F\, \Big\{2\,\frac{e^{i\omega\tmedio}}{\omega}\,\sen(\omega b) -
+		  \frac{e^{i(\omega_\bullet\tmedio+\theta_\bullet)}\,e^{i\omega\tmedio}}{\omega+\omega_\bullet}\,\sen[(\omega+\omega_\bullet) b] - \\
+			&\rule{5cm}{0cm}
+			 -\frac{e^{-i(\omega_\bullet\tmedio+\theta_\bullet)}\,e^{i\omega\tmedio}}{\omega-\omega_\bullet}\,\sen[(\omega-\omega_\bullet) b]
+		 			\Big\}
+	\end{split}\\
+	\begin{split}
+		&= \frac{1}{2}\,b\,C_F\,e^{i\omega\tmedio}\,\big\{2\,\senc(\omega b) - 
+				e^{i(\omega_\bullet\tmedio+\theta_\bullet)}\senc[(\omega+\omega_\bullet)b] - \\
+				&\rule{5cm}{0cm} -e^{-i(\omega_\bullet\tmedio+\theta_\bullet)}\senc[(\omega-\omega_\bullet)b] \big\}
+	\end{split}
+	\end{align*}
+	
+	Finalmente, como $\omega_\bullet\tmedio+\theta_\bullet=\pi$ concluimos que
+	\begin{equation*}
+	H(\omega)\doteq\FT{h(t)} = \frac{1}{2}\,b\,C_F\,e^{i\omega\tmedio}\,\left\{2\,\senc(\omega b)+ \senc[(\omega+\omega_\bullet)b] 
+		+ \senc[(\omega-\omega_\bullet)b]\right\}
+	\end{equation*}
+	
+	%-------------------------------------------------------------------------------------
+	%	Determinação de $\sigma(A,B)$}\label{sec:sigma(A,B)
+	%-------------------------------------------------------------------------------------			
+	\section{Determinação de $\sigma(A,B)$}\label{sec:sigma(A,B)}
+	
+	As integrais na equação~\eqref{eq:1} possuem todas a mesma forma. Assim, podemos resolvê-las todas de uma só vez:
+	\begin{gather*}
+	\sigma(A,B) \doteq \intII \frac{b\,e^{i\lambda\tmedio}}{\lambda-A}\,\senc\big[(\lambda-B)b\big]\,d\lambda
+	 = \intII \frac{b\,e^{i\lambda\tmedio}}{\lambda-A}\,\frac{\sin\big[(\lambda-B)b\big]}{(\lambda-B)b}\,d\lambda = \\
+	 = \intII \frac{e^{i\lambda\tmedio}\,\sin\big[(\lambda-B)b\big]}{(\lambda-A)\,(\lambda-B)}\,d\lambda \nonumber 
+	 = \frac{1}{2i}\,\intII\frac{e^{i\lambda\tmedio}}{(\lambda-A)\,(\lambda-B)}\,
+	 						\Big[e^{i(\lambda-B)b}-e^{-i(\lambda-B)b}\Big]\,d\lambda = \\
+	 = \frac{e^{-iBb}}{2i}\,\intII \frac{e^{i(\tmedio+b)\lambda}}{(\lambda-A)\,(\lambda-B)} -
+	 	 \frac{e^{iBb}}{2i}\,\intII \frac{e^{i(\tmedio-b)\lambda}}{(\lambda-A)\,(\lambda-B)} \nonumber = \\
+	 = \frac{e^{-iBb}}{2i}\,\intII \frac{e^{i \lambda t_N}}{(\lambda-A)\,(\lambda-B)} -
+	 	 \frac{e^{iBb}}{2i}\,\intII \frac{e^{i \lambda t_1}}{(\lambda-A)\,(\lambda-B)}.	\label{eq:2}
+	\end{gather*}
+
+	\begin{figure}[htb]
+		\centering
+		\psfrag{a}[][]{\LARGE $A$}
+		\psfrag{b}[][]{\LARGE $B$}
+		\psfrag{c}[][]{\LARGE $-R$}
+		\psfrag{d}[][]{\LARGE $R$}
+		\psfrag{e}[][]{\LARGE $\gamma_1$}
+		\psfrag{f}[][]{\LARGE $\gamma_2$}
+		\psfrag{g}[][]{\LARGE $\Im$}
+		\psfrag{h}[][]{\LARGE $\Re$}
+		\psfrag{i}[][]{\LARGE $\epsilon$}
+		\resizebox{0.7\textwidth}{!}{\includegraphics{figuras/Argand-Gauss}}
+		\caption{\footnotesize\label{fig:Argand-Gauss} Percurso no plano Argand-Gauss utilizado para a determinação de
+		$\oint f(\lambda)\,d\lambda$.}
+	\end{figure}
+	
+	Essas duas integrais são da forma $\intII f(\lambda)\,d\lambda$ com $f(\lambda)= e^{iC\lambda}/[(\lambda-A)\,(\lambda-B)]$, $C,B\in\mathbbm{R}$ e $\lambda,A\in\mathbbm{C}$.\footnote{Da expressão~\eqref{eq:1} vemos que $A=\omega+i\alpha_s$ ($\alpha_s\in\mathbbm{R}$) sempre e $B=\omega_s$ ou $\omega_s\pm\omega_\bullet$ ($\omega_s,\omega_\bullet\in\mathbbm{R}$). $C=t_1$ ou $t_N$ ($t_1,t_N\in\mathbbm{R}$).} Podemos resolver esta integral utilizando a técnica dos {\bfseries resíduos}. Para fazermos isso consideramos o percurso no plano complexo ilustrado na figura~\ref{fig:Argand-Gauss}. Podemos escrever
+	$$
+	\oint f(\lambda)\,d\lambda = \int\limits_{-R}^{B-\epsilon}f(\lambda)\,d\lambda + \int\limits_{\gamma_1} f(\lambda)\,d\lambda +
+		\int\limits_{B+\epsilon}^{R} f(\lambda)\,d\lambda + \int\limits_{\gamma_2} f(\lambda)\,d\lambda = 2\pi i\sum\res\big[f(\lambda)\big],
+	$$
+	onde a somatória é feita sobre todos os resíduos de $f(\lambda)$ que residem no interior do percurso fechado ilustrado. São dois ao todo, um em $\lambda=A$ e outro em $\lambda=B$:
+	\begin{eqnarray*}
+		\res\big[f(\lambda=A)\big] &=& \lim_{\lambda\to A} (\lambda-A)\,f(\lambda) = \lim_{\lambda\to A}\frac{e^{iC\lambda}}{\lambda-B}=
+			\frac{e^{iCA}}{A-B} \\ 
+		\res\big[f(\lambda=B)\big] &=& \lim_{\lambda\to B} (\lambda-B)\,f(\lambda) = \lim_{\lambda\to B}\frac{e^{iC\lambda}}{\lambda-A}=
+			\frac{e^{iCB}}{B-A}.
+	\end{eqnarray*}
+	
+	A integral no percurso $\gamma_1$ é
+	$$
+	\int\limits_{\gamma_1}f(\lambda)\,d\lambda = \frac{1}{2}\,2\,i\,\pi\,\res\big[f(\lambda=B)\big] = i\,\pi\,\frac{e^{iCB}}{B-A},
+	$$
+	enquanto aquela em $\gamma_2$ é nula quando $R\to\infty$.
+	
+	Portanto,
+	$$
+	\oint f(\lambda)\,d\lambda = \int\limits_{-R}^{B-\epsilon}f(\lambda)\,d\lambda + i\pi\,\frac{e^{iCB}}{B-A} +
+		\int\limits_{B+\epsilon}^{R} f(\lambda)\,d\lambda = 2\,i\,\pi\,\frac{e^{iCA}-e^{iCB}}{A-B} \Rightarrow
+	$$
+	$$
+	\Rightarrow\int\limits_{-R}^{B-\epsilon}f(\lambda)\,d\lambda\, + \int\limits_{B+\epsilon}^{R} f(\lambda)\,d\lambda =
+		\frac{i\pi}{A-B}\,\big(2\,e^{iCA}-e^{iCB}\big).
+	$$
+	
+	Quando $\epsilon\to0$ e $R\to\infty$ encontramos
+	$$
+	\intII f(\lambda)\,d\lambda =	\frac{i\pi}{A-B}\,\big(2\,e^{iCA}-e^{iCB}\big).
+	$$
+	
+	Retornando este resultado à equação~\eqref{eq:2} ficamos com
+	\begin{eqnarray*}
+	\sigma(A,B) &=& \frac{e^{-ibB}}{2i}\,\frac{i\pi}{A-B}\,\big(2e^{it_NA}-e^{it_N B}\big)-
+		\frac{e^{ibB}}{2i}\,\frac{i\pi}{A-B}\,\big(2e^{it_1A}-e^{it_1B}\big)	\\
+		&=& \frac{\pi}{A-B}\big[e^{i(t_N A-bB)}-e^{i(t_1A+bB)}\big].
+	\end{eqnarray*}
+	
+	
+	

@@ -1,0 +1,123 @@
+		
+		\section{Sólidos cristalinos}
+		
+		\index{Bloch!Felix}
+		\index{Bandas!Estrutura de}
+		\index{Juncao p-n@Junção p-n}
+		\index{Transistor}
+		A idéia de que os cristais são compostos por um arranjo tridimensional periódico de átomos já era bastante difundida no século {\scshape xviii}, mas foi só na década de 1920 que o conhecimento acerca desses materiais (e de todos aqueles semelhantes aos cristais, ditos cristalinos) atingiu maturidade Física e Matemática suficientes para desenvolver-se a todo vapor. Isto ocorreu pioneiramente pelas mãos de Felix Bloch\footnote{F. Bloch recebeu o prêmio Nobel de Física em 1952 por esses estudos.} (1905-1983), que introduziu o conceito de \novotermo{estrutura de bandas} dos cristais (e, conseqüentemente, dos materiais cristalinos) baseado nas formulações da recém-nascida Mecânica-Quântica. As idéias de Bloch fizeram uma revolução no meio científico (que, na época, preocupava-se principalmente com a compreensão do átomo isolado) e comercial, culminando com a descoberta das junções p-n (em 1939) e com a invenção do transistor (em 1948).
+		
+		\index{Bulk}
+		\index{Gap|see{Bandas!proibidas}}
+		\index{Bandas!proibidas}
+		Átomos isolados possuem níveis de energia discretos e elétrons muito bem localizados em redor do núcleo; mas quando esses átomos são agrupados para formar uma estrutura extensa (\novotermo{\foreign{bulk}}), as funções de onda dos elétrons se superpõem (especialmente aquelas dos elétrons no nível de valência), dando origem a conjuntos (quase) contínuos de estados possíveis e energeticamente distintos chamados de \novotermo{bandas de energia}.\footnote{Para maiores detalhes, consulte o capítulo 13 da referência \cite{eisberg}.} As regiões energeticamente proibidas dos átomos, quando não são eliminadas por essas bandas, dão origem às \novotermo{bandas proibidas}, ou \novotermo{\foreign{gaps}}.
+
+	\begin{figure}[htb]
+		\centering
+		\psfrag{a}[][]{\LARGE\colorbox{white}{\shortstack{Filme semicondutor\\$\sim\unit{10}{\nano\metre}$}}}
+		\psfrag{b}[r][r]{\LARGE\textsc{qd} ($\sim\unit{10}{\nano\metre}$)}
+		\psfrag{c}[][]{\LARGE\shortstack{\foreign{Bulk}:\\Macroscópico}}
+		\psfrag{d}[][]{\LARGE Heteroestruturas}
+		\psfrag{e}[][]{\LARGE Pontos-quânticos}
+		\psfrag{f}[][]{\LARGE Átomos}
+		\psfrag{g}[][]{\LARGE\colorbox{white}{$\sim\unit{1}{\angstrom}$}}
+		\resizebox{\textwidth}{!}{\includegraphics{figuras/introducao}}
+		\caption{\footnotesize\label{fig:introducao} Da esquerda para a direita, ilustramos a evolução dos interesses científicos acerca da estrutura da matéria no último século, começando com o átomo, cuja imagem popular ainda é aquela devida a Ernest Rutherford, em 1911.\index{Rutherford, Ernest} Depois, Felix Bloch aplicou a recém-nascida Mecânica-Quântica às estruturas cristalinas macroscópicas, chamadas de \foreign{bulks} (volume), introduzindo conceitos completamente novos e iniciando um conhecimento que culminou na invenção do transistor, hoje fundamental em praticamente todas as aplicações tecnológicas. Por volta da década de 1950, os cientistas voltaram-se para o estudo dos fenômenos decorrentes do confinamento espacial dos elétrons, até então ignorado pela teoria de Bloch. Foi neste ínterim que surgiram o conceito de heteroestruturas e as técnicas de crescimento epitaxial, capazes de construir filmes cristalinos extremamente delgados e quase isentos de defeitos. Finalmente, a atenção atualmente volta-se em parte para o estudo dos pontos-quânticos, diminutas regiões do espaço capazes de capturar e confinar elétrons em todas as três direções do espaço, como nos átomos.}
+	\end{figure}		
+		
+		\index{Bloch!Teoria de}
+		\index{de Broglie!comprimento de onda ($\lambda$)}
+		\index{Rede!cristalina}
+		\index{Rede!Parametro de@Parâmetro de}
+		Na teoria de Bloch, todo material cristalino é composto por um arranjo espacialmente periódico e \enfase{ilimitado} de átomos (ou grupo de átomos). Em termos práticos, isto significa que as propriedades desses materiais não dependem de seus tamanhos nem dos possíveis processos que ocorram em suas superfícies;\footnote{É interessante notar que na formulação proposta por Bloch, várias das características de um sólido cristalino sequer dependem dos átomos que o compõem. O exemplo mais imediato disso é o próprio conceito de estrutura de bandas.} e as experiências têm demonstrado que esta é uma ótima aproximação mesmo para amostras muito pequenas, de alguns micrometros. Essas dimensões são ainda extremamente grandes quando comparadas com as distâncias interatômicas (parâmetro de rede)\footnote{A definição de parâmetro de rede é um pouco mais complexa que isso~\cite{ashcroft,kittel}.} que caracterizam o período do arranjo. Mas quando as dimensões da amostra vão abaixo disso, os elétrons passam a ``enxergar'' os limites da amostra e as conseqüências desse confinamento (e dos processos de superfície) não podem mais ser ignoradas. Na linguagem da Mecânica-Quântica, diz-se que as dimensões da amostra tornaram-se comparáveis ao comprimento de onda de de Broglie ($\lambda$) dos elétrons \cite{bimberg}:
+		\begin{equation}\label{eq:deBroglie}
+		\lambda = \frac{h}{p} = \frac{h}{\sqrt{2\,\meff\,\boltzmann\,T}},
+		\end{equation}
+		onde $h=\unit{6,626\times\power{10}{-34}}{\joule\cdot\second}$ é a constante de Planck, $p$ é o módulo do momento do elétron, $T$ é a temperatura (em kelvin), $k_B=\unit{1,381\times\power{10}{-23}}{\joule\per\kelvin}$ é a constante de Boltzmann e $\meff$ é a massa efetiva\footnote{Um elétron numa estrutura cristalina comporta-se diferentemente de outro no vácuo e a massa efetiva é uma maneira aproximada de representar essa diferença de comportamento.} do elétron na estrutura cristalina.
+		\index{Constante!de Planck}
+		\index{Constante!de Boltzmann}
+		\index{Massa!efetiva}
+
+		\index{Massa!do eletron@do elétron}
+		\index{Efeito!de confinamento}
+		Assim, no caso do GaAs ($\meff=0,067\,m_0$, onde $m_0=\unit{9,109\times\power{10}{-31}}{\kilogram}$ é a massa de repouso do elétron) a \unit{1,4}{\kelvin}, por exemplo, se qualquer uma das dimensões da amostra for da ordem de \unit{3500}{\angstrom}, os efeitos de confinamento tornar-se-ão relevantes! Mas quais seriam eles? Vamos ver...
+				
+		\section{Heteroestruturas}
+			\index{Heteroestruturas}
+		
+		\index{Substrato|textbf}
+		\index{Tunelamento}
+		\index{Resistencia@Resistência!diferencial negativa}
+		No final da década de 1950 a idéia de se utilizar \novotermo{filmes finos}\footnote{Um filme fino nada mais é que uma folha plana de algum material, geralmente sustentada por algum outro material, de espessura (deveras) maior, chamado substrato.} para estudar esses efeitos de quantização já era popular e a principal estrutura estudada eram os filmes de semimetais depositados a vácuo sobre substratos de mica (filmes de metais e semicondutores também eram estudados). Nesta época, muitas previsões teóricas foram feitas, como o tunelamento ressonante e a resistência diferencial negativa, mas as técnicas experimentais disponíveis não permitiam aos pesquisadores construírem filmes de qualidade suficientemente boa para verificarem esses fenômenos. Isto ocorria principalmente por que a observação desses efeitos exigia o uso de filmes extremamente delgados (ditos ultra-finos) e isentos de defeitos para que os elétrons pudessem ser refletidos nas interfaces ou superfícies (de modo a estarem confinados neste plano) e, ao mesmo tempo, que pudessem transitar sem obstáculos (sem espalhar) no plano do filme.
+		
+		\index{Epitaxia por feixe molecular}
+		\index{Molecular beam epitaxy|see{Epitaxia por feixe molecular}}
+		\index{MBE|see{Epitaxia por feixe molecular}} 
+		\index{Crescimento}
+		\index{Fotoluminescencia@Fotoluminescência}
+		\index{PL|see{Fotoluminescencia@Fotoluminescência}}
+		\index{Chopper}
+		\index{Sommerfeld!Teoria de}
+		\index{Gas@Gas bidimensional de elétrons}
+		\index{Two-dimensional electron gas|see{Gas@Gas bidimensional de elétrons}}
+		\index{2DEG|see{Gas@Gas bidimensional de elétrons}}		
+		Foi na década de 1960 que esse cenário mudou radicalmente: Nasciam as técnicas de crescimento\footnote{A confecção de estruturas cristalinas através das técnicas de epitaxia consiste em montar essas estruturas camada após camada atômica, de tal modo que o substrato \enfase{cresce} na direção perpendicular à sua superfície, daí o termo ``crescimento,'' utilizado no sentido de construir uma tal estrutura.} epitaxial, como a epitaxia por feixe molecular (\textsc{mbe}, \foreign{molecular beam epitaxy}; capítulo~\ref{cap:MBEeQD}).  A partir daí, tornou-se possível inserir coerentemente camadas com alguns angströns de espessura de semicondutores de \foreign{gap} menor sobre substratos de \foreign{gap} maior, restringindo o movimento dos elétrons a apenas duas direções (plano do filme: veja a figura~\ref{fig:introducao}) e garantindo uma interface quase perfeita. Era o que faltava: A partir daí os diversos fenômenos de confinamento previstos puderam ser verificados e muitas outras idéias foram experimentadas. Particularmente impressionantes foram os resultados obtidos com experiências ópticas: Em 1974, Dingle \etal~\cite{dingle} observaram diretamente o espectro de absorção em forma de degraus característico de um gás bidimensional de elétrons (\textsc{2deg}, \foreign{two-dimensional electron gas}) descrito pela teoria de Sommerfeld. Além disso, esses estudos enfatizaram a importância dos efeitos excitônicos, fundamentais em alguns dispositivos como moduladores ópticos\footnote{Um modulador óptico é um dispositivo capaz de variar, ou modular, um sinal óptico, geralmente com o intuito de fazê-lo transmitir informações. Um exemplo é o \foreign{chopper}, utilizado em medidas de fotoluminescência~\cite{celso,mike,sandro}.} e elementos ópticos biestáveis.\footnote{Um elemento biestável é qualquer dispositivo capaz de assumir apenas dois estados distintos, independentemente do sinal de entrada. Exemplos são portas lógicas e memórias.}
+				
+		\index{Heteroestruturas}
+		\index{HE|see{Heteroestruturas}}
+		\index{Poco-quantico@Poço-quântico}
+		\index{QW|see{Poco-quantico@Poço-quântico}}
+		\index{Quantum-!well|see{Poco-quantico@Poço-quântico}}
+		\index{Super-redes} 
+		\index{Superlattices|see{Super-redes}} 
+		\index{SR|see{Super-redes}} 
+		\index{Laser}
+		\index{Fotodetector}
+		Esse tipo de estrutura, construída artificialmente através da superposição de filmes ultra-finos de materiais distintos, ficou conhecido como \novotermo{heteroestruturas} (\textsc{he}s). Dois tipos particularmente interessantes de heteroestrutura são os \novotermo{poços-quânticos} (\textsc{qw}s, \foreign{quantum wells}) e as \novotermo{super-redes} (\textsc{sr}s). O primeiro deles é composto por duas camadas de um semicondutor qualquer separadas por uma terceira camada de um semicondutor distinto, de \foreign{gap} menor, cuja função é prover aos elétrons uma região na qual a energia potencial do gás bidimensional de elétrons  seja menor que em qualquer outra região do material e, portanto, mantê-los ali confinados. Antes do advento das \textsc{he}, os poços-quânticos não passavam de estruturas teóricas cuja única função era ilustrar as equações da Mecânica-Quântica; mas agora eles são utilizados na confecção de vários dispositivos opto-eletrônicos de alta performance como \foreign{lasers} e fotodetectores~\cite{wood}. 
+		
+		\index{Super-redes}
+		As super-redes, por outro lado, são uma sucessão de \textsc{qw}s e são utilizadas para melhorar a performance de heteroestruturas baseadas em poços-quânticos. Além disso, elas isolam as impurezas do substrato (que geralmente possui qualidade muito inferior àquela exigida na fabricação das \textsc{he}s) da heteroestrutura de interesse, construída sobre ele. Neste trabalho utilizamos uma \textsc{sr} justamente para isso (capítulo~\ref{cap:amostras}).
+								
+		\section{Os pontos-quânticos}
+
+		\index{Pontos-quanticos@Pontos-quânticos} 
+		\index{Quantum-!dots|see{Pontos-quanticos@Pontos-quânticos}} 
+		\index{QD|see{Pontos-quanticos@Pontos-quânticos}}
+		\index{Fio-quantico@Fio-quântico} 		
+		\index{Quantum-!wire|see{Fio-quantico@Fio-quântico}}
+		No final da década de 1980, as principais propriedades dos poços-quânticos e das super-redes estavam bem compreendidas e o interesse dos pesquisadores voltou-se para estruturas com maior grau de confinamento dos elétrons: em duas dimensões, os \novotermo{fios-quânticos}, e em três, os \novotermo{pontos-quânticos} (\textsc{qd}s, \foreign{quantum-dots}).\footnote{Lembre-se de que os filmes ultra-finos confinam os elétrons em apenas \enfase{uma} dimensão, deixando as duas direções do plano do filme livres para os elétrons transitarem.}
+
+		O confinamento nas três direções do espaço, que dá origem aos pontos-quânticos, traduz-se na completa localização dos portadores (elétrons ou buracos), à imagem dos átomos. De fato, algumas das propriedades dos \textsc{qd}s assemelham-se àquelas de um elétron confinado em uma caixa~\cite{bimberg}, dentre as quais a discretização dos níveis de energia (a estrutura de bandas, presente nos \foreign{bulks}, é completamente inexistente nos pontos-quânticos). Além disso, as propriedades dessas novas estruturas (como os níveis de energia, por exemplo) são altamente dependentes das dimensões envolvidas.
+		
+		\index{Laser}
+		\index{Fotodetector}
+		Para compreendermos a importância deste intenso confinamento, suponha que temos um \textsc{qd} com apenas dois estados. As energias desses estados são tão precisas quanto permitem a relação de incerteza de Heisenberg (ignorando os efeitos da temperatura) e, por este motivo, a transição de um elétron do nível de energia mais alto (primeiro e único estado excitado) para o mais baixo (fundamental) ocorre mediante a emissão de um fóton de energia extremamente bem definida. Podemos utilizar esta transição para construir um \foreign{laser}~\cite{fafard1} que emite num comprimento de onda muito bem definido. Inversamente, para que o elétron transite do nível de energia mais baixo para o mais alto, ele deve absorver um fóton de energia igualmente bem definida, e disto podemos construir um fotodetector~\cite{phillips} capaz de identificar um comprimento de onda muito específico! São as duas pontas de uma linha de transmissão de dados: Um emissor (\foreign{laser}) e um receptor (fotodetector).
+		
+		\index{Fibra optica@Fibra óptica}
+		\index{Repetidor}
+		\index{Laboratorio@Laboratório!de Novos Materiais Semicondutores}
+		\index{LNMS|see{Laboratorio@Laboratório!de Novos Materiais Semicondutores}}
+		\index{Universidade de Sao Paulo@Universidade de São Paulo}
+		\index{USP|see{Universidade de Sao Paulo@Universidade de São Paulo}}
+		\index{1.3mm@\unit{1,3}{\micro\metre}}
+		\index{1.5mm@\unit{1,5}{\micro\metre}}
+		Não é preciso dizer que essas características dos pontos-quânticos são inestimáveis para a tecnologia das telecomunicações, mas podemos ir muito mais longe: Nos últimos anos, as fibras ópticas de sílica vêm substituindo os antigos fios de cobre e possibilidando uma nova gama de aplicações, desde procedimentos cirúrgicos até simples decorações domésticas. As fibras ópticas atuais apresentam um mínimo local de atenuação em \unit{1,3}{\micro\metre} e um mínimo absoluto em \unit{1,5}{\micro\metre}, isto é, sinais com estas freqüências podem percorrer distâncias muito maiores (dezenas a centenas de vezes) nas fibras ópticas antes de serem perdidos em meio aos ruídos. Para as telecomunicações, isto implica numa redução significativa do número de \termo{repetidores}\footnote{Um repetidor é um dispositivo cuja função é amplificar o sinal recebido e reenviá-lo para o próximo trecho de uma linha de transmissão, de modo que o sinal não seja perdido antes de atingir seu destino.} numa longa linha de transmissão de dados e, conseqüentemente, numa redução dos custos de instalação e manutenção. Isto afeta os preços praticados por serviços prestados e, por conseguinte, a economia de um país e do mundo...! Mas foi só há alguns poucos anos que as primeiras emissões em \unit{1,3}{\micro\metre} foram atingidas~\cite{joyce,mike2}, e apenas ainda mais recentemente (em meados de 2002), o grupo do Laboratório de Novos Materiais Semicondutores (\textsc{lnms}) da Universidade de São Paulo (\textsc{usp}) conseguiu fabricar pontos-quânticos que emitem (e absorvem) fótons de \unit{1,5}{\micro\metre}~\cite{mike3}, tornando-se um dos primeiros laboratórios no mundo a obter tal resultado, e a despeito de alguns trabalhos que impossibilitavam a obtenção de \textsc{qd}s com o tamanho necessário para isso~\cite{joyce}.
+		
+		\index{Transistor!monoeletronico@monoeletrônico}
+		\index{Memoria optica@Memória óptica}
+		\index{Tracador@Traçador}
+		\index{LED!organico@orgânico}
+		\index{Computacao quantica@Computação quântica}
+		\index{Tecnecio@Tecnécio}
+		Várias outras aplicações para os pontos-quânticos têm sido previstas e experimentadas como transistores monoeletrônicos~\cite{kim}, memórias ópticas~\cite{shields}, \termo{traçadores}\footnote{Um traçador é uma substância utilizada para marcar e acompanhar (ou traçar) a evolução de um sistema (geralmente biológico).} biológicos~\cite{benoit}, \textsc{led}s (\foreign{light emitting diode}) orgânicos~\cite{coe} e um possível grande papel no desenvolvimento da recente computação quântica~\cite{venere}. Cada uma dessas aplicações apresenta inúmeras vantagens sobre as similares atuais: No caso dos traçadores biológicos, \eg, os pontos-quânticos oferecem um espectro de emissão deveras mais estreito que os atuais traçadores (baseados em tintas orgânicas fluorescentes), facilitando e melhorando a interpretação dos resultados. Além disso, por não serem radioativos, os \textsc{qd}s não oferecem os mesmos prejuízos à saúde de um paciente que precise passar por este tipo de atividade, como ocorre atualmente com o tecnécio meta-estável (isótopo 95).
+		
+		Todas essas aplicações são muito novas e bastante complexas, especialmente por que ainda sabemos pouco a respeito dos pontos-quânticos. Em verdade, a maioria delas ainda é realidade apenas no meio acadêmico e está longe de ser utilizada comercialmente. No entanto, é curioso notar que a primeira aplicação comercial dos \textsc{qd}s data da década de 1930, quando semicondutores (\eg, CdSe) nanométricos foram inseridos em vidro~\cite{bimberg} e comercializados como filtros de cores por várias décadas. Os efeitos de quantização desse tipo de estrutura foram experimentalmente confirmados em 1984~\cite{bimberg}, mas o fato de o vidro ser isolante dificultou, por muito tempo, o estudo e a utilização desses pontos-quânticos em dispositivos eletrônicos ou opto-eletrônicos.
+		
+		\index{Efeito!bottleneck}
+		Mas não é só na Física Aplicada que os \textsc{qd}s são interessantes: À imagem do que ocorreu com as heteroestruturas, muitos novos fenômenos estão sendo previstos e observados, como por exemplo o efeito \novotermo{bottleneck} \cite{baranov,mukai2} e a importância das tensões mecânicas (inerente ao método de fabricação dos pontos-quânticos: veja a seção~\ref{sec:QD}) para as estruturas de bandas das heteroestruturas (sobre as quais os \textsc{qd}s são formados) e para os portadores de cargas em suas imediações, que é um dos intuitos deste trabalho.		
+		
+		
+		
+		
+		
+		

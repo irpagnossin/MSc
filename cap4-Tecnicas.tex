@@ -1,0 +1,742 @@
+		
+	Para estudar e compreender as estruturas que apresentamos no capítulo anterior, utilizaremos três técnicas experimentais já bastante difundidas, cujos princípios teóricos serão agora apresentados. As duas primeiras são técnicas de transporte elétrico e, por isso, fornecem-nos informações relativas à condução de corrente elétrica, como a quantidade de portadores que contribuem para este processo e a velocidade com que o fazem. Elas estão baseadas nos efeitos Hall clássico e Shubnikov-de Haas; Finalmente, utilizaremos a microscopia de força atômica para analisar morfologicamente os pontos-quânticos na superfície de uma amostra crescida especialmente para este fim (veja o capítulo anterior). Deste estudo seremos capazes de avaliar suas dimensões e a densidade superficial deles, além da rugosidade da superfície. De quebra, obteremos imagens representativas dos \textsc{qd}s que nos permitirão avaliar qualitativamente a homogeneidade da distribuição espacial.
+	
+		%-------------------------------------------------------------------------------------
+		%	O efeito Hall
+		%-------------------------------------------------------------------------------------
+		
+		\section{O efeito Hall}\label{sec:efeito-Hall}
+		
+		\index{Efeito!Hall}
+		\index{Hall!Efeito}
+		\index{Velocidade de arrasto}
+		A figura~\ref{fig:efeito-Hall} é uma ampliação da região de interesse (fig.~\ref{fig:barra-Hall}) vista em perspectiva e serve para ilustrar o efeito Hall: Devido ao campo elétrico $E_x$ aplicado na região de interesse, os elétrons da amostra, impelidos pela força elétrica ($-\cargaeletron\,E_x$), dão origem à densidade de corrente $j_x$. Ao aplicarmos um campo magnético $B$ perpendicularmente a esta corrente (na direção $z$, por exemplo), a força magnética ($-\cargaeletron\,\vetor v\times\vetor B$, onde $\vetor v$ é a velocidade de arrasto dos elétrons) passa a agir sobre esses elétrons empurrando-os para o lado direito da amostra (fig.~\ref{fig:efeito-Hall}); mas este movimento é limitado pela dimensão da amostra nesta direção e, por isso, os elétrons vão se acumulando ali. À medida que isso ocorre, o excesso de elétrons à direita e o conseqüente déficit à esquerda geram um campo elétrico $\vetor E_y$ no sentido de conter este movimento. O equilíbrio ocorre quando a força elétrica gerada pelo desequilíbrio de cargas dentro da amostra balanceia a força magnética:	
+		$$
+		\vetor F = -\cargaeletron(\vetor E_y+\vetor v\times\vetor B) = \vetor 0.
+		$$ 
+
+		\index{Hall!Edwin Herbert}
+		\index{Hall!Campo}
+		Nessa situação, $E_y\doteq E_H$ é conhecido como campo Hall e o fenômeno de seu aparecimento é o efeito Hall, descoberto em 1879 por Edwin Herbert Hall.
+		
+		\index{Buraco}
+		\index{hole|see{Buraco}}
+		No caso de portadores do tipo-p (buracos), o sentido da velocidade de arrasto é invertido e (por isso) a força magnética permanece inalterada. Logo, no lado direito da amostra passam a se acumularem os buracos e o sentido de $E_H$ também inverte. De fato, o sentido de $E_H$ costuma ser utilizado para verificar qual o tipo de portador que domina a condução.
+
+		\begin{figure}[htb]
+			\centering
+			\psfrag{a}[][]{\colorbox{white}{\LARGE $l_x$}}
+			\psfrag{b}[][]{\LARGE $l_z$}
+			\psfrag{c}[][]{\LARGE $l_y$}
+			\psfrag{x}[][]{\LARGE $x$}
+			\psfrag{y}[][]{\LARGE $y$}
+			\psfrag{z}[][]{\LARGE $z$}
+			\psfrag{B}[][]{\LARGE $\vetor B$}			
+			\psfrag{Ex}[][]{\LARGE $E_x$}
+			\psfrag{Ey}[][]{\LARGE $E_y$}
+			\psfrag{Jx}[][]{\LARGE $j_x$}
+			\psfrag{A}[l][l]{\LARGE $A$}
+			\psfrag{D}[l][l]{\LARGE $D$}
+			\resizebox{0.7\textwidth}{!}{\includegraphics{figuras/regiao-interesse.eps}}
+			\caption{\footnotesize\label{fig:efeito-Hall} Vista em perspectiva da região de interesse (fig.~\ref{fig:barra-Hall}) ilustrando o efeito Hall: A força magnética gera um desequilíbrio na distribuição de carga transversal à corrente elétrica ($j_x$), dando origem ao chamado campo Hall ($E_H$) e, por conseguinte, à tensão Hall ($V_H$).\index{Hall!Tensao@Tensão}}
+		\end{figure}
+
+		\index{Tempo!de relaxacao@de relaxação}
+		\index{tau@$\bar\tau$|see{Tempo de!relaxacao@de relaxação}}
+		\index{Espalhamento}
+		A teoria de Drude fornece a descrição matemática mais simples deste fenômeno, mas peca em alguns aspectos teóricos importantes, dentre os quais destacamos o \novotermo{tempo de relaxação} ($\bar\tau$). Classicamente, $\bar\tau$ é definido como o tempo médio entre duas colisões sucessivas de um elétron com os \enfase{íons} da rede cristalina. No entanto, o paradigma quântico mostra~\cite{ashcroft} que esta definição é incompleta e incorreta, além de não nos permitir relacionar $\bar\tau$ com as possíveis maneiras (mecanismos) com que essas colisões ocorrem. Por esta razão, daremos a seguir uma breve descrição semi-clássica do efeito Hall que nos permita contornar esses problemas e, ao mesmo tempo, evitar (em parte) o formalismo da teoria quântica.
+		
+		\index{Sommerfeld!Teoria de}
+		Na teoria de Sommerfeld~\cite{ashcroft}, as equações do movimento de \enfase{um} elétron num orbital $\vetor k$ de uma sub-banda qualquer (suponhamos, primeiramente, que a condução elétrica decorra da contribuição dessa sub-banda apenas) são
+		\begin{equation*}
+		\dot{\vetor r}=\frac{1}{\hbar}\,\vetor\nabla_{\vetor k}\epsilon(\vetor k) \qquad\text{e}\qquad 
+		\hbar\dot{\vetor k}=\vetor F=-\cargaeletron(\vetor E+\vetor v\times\vetor B),
+		\end{equation*}
+		
+		\index{Forca@Força}
+		\index{Forca@Força!de Lorentz}
+		\index{Forca@Força!de espalhamento}
+		\noindent%
+onde $\epsilon(\vetor k)$ é a energia desse elétron, $\vetor r$ é o vetor de posição; $\vetor k$ o de onda e $\vetor F$ é a força de Lorentz. No caso de uma banda parabólica, onde $\epsilon(\vetor k)=\hbar^2\,k^2/(2\meff)$, obtemos a equação clássica do movimento de um elétron sujeito à força de Lorentz: $\dot{\vetor p}=\vetor F = -\cargaeletron\left(\vetor E + \vetor p/m\times\vetor B\right)$. Mas esta expressão não leva em conta as colisões (espalhamentos) desse elétron. Para fazermos isso, adicionamos a $\vetor F$ a assim rotulada \novotermo{força de espalhamento} ($-\vetor p/\bar\tau$), e obtemos~\cite{ashcroft}
+		\begin{equation}\label{eq:Lorentz}
+		\frac{d\vetor p}{dt}= -\cargaeletron\left(\vetor E + \frac{\vetor p}{m}\times\vetor B\right)-\frac{\vetor p}{\bar\tau}.
+		\end{equation}
+		
+		$1/\bar\tau$ é a probabilidade, por unidade de tempo, de ocorrer algum espalhamento (por qualquer que seja o mecanismo) \enfase{que prejudique} o fluxo de elétrons que dá origem à corrente elétrica ($j_x$ na figura~\ref{fig:efeito-Hall}).\footnote{Esse é um dos erros do modelo de Drude: Nele, $\bar\tau$ é o tempo médio entre duas colisões sucessivas, independentemente do resultado dessa colisão. Do ponto de vista quântico, entretanto, nem todo espalhamento prejudica a corrente elétrica (veja a discussão na seção~\ref{sec:efeito-SdH}, página~\pageref{sec:efeito-SdH}).} Conseqüentemente, $\vetor p/\bar\tau$ representa a taxa de variação do momento $\vetor p$ devido a todos esses mecanismos. Essas conclusões ainda são idênticas àquelas obtidas a partir da teoria de Drude. No entanto, a vantagem da presente formulação não reside aí, mas no fato de que agora podemos relacionar $\bar\tau$ com os diversos mecanismos de espalhamento possíveis (impurezas, defeitos, centros coulombianos, etc.) através da equação de Boltzmann:		
+		\index{Equacao@Equação!de Boltzmann}
+		\begin{equation}\label{eq:Boltzmann}
+		\frac{\partial f}{\partial t} + \dot{\vetor r}\cdot\vetor\nabla_{\vetor r}f + \dot{\vetor k}\cdot\vetor\nabla_{\vetor k}f
+			- \left(\frac{\partial f}{\partial t}\right)_\text{col.} = 0,
+		\end{equation}
+		
+		\index{Aproximacao@Aproximação!do tempo de relaxacao@do tempo de relaxação}
+		\index{Colisao@Colisão!Termo de}
+		\noindent%
+onde $f\equiv f(\vetor r,\vetor k,t)$ é a função de distribuição de Fermi-Dirac perturbada e a última parcela é o \novotermo{termo de colisão},\index{Termo de colisao@Termo de colisão} que descreve as variações de $f$ devido aos espalhamentos. De fato, o tempo de relaxação é uma aproximação (conhecida como \novotermo{aproximação do tempo de relaxação}) do termo de colisão para espalhamentos elásticos.\footnote{Nesses casos, $\bar\tau\equiv\bar\tau(\epsilon)$ e $\epsilon$ é a energia (inicial e final) desse processo.}	No caso do arseneto de gálio, sabe-se~\cite{look} que esta aproximação é aceitável para temperaturas inferiores a \unit{100}{\kelvin}, como é o nosso caso. Por conta disto, utilizaremos esta aproximação daqui para frente. Para temperaturas maiores que $100$ kelvin o principal mecanismo de espalhamento envolve fônons ópticos de altas energias e, por conseguinte, a aproximação do tempo de relaxação não se aplica.
+	
+	  Por simplicidade, tomemos $\vetor B=(0,0,B)$, $\vetor E=(E_x,E_y,0)$ (fig.~\ref{fig:efeito-Hall}) e determinemos $\vetor p$ a partir da equação~\eqref{eq:Lorentz} para o estado estacionário, dado pela condição $d\vetor p/dt=\vetor 0$ (ou seja, quando as forças elétrica, magnética e de espalhamento se equilibram e não mais modificam $\vetor p$). Encontramos\footnote{Isto deve ser feito escrevendo as três equações (componentes $x$, $y$ e $z$) separadamente, resolvendo-as para $p_x$, $p_y$ e $p_z$ (com $\dot p_x=\dot p_y=\dot p_z=0$: estado estacionário) e reescrevendo-as na forma vetorial.}
+		\begin{equation}\label{eq:Hall-microscopico}
+		\frac{\vetor p}{\meff} = \vetor v = 
+		-\frac{e}{\meff}\,\frac{\bar\tau}{1+\Omega^2\,\bar\tau^2}\,\left(
+			\begin{matrix}
+			1            & -\Omega\bar\tau & 0\\
+			\Omega\bar\tau & 1						 & 0\\
+			0            & 0             & 0
+			\end{matrix}\right)\vetor E,
+		\end{equation}
+		
+		\index{Landau!niveis de@níveis de}
+		\index{Frequencia@Freqüência}
+		\index{Frequencia@Freqüência!ciclotronica@ciclotrônica}
+		\noindent%
+onde a freqüência ciclotrônica $\Omega\doteq\cargaeletron\,B/\meff$ está associada com a formação dos chamados \novotermo{níveis de Landau}, que não aparecem explicitamente nesta formulação semi-clássica (veja a seção~\ref{sec:efeito-SdH}). 
+		
+		\index{Densidade!de corrente}
+		Nesta equação, o campo elétrico é acessível experimentalmente por intermédio da diferença de potencial entre os pontos B e C (região de interesse, fig.~\ref{fig:barra-Hall}), mas $\vetor v$ é uma incógnita. Para contornarmos isso, lembremo-nos de que a corrente elétrica --- mensurável --- deriva da velocidade de arrasto~\cite{look}:
+		\begin{equation}\label{eq:j}
+		\vetor j = -\frac{2}{(2\pi)^3}\int_{\vetor k}\cargaeletron\, \vetor v(\vetor k)\, f(\vetor k)\,d\vetor k
+						 = -n_{3D}\,\cargaeletron\frac{\int_{\vetor k} \vetor v(\vetor k)\,f(\vetor k)\,d\vetor k}{\int_{\vetor k} 
+						 	 f^0(\vetor k)\,d\vetor k},
+		\end{equation}
+		
+		\index{Concentracao@Concentração}
+		\index{Concentracao@Concentração!volumetrica@volumétrica}
+		\noindent%
+onde $f$ ($f^0$) é a função de distribuição de Fermi-Dirac \enfase{perturbada} (\enfase{não perturbada}) pela presença dos campos elétrico e magnético e pelos processos de espalhamento. Dito de outra forma, $f(\vetor k)$ é a probabilidade de o estado $\vetor k$ estar ocupado na presença dessas perturbações; $n_{3D}$ é a concentração volumétrica de elétrons na sub-banda em questão (lembre-se de que estamos considerando apenas uma); $\vetor j=(j_x,j_y,j_z)$ e o fator $2$ no numerador reflete a degenerescência de \foreign{spin} dos elétrons.
+		
+		Note que, a partir da expressão anterior, deixamos de ``olhar'' para apenas um elétron e passamos a considerar todos aqueles pertencentes à sub-banda que contribui para a condução. Isto decorre do sinal de integração. 
+				
+		A densidade de corrente é algo acessível experimentalmente e é possível unirmos~\eqref{eq:Hall-microscopico} e~\eqref{eq:j} de modo a obtermos um resultado prático. Tudo o que nos falta para conseguirmos isso é $f(\vetor k)$ que, a rigor, deve ser determinada a partir da equação~\eqref{eq:Boltzmann}. Alternativamente, podemos supor que as perturbações que levam a distribuição de Fermi-Dirac de $f^0(\epsilon(\vetor k))$ para $f(\vetor k)$ são pequenas e, neste caso, podemos obter $f(\vetor k)$ a partir de uma expansão de $f^0(\epsilon)$ em torno de $\vetor k=\vetor 0$:
+		\begin{align}
+		f(\vetor k) &\approx f^0(\epsilon) + \vetor k\cdot\vetor\nabla_{\vetor k}\,f^0(\epsilon)	\notag\\
+								&\approx f^0(\epsilon) + 2\epsilon\,\frac{\partial f^0}{\partial\epsilon}. \label{eq:g}
+		\end{align}
+		
+		Agora levamos~\eqref{eq:Hall-microscopico} e~\eqref{eq:g} até~\eqref{eq:j} e concluímos que
+		\begin{equation*}
+		\vetor j = -n_{3D}\,\cargaeletron\left\langle\vetor v\right\rangle, \qquad\text{com}\quad
+			\left\langle\xi(\epsilon)\right\rangle = \frac{\int_0^\infty \xi(\epsilon)\,\epsilon^{3/2}\,\frac{\partial f^0}{\partial\epsilon}\,d\epsilon}{\int_0^\infty \epsilon^{3/2}\,\frac{\partial f^0}{\partial\epsilon}\,d\epsilon}.
+		\end{equation*}
+		
+		\index{Energia de Fermi@Energia de Fermi ($\epsilon_F$)}
+		\index{Potencial quimico@Potencial químico ($\zeta$)}
+		Este resultado é muito parecido com aquele proposto por Drude ($\vetor j=-n_{3D}\,\cargaeletron\,\vetor v$), mas não passa da aparência: Agora cada elétron num orbital $\vetor k$ contribui diferentemente para a corrente elétrica de outro num orbital $\vetor k'$. Mais ainda: todos os experimentos de transporte elétrico deste trabalho foram executados a baixíssimas temperaturas (\unit{1,4}{\kelvin}) e, nesta situação, $\partial f^0/\partial\epsilon\approx-\delta(\epsilon-\epsilon_F)$, sendo $\epsilon_F$ a energia de Fermi.\footnote{Devido à baixa temperatura na qual trabalhamos, trataremos os conceitos de potencial químico ($\xi$) e energia de Fermi como sinônimos.} Conseqüentemente, $\left\langle\xi(\epsilon)\right\rangle\approx\xi(\epsilon_F)$ e, então, $\vetor j = -n_{3D}\,\cargaeletron\,\vetor v(\epsilon_F)$. Isto é, apenas os elétrons nas imediações do nível de Fermi ($\epsilon_F$) contribuem para a condução elétrica! Agora, trazemos~\eqref{eq:Hall-microscopico} para cá e concluímos que
+		\begin{equation}\label{eq:tensor-condutividade}
+		\vetor j =  \frac{n_{3D}\,\cargaeletron^2}{\meff}\,\frac{\bar\tau}{1+\Omega^2\bar\tau^2}\left(
+			\begin{matrix}
+			1            & -\Omega\bar\tau & 0\\
+			\Omega\bar\tau & 1						 & 0\\
+			0            & 0             & 0
+			\end{matrix}\right)\vetor E \doteq\left(
+			\begin{matrix}
+			\sigma_{xx}  & \sigma_{xy}   & 0\\
+			\sigma_{yx}  & \sigma_{yy}   & 0\\
+			0            & 0             & 0
+			\end{matrix}\right)\vetor E,
+		\end{equation}
+		onde $\bar\tau\equiv\bar\tau(\epsilon_F)$.
+		
+		Lembre-se de que, no início desta seção, dissemos que o movimento dos elétrons na direção $y$ (fig.~\ref{fig:efeito-Hall}) é limitado pelas dimensões da amostra e que o equilíbrio ocorrerá quando não houver mais fluxo de elétrons nesta direção, ou seja, quando $j_y=0$. Esta imposição nos leva a
+		\begin{align}
+		j_x &= \frac{\sigma_{xx}^2+\sigma_{xy}^2}{\sigma_{xx}}\,E_x	\qquad (j_y=0) \notag\\
+				&= \underbrace{n_{3D}\cargaeletron\overbrace{\frac{\cargaeletron\,\bar\tau}{\meff}}^{\bar\mu}}_{\sigma}\, E_x, \label{eq:jx}
+		\end{align}
+		
+		\index{Mobilidade!de transporte}
+		\index{Condutividade}
+		\index{Hall!Coeficiente}
+		\noindent%
+onde $\bar\mu\doteq\bar\mu(\epsilon_F)=\cargaeletron\bar\tau(\epsilon_F)/\meff$ é a {\bfseries mobilidade de transporte} e $\sigma$ é a {\bfseries condutividade} da amostra. Além disso, uma quantidade convenientemente definida é o {\bfseries coeficiente Hall}, $R_H\doteq E_y/(j_x\,B)$, que na mesma condição acima resulta
+		\begin{align}
+		R_H &= \frac{1}{B}\,\frac{\sigma_{xy}}{\sigma_{xx}^2+\sigma_{xy}^2} \qquad (j_y=0) \notag\\
+		    &= -\frac{1}{n_{3D}\,\cargaeletron}. \label{eq:RH}
+		\end{align}
+		
+		\subsection{Concentração de portadores e mobilidade de transporte}
+		
+		\index{Hall!Tensao@Tensão}
+		Supondo que $j_x$ seja uniforme na região de interesse (figura~\ref{fig:barra-Hall}), podemos escrever $j_x=I/(l_y\, l_z)$, sendo $I$ a corrente que percorre a amostra. Além disso, $V_H\approx l_y\, E_y$ (Lembre-se de que $E_y\doteq E_H$ no equilíbrio), onde $V_H$ é a diferença de potencial entre os pontos $B$ e $E$ na figura~\ref{fig:barra-Hall}, chamada de \novotermo{tensão Hall}. Então
+		\begin{equation*}
+		R_\text{H} \doteq\frac{E_y}{j_x\, B} = \frac{V_H/l_y}{I/(l_y\, l_z)\, B} = \frac{l_z\,V_H}{I\, B},
+		\end{equation*}
+		e fazendo-nos valer do resultado~\eqref{eq:RH}, segue que
+		\begin{equation}\label{eq:nH}
+		n \doteq n_{3D}\, l_z = -\frac{I\, B}{\cargaeletron\, V_H}	\qquad\qquad\text{(SI)}.
+		\end{equation}
+		
+		\index{Concentracao@Concentração!volumetrica@volumétrica}
+		\index{Concentracao@Concentração!bidimensional}
+		\index{Concentracao@Concentração!Hall}
+		\index{Hall!Concentracao@Concentração}
+		Perceba a diferença entre $n_{3D}$ e $n$: O primeiro é a concentração volumétrica de portadores na amostra, enquanto $n$, dita a {\bfseries concentração bidimensional} ou {\bfseries Hall}, já leva em consideração o fato de que os portadores estão confinados numa região de tamanho $l_z$ (na direção $z$). A rigor, este comprimento não é a espessura da amostra, como a figura~\ref{fig:efeito-Hall} pode sugerir, mas proporcional à extensão espacial da função de onda desses portadores na direção do confinamento.
+		
+		Assim, tudo o que temos de fazer para determinarmos $n$ é desenhar o gráfico $V_H\times B$ e ajustar-lhe uma reta:
+		\begin{equation}\label{eq:conc-H}
+		n = n_\text{ef} = \frac{0,624}{\text{coeficiente angular de $V_H\times B$}}, 
+		\end{equation}
+		
+		\index{Concentracao@Concentração!efetiva}
+		\noindent%
+com $[n]=\unit{\terad}{\centi\rpsquare\metre}$, $[I]=\unit{1}{\micro\ampere}$ (veja o capítulo~\ref{cap:instalacoes}), $[V_H]=\milli\volt$ e $[B]=\tesla$. O sinal negativo da equação~\eqref{eq:nH} pode ser ignorado completamente por que sabemos que os portadores de nossa amostra são elétrons.\footnote{Isto foi imposto durante o crescimento, quando dopamos com silício o GaAs(001): Veja a seção~\ref{sec:amostras-descricao}, página~\pageref{sec:amostras-descricao}.} Quando mais de uma sub-banda contribui para a condução, esta expressão dá a \novotermo{concentração efetiva} $n_\text{ef}$ de portadores da amostra (próxima seção). 
+				
+		Uma vez determinada a concentração, a mobilidade de transporte segue de $j_x$ (equação~\eqref{eq:jx}):
+		\begin{equation*}		
+		\underbrace{\rho=\frac{1}{\sigma}=R_{BC}\,\frac{l_y\,l_z}{l_x}}_{\text{segunda lei de Ohm}} \quad\Rightarrow\quad \frac{1}{n\,\cargaeletron\,\bar\mu}=R_{BC}\,\frac{l_y\,l_z}{l_x}
+			\quad\Rightarrow\quad \frac{l_x}{l_y}\,\frac{1}{\underbrace{(n_{3D}\,l_z)}_{n}\,\cargaeletron\,R_{BC}}=\bar\mu
+		\end{equation*}
+		e, como $R_{BC}=V_{BC}/I$ é a resistência entre os pontos $B$ e $C$ \enfase{em campo nulo},
+		\begin{equation}\label{eq:mobil-H}
+		\bar\mu = \bar\mu_\text{ef} = \frac{I\,(l_x/l_y)}{n\,e\,V_{BC}} = \frac{15\,605,49}{n\,V_{BC}},
+		\end{equation}
+		
+		\index{Mobilidade!efetiva}
+		\noindent%
+com $[\bar\mu]=\centi\squaren\metre\per\volt\cdot\second$, $[I]=\unit{1}{\micro\ampere}$, $[n]=\unit{\terad}{\centi\rpsquare\metre}$ e $[V_{BC}]=\milli\volt$. $l_x=\unit{500}{\micro\metre}$ e $l_y=\unit{200}{\micro\metre}$ na barra-Hall utilizada (veja a figura~\ref{fig:barra-Hall}). $\bar\mu_{ef}$ é a \novotermo{mobilidade efetiva} (a seguir).
+		
+		\index{Aproximacao@Aproximação!da banda parabolica@da banda parabólica}
+		\index{Brillouin!primeira zona}
+		Tudo o que fizemos até aqui (e tudo o que vier a seguir) foi realizado para uma banda parabólica ($\epsilon(\vetor k)=\hbar^2k^2/(2\meff)$) ou, mais precisamente, na {\bfseries aproximação da banda parabólica}, e não é difícil ver por que isso foi possível: Suponha, por um instante, que de fato nossas sub-bandas sejam parabólicas. Então, a relação entre o vetor de onda de Fermi e a concentração de portadores no caso de sistemas bidimensionais como o nosso (veja o capítulo~\ref{cap:resultados}) é $\vetor k_F^2=2\,\pi\,n$. Por outro lado, o vetor do espaço recíproco que define os limites da primeira zona de Brillouin ($\vetor k_B$) tem módulo aproximadamente igual $\pi/a$, onde $a$ é o parâmetro de rede. No nosso caso, especificamente, $a\approx\unit{5}{\centi\power{\metre}{-8}}$ e veremos que as concentrações são da ordem de \unit{\terad}{\centi\rpsquare\metre}. Então
+		\begin{equation*}
+		\frac{k_B}{k_F} \approx \frac{\pi/a}{\sqrt{2\,\pi\,n}} \approx 25.
+		\end{equation*}
+		
+		Destarte, o nível de Fermi está próximo do fundo da banda ($\vetor k=\vetor 0$) e podemos aproximá-la (a banda) por uma série de Taylor em torno de $\vetor k=\vetor 0$, o que corresponde à aproximação da banda parabólica.
+		
+		\subsection[Condução em várias sub-bandas:\\Concentração e mobilidade efetivas]{Condução em várias sub-bandas: Concentração e mobilidade efetivas}\label{sec:conc-mobil-ef}
+		
+		A densidade de corrente dada pela equação~\eqref{eq:j} refere-se a uma sub-banda apenas, conforme procuramos deixar claro desde o início. Isto significa que os resultados obtidos na seção anterior referem-se aos processos de condução elétrica que ocorrem devido à contribuição de apenas uma sub-banda. No entanto, este não costuma ser o caso, especialmente em heteroestruturas como a nossa, onde o confinamento dos portadores dá origem a um conjunto de estados (sub-bandas) que não pode ser interpretado como um \foreign{quasi}-contínuo, à imagem do que se costuma fazer com as bandas de valência e condução nos \foreign{bulks}. Então, para levarmos em consideração esta nova realidade precisamos somar a densidade de corrente $\vetor j_s$ (devido à $s$-ésima sub-banda) em todas as sub-bandas ocupadas, assim:
+		\begin{equation*}
+		\vetor j = -\frac{2}{(2\pi)^3}\sum_{s}\int\limits_{\vetor k}\cargaeletron\,\vetor v_s(\vetor k)\, f_s(\vetor k)\,d\vetor k.
+		\end{equation*}
+						
+		\index{Concentracao@Concentração!efetiva}
+		\index{Mobilidade!efetiva}
+		Com isso, ao invés de fornecerem a concentração e a mobilidade de transporte de \enfase{uma} sub-banda, as equações~\eqref{eq:conc-H} e~\eqref{eq:mobil-H} dão a concentração ($n_\text{ef}$) e a mobilidade de transporte ($\bar\mu_\text{ef}$) \enfase{efetivas}, respectivamente. Então, \eg, se a condução elétrica em um material ocorre através de $5$ sub-bandas, cada qual com concentração $n_s$ e mobilidade de transporte $\bar\mu_s$, este material comportar-se-á como se a condução ocorresse por intermédio de apenas uma sub-banda com concentração de portadores $n_\text{ef}$ (dada pela equação~\eqref{eq:conc-H}) e mobilidade de transporte $\bar\mu_\text{ef}$ (dada por~\eqref{eq:mobil-H}). Além do mais, podemos mostrar que~\cite{look,schubert}
+		\begin{equation}\label{eq:conc+mobil-eff}
+		n_\text{ef} = \frac{\left(\sum_s n_s\,\bar\mu_s\right)^2}{\sum_s n_s\,\bar\mu_s^2}	\qquad\text{e}\qquad
+		\bar\mu_\text{ef} = \frac{\sum_s n_s\,\bar\mu_s^2}{\sum_s n_s\,\bar\mu_s}.
+		\end{equation}
+		
+		\index{Magnetoresistividade!negativa}
+		As concentrações e mobilidades de transporte de cada sub-banda não são diretamente mensuráveis pelo método do efeito Hall (que fornece apenas $n_\text{ef}$ e $\bar\mu_\text{ef}$), mas podem ser obtidas algebricamente quando apenas \enfase{duas} sub-bandas participam da condução~\cite{look}. Visando resolver este problema, em 1987 Beck e Anderson~\cite{beck} propuseram um espectro de mobilidades e concentrações capazes de determinarem as mobilidades e concentrações de estruturas com mais de duas sub-bandas a partir de medidas do efeito Hall. Mas infelizmente não poderemos utilizar nem um nem outro método: Primeiro por que, conforme veremos no capítulo~\ref{cap:resultados}, nossas amostras possuem três sub-bandas ocupadas; E segundo por que elas apresentam um comportamento conhecido como \novotermo{magnetoresitividade negativa}~\cite{bakarov,bykov,mirlin}, um efeito não considerado por Beck e Anderson. Em verdade, na maioria das medidas efetuadas não seremos capazes de determinar $\bar\mu_s$, tendo de nos contentar com $\bar\mu_\text{ef}$.
+		
+		\index{Tempo!de relaxacao@de relaxação}
+		\index{Mobilidade!de transporte}
+		Finalmente, um pequeno comentário acerca da notação utilizada: A barra indica quantidades relacionadas ao transporte elétrico e visa distinguir o tempo de relaxação ($\bar\tau_s$) e a mobilidade de transporte ($\bar\mu_s$), obtidos do efeito Hall, do tempo de espalhamento ($\tau_s$) e da mobilidade quântica ($\mu_s$), obtidos do efeito Shubnikov-de Haas (próxima seção). O índice ``$s$'' designa a sub-banda. Os tempos de espalhamento e relaxação e as mobilidades quânticas e de transporte são, essencialmente, equivalentes, já que $\mu_s\doteq\cargaeletron\tau_s/\meff_s$ e $\bar\mu_s\doteq\cargaeletron\bar\tau_s/\meff_s$. Note ainda que não existe uma tal diferenciação no caso das concentrações de portadores e que, por isso, não há sentido em colocarmos uma barra em $n_s$ e $n_\text{ef}$.
+	
+	%-------------------------------------------------------------------------------------
+	%	O efeito Shubnikov-de Haas
+	%-------------------------------------------------------------------------------------
+	\section{O efeito Shubnikov-de Haas}\label{sec:efeito-SdH}
+	
+	\index{Landau!niveis de@níveis de}
+	\index{Shubnikov!Lev Vasiljevich}
+	\index{de Haas!Wander Johannes}
+	\index{de Haas!Efeito Shubnikov-}
+	\index{Efeito!Shubnikov-de Haas}
+	\index{Shubnikov!-de Haas, efeito}
+	Além do fenômeno Hall, uma outra conseqüência da aplicação de um campo magnético sobre um gás de elétrons é a formação dos chamados {\bfseries níveis de Landau}, os quais dão origem às oscilações de resistividade (ou condutividade) alcunhadas de efeito Shubnikov-de Haas, descoberto em 1920 por Lev Vasiljevich Shubnikov e Wander Johannes de Haas (em colaboração).
+	
+	\index{Larmor!raio de}
+	Basicamente, os níveis de Landau são estados de um oscilador harmônico simples cuja freqüência é a ciclotrônica ($\Omega_s=\cargaeletron B/\meff_s$, onde ``$s$'' identifica a $s$-ésima sub-banda): Na seção~\ref{sec:efeito-Hall}, vimos que os elétrons que percorrem a região de interesse (figura~\ref{fig:barra-Hall}) são defletidos transversalmente à corrente elétrica ($j_x$) pela força magnética. Isto ocorre segundo um arco de circunferência de raio $r_s=p_s/(\cargaeletron\,B)=v/\Omega_s$ (raio de Larmor). Quando $B$ é suficientemente intenso, este raio torna-se menor que a dimensão $l_y$ da amostra, a órbita se fecha (fig.~\ref{fig:raio-Larmor}) dentro dela e um oscilador harmônico se forma. Conseqüentemente, a formação dos níveis de Landau está condicionada à relação $l_y\gg r_s$. No nosso caso, $l_y=\unit{200}{\micro\metre}$ e $v=v_F=\hbar k_F=\hbar\sqrt{2\pi\,n}$ ($n$ é a concentração bidimensional de elétrons), de sorte que o campo magnético mínimo necessário para que ocorra a formação dos níveis de Landau é de \unit{20}{G}. Embora este seja um campo intenso (o da Terra é \unit{0,3}{G} no equador), esta condição é satisfeita em praticamente todos os valores de campo investigados (entre zero e $\unit{10}{\tesla}=\unit{\power{10}{4}}{G}$) e iremos ignorá-la daqui para frente.
+
+	\begin{figure}[tb]
+		\begin{minipage}[c]{0.45\textwidth}
+			\centering
+			\psfrag{B}[][]{\LARGE $B$}
+			\psfrag{jx}[][]{\LARGE $j_x$}
+			\psfrag{rl}[][]{\LARGE $r_s$}
+			\psfrag{x}[][]{\LARGE $x$}
+			\psfrag{y}[][]{\LARGE $y$}
+			\psfrag{e}[][]{\LARGE $\cargaeletron^-$}
+			\psfrag{c}[][]{\colorbox{white}{\LARGE $l_y$}}
+			\resizebox{\textwidth}{!}{\includegraphics{figuras/raio-Larmor.eps}}			
+		\end{minipage}\hfill
+		\begin{minipage}[c]{0.50\textwidth}
+			\caption{\footnotesize\label{fig:raio-Larmor} Em baixos campos magnético (à esquerda), a órbita ciclotrônica dos elétrons na amostra não se fecha dentro da amostra e, nesta situação, os níveis de Landau não se formam coerentemente. No entanto, como $r_s\propto1/B$, quando $B$ é suficientemente intenso (à direita), $r_s$ torna-se menor que $l_y$, a órbita se fecha dentro da amostra e a formação dos níveis de Landau ocorre coerentemente.}
+		\end{minipage}
+	\end{figure}
+
+	Uma vez formados os níveis de Landau, o conjunto de números quânticos que descrevem os estados do \textsc{2deg} muda de $(s,\vetor k)$\footnote{Lembre-se de que $\vetor k=(k_x,k_y,k_z)$.} para $(s,l,k_z)$:
+	\begin{center}
+	\vspace{1ex}
+	\begin{tabular}{ccc}
+		$B=0$ (\textsc{2deg}) && $B\ne 0$ (níveis de Landau) \\
+		\hline
+		 \rule[-17pt]{0pt}{40pt}$\displaystyle\epsilon_s(\vetor k) = \epsilon_s + \frac{\hbar^2\vetor k^2}{2\meff_s}$	& $\longrightarrow$ & $\displaystyle\epsilon_{s,l}(k_z) = \epsilon_s + \left(l+\frac{1}{2}\right)\hbar\Omega_s + \frac{\hbar^2k_z^2}{2\meff_s}$\\
+		\hline			
+	\end{tabular}
+	\vspace{1ex}	
+	\end{center}
+		
+	Aí, $\epsilon_s$ é a energia de fundo de banda da $s$-ésima sub-banda e $l=0,1,2,\ldots$ identifica um nível de Landau. $k_z$ não se altera com a aplicação do campo pois $\vetor B\parallel\vetor k_z$ e, além disso, podemos considerá-lo nulo ($k_z=0$) por que não há fluxo de elétrons nesta direção (no estado estacionário), posto que as funções de onda estão confinadas em $z$ (veja o capítulo~\ref{cap:resultados} para maiores detalhes) e que não há campo elétrico nesta direção.\footnote{Ou seja, não há força agindo sobre os elétrons na direção $z$.}
+	
+	\index{Landau!niveis de@níveis de!degenerescencia@degenerescência}
+	\index{Landau!niveis de@níveis de!depopulação@depopoulação}
+	\index{Landau!niveis de@níveis de!desocupacao@desocupação}
+	\index{Fator de preenchimento}
+	Os níveis de Landau possuem degenerescência $D=2\cargaeletron B/h$ (por unidade de área)~\cite{ashcroft,kittel,ridley}. onde $h$ é a constante de Planck. Ora, se uma sub-banda qualquer possui $n_s$ elétrons, serão necessários $\eta=n_s/D$ níveis de Landau para acomodá-los todos (diz-se que $\eta$ é o \novotermo{fator de preenchimento}). Agora, note que a degenerescência é uma função linear do campo e, portanto, que cresce conforme aumentamos $B$. Como $n_s$ permanece constante,\footnote{Supõe-se que a perturbação causada pela aplicação do campo magnético não é suficiente para alterar a estrutura de bandas do material. Aliás, decorre daí também o fato de a expressão anterior não apresentar variação na forma como nos referimos às sub-bandas (indice $s$).} o número de níveis de Landau necessário para instalá-los diminui à medida que aumentamos o campo magnético, ou seja, o fator de preenchimento diminui à medida que aumentamos $B$. Este fenômeno é conhecido como \novotermo{depopulação dos níveis de Landau}. 
+
+	
+	\index{Efeito!Shubnikov-de Haas}
+	\index{Shubnikov!-de Haas, efeito}
+	\index{Efeito!de Haas-van Alphen}
+	Mas isto não é só: O \foreign{gap} de energia entre dois níveis de Landau consecutivos é $\hbar\Omega_s$ e também cresce com o campo (pois $\Omega_s=\cargaeletron B/\meff_s$). Assim, o campo magnético tende a reduzir a energia do sistema por intermédio da depopulação dos níveis e, simultaneamente, aumentá-la, por conseqüência do aumento do \foreign{gap} de energia. Esses dois fenômenos estão ilustrados na figura~\ref{fig:Landau-levels} e dão origem aos efeitos Shubnikov-de Haas (oscilações de resistividade) e de Haas-van  Alphen (oscilações do momento magnético): Nesta figura, as linhas tracejadas representam a evolução dos níveis de Landau com o campo e os traços horizontais cheios identificam-lhes em três situações de grande interesse (a seguir). Os pontilhados horizontais denotam os meios de \foreign{gap} e $\zeta$ é o potencial químico (ou energia de Fermi), mantido fixo por todo o volume da amostra (e não só pela região-ativa); A degenerescência ($D$) está representada pelo comprimento dos níveis e os círculos escuros são os elétrons.
+	
+	\begin{figure}[Htb]
+		\begin{minipage}[c]{0.57\textwidth}
+		\centering
+		\psfrag{n}[][]{$l$}
+		\psfrag{n+1}[][]{$l+1$}
+		\psfrag{n+2}[][]{$l+2$}
+		\psfrag{n+3}[][]{$l+3$}
+		\psfrag{n-1}[][]{$l-1$}
+		\psfrag{n-2}[][]{$l-2$}
+		\psfrag{n-3}[][]{$l-3$}
+		\psfrag{hw}[l][l]{$\hbar\Omega_s$}
+		\psfrag{B}[][]{$B$}
+		\psfrag{B0}[][]{$B_0$}
+		\psfrag{B1}[][]{$3B_0/2$}
+		\psfrag{B2}[][]{$2B_0$}
+		\psfrag{D}[][]{$D$}
+		\psfrag{D0}[][]{$D_0$}
+		\psfrag{D1}[][]{$3D_0/2$}
+		\psfrag{D2}[][]{$2D_0$}
+		\psfrag{En}[][]{\colorbox{white}{\large $\left(l+\frac{1}{2}\right)\frac{\hbar\,\cargaeletron}{\meff_s}B$}}
+		\psfrag{EF}[][]{\LARGE $\zeta$}
+		\resizebox{\textwidth}{!}{\includegraphics{figuras/Landau-levels.eps}}
+		\end{minipage}\hfill
+		\begin{minipage}[c]{0.40\textwidth}
+\caption{\footnotesize\label{fig:Landau-levels} Níveis de Landau e sua relação com o efeito Shubnikov-de Haas: As linhas tracejadas evidenciam a dependência linear da energia do $l$-ésimo nível de Landau com o campo magnético e as linhas cheias horizontais identificam-lhes em três situações de grande interesse para a compreensão do efeito Shubnikov-de Haas (veja o texto). O eixo $D$ na parte inferior é a degenerescência, que também cresce com o campo magnético; Ela também é representada pelo comprimento dos níveis. $\zeta$ é o potencial químico e os círculos representam os elétrons. Note que a quantidade de elétrons não se mantém constante nas três situações ilustradas. Isto ocorre simplesmente por que esta representação não apresenta \enfase{todos} os níveis ocupados, desde $l=0$.}	
+	\end{minipage}
+	\end{figure}	
+	
+	A explicação completa do efeito Shubnikov-de Haas baseia-se na solução da equação de Schrödinger independente do tempo
+	\begin{equation}\label{eq:schroedinger}
+	\mathcal{H}_0\,\Psi(\vetor r) = \epsilon\Psi(\vetor r), \qquad\text{com }\mathcal{H}_0=\frac{1}{2\meff}(\vetor p + 
+		\cargaeletron\vetor A)^2 - \cargaeletron\,\phi,
+	\end{equation}
+	sendo $\vetor A$ e $\phi$ os potenciais vetor e escalar, respectivamente: $\vetor B=\vetor\nabla\times\vetor A$ (no gauge $\vetor\nabla\cdot\vetor A=0$) e $\vetor E=-\vetor\nabla\phi$. $\vetor p$ é o momento mecânico. Além de ser instrutivo, este caminho traz à tona a relação entre este fenômeno e o efeito Hall. Mas não vamos segui-lo aqui por que é demasiadamente complexo; fora do alcance deste trabalho. Ao invés disso, daremos uma descrição qualitativa simples que serve para compreender os aspectos fundamentais. Feito isso, partiremos da expressão completa da resistividade (obtida da equação acima) em busca de um método experimental de obtermos as concentrações e mobilidades quânticas das sub-bandas envolvidas nas oscilações. Ao leitor interessado no percurso completo recomendamos consultar o capítulo 7 da referência~\cite{ridley}.
+
+	\index{Densidade!de estados}
+	Na seção~\ref{sec:efeito-Hall} mostramos que a densidade de corrente elétrica que percorre a amostra é proporcional à velocidade dos elétrons \enfase{no nível de Fermi}: $\vetor j\propto\vetor v(\epsilon_F)$, isto é, somente os elétrons nas imediações do nível de Fermi contribuem para a condução elétrica. Naquela ocasião, as sub-bandas eram um \foreign{quasi}-contínuo de estados e sempre era possível termos $\meff_s/(\pi\hbar^2)$ elétrons (densidade de estados de um gás bidimensional de elétrons) no nível de Fermi, qualquer que fosse essa energia. Mas agora, com a aplicação do campo magnético, a densidade de estados deixa de ser constante (característica de \textsc{2deg}s) e torna-se discreta, com picos em $\epsilon_{s,l}$: Não há estados disponíveis entre dois níveis de Landau e podemos dizer, grosso modo, que a densidade de estados é uma função delta de Dirac:\footnote{A rigor, o perfil da densidade de estados é uma lorentziana, cuja largura está associada à mobilidade quântica, conforme explicaremos mais a frente no texto.} $D \sum_{l<\eta} \delta(\epsilon-\epsilon_{s,l})$, onde $D=2\cargaeletron B/h$ é a degenerescência dos níveis de Landau e $\eta$ é o fator de preenchimento.\footnote{Lembre-se de que $\eta=n_s/D$ e, conseqüentemente, de que qualquer nível de Landau com $l>\eta$ estará desocupado, daí a somatória ser limitada aos $l<\eta$.} Assim, quando o nível de Fermi está precisamente sobre um nível de Landau (situação $B=B_0$ na figura~\ref{fig:Landau-levels}), temos portadores e disponibilidade de estados no nível de Fermi e a condução elétrica ocorre plenamente: A condutividade (resistividade) experimenta um máximo (mínimo). Mas à medida que aumentamos o campo magnético, a energia desse nível ultrapassa $\zeta$ (já que $\epsilon_{s,l}\propto B$) e ele começa a ser depopulado (situação $B=3B_0/2$). Com isso, diminui a disponibilidade de \enfase{estados} nas imediações da energia de Fermi e a condução é prejudicada. A condutividade (resistividade) cai (cresce) até que o nível de Fermi esteja a meio-caminho de dois estados de Landau ($B=2B_0$): Nesta situação, a quantidade de estados nas imediações do nível de Fermi é mínima (ou nula) e a condutividade (resistividade) também é mínima (máxima). Agora, aumentar o campo magnético tem efeito contrário: A condutividade melhora por que o nível de Landau imediatamente abaixo ($l-1$ na figura~\ref{fig:Landau-levels}) passa a se aproximar do de Fermi e tudo o que foi descrito acima se repete. Destarte, a condutividade (e a resistividade) da amostra oscila conforme variamos $B$. Mais que isso, esta oscilação é periódica em $1/B$ e sua freqüência é proporcional à concentração de portadores dessa sub-banda: Teremos um máximo (mínimo) na condutividade (resistividade) sempre que $\zeta=(l+\tfrac{1}{2})\hbar\Omega_s$. Mas como $\meff_s\zeta=\tfrac{1}{2}\hbar^2\vetor k_F^2=\tfrac{1}{2}\hbar^2(2\pi\,n_s)$, podemos escrever
+	\begin{equation}\label{eq:conc-SdH-1subbanda}
+	\frac{1}{B_l} = \left(l+\frac{1}{2}\right)\frac{2\,\cargaeletron}{n_s\,h}.
+	\end{equation}
+	
+	Ou seja, o gráfico $1/B_l\times l$ (onde $B_l$ são os valores de campo que correspondem a mínimos de resistividade) é uma reta e de seu coeficiente angular podemos tirar imediatamente a concentração de portadores ($n_s$). Note que não é necessário sabermos a que $l$ corresponde um determinado mínimo da resistividade para fazermos isto, pois um erro constante em $l$ acarretará numa alteração do coeficiente linear do gráfico, que é irrelevante para o nosso propósito; o importante é saber numerar os mínimos: $l$ cresce à medida que $1/B$ cresce.
+	
+	Da expressão acima é também possível verificar que as ocilações de resistividade (e de condutividade) são periódicas em $1/B$:
+	\begin{equation*}
+	\frac{1}{B_l} - \frac{1}{B_{l-1}} = \left[\left(l+\frac{1}{2}\right)-\left(l-1+\frac{1}{2}\right)\right]\,\frac{2\,
+	\cargaeletron}{n_s\,h} = \frac{2\,\cargaeletron}{n_s\,h},
+	\end{equation*}
+	onde $B_l$ é a intensidade do campo magnético associado ao máximo de condutividade devido à superposição do $l$-ésimo nível de Landau ao nível de Fermi. Portanto, o período das oscilações SdH é $2\,\cargaeletron/(n_s\,h)$ e,  por conseguinte, a freqüência das oscilações de resistividade é $\nu_s=n_s\,h/(2\,\cargaeletron)$.	Isto é o efeito Shubnikov-de Haas!
+	
+	\index{Magnetoresistividade}
+	Apesar de dar resultados corretos, a equação~\eqref{eq:conc-SdH-1subbanda} é insatisfatória quando mais de uma sub-banda está presente por que as oscilações se sobrepõem. Neste caso, precisamos de um método melhor: A solução do problema~\eqref{eq:schroedinger}, aliado aos processos de espalhamento, influências da temperatura e do \foreign{spin} do elétron, conforme apresentado no capítulo 7 da referência~\cite{ridley} (um texto alternativo é~\cite{isihara}), permite-nos escrever a \novotermo{magnetoresistividade} de um gás bidimensional de elétrons como
+	\begin{equation}\label{eq:n-osc+osc}
+	\rho\left(\frac{1}{B}\right) = 
+			\rho_\text{n-osc} + 
+					\sum_s K_s \, \overbrace{\frac{2\pi^2\,s\,\boltzmann T/\hbar\Omega_s}{\sinh\left(2\pi^2\,s\,\boltzmann
+						 T/\hbar\Omega_s\right)}}^{(3)} \,\underbrace{\rule[-10pt]{0pt}{10pt} e^{-\alpha_k/B}}_{(2)} \, \overbrace{\cos\left(\frac{\omega_s}{B}+\phi_s\right)}^{(1)}.
+	\end{equation}\index{Magnetoresistividade}
+	
+	\index{Mobilidade!quantica@quântica}
+	\index{Concentracao!de portadores}
+	$\mu_s$ ($\alpha_s=\pi s/\mu_s$) e $n_s$ ($\omega_s=2\pi\nu_s=\pi\,h\,n_s/\cargaeletron$) são a \novotermo{mobilidade quântica} e a concentração da $s$-ésima sub-banda, respectivamente; $K_s$ é uma constante, $\phi_s$ é uma fase e a somatória é feita sobre todas as sub-bandas ocupadas; $\rho_\text{n-osc}$ é uma parcela não oscilatória.	
+
+	\index{Landau!niveis de@níveis de!alargamento}	
+	O termo (1) representa a oscilação de resistividade conforme descrita há pouco: É o efeito Shubnikov-de Haas propriamente dito. Já (2) denota o alargamento dos níveis de Landau devido aos espalhamentos e (3) resulta da influência da temperatura. Finalmente, a constante $K_s$ engendra, dentre outros fatores de menor importância, o efeito do \foreign{spin} do elétron.
+		
+	No nosso caso, $(3)$ é aproximadamente igual a $1$ por que a temperatura em que trabalhamos é muito baixa: \unit{1,4}{\kelvin}. Além disso, objetivando reduzir a influência da parte não oscilatória ($\rho_\text{n-osc}$), podemos tomar a $r$-ésima derivada de $\rho$ com relação a $1/B$:
+	\begin{gather}
+		\rho^{(r)}(t) = \sum_s K_s \left(\alpha_s^2 + \omega_s^2\right)^\text{r/2} \, e^{-\alpha_s\,t} \, 					
+				\cos\left(\omega_s\,t+\theta_s\right), \label{eq:rho} \\
+						\theta_s = \phi_s + r\cdot\arctan\left(\omega_s/\alpha_s\right). \notag
+	\end{gather}
+	
+	Fizemos $t\doteq 1/B$ para simplificar a visualização e o tratamento que faremos logo mais.
+	
+	\subsection{As concentrações das sub-bandas}\label{sec:conc-SdH}
+	
+	\index{Transformada!de Fourier}
+	Uma maneira simples e direta de obtermos cada uma das concentrações $n_s$ (associadas a cada sub-banda ocupada do \textsc{2deg}) é aplicar uma transformada de Fourier (\textsc{tf}) em~\eqref{eq:rho} (tomando $t\doteq1/B$ como o domínio do tempo). A representação desta equação no domínio da freqüência, resultado da \textsc{tf}, é um pico em cada uma das freqüências $\nu_s$ (veja o apêndice~\ref{ap:CFT}). Mas $n_s$ e $\nu_s$ estão relacionados (observe o argumento do cosseno em~\eqref{eq:rho} e a definição de $\omega_s$) por $\nu_s=n_s\,h/2\cargaeletron$ (haja vista que $\omega=2\pi\nu$), o que nos permite escrever
+	\begin{equation}\label{eq:conc-SdH}
+		n_s = 0,048\,36\cdot \nu_s,	\qquad\qquad	[n_s]=\unit{\terad}{\centi\rpsquare\metre} \text{ e } [\nu_s]=\reciprocal\tesla.
+	\end{equation}
+	
+	Assim, tudo o que devemos fazer para determinarmos $n_s$ é aplicar uma transformada de Fourier ao gráfico $\rho^{(r)}\times B^{-1}$, determinar as posições $\nu_s$ dos picos (tantos quantos forem as sub-bandas ocupadas) e aplicá-las na equação~\eqref{eq:conc-SdH}.
+	
+	Neste ponto, convidamos o leitor a retornar à discussão feita sobre a equação~\eqref{eq:conc-SdH-1subbanda} e compará-la com este novo resultado, que independe do número de sub-bandas ocupadas.
+
+	\index{Mobilidade!quantica@quântica}
+	\subsection{As mobilidades quânticas das sub-bandas}\label{sec:mobil-SdH}
+	
+	\index{Principio@Princípio!de Heisenberg}
+	\index{Principio@Princípio!da incerteza}
+	\index{Landau!niveis de@níveis de!largura natural}
+	\index{Landau!niveis de@níveis de!alargamento}
+	\index{Tempo!de espalhamento}
+	Graças ao princípio de Heisenberg, as energias de Landau apresentam uma incerteza de $\hbar/2\tau_s$ que se manifesta alargando os níveis:\footnote{Do princípio da incerteza, $\Delta\epsilon\,\Delta t\approx\hbar/2$ e, conseqüentemente, $\Delta\epsilon\approx \hbar/2\tau_s$ ($\tau_s\doteq\Delta t$).} a chamada \novotermo{largura natural} dos níveis de Landau. $1/\tau_s$ é a taxa de espalhamento (e, conseqüentemente, $\tau_s$ é o \novotermo{tempo de espalhamento}) de um elétron, desde um estado com energia $\epsilon_{s,l}$ (nível de Landau) para outro com energia ligeiramente distinta (da ordem de $\hbar/2\tau_s$). Este alargamento é representado pela exponencial na equação~\eqref{eq:rho} e é através dele que podemos determinar $\tau_s$ ou, equivalentemente, a \novotermo{mobilidade quântica} $\mu_s\doteq\cargaeletron\,\tau_s/\meff_s$. 
+		
+	É instrutivo notar que $\mu_s$ só é possível de se avaliar por causa do princípio da incerteza, não pelo efeito Shubnikov-de Haas propriamente dito (representado pelo cosseno nas expressões acima). Ou melhor, avaliar as mobilidades quânticas é equivalente a verificar este que é um dos princípios mais controversos da Mecânica Quântica. Por outro lado, se a estrutura cristalina fosse perfeita não haveria espalhamento e $\tau_s\!\to\!\infty$. Mas $\Delta\epsilon\tau_s$ é finito e, conseqüentemente, $\tau_s$ deve ser finito. Logo, a estrutura cristalina não pode ser perfeita! De fato e, em verdade, $\tau_s$ é também uma medida da imperfeição do material, como mostra a equação~\eqref{eq:def-tau}, a seguir.
+	
+	Outro aspecto importante de se compreender é a diferença entre o \enfase{tempo de espalhamento} ($\tau_s$) e o de \enfase{relaxação} ($\bar\tau_s$), que aparece na definição da mobilidade de transporte (página~\pageref{eq:jx}): O primeiro é uma medida da probabilidade (e da taxa) de um elétron ser espalhado; só isso. O segundo importa-se apenas com os espalhamentos que prejudicam o transporte elétrico. Isso é mais fácil de entender escrevendo-os matematicamente:\footnote{Veja as referências \cite{sarma}, \cite[cap. 16]{ashcroft}, \cite[seção 39.2]{abrikosov} e \cite[seção 7.3]{ziman}.}		
+		\begin{equation}\label{eq:def-tau}
+		\begin{aligned}
+			\frac{1}{\tau_s(\vetor k)} &= \sum_{\vetor k\ne \vetor k'} W_{\vetor k,\vetor k'} & &= \frac{1}{(2\pi)^3}\int W_{\vetor k,\vetor 
+				k'}\,d\vetor k'	\qquad\text{e}\qquad \\
+			\frac{1}{\bar\tau_s(\vetor k)} &= \sum_{\vetor k\ne\vetor k'} W_{\vetor k,\vetor k'}\,\left(1-\hat{\vetor k}\cdot\hat{\vetor 
+				k'}\right) & &= \frac{1}{(2\pi)^3}\int W_{\vetor k,\vetor k'}\,\left(1-\hat{\vetor k}\cdot\hat{\vetor k}'\right)\,d\vetor k'.
+		\end{aligned}
+		\end{equation}
+	
+	$W_{\vetor k,\vetor k'}$ é a probabilidade, por unidade de tempo, de a transição (espalhamento) $\vetor k \! \to \! \vetor k'$ ocorrer. Por esta forma, $1/\tau_s$ é a probabilidade de um elétron transitar de seu estado atual ($\vetor k$) para \enfase{qualquer} outro acessível ($\vetor k'$). O tempo de relaxação é exatamente a mesma coisa, exceto que $W_{\vetor k,\vetor k'}$ é ponderada pelo ângulo $\cos\theta=\hat{\vetor k}\cdot\hat{\vetor k'}$: $1/\bar\tau_s$ prefere espalhamentos com $\theta$ grande.
+	
+	\begin{figure}[htb]
+		\centering
+		\psfrag{a}[][]{$\vetor E$}
+		\psfrag{b}[][]{(a)}
+		\psfrag{c}[][]{{\color{red}(b)}}
+		\psfrag{d}[][]{$\theta$}
+		\psfrag{e}[][]{$\vetor p=\hbar\vetor k$}
+		\resizebox{0.5\textwidth}{!}{\includegraphics{figuras/espalhamento.eps}}
+		\caption{\footnotesize\label{fig:espalhamento}As colisões do tipo (a) ilustram espalhamentos que pouco contribuem para o (inverso do) tempo de relaxação ($\bar\tau_s$): Nestes casos, o ângulo $\theta$ é pequeno e, portanto, $1/\bar\tau_s \to 0$, embora $1/\tau_s$ seja finito (veja as equações~\eqref{eq:def-tau}); Por outro lado, os espalhamentos do tipo (b) representam espalhamentos que prejudicam o estado atual de condução elétrica: Agora, $\theta$ é grande e, conseqüentemente, $1/\bar\tau_s$ \enfase{e} $1/\tau_s$ são finitos! Os pontos pretos são os centros espalhadores (impurezas, defeitos, etc.), $\vetor E$ é o campo elétrico e note que todos esses espalhamentos são elásticos pois conservam $|\vetor p|$.}		
+	\end{figure}		
+	
+	
+	Para entender isso, suponha que todos os espalhamentos são para frente, ou seja, que $\theta=0$ (fig.~\ref{fig:espalhamento}). Neste caso, a existência de um tal mecanismo de espalhamento não modifica um estado estacionário de condução elétrica previamente atingido. Isto é, embora ocorram espalhamentos ($\tau_s$ é finito), eles são irrelevantes do ponto de vista do transporte elétrico e o tempo médio entre espalhamentos sucessivos que o \enfase{prejudicam} tende ao infinto: $\bar\tau_s\to\infty$. Dito de outra forma, a probabilidade de que ocorra algum espalhamento que \enfase{prejudique} o transporte elétrico é nula: $1/\bar\tau_s\to0$ (veja a figura~\ref{fig:espalhamento}). Por este motivo, $\tau_s$ (o tempo de espalhamento) sozinho não tem muita importância para o transporte elétrico, já que não leva em consideração esse aspecto; O grande mérito de conhecê-lo é que podemos compará-lo com $\bar\tau_s$ e, a partir daí, buscar compreender os mecanismos de espalhamento presentes. Uma quantidade particularmente útil nesse tipo de atividade é a razão entre esses tempos~\cite[p. 522]{handbook}:
+	\begin{equation*}
+		\frac{\bar\tau_s}{\tau_s} = \frac{1}{\langle1-\cos\theta\rangle}.
+	\end{equation*}
+	
+	O que se faz é determinar $W_{\vetor k,\vetor k'}$ para algum mecanismo de espalhamento com base em considerações teóricas, calcular $\bar\tau_s/\tau_s$ e compará-lo com resultados experimentais. Essa razão está atualmente avaliada entre 2 e 3 para \foreign{bulks}, podendo atingir várias ordens de grandeza no caso de heteroestruturas como a nossa~\cite{sarma}. Isto significa que em heteroestruturas o espalhamento é altamente não isotrópico.
+
+	Agora podemos introduzir mais uma condição necessária para que o efeito SdH ocorra: $\Omega_s$ é a freqüência angular de um elétron numa órbita de Landau. Então, é claro que esse elétron percorre essa órbita num tempo $2\pi/\Omega_s$. Ora, se o tempo de espalhamento ($\tau_s$) for menor que esse período o elétron não conseguirá completar a órbita e o movimento do gás de elétrons se torna incoerente. Neste caso, a densidade de estados entre os níveis pode tornar-se significativa e destruir as oscilações. Assim, costuma-se exigir que $\tau_s \gg 2\pi/\Omega_s$, ou equivalentemente,\footnote{Lembrando que $\Omega=\cargaeletron\,B/\meff_s$ e que $\mu_s=\cargaeletron\,\tau_s/\meff_s$.} $B\gg1/\mu_s$.
+	
+	Uma vez compreendido o significado das mobilidades quânticas, vamos determiná-las:	Uma medida do efeito Shubnikov-de Haas fornece-nos um conjunto de $M$ pontos experimentais
+	$$
+	\{(B_j,V_j)\} = \{(B_1,V_1), (B_2,V_2), \ldots, (B_M,V_M)\},
+	$$ 
+	onde $V_j$ é a diferença de potencial associada à corrente $j_x$ ($V_j\doteq V_{BC}$ na figura~\ref{fig:barra-Hall}) e $B_j$ é a intensidade do campo magnético perpendicular a essa corrente (fig.~\ref{fig:efeito-Hall}). Pela primeira e segunda leis de Ohm podemos mostrar que $\rho\propto V_{BC}$. O fator de proporcionalidade (que inclui eventuais fatores de escala) pode ser incorporado na constante $K_s$, cuja influência  na determinação das mobilidades (e das concentrações: observe a equação~\eqref{eq:conc-SdH}) é nula. Por esses motivos, a resistividade da amostra e a diferença de potencial paralela à corrente (medida diretamente através de um voltímetro, por exemplo) são quantidades equivalentes.
+	
+	\index{Fourier!transformada!discreta}
+	Em qualquer transformada discreta de Fourier (\textsc{dft}, \foreign{discrete Fourier transform}), o conjunto de dados transformado é sempre \enfase{discreto} e \enfase{limitado}. Com efeito, a definição de transformada de Fourier deixa de ser uma integral imprópria e passa a ser~\cite{recipes}
+	\begin{equation}\label{eq:def-DFT} 
+		\begin{gathered}
+		F(\omega_\ell) \doteq C_F\,\sum_{j=1}^N\, f_j\,J_j\,e^{i\omega_\ell\,t_j}\,\Delta t,	\\
+		\omega_\ell=2\pi\nu_\ell=2\pi\,\frac{\ell}{N\,\Delta t} \qquad\text{e}\qquad \ell = 0,\ldots,N-1,
+		\end{gathered}
+	\end{equation}
+	onde $N$ é o número de pares ordenados $(t_j,f_j)$ utilizados na transformada que, no nosso caso, correspondem aos pares $(1/B_j,V_j'')$, com $j=1,2,\ldots, N$.\footnote{Este conjunto é obtido a partir do original, $\{(B_j,V_j)\}$, com $j=1,2,\ldots,M$.} $\Delta t$ é a diferença entre dois $t_j$ consecutivos e, como podemos ver, é constante (não tem índice). Isto significa que precisaremos interpolar $\{(t_j,f_j)\}$ antes de aplicar-lhe a transformada. Vamos supor que isso já foi feito e ignoraremos esse detalhe. $J_j$ é a \novotermo{função janela} e $C_F$ é uma constante de normalização que depende do algorítmo utilizado para avaliar~\eqref{eq:def-DFT}.\footnote{Os softwares \foreign{Mathematica} e \foreign{MathCAD}, por exemplo, utilizam $1/\sqrt{N}$, enquanto o \foreign{Microcal Origin} usa 1 quando a opção \texttt{normalização} está desativada e $1/N$ em caso contrário.}
+	\index{Janela!funcao@função}
+
+	O modo como $F(\omega_\ell)$ é determinado é irrelevante para nós.\footnote{Existe uma infinidade de softwares e algorítmos, proprietários ou não, que se prestam a essa tarefa. Nós utilizamos o pacote \foreign{Origin} da \foreign{OriginLab} (http://www.originlab.com).} Importa sim sabermos que o resultado da equação~\eqref{eq:def-DFT} está disponível uma vez conhecido o conjunto experimental $\{(t_j,f_j)\}$ e escolhida a função janela mais apropriada.
+
+	\index{Fourier!transformada!continua@contínua}
+	\index{CFT}	
+	Então vejamos: \enfase{O resultado obtido numericamente a partir da equação acima é uma aproximação da transformada contínua} (\textsc{cft}, \foreign{continuous Fourier transform}) de $\rho^{(r)}$ (equação~\eqref{eq:rho}) e, sendo assim, podemos compará-los; Foi isso que fizemos para concluirmos~\eqref{eq:conc-SdH}. Mas isso é insuficiente quando queremos determinar $\mu_s$ simplesmente por que não conhecemos $K_s$.\footnote{Veja o apêndice~\ref{ap:CFT} para maiores detalhes.} Então faremos o contrário: vamos \enfase{aproximar a transformada contínua de Fourier de~\eqref{eq:rho} do resultado numérico} (\textsc{dft}) obtido a partir de~\eqref{eq:def-DFT} incluindo na \textsc{cft} o conceito de função janela. Com isso poderemos dar conta da limitação (mas não da discretização)\footnote{Considerar também a discretização do intervalo $t_1\le t_j\le t_N$ significa retornar à equação~\eqref{eq:def-DFT}.} do intervalo $t_1\le t_j\le t_N$ imposta pela impossibilidade de se obter um conjunto experimental infinito. Destarte, ao revés de calcularmos $\FT{\rhoxx}$, determinaremos $\FT{\rhoxx\,J(t)}$:
+	\begin{equation*}
+	F_J(\omega) \doteq \FT{\rho^{(r)}(t)\,J(t)} \doteq C_F\int\limits_{t_1}^{t_N} \rho^{(r)}(t)\,
+		\mathbf{J}(t)\,e^{i\omega t}\,dt
+	\end{equation*}
+	
+	Note que usamos $C_F$ no lugar do usual $1/\sqrt{2\pi}$ para mantermos a conformidade com a equação~\eqref{eq:def-DFT}.
+	
+	\index{Janela!Hanning ou Hann}
+	\index{Hanning ou Hann!Janela}
+	\index{DSP|see{Digital Signal Processing}}
+	\index{Digital Signal Processing}
+	Uma janela é qualquer função limitada e positiva dentro do intervalo $[t_1,t_N]$ e identicamente nula fora dele.\footnote{O conceito de função janela aparece no desenvolvimento das \textsc{dft}s como uma forma de melhorá-las quando comparadas com seus respectivos espectros contínuos. O leitor interessado pode consultar qualquer boa literatura sobre tratamento digital de sinais (\textsc{dsp}, \foreign{digital signal processing}), tal como~\cite{recipes} ou~\cite{smith}.}	Utilizaremos a janela Hanning (ou Hann),	
+	\begin{equation*}
+		J(t) = h(t)\doteq
+		\begin{cases}
+			\frac{1}{2}\big[ 1-\cos(\omega_\bullet t+\theta_\bullet) \big],	&t\in[t_1,t_N] \\
+			0	&t\notin[t_1,t_N],
+		\end{cases}
+	\end{equation*}
+	por que sua expressão pode ser escrita em termos de exponenciais, o que é uma vantagem pois não só $\rho^{(r)}$ consiste numa composição de exponenciais como também a própria definição de transformada de Fourier as envolve. $\omega_\bullet=2\pi/(t_N-t_1)$ e $\theta_\bullet=-\omega_\bullet\,t_1$.
+	
+	Então queremos determinar
+	\begin{equation}\label{eq:metodo-SdH}	
+	F_H(\omega) \doteq \FT{\rhoxx\,h(t)} = \sum_s K_s(\alpha_s^2+\omega_s^2)^{r/2}\,\FT{e^{-\alpha_s t}\cos(\omega_s t+\theta_s)\,h(t)}
+	\end{equation}
+	
+	Embora não seja realmente difícil, resolver a expressão acima é uma tarefa árdua e deixaremos esse trabalho para o apêndice~\ref{ap:metodo-SdH}. O resultado desejado é
+	\begin{equation}\label{eq:mobil-SdH}
+	\ln |F_H(\omega_s)| = -\alpha_s t_1 + Q_s(\Delta),
+	\end{equation}
+	onde $Q_s$ é uma função de $\Delta=t_N-t_1$, a largura da janela Hanning, e $t_1$ e $t_N$ são os limites inferior e superior dessa janela, respectivamente.
+	\index{Janela!Hanning ou Hann!largura}
+	\index{Hanning ou Hann!Janela!Largura}
+	
+	Em palavras: O logarítmo do módulo da transformada \enfase{discreta} de Fourier da (derivada da) magnetoresistividade em $\omega=\omega_s$ varia linearmente com o limite inferior da janela Hanning, sendo $-\pi\,s/\mu_s$ (lembre-se que $\alpha_s=\pi\,s/\mu_s$) o fator de proporcionalidade, desde que a largura da janela seja mantida constante.
+	
+	Apesar da equação acima exigir que $\Delta$ seja constante, nós verificamos através de simulações numéricas que podemos ignorar essa condição (dentro dos limites de $n_s$ e $\mu_s$ encontrados neste trabalho).
+	
+	Então vamos ver como utilizar~\eqref{eq:mobil-SdH}: Suponha que medimos $M$ pares $(B_j,V_j$) distintos (figura~\hbox{\ref{fig:metodoSdH-passos}(a)}), lembrando que $V_j$ é a queda de tensão (paralela à corrente aplicada) associada ao campo magnético $B_j$ aplicado (perpendicular ao plano de confinamento dos elétrons). O primeiro passo é criar o conjunto (fig.~\hbox{\ref{fig:metodoSdH-passos}(b)})
+	\begin{multline*}
+	\left\{ \left(\frac{1}{B_1},V_1''\right), \left(\frac{1}{B_2},V_2''\right),\ldots,\left(\frac{1}{B_j},V_j''\right),\ldots 
+		\left(\frac{1}{B_M},V_M''\right) \right\} \equiv \\ \equiv
+			\left\{(\uptau_1,f_1),(\uptau_2,f_2),\ldots,(\uptau_j,f_j),\ldots,(\uptau_M,f_M)\right\},
+	\end{multline*}
+	lembrando que $\rho(B)\propto V(B)$ de tal forma que $\rho''\propto V''$.
+	
+	Um detalhe a ser notado pelo leitor é que $\uptau_j\doteq1/B_j$ denota os \enfase{pontos experimentais obtidos} ($j$ varia de 1 até $M$), enquanto $t_j\doteq1/B_j$ corresponde aos \enfase{pontos utilizados na transformada} ($j$ varia de 1 até $N$). Assim, $[t_1,t_N]\in[\uptau_1,\uptau_M]$ (veja a tabela~\ref{tab:metodoSdH}).
+	
+	O passo seguinte é gerar, por exemplo, 5 \textsc{dft}s utilizando 5 intervalos $[t_1,t_N]\in[\uptau_1,\uptau_M]$ (figura~\hbox{\ref{fig:metodoSdH-passos}(c)}) distintos. A tabela~\ref{tab:metodoSdH} ilustra uma possibilidade genérica.
+	
+	\begin{table}[htb]
+	\begin{minipage}[c]{0.42\textwidth}
+		\centering
+		\begin{tabular}{c|c|c}	
+		& $[t_1,t_N]$ & $\ln|F_H(\omega_k)|$ \\
+	\hline
+		1\textordfeminine\ \textsc{dft}	&	$[\uptau_1,\uptau_M]$	 & \textoneoldstyle \\
+		2\textordfeminine\ \textsc{dft}	& $[\uptau_2,\uptau_M]$  & \texttwooldstyle \\
+		3\textordfeminine\ \textsc{dft}  & $[\uptau_3,\uptau_M]$  & \textthreeoldstyle \\
+		4\textordfeminine\ \textsc{dft}  & $[\uptau_4,\uptau_M]$  & \textfouroldstyle \\
+		5\textordfeminine\ \textsc{dft}  & $[\uptau_5,\uptau_M]$	 & \textfiveoldstyle \\
+	\hline
+	\end{tabular}
+	\end{minipage}\hfill
+	\begin{minipage}[c]{0.56\textwidth}
+		\centering
+		\psfrag{t1}[][]{\colorbox{white}{\LARGE$\uptau_1$}}
+		\psfrag{t3}[][]{\colorbox{white}{\LARGE$\uptau_3$}}
+		\psfrag{t5}[][]{\colorbox{white}{\LARGE$\uptau_5$}}
+		\psfrag{tm}[][]{\colorbox{white}{\LARGE$\uptau_{M}$}}
+		\psfrag{tm2}[][]{\colorbox{white}{\LARGE$\uptau_{M-2}$}}
+		\psfrag{tm4}[][]{\colorbox{white}{\LARGE$\uptau_{M-4}$}}
+		\psfrag{tt1}[][]{\colorbox{white}{\LARGE$t_1$}}
+		\psfrag{ttn}[][]{\colorbox{white}{\LARGE$t_N$}}
+		\psfrag{1}[][]{\colorbox{white}{\Large 1\textordfeminine\ \textsc{dft}}}
+		\psfrag{2}[][]{\colorbox{white}{\Large 2\textordfeminine}}
+		\psfrag{3}[][]{\colorbox{white}{\Large 3\textordfeminine}}
+		\psfrag{4}[][]{\colorbox{white}{\Large 4\textordfeminine}}
+		\psfrag{5}[][]{\colorbox{white}{\Large 5\textordfeminine}}
+		\resizebox{\textwidth}{!}{\includegraphics{figuras/metodoSdH.eps}}	
+	\end{minipage}
+	\caption{\footnotesize\label{tab:metodoSdH} A tabela à esquerda apresenta uma possibilidade genérica de cálculo da mobilidade quântica: O valor de $t_1$ (lembre-se que $t_j=1/B_j$) varia, sendo igual a $\uptau_1$ na primeira transformada, $\uptau_2$ na segunda e assim sucessivamente até a quinta transformada. $t_N$, por outro lado, é mantido fixo em $\uptau_M$. A figura ao lado da tabela é uma representação gráfica dela, na qual podemos ver explicitamente a variação em $t_1$ e em $\Delta$. À medida que $t_1$ diminui, a amplitude da transformada nos picos (que identificam as sub-bandas) cresce (veja a figura~\ref{fig:metodoSdH-passos}) e dessa variação podemos obter a mobilidade quântica $\mu_s$: equação~\eqref{eq:mobil-SdH}.}
+	\end{table}
+
+	Finalmente, basta fazer um gráfico do conjunto $\{(\uptau_1,\text{\textoneoldstyle}), (\uptau_2,\text{\texttwooldstyle}), \ldots, (\uptau_5,\text{\textfiveoldstyle})\}$ e ajustar-lhe uma reta (figura~\hbox{\ref{fig:metodoSdH-passos}(d)}). O coeficiente linear é $\alpha_s=-\pi s/\mu_s$ e, com isso, resolvemos o problema: determinamos $\alpha_s$, $\mu_s$ e $\tau_s$!
+	
+	No exemplo dado na figura~\ref{fig:metodoSdH-passos} utilizamos a magnetoresistividade da amostra-referência ($d_\text{InAs}=0$) no claro (veja os capítulos~\ref{cap:instalacoes} e~\ref{cap:resultados}). Perceba que o espectro de freqüências ou de concentrações (fig.~\hbox{\ref{fig:metodoSdH-passos}(c)}) apresenta dois picos: O maior deles corresponde à segunda sub-banda ($s=2$) e o menor, à terceira ($s=3$). A primeira sub-banda não é visível por que o tempo de espalhamento dos elétrons nessa sub-banda é inferior ao período ciclotrônico ($\Omega_s\tau_s<1$; veja o capítulo~\ref{cap:resultados} para maiores detalhes). Devemos desenhar um gráfico $\ln|F_H(\omega_s)|\times t_1$ para cada um dos picos (sub-bandas), de modo a determinarmos $\mu_2$ e $\mu_3$. Na figura~\hbox{\ref{fig:metodoSdH-passos}(d)}, apresentamos somente o gráfico referente a $s=2$.
+
+	\begin{figure}[p]
+		\centering
+		\psfrag{a}[b][c]{$\rho$ ($\kilo\ohm\per\Box$) ou $V$ (\milli\volt)}
+		\psfrag{b}[b][c]{$B$ (\tesla)}
+		\psfrag{c}[b][c]{$1/B$ (\reciprocal\tesla)}
+		\psfrag{d}[t][c]{$\rho''$ (\unit{\kilod}{\kilo\ohm\cdot\squaren\tesla\per\Box})}
+		\psfrag{e}[t][c]{$|F_H(\nu=\nu_s)|$ (\unit{\kilod}{\kilo\ohm\cdot\tesla\per\Box})}
+		\psfrag{f}[t][c]{$t_1$ (\reciprocal\tesla)}
+		\psfrag{g}[t][c]{$\nu$ (\tesla) ou $n$ (\unit{\terad}{\centi\rpsquare\metre})}
+		\psfrag{h}[][]{$|F_H(\nu)|$ (\unit{\kilod}{\kilo\ohm\cdot\tesla\per\Box})}
+		\psfrag{i}[l][l]{1\textordfeminine\ \textsc{dft}}
+		\psfrag{j}[l][l]{2\textordfeminine}
+		\psfrag{k}[l][l]{3\textordfeminine}
+		\psfrag{l}[l][l]{4\textordfeminine}
+		\psfrag{m}[l][l]{5\textordfeminine}
+		\psfrag{n}[][]{$s=2$}
+		\psfrag{o}[][]{$s=3$}
+		\psfrag{p}[][]{(a)}
+		\psfrag{q}[][]{(b)}
+		\psfrag{r}[][]{(c)}
+		\psfrag{s}[][]{(d)}
+		\resizebox{\textwidth}{!}{\includegraphics{figuras/metodoSdH-passos.eps}}
+		\caption{\footnotesize\label{fig:metodoSdH-passos} Ilustração do procedimento utilizado para calcular as mobilidades quânticas de uma amostra baseado no efeito Shubnikov-de Haas: Em (a) apresentamos o resultado bruto de uma medida do efeito SdH: O conjunto $\{(B_j,V_j)\}$,  chamado de \novotermo{traço SdH}, onde $V_j$ é a queda de tensão entre os pontos $B$ e $C$ na figura~\ref{fig:barra-Hall} quando o campo magnético perpendicular ao plano de confinamento dos elétrons tem intensidade $B_j$. (b) A partir dessas medidas, o primeiro passo é criar o conjunto $\{(1/B_j,V_j'')\}$, no qual a periodicidade da magnetoresistividade (proporcional a $V_j$) pode ser observada. (c) Depois, calculamos diversas transformadas discretas de Fourier (cinco neste caso), cada qual com um valor diferente de $t_1$, limite inferior da janela Hanning (lembre-se de que $t_j=1/B_j$). Cada um dos picos observados na transformada corresponde a uma sub-banda. Neste caso, as sub-bandas são a segunda ($s=2$) e a terceira. A primeira não é visível por motivos que serão expostos no capítulo~\ref{cap:resultados}. A posição dos picos, que permanece aproximadamente constante, dá a concentração de portadores da sub-banda, conforme~\eqref{eq:conc-SdH}. (d) O logarítmo dos valores dos picos (magnitudes da transformada), quando desenhados contra $t_1$, resultam em uma reta cujo coeficiente angular é $-\pi s/\mu_s$, onde $\mu_s$ é a mobilidade quântica da $s$-ésima sub-banda.}		
+	\end{figure}
+	\index{Traco@Traço!SdH}
+	
+	\index{FFT}
+	\index{Fourier!transformada!rapida@rápida}
+	\index{Fast Fourier transform}
+	Esse método de calcular as mobilidades quânticas é consideravelmente complexo por que existe uma infinidade de detalhes para os quais devemos atentar; detalhes que não cabem aqui. Como se não fosse suficiente, o tempo gasto é também muito grande: em torno de trinta minutos por sub-banda (utilizando o software de análise de dados \foreign{Microcal Origin}). Felizmente, grande parte desses cálculos não depende da intervenção do usuário e, graças a isso, pudemos desenvolver um script (interpretado pelo \foreign{Microcal Origin}) capaz de executá-los automaticamente. De fato, esta é uma das grandes contribuições deste trabalho ao grupo de pesquisas do Departamento de Física dos Materiais de Mecânica ({\scshape dfmt}) da Universidade de São Paulo: Com ele, o tempo acima foi reduzido para cinco minutos, aproximadamente! Mesmo assim, por envolver uma série de transformadas de Fourier (algorítmo \textsc{fft}, \foreign{fast Fourier transform}), interpolações, derivações e alisamentos, o tempo de processamento é bastante elevado (algo em torno dos dois minutos num processador de \unit{400}{\mega\hertz} com \unit{196}{\mebi\byte} de memória {\scshape ram}). Por este motivo estamos atualmente traduzindo este script para uma linguagem compilada (C e MatLab), o que nos permitirá reduzir ainda mais o tempo gasto na análise para, essencialmente, o tempo de interação com o usuário (ou seja, o tempo gasto nos cálculos será ínfimo). Essa busca pela redução do tempo de processamento pode parecer preciosismo, mas não é: A criação deste script facilitou enormemente os cálculos (para o usuário) e nos permitiu explorar bastante profundamente o método através de simulações numéricas. Novamente, não cabe aqui apontar os resultados, mas um deles é apresentado no apêndice~\ref{ap:metodo-SdH}. Além disso, esse estudo nos trouxe conhecimentos significativos na área de Processamento Digital de Sinais.	
+
+	%-------------------------------------------------------------------------------------
+	%	A fotoluminescência
+	%-------------------------------------------------------------------------------------		
+	\section{A Fotoluminescência}\label{sec:PL}
+
+	Fotoluminescência (\textsc{pl}, \foreign{photoluminescence}) é o nome dado ao fenômeno da emissão radiativa que ocorre quando um elétron transita de um estado com energia $\epsilon_1$ para outro de energia mais baixa, $\epsilon_0$. A freqüência $\nu$ dessa emissão (ou, equivalentemente, a energia do fóton gerado) é dada pela relação de Planck, $h\,\nu=\epsilon_1-\epsilon_0$, sendo $h=\unit{6,626\times\power{10}{-34}} {\joule\cdot\second}$ a constante de Planck.
+	
+	Na Física dos semicondutores, a técnica conhecida por \textsc{pl}, que se baseia neste fenômeno, é largamente utilizada por ser capaz de disponibilizar informações valiosas acerca da estrutura de bandas de uma amostra qualquer. Além disso, grande parte do sucesso desta técnica reside também em sua simplicidade e em várias outras características desejáveis:
+	\begin{compactitem}
+		\item	A \textsc{pl} é uma técnica não destrutiva, ou seja, a amostra não é prejudicada durante a realização da medida;
+		\item	Apenas uma pequena quantidade de material é necessário (tipicamente, de alguns milímetros);
+		\item	A técnica nos permite investigar portadores minoritários. No caso de amostras que contenham portadores do tipo-n e do tipo-p, isto significa que a \textsc{pl} pode nos fornecer informações complementares às medidas de transporte elétrico (não é o nosso caso);
+		\item	Não é necessário nenhum tipo especial de preparo das amostras (veja a seção~\ref{sec:amostras-preparo});
+		\item	Podemos detectar qualitativamente a presença de impurezas.
+	\end{compactitem}
+	
+	Por outro lado, as limitações da \textsc{pl} residem especialmente na (i) restrição a processos de recombinação radiativa e na (ii) impossibilidade de se determinar a densidade de dopantes e/ou impurezas.	
+
+	Basicamente, a técnica de fotoluminescência, quando aplicada aos semicondutores, consiste na criação de um par elétron-buraco pela incidência de radiação (através de \foreign{laser}, veja o capítulo~\ref{cap:instalacoes}) e na posterior detecção	da radiação emitida (de freqüência inferior à incidente). A figura~\ref{fig:PL} ilustra a situação característica: Devido à quase-continuidade das bandas de valência (\textsc{bc}) e de condução (\textsc{bv}), ao incidirmos sobre uma amostra semicondutora fótons com energia superior ao \foreign{gap} do material, esses fótons são absorvidos pelos elétrons na banda de valência e transitam, desde seu estado atual $\epsilon_0$ (por exemplo), até algum estado $\epsilon_1$ disponível na banda de condução.\footnote{Por simplicidade, suponha que a banda de condução está desocupada, como é o caso de amostras não dopadas no zero absoluto.}
+	
+	Ao deixar a banda de valência para ocupar um estado antes desocupado na banda de condução, o elétron libera o estado $\epsilon_0$. A ausência deste elétron neste estado é, sob todos os aspectos teóricos e práticos, equivalente à ocupação deste estado por uma partícula de carga oposta à do elétron, comumente chamada de \termo{buraco} (veja o capítulo 8 da referência \cite{kittel} para maiores detalhes). Por esta razão, diz-se que a luz incidente criou na amostra um par elétron-buraco.
+
+	\begin{figure}[htb]
+		\centering		
+		\psfrag{a}[][]{\Large $h\nu=\epsilon_g<h\nu_0$}
+		\psfrag{b}[][]{\Large $\epsilon_g$}
+		\psfrag{c}[][]{\Large \colorbox{white}{$e$}}
+		\psfrag{d}[][]{\Large $h\nu_0$}
+		\psfrag{e}[][]{\Large \colorbox{white}{hh}}
+		\psfrag{f}[][]{\Large \colorbox{white}{lh}}
+		\psfrag{g}[][]{\Large $k$}
+		\psfrag{h}[][]{\Large $0$}
+		\psfrag{i}[r][r]{\Large \shortstack{Banda de \\condução}}
+		\psfrag{j}[e][e]{\Large \shortstack{Banda de \\valência}}
+		\psfrag{l}[][]{\Large\colorbox{white}{Energia}}
+		\resizebox{0.7\textwidth}{!}{\includegraphics{figuras/PL}}			
+		\caption{\footnotesize\label{fig:PL} A fotoluminescência em um material condutor consiste na emissão de um fóton cuja energia é igual ao \foreign{gap} do material. Este fóton é emitido quando um elétron (buraco) na banda de condução (de valência) transita para a banda de valência (de condução). Note que a radiação emitida possui freqüência inferior à incidente.}
+	\end{figure}
+	
+	Enquanto o elétron estiver no nível energético $\epsilon_1$ e o buraco, no $\epsilon_0$, o material estará excitado, posto que o estado fundamental é aquele em que o elétron está na banda de valência e o buraco, na de condução (ou seja, o estado inicial). Por este motivo, imediatamente após criados, o elétron e o buraco ``caminham'' em direção ao estado com $k=0$, trocando energia com a rede através da emissão de fônons (não radiativos): É o que se chama de \novotermo{termalização}. Outra maneira de retornar ao estado inicial é a emissão imediata de um fóton de energia igual ao do incidente (processo chamado de \novotermo{emissão espontânea} ou \novotermo{estimulada}). Entretanto, no caso de semicondutores, onde sempre existe a possibilidade de o elétron (e o buraco) trocar energia através de um fônon (devido à relação de dispersão $\epsilon(\vetor k)$), este é o caminho menos provável; mas no caso de sistemas com estados discretos (onde não existe uma relação de dispersão), esta é uma maneira bastante provável.
+	
+	Enquanto o \foreign{gap} dos semicondutores é da ordem de alguns eletron-volts (o do GaAs, por exemplo, é \unit{1,5192}{\electronvolt} a \unit{1,4}{\kelvin}), os fônons têm energias da ordem de algumas dezenas de \enfase{mili} eletron-volts. Deste modo, ao atingirem o estado com $k=0$ (veja a figura~\ref{fig:PL}), não existe fônon capaz de fazer o elétron (buraco) transitar da \textsc{bc} (\textsc{bv}) para a \textsc{bv} (\textsc{bc}). Então, a transição ocorre através da emissão de um fóton de energia igual ao \foreign{gap} ($\epsilon_g$) do material, ou seja, de freqüência $\nu=\epsilon_g/h$, menor que a do fóton incidente. Esta transição costuma ser representada por \transicao{e-hh}, indicando que o elétron na banda de condução (\transicao{e}) recombinou-se com o buraco na banda de buracos-pesados (\transicao{hh}, \foreign{heavy-holes}).\footnote{Similarmente, ``\transicao{lh}'' representa a banda de buracos leves: \foreign{light-holes}.}
+	
+	Na realidade, a energia do fóton emitido é ligeiramente menor que o \foreign{gap} do material por que, ao ser criado o par elétron-buraco, a interação coulombiana entre eles cria um estado ligado chamado \novotermo{éxciton}, cuja energia é ligeiramente inferior ao \foreign{gap} (o éxciton do GaAs, \eg, tem energia \unit{1,5156}{\electronvolt}). Destarte, o sinal luminoso detectado numa medida de fotoluminescência decorre da \novotermo{recombinação excitônica} do par elétron-buraco.	
+	
+	A figura~\ref{fig:recombinacoes} ilustra os diversos tipos de recombinação possíveis, incluindo aquelas provenientes da presença de impurezas aceitadoras (\transicao{A^0}) e doadoras (\transicao{A^0}).
+		
+	\begin{figure}[htb]
+		\centering
+		\psfrag{a}[][]{\LARGE (a)}
+		\psfrag{b}[][]{\LARGE (b)}
+		\psfrag{c}[][]{\LARGE (c)}
+		\psfrag{d}[][]{\LARGE (d)}
+		\psfrag{e}[][]{\LARGE (e)}
+		\psfrag{f}[][]{\LARGE (f)}
+		\psfrag{g}[][]{\LARGE (g)}
+		\psfrag{h}[e][e]{\LARGE BC}
+		\psfrag{i}[e][e]{\LARGE BV}
+		\resizebox{0.8\textwidth}{!}{\includegraphics{figuras/recombinacoes}}	
+		\caption{\footnotesize\label{fig:recombinacoes} Os diversos mecanismos de recombinação radiativa possíveis num material semicondutor: (a) Transição da banda de condução para a banda de valência, \transicao{e-h}; (b) exciton livre, EX; (c) exciton ligado a impureza doadora, \transicao{D^0X}; (d) exciton ligado a impureza aceitadora, \transicao{A^0X}; (e) transição doador-aceitador, \transicao{DA}; (f) emissão da BC para nível aceitador e (g) emissão de nível doador para a \textsc{bv}. As caixas vermelhas identificam as transições que envolvem éxciton.}
+	\end{figure}
+	
+	No caso de pontos-quânticos, onde o confinamento ocorre nas três dimensões, os níveis de energia são discretos e não existe relação de dispersão em nenhum dos componentes de $\vetor k$. Por isso, a emissão de fônons como mecanismo de relaxação é altamente improvável por que é preciso que eles tenham energia exatamente igual à diferença entre dois níveis do \textsc{qd}; e também por que, dependendo da magnitude dessa diferença, pode não ser possível um tal fônon (como já dissemos, fônons possuem energias da ordem de algumas dezenas de \enfase{mili} eletron-volts). Deste modo, o tempo de vida de um elétron num determinado nível é muito longo, e torna-se perfeitamente possível a ocupação de estados excitados mesmo que o estado fundamental não esteja completamente preenchido. Chamamos isto de efeito \novotermo{bottleneck} (engarrafamento) \cite{baranov,mukai2,bockelmann,fafard2,inoshita,mukai1}.
+	
+	%-------------------------------------------------------------------------------------
+	%	Microscopia de varredura por ponta
+	%-------------------------------------------------------------------------------------	
+	\setbox1 = \hbox{\Large\textbf{\textsc{afm}}}
+	\section[Microscopia de força atômica (\textsc{afm})]{Microscopia de força atômica (\box1)}\label{sec:AFM}
+
+	\index{AFM}
+	\index{Microscopia!de forca atomica@de força atômica}
+	\index{STM}
+	\index{Microscopia!de tunelamento}
+	\index{LFM}
+	\index{Microscopia!de forca lateral@de força lateral}
+	\index{MFM}
+	\index{Microscopia!de forca magnetica@de força magnética}
+	\index{SPM}
+	\index{Microscopia!de varredura por ponta}
+	\index{Van der Waals}
+	A microscopia de força atômica (\textsc{afm}, \foreign{atomic force microscopy}) é apenas uma das modalidades de microscopia conhecida genericamente como \novotermo{microscopia de varredura por ponta} (\textsc{spm}, \foreign{scanning probe microscopy}), da qual fazem parte a microscopia de tunelamento (\textsc{stm}, \foreign{scanning tunneling microscopy}), de força lateral (\textsc{lfm}, \foreign{lateral-force microscopy}), de força magnética (\textsc{mfm}, \foreign{magnetic force microscopy}) e várias outras. A distinção entre cada uma dessas modalidades reside no tipo de interação entre a ponta de prova e a \enfase{superfície} da amostra. Na \textsc{afm} e \textsc{lfm}, \eg, é a interação de Van-der Waals; na \textsc{stm}, é o fenômeno de tunelamento de elétrons da superfície, desde a ponta até a amostra (ou vice-versa); na \textsc{mfm}, é a força magnética.
+
+	\index{Tamanho de pixel}
+	Uma característica peculiar a todas as modalidades \textsc{spm} (incluindo \textsc{afm}) é o fato de a ponta não registrar continuamente a interação ponta-amostra, como ocorre num microscópio óptico usual, por exemplo. Ao invés, ela faz isso em intervalos denominados \novotermo{tamanho de pixel} ($\Delta$) que, por simplicidade, é constante durante toda uma medida, tanto na varredura lenta quanto na rápida (a seguir). Além disso, a área varrida pela sonda geralmente é quadrada, também apenas para simplificar a administração dos resultados.
+
+	A idéia é formar um conjunto de ternos ordenados $(x,y,z)$ onde $(x,y)$ é a posição da sonda numa amostra mapeada por uma matriz quadrada de pontos igualmente distanciados (figura~\ref{fig:varredura}) e $z$ é algum registro de interação entre sonda e amostra que depende do tipo de microscopia que se pretende fazer.
+	
+	\index{Taxa de leitura}
+	\index{Varredura!rapida@rápida}
+	\index{Varredura!lenta}
+	A varredura de uma única linha na figura~\ref{fig:varredura} leva algum tempo $T=1/\nu$, onde $\nu$ é a \novotermo{taxa de leitura} de linhas (ajustável pelo usuário). Finalizada a leitura de uma linha, a sonda passa para a seguinte, levando mais $T$ para completá-la. Se a linha possui $N$ pontos, teremos também $N$ linhas (pois a matriz é quadrada) e, portanto, a varredura de toda a matriz consome $NT$, obviamente maior que o tempo gasto com apenas uma linha. Por este motivo, o movimento de leitura de apenas uma linha horizontal na figura~\ref{fig:varredura} recebe o nome de \novotermo{varredura rápida}, enquanto o na direção vertical, \novotermo{varredura lenta}.
+	
+\begin{figure}[htb]
+	\begin{minipage}[c]{0.7\textwidth}
+	\centering
+  \setlength{\unitlength}{0.7mm}
+	\begin{picture}(100,100)(-35,-7)
+  	\multiput(0,0)(0,10){10}{\multiput(0,0)(10,0){10}{\color{blue}\circle*{1.5}}}
+  	\multiput(0,8)(0,10){9}{\multiput(0,0)(10,0){10}{\color{red}\circle*{1.5}}}
+	 	\multiput(0,0)(0,10){10}{\vector(1,0){90}}
+	 	\multiput(90,8)(0,10){9}{\vector(-1,0){90}}
+	 	\multiput(90,0)(0,10){9}{\line(0,1){8}}
+	 	\multiput(0,8)(0,10){9}{\line(0,1){2}}
+	 	\put(-5,-5){\vector(1,0){15}}\put(-5,13){\makebox(0,0){$y$}}
+	 	\put(-5,-5){\vector(0,1){15}}\put(13,-5){\makebox(0,0){$x$}}
+	 	\put(40,-7.5){\line(0,1){5}}\put(35,-5){\vector(1,0){5}}
+	 	\put(50,-7.5){\line(0,1){5}}\put(55,-5){\vector(-1,0){5}}
+	 	\put(57,-5){\makebox(0,0)[cl]{\scriptsize Tamanho de pixel}}
+	 	\put(35,95){\vector(1,0){20}}
+	 	\put(95,35){\vector(0,1){20}}
+	\end{picture}
+	\end{minipage}
+	\caption{\label{fig:varredura}\footnotesize As linhas em preto indicam o sentido da varredura. Os pontos azuis representam as medidas feitas enquanto a sonda se move da esquerda para a direita (\novotermo{\foreign{trace}})\index{Trace}. Inversamente, os pontos vermelhos representam as medidas feitas no sentido contrário (\novotermo{\foreign{retrace}})\index{Retrace}. Embora a representação acima os coloque em posições ligeiramente distintas, em verdade eles se superpõem, possibilitando duas medidas ``simultaneamente:'' Uma em \foreign{trace} e outra em \foreign{retrace}.}	
+\end{figure}
+
+	\index{Resolucao@Resolução}
+	Já que os registros das interações não são feitos de forma contínua, qualquer estrutura menor que $\Delta$ passa despercebida pela sonda.\footnote{Exceto quanto esta estrutura ocorre de forma periódica.} Isto significa que todas as modalidades \textsc{spm} são verossímeis apenas para estruturas maiores que o tamanho de pixel e, portanto, que $\Delta$ é um parâmetro de fundamental importância. Para calculá-lo, utilizamos a extensão da área varrida e o número de medidas por linha, $N$ (igual ao número de linhas varridas), por vezes tomado como sinônimo de \novotermo{resolução}\index{AFM!resolução}. Por exemplo: Suponha que esperamos encontrar em uma determinada amostra estruturas da ordem de \unit{20}{\angstrom}, numa área de $L^2=200\times \unit{200}{\nano\metre}$. Então,
+	\begin{equation*}
+	\Delta = \frac{L}{N} < \unit{20}{\angstrom} \quad\Rightarrow\quad N > \frac{\unit{200}{\nano\metre}}{20\angstrom} = 100
+	\end{equation*}
+	
+	Assim, devemos escolher fazer pelo menos 100 medidas por linha. Na interface do equipamento, escolhemos uma \enfase{resolução} superior a 100.
+
+	Outra característica das técnicas \textsc{spm} é o fato de a sonda (ponta) interagir com a \enfase{superfície} da amostra, sendo incapaz de avaliar o interior da amostra como ocorre na microscopia de varredura eletrônica, por exemplo. Além disso, todas as técnicas \textsc{spm} podem ser utilizadas em pressão ambiente, o que constitui uma enorme vantagem sobre outras técnicas de microscopia.
+	
+	\index{Microscopia}
+	\index{Microscopia!de forca atomica@de força atômica!de contato}
+	\index{Microscopia!de forca atomica@de força atômica!de contato intermitente}
+	\index{Microscopia!de forca atomica@de força atômica!de nao-contato@de não contato}
+	Vejamos com um pouco mais de detalhe a \textsc{afm}, modalidade \textsc{spm} que utilizaremos no capítulo~\ref{cap:resultados} para obtermos informações morfológicas sobre os pontos-quânticos de uma amostra crescida especialmente para este fim (veja o capítulo~\ref{cap:amostras}), tais como suas dimensões, densidade superficial, rugosidade (da superfície) e homogeneidade: Existem três ``sub-modalidades'' ou \termo{modos} desta técnica: \textsc{afm} de contato, de não contato e de contato intermitente. Em todos eles a interação sonda-amostra é a força de Van-der Waals, cuja dependência com a distância está ilustrada qualitativamente na figura~\ref{fig:van-der-waals}. Na primeira modalidade, a distância entre a ponta e a amostra é tal que a força de Van-der Waals é repulsiva. Neste caso, dissemos que a amostra e a ponta estão em contato. Por isso \textsc{afm} \enfase{de contato}. Nas outras duas modalidades a força é atrativa e a ponta oscila sobre a amostra: Quando esta oscilação toca a amostra, dizemos que se trata de \textsc{afm} \enfase{de contato intermitente}; quando não, de \enfase{não contato} (note que na \textsc{afm} de contato a ponta não oscila, permanecendo sempre em contato com a amostra).
+		
+	\begin{figure}[htb]
+		\begin{minipage}[c]{0.6\textwidth}
+			\centering
+			\psfrag{a}[r][r]{$|F|$}
+			\psfrag{b}[l][l]{\textsc{afm} de contato}
+			\psfrag{c}[][]{\colorbox{white}{\shortstack{\textsc{afm} de contato\\ intermitente}}}
+			\psfrag{d}[][]{\colorbox{white}{\shortstack{\textsc{afm} de não\\ contato}}}
+			\psfrag{e}[][]{$z$}
+			\psfrag{f}[][]{$0$}
+			\psfrag{g}[l][l]{\colorbox{white}{Superfície da amostra}}
+			\resizebox{\textwidth}{!}{\includegraphics{figuras/van-der-waals}}		
+		\end{minipage}\hfill
+		\begin{minipage}[c]{0.35\textwidth}
+			\caption{\label{fig:van-der-waals}\footnotesize A microscopia de força atômica (\textsc{afm}) caracteriza-se pela interação de Van-der Waals entre a ponta e a superfície da amostra. Esta técnica se divide em três modalidades, cada qual agindo em uma região diferente do gráfico acima. No caso da \textsc{afm} de contato, essas forças são da ordem de $\power{10}{-6}$--\unit{\power{10}{-7}}{\newton} (repulsivas); E no caso da \textsc{afm} de não-contato, de \unit{\power{10}{-12}}{\newton} (atrativa); A \textsc{afm} de contato intermitente atinge valores intermediários (atrativa).}
+		\end{minipage}
+	\end{figure}
+		
+	\begin{figure}[htb]
+		\centering
+		\psfrag{a}[][]{\huge\shortstack{Eletrônica\\de detecção}}
+		\psfrag{b}[l][l]{\huge\foreign{Laser}}
+		\psfrag{c}[][]{\huge\shortstack{Eletrônica\\de controle}}
+		\psfrag{d}[][]{\huge$x,y$}
+		\psfrag{e}[l][l]{\huge$z$}
+		\psfrag{f}[r][r]{\huge Fotodetector}
+		\psfrag{g}[l][l]{\huge Cantiléver}
+		\psfrag{h}[r][r]{\huge Ponta}
+		\psfrag{i}[][]{\huge Amostra}
+		\psfrag{j}[l][l]{\huge\foreign{Scanner}}
+		\resizebox{0.6\textwidth}{!}{\includegraphics{figuras/scanner-AFM}}			
+		\caption{\label{fig:AFM}\footnotesize Esquema de organização da sonda para a microscopia de força atômica.}
+	\end{figure}
+
+	A rigor, existe ainda uma terceira força envolvida: A de \novotermo{capilaridade}, atrativa e da ordem de \unit{\power{10}{-8}} {\newton}. Esta força é irrelevante no caso da \textsc{afm} de contato. Por outro lado, a \textsc{afm} de contato intermitente é pouco suscetível à capilaridade e a \textsc{afm} de não-contato, muito suscetível. Destarte, vemos que os três modos se completam, no sentido de que eles são gradativamente mais delicados com a amostra, na mesma medida que são mais suscetíveis ao menísco de água adsorvido na superfície (e outros artefatos). Neste aspecto, a \textsc{afm} de não-contato oferece-nos a vantagem de podermos analisar a topografia de uma amostra sem que haja contato real entre ponta e amostra (especialmente útil no caso de amostras biológicas), enquanto a \textsc{afm} de contato não se deixa levar por este artefato sempre presente. Já a \textsc{afm} de contato intermitente faz a ponte entre uma modalidade e outra, juntando vantagens e desvantagens de ambas.
+	
+	\index{Cantilever@Cantiléver}
+	\index{Scanner}
+	\index{Laser}
+	\index{Fotodetector}
+	Em todos os modos de \textsc{afm}, a sonda é composta por uma diminuta agulha (de alguns micrometros) montada sobre um cantiléver que, por seu turno, está acoplado ao \foreign{scanner} (a seguir). Também fazem parte deste arranjo um feixe de \foreign{laser} e um fotodetector, organizados conforme a ilustração da figura~\ref{fig:AFM}. 
+	
+	\index{Scanner}
+	\index{Piezoeletrico@Piezoelétrico}
+	\index{Piezoeletrico@Piezoelétrico!tensor de acoplamento}
+	O \foreign{scanner} é o dispositivo responsável por mover a sonda nas três direções do espaço, ou seja, pela varredura e pelos deslocamentos verticais. Esses deslocamentos nanométricos são feitos com base no fenômeno da \novotermo{piezoeletricidade}: O \foreign{scanner} é uma cerâmica piezoelétrica que, quando submetida a um campo elétrico $\vetor E$, deforma-se segundo $\vetor s = \tensor d\vetor E$, onde $\vetor s$ é vetor de deslocamento e $\tensor d$ é o \termo{tensor de acoplamento piezoelétrico}, da ordem de \unit{\power{10}{-12}} {\coulomb\per\newton}. O carácter tensorial desta expressão é útil para representar o fato experimental de que $\vetor s$ não é paralelo a $\vetor E$. No entanto, esta relação não é rigorosamente verdadeira por que os deslocamentos $\vetor s$ não são lineares com $\vetor E$, além de dependerem de várias outras características do material.	
+	
+	\index{Setpoint}
+	Na figura~\ref{fig:AFM}, vemos que o \foreign{laser} incide sobre a parte de cima do cantiléver e é refletido para o fotodetector. Assim, no caso da \textsc{afm} de contato, quando aproximamos ou afastamos a ponta da amostra, o cantiléver é defletido no intuito de equilibrar a força de Van-der Waals. Esta deflexão causa um desvio para cima ou para baixo da posição original de incidência do \foreign{laser} sobre o fotodetector que é proporcional à aproximação ou afastamento da ponta. Destarte, a idéia imediata de funcionamento é que, conforme a ponta segue a topografia da superfície, o equipamento interpreta as deflexões do \foreign{laser} como ondulações na amostra e as armazena em $z$. Esta é uma primeira forma de acompanharmos a morfologia da superfície. Outra é a seguinte: O equipamento nos permite ajustar um parâmetro chamado \novotermo{\foreign{setpoint}}, que é essencialmente a pressão com que a ponta toca a superfície (ou, equivalentemente, a deflexão inicial do cantiléver). Quanto maior o \foreign{setpoint}, maior a pressão sobre a amostra. Suponha, \eg, que tenhamos encostado a ponta na superfície com \foreign{setpoint} igual a \unit{0,5}{\volt} (a tensão aplicada no \foreign{scanner} necessária para produzir uma tal pressão) e, ao deslocar-se para o ponto vizinho na matriz de varredura (fig.~\ref{fig:varredura}), a ponta tenha encontrado uma protuberância. Nesta situação, a distância ponta-amostra diminuiu, aumentando a força de Van-der Waals e, conseqüentemente, a deflexão do cantiléver. Esta alteração na deflexão aparece como um deslocamento vertical para cima do \foreign{laser} refletido, alterando a leitura do fotodetector (veja a figura~\ref{fig:AFM}). O \foreign{software} do microscópio percebe esta alteração e retrai verticalmente a cerâmica piezoelétrica até que a deflexão original do cantiléver seja reestabelecida. Finalmente, o equipamente registra essa correção vertical em $z$, junto com a posição da ponta na matriz de varredura e está formado o terno $(x,y,z)$.
+	
+	A primeira forma de medida pode atingir taxas de varredura superiores à segunda, sendo, por isso, especialmente útil no estudo de formação de superfícies, onde é interessante uma varredura em ``tempo real.'' No entanto, esta técnica se limita a amostras cuja rugosidade é bastante baixa. Por outro lado, a segunda maneira de acompanhar a morfologia da amostra sobrepuja a primeira justamente aí: Ela pode captar variações que vão desde frações de angströns até dezenas de micrometros! No nosso caso, utilizamos esta última forma.
+	
+	Embora todas as modalidades de \textsc{spm} sejam correlatas e muito interessantes de se compreender, vamo-nos ater ao que expusemos até o momento apenas para manter a brevidade e a objetividade deste trabalho.

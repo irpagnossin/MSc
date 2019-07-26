@@ -1,0 +1,121 @@
+
+	Neste apêndice mostraremos como foi possível calcularmos as relações entre as mobilidades de transporte e quânticas da segunda e terceira sub-bandas do \textsc{2deg}. Começamos pelas equações
+	\begin{align}
+		n_\text{ef} 				&= \frac{\left(\sum_s n_s\,\bar\mu_s\right)^2}{\sum_s n_s\,\bar\mu_s^2}\text{\quad e}  	\label{eq:apC-1}\\
+		\bar\mu_\text{ef}		&= \frac{\sum_s n_s\,\bar\mu_s^2}{\sum_s n_s\,\bar\mu_s},																\label{eq:apC-2}			
+	\end{align}
+	que relacionam a concentração ($n_\text{ef}$) e a mobilidade ($\bar\mu_\text{ef}$) efetivas (seção~\ref{sec:conc-mobil-ef}) com as concentrações de portadores ($n_s$) e suas mobilidades de transporte ($\bar\mu_s$). A somatória é feita sobre todas as sub-bandas parcialmente ocupadas, ou seja, sobre todas aquelas que contribuem para a condução elétrica.
+	
+	Supondo que conhecemos $n_\text{ef}$, $\bar\mu_\text{ef}$ e $n_s$ e $\bar\mu_s$ de todas as sub-bandas, exceto uma (digamos, $s=i$), podemos calcular $n_i$ e $\bar\mu_i$ através das equações acima. Para fazermos isto, primeiramente nós multiplicamos \eqref{eq:apC-1} por \eqref{eq:apC-2} e obtemos
+	\begin{equation}\label{eq:apC-3}
+		n_\text{ef}\,\bar\mu_\text{ef} = \sum_s n_s\,\bar\mu_s,
+	\end{equation}
+	ou, equivalentemente,
+	\begin{equation}\label{eq:apC-4}
+		n_\text{ef}\,\bar\mu_\text{ef} = n_i\,\bar\mu_i + \sum_{s\ne i} n_s\,\bar\mu_s.
+	\end{equation}
+	
+	Além disso, levando a equação~\eqref{eq:apC-3} em~\eqref{eq:apC-2},
+	\begin{align}
+		\bar\mu_\text{ef} = \frac{\sum_s n_s\,\bar\mu_s^2}{n_\text{ef}\,\bar\mu_\text{ef}} 
+						&\Rightarrow 	n_\text{ef}\,\bar\mu_\text{ef}^2 = n_i\,\bar\mu_i^2 + \sum_{s\ne i} n_s\,\bar\mu_s^2 \Rightarrow\notag	\\
+						&\Rightarrow	n_i\,\bar\mu_i^2 = n_\text{ef}\,\bar\mu_\text{ef}^2 - \sum_{s\ne i} n_s\,\bar\mu_s^2.
+									\label{eq:apC-5}
+	\end{align}
+	
+	Agora, juntando~\eqref{eq:apC-4} e~\eqref{eq:apC-5} nós encontramos
+	\begin{equation*}
+		\bar\mu_i(n_\text{ef}\,\bar\mu_\text{ef} - \sum_{s\ne i} n_s\,\bar\mu_s) = n_\text{ef}\,\bar\mu_\text{ef}^2 - 
+						\sum_{s\ne i} n_s\,\bar\mu_s^2,
+	\end{equation*}
+	o que resulta em
+	\begin{equation}\label{eq:apC-mobilidade}
+		\bar\mu_i = \frac{n_\text{ef}\,\bar\mu_\text{ef}^2 - \sum_{s\ne i} n_s\,\bar\mu_s^2}{n_\text{ef}\,\bar\mu_\text{ef} - \sum_{s\ne i} n_s\,\bar\mu_s}.
+	\end{equation}
+	
+	Finalmente, colocando este resultado em~\eqref{eq:apC-4} obtemos
+	\begin{equation}\label{eq:apC-concentracao}
+		n_i = \frac{(n_\text{ef}\,\bar\mu_\text{ef} - \sum_{s\ne i} n_s\,\bar\mu_s)^2}{n_\text{ef}\,\bar\mu_\text{ef}^2 - \sum_{s\ne i} n_s\,\bar\mu_s^2}
+	\end{equation}
+	e, consequentemente, podemos determinar univocamente $n_i$ e $\bar\mu_i$. No entanto, embora nós conheçamos $n_s$ (inclusive $n_i=n_1$ no nosso caso), nó não temos nenhuma das mobilidades de transporte. Ao invés disso, temos apenas $\mu_2$ e $\mu_3$, obtidas do efeito shubnikov-de Haas. Mas podemos escrever $\bar\mu_s = \beta_s\,\mu_s$, onde $\beta_s$ é justamente a razão entre os tempos de relaxação ($\bar\tau_s$) e espalhamento ($\tau_s$) ou, equivalentemente, entre as mobilidades de transporte e quântica:
+	$$
+	\beta_s \doteq \frac{\bar\mu_s}{\mu_s} \equiv \frac{\bar\tau_s}{\tau_s}.
+	$$
+	
+	Aplicar esta mudança de variável é útil pois, como a equação~\eqref{eq:apC-concentracao} não contém $\bar\mu_i$ ($=\bar\mu_1$ no nosso caso) e como conhecemos $n_i=n_1$, somente $\beta_2$ e $\beta_3$ são desconhecidas:
+	\begin{align}
+	n_1 &= \frac{\left[n_\text{ef}\,\bar\mu_\text{ef} - \sum_{s\ne 1} n_s\,(\beta_s\,\mu_s)\right]^2}{n_\text{ef}\,\bar\mu_\text{ef}^2 - \sum_{s\ne 1} n_s\,(\beta_s\,\mu_s)^2} \notag\\
+			&= \frac{\left[n_\text{ef}\,\bar\mu_\text{ef} - (n_2\,\mu_2)\,\beta_2 - (n_3\,\mu_3)\,\beta_3 \right]^2}{n_\text{ef} \, \bar\mu_\text{ef}^2 - (n_2\,\mu_2^2)\,\beta_2^2 - (n_3\,\mu_3^2)\,\beta_3^2}.		\label{eq:apC-6}
+	\end{align}
+	
+	Esta equação (não-linear) define a curva $\beta_3(\beta_2)$ que resolve a equação~\eqref{eq:apC-concentracao}. Uma outra abordagem é reescrevê-la como a intersecção das superfícies $n_i\,f(\vetor\beta)$ e $g(\vetor\beta)$, onde $\vetor\beta=(\beta_2,\beta_3)$, assim:
+	$$
+	n_i\overbrace{\left[n_\text{ef} \, \bar\mu_\text{ef}^2 - (n_2\,\mu_2^2)\,\beta_2^2 - (n_3\,\mu_3^2)\,\beta_3^2\right]}^{ f(\vetor\beta) }  =  \overbrace{\left[n_\text{ef}\,\bar\mu_\text{ef} - (n_2\,\mu_2)\,\beta_2 - (n_3\,\mu_3)\,\beta_3 \right]^2}^{g(\vetor\beta)}.
+	$$
+	
+	Analisando o formato dessas superfícies e lembrando que $\beta_s \ge 0$ sempre, descobrimos que só têm sentido as soluções contidas na região definida por
+	\begin{equation}\label{eq:apC-regiao}
+	\left(\frac{\beta_2}{a_2}\right)^2 + \left(\frac{\beta_3}{a_3}\right)^2 \le 1 \quad\text{e}\quad \beta_2,\beta_3\ge 0,
+	\end{equation}
+	sendo $a_s = (\bar\mu_\text{ef}/\mu_s)\,\sqrt{n_\text{ef}/n_s}$. Finalmente, ao invés de dizermos que temos precisamente $n_i$, fazemos $n_I\le n_i \le n_S$ e reescrevemos a equação~\eqref{eq:apC-6} como
+	\begin{equation}\label{eq:apC-desigualdade}
+	n_I \le \frac{\left[n_\text{ef}\,\bar\mu_\text{ef} - (n_2\,\mu_2)\,\beta_2 - (n_3\,\mu_3)\,\beta_3 \right]^2}{n_\text{ef} \, \bar\mu_\text{ef}^2 - (n_2\,\mu_2^2)\,\beta_2^2 - (n_3\,\mu_3^2)\,\beta_3^2} \le n_S,
+	\end{equation}
+	
+	ou ainda, 
+	\begin{equation}\label{eq:apC-final}
+	n_I\,f(\vetor\beta) \le g(\vetor\beta) \le n_S\,f(\vetor\beta).
+	\end{equation}
+	
+	Agora, escrevemos um software que procura na região~\eqref{eq:apC-regiao} os pares $(\beta_2,\beta_3)$ que satisfazem~\eqref{eq:apC-final}. No limite em que $n_I,n_S\to n_i$, obtemos a curva $\beta_3(\beta_2)$. 
+
+	A figura~\ref{fig:apC-mapa} ilustra duas soluções para a amostra \amostra{2,5} no \termo{claro}, ambas utilizando os valores obtidos das medidas dos efeitos Hall e Shubnikov-de Haas, apresentados na tabela~\ref{tab:apC-valores}: A primeira, representada pelos símbolos $+$, foi obtida fazendo $n_I=n_2=1,22$ e $n_S=4-(n_2+n_3)=2,29$. Esta condição não depende de conhecermos $n_1$ por que ela diz que a concentração de portadores no estado fundamental (primeira sub-banda) é maior que aquela da segunda sub-banda e, no entanto, menor que os \unit{4\times\terad}{\centi\rpsquare\metre} extrínsecos, menos aqueles que --- com certeza --- estão no \textsc{2deg}: $n_2+n_3$. A outra solução, representada pelos símbolos {\color{red}$\medcirc$}, está associada à condição $n_I\approx n_S \approx n_1 = 1,67$: Este é o valor que encontramos das medidas do efeito Shubnikov-de Haas (tabela~\ref{tab:apC-valores}).
+
+	{
+	\setlength{\abovecaptionskip}{0.5cm}
+	\setlength{\belowcaptionskip}{0.5cm}
+	\begin{table}[htb]
+		\begin{minipage}[c]{\textwidth}
+			\centering
+			\caption{\footnotesize\label{tab:apC-valores}Resultados utilizados para calcular o gráfico da figura~\ref{fig:apC-mapa}, obtidos das medidas dos efeitos Hall e Shubnikov-de Haas para a amostra \amostra{2,5} no \termo{claro}. As concentrações estão escritas em unidades de \unit{\terad}{\centi\rpsquare\metre} e as mobilidades, de $\squaren\metre\per\volt\cdot\second$.}
+			\begin{tabular}{cccccccc}
+			\rowcolor[gray]{0.9}$n_1$ & $n_2$ & $n_3$ & $n_\text{ef}$ & $\mu_1$ & $\mu_2$ & $\mu_3$ & $\bar\mu_\text{ef}$ \\		
+		$1,67$ & $1,22$ & $0,49$ & $2,11$ & ? & $0,374$ & $0,074$ & $0,792$ \\ 
+			\end{tabular}
+		\end{minipage}\vspace{5mm}		
+		\begin{minipage}[c]{\textwidth}
+			\centering
+			\psfrag{a}[][]{\large$\beta_3 = \text{Maior valor de }\beta_2$}
+			\psfrag{b}[][]{\large$\beta_3 = 2,5$}
+			\psfrag{c}[][]{\large\rotatebox{90}{$\beta_2 = 2,5$}}
+			\psfrag{d}[][]{\large\colorbox{white}{\shortstack{Solução para\\$n_2 \le n_1 \le 4 - n_2 - n_3$}}}
+			\psfrag{e}[][]{\large\shortstack{Solução para\\$n_1=1,67$}}
+			\psfrag{f}[][]{\large\rotatebox{90}{$2,5\le \beta_3 \le 2,7$}}
+			\psfrag{g}[][]{\large\rotatebox{90}{$\beta_2 \approx 2,7$}}
+			\psfrag{x}[][]{\Large$\beta_2$}
+			\psfrag{y}[][]{\Large$\beta_3$}
+			\resizebox{0.9\textwidth}{!}{\includegraphics{figuras/apC-mapa}}
+			\captionof{figure}{\footnotesize\label{fig:apC-mapa}Exemplo de aplicação do método exposto neste apêndice para a amostra \amostra{2,5} no \termo{claro}. Cada símbolo $+$ representa uma solução da equação~\eqref{eq:apC-desigualdade} para a condição $1,22 \le n_1 \le 2,29$. Analogamente, os símbolos {\color{red}$\medcirc$} são as soluções para a condição $n_1=1,67$ (veja a tabela~\ref{tab:apC-valores}). Note como a imposição das condições $\beta_2\ge 2,5$ e $2,5\le \beta_3 \le \beta_2$ limita enormemente as soluções possíveis (retângulo cinza).}
+		\end{minipage}
+	\end{table}
+	}
+	
+	As soluções apresentadas na figura~\ref{fig:apC-mapa} não resolvem muito o problema, pois existe uma vasta gama de valores possíveis para $\beta_2$ e $\beta_3$. Para limitar esses valores, vamos fazer algumas suposições baseadas nos dois seguintes fatos conhecidos:	
+	\vspace{0.5ex}
+	\begin{compactitem}
+		\item[\cite{koenraad}] A razão entre a mobilidade de transporte e quântica de um \textsc{2deg} sobre uma dopagem planar é aproximadamente igual a $2,5$;
+		\item[\cite{sarma}] Esta razão é tão maior quanto mais distante estiver o \textsc{2deg} do plano da dopagem.
+	\end{compactitem}
+	\vspace{0.5ex}
+	
+	Assim, como em nossas amostras $\langle\psi_1|\,z\,|\psi_1\rangle = 0$ (fig.~\ref{fig:bandas}), ou seja, está sobre o $\delta$-Si (seção~\ref{sec:resultados-SdH-iluminacao}), esperamos que $\beta_1\approx 2,5$. Além disso, como $\langle\psi_2|\,z\,|\psi_2\rangle \ge \langle\psi_3|\,z\,|\psi_3\rangle \ge 0$ (seção~\ref{sec:resultados-SdH-iluminacao}), podemos esperar que $\beta_2 \ge \beta_3 \ge \beta_1$. 
+	
+	Resumindo, devemos limitar os resultados da figura~\ref{fig:apC-mapa} à região definida por
+	$$
+	\beta_2 \ge 2,5 \quad\text{e}\quad 2,5 \le \beta_3 \le \beta_2,
+	$$
+	o que equivale aproximadamente ao retângulo cinza na figura~\ref{fig:apC-mapa}. Perceba como estas duas suposições limitam bastante os valores possíveis de $\beta_2$ e $\beta_3$. Isto é verdade para todas as amostras que analisamos e suficiente para construirmos o gráfico da figura~\ref{fig:razao-mobilidades}.
+	
+	Poderíamos também utilizar essas soluções na equação~\eqref{eq:apC-mobilidade} e tentar limitar ainda mais os resultados impondo a condição $\mu_1 \le \mu_3 \le \mu_2$, que sabemos ser verdade (seção~\ref{sec:resultados-SdH-iluminacao}), mas verificamos que em nenhum momento isto melhorou o nosso resultado.
+	
+	

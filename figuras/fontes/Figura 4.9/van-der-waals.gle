@@ -1,0 +1,22 @@
+size 10 10
+
+set hei 0.4
+set lwidth 0.015
+
+begin graph
+  size 10 10
+  nobox
+
+  xlabels off
+  x2labels off
+  xaxis off
+  x2axis off
+
+  ylabels off
+  y2labels off
+  yaxis off
+  y2axis off
+
+  let d1 = -10/x*(1-1/x) from 0.916 to 8 step 0.2
+  d1 line smooth
+end graph

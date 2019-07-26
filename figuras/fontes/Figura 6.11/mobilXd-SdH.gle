@@ -1,0 +1,93 @@
+size 11 11
+set lwidth 0.015
+set hei    0.400
+
+!include regua.gle
+
+amove 5.55 1.60
+box 3 7.35 nobox fill grey5
+
+!-- Barra de erros da terceira sub-banda
+amove 2.08 2.5
+rline 0 1
+rmove -0.1 0
+rline 0.2 0
+rmove 0 -1
+rline -0.2 0
+
+!------------------------------------
+! Linhas horizontais comparando os
+! pontos com a amostra-referência
+!------------------------------------
+set lstyle 6
+
+amove 1.75 4.35
+rline 6.5 0.0 
+
+amove 1.75 7.35
+rline 6.5 0.0
+!------------------------------------
+
+set lstyle 0
+amove 0 0
+begin graph
+ 	size 10 10.5
+	nobox
+
+	xticks length 0.1
+	xlabels hei 0.4
+	xtitle "\rule{0pt}{1\em}x"
+	xaxis min -0.25 max 2.75 dticks 0.5 dsubticks 0.1
+
+	yticks length 0.1
+	ylabels hei 0.4
+	!ylabels off
+	y2labels on
+	ytitle "y"
+	yaxis min 0.15 max 0.9 dticks 0.2 dsubticks 0.1
+	y2axis min 0.05689 max 0.34137 dticks 0.1 dsubticks 0.01
+	y2title "w"
+
+	data mobilXd-SdH.dat
+	d1 line marker fcircle 	 msize 0.4
+	d2 line marker ftriangle msize 0.4
+	d3 line marker wcircle   msize 0.4 lstyle 2
+	d4 line marker wtriangle msize 0.4 lstyle 2
+end graph
+
+
+set lwidth 0.03
+
+amove 3.0 4.5
+rline 0.0 2.0 arrow end
+rmove -0.4 -1.1
+text a
+
+amove 6.15 3.15
+rline 0.0 -0.8 arrow end
+
+amove 5.45 8.4
+text c
+
+amove 3.25 3.75
+text d
+
+rmove 0.0 -1.2
+text e
+
+set lstyle 0
+amove 1.75 8.5
+save ponto1
+rmove 3.5 0
+save ponto2
+join ponto1 <-> ponto2
+rmove -1.76 -0.1
+text f
+
+amove 5.75 8.5
+save ponto3
+rmove 2.5 0
+save ponto4
+join ponto3 <-> ponto4
+rmove -1.35 -0.1
+text b

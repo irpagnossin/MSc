@@ -1,0 +1,24 @@
+size 10 10
+
+set lwidth 0.015
+set hei    0.40
+
+!include regua.gle
+
+amove 0 0
+begin graph
+  size 10 10
+  nobox
+
+  xticks length 0.15
+  xtitle "\rule{0pt}{1.5\em}x"
+  xaxis min 1.5 max 2.3 dticks 0.2 dsubticks 0.1
+
+  yticks length 0.15
+  ytitle "\rule{1.5\em}{0pt}y"
+  yaxis log min 1 max  1000
+
+  data madhukar.dat
+  d1 line marker fdiamond
+  d1 msize 0.3
+end graph

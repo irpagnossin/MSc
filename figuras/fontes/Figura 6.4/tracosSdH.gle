@@ -1,0 +1,57 @@
+size 10 20
+
+set hei 0.4
+set lwidth 0.015
+
+!include regua.gle
+
+
+amove 0 0
+begin graph
+ 	size 10 10
+	nobox
+
+	xticks length 0.1
+	xlabels hei 0.4
+	xtitle "\rule{0pt}{1\em}x"
+	xaxis min -0.5 max 10.5 dticks 2 dsubticks 1
+
+	yticks length 0.1
+	ylabels hei 0.4
+	ytitle "y"
+	yaxis min 1 max 11.0 dticks 2 dsubticks 1
+
+	data escuro.dat
+	d1 line color black
+	d2 line color red
+	d3 line color green
+	d4 line color blue
+	d5 line color cyan
+	d6 line color magenta
+end graph
+
+amove 7.2 0
+begin graph
+ 	size 10 10
+	nobox
+
+	xticks length 0.1
+	xlabels hei 0.4
+	!xtitle "\rule{0pt}{1\em}x"
+	xaxis min -0.5 max 10.5 dticks 2 dsubticks 1
+
+	yticks length 0.1
+	ylabels off
+	y2labels on
+	y2labels hei 0.4
+	y2title "y"
+	yaxis min 0 max 5 dticks 1 dsubticks 0.5
+
+	data claro.dat
+	d1 line color black
+	d2 line color red
+	d3 line color green
+	d4 line color blue
+	d5 line color cyan
+	d6 line color magenta
+end graph

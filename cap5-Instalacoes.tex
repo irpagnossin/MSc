@@ -1,0 +1,107 @@
+%---------------------------------------------------------
+% Arquivo: cap5-Instalacoes.tex
+% Autor:	 Ivan Ramos Pagnossin
+%---------------------------------------------------------
+	
+	É comum em trabalhos científicos encontrarmos um certo distanciamento entre a teoria desenvolvida para analisar uma amostra e a forma como manipulamos os equipamentos destinados à medição desta amostra. O capítulo~\ref{cap:tecnicas}, por sí só, é um exemplo disto: Não mencionamos, \eg, como é possível mantermos a amostra em \unit{1,4}{\kelvin}, nem como conseguimos uma região de campo magnético uniforme; tampouco explicamos como manter fixa a corrente elétrica que percorre a amostra. Estes são apenas alguns exemplos e visando reduzir\footnote{Não pretendemos exaurir aqui todos os detalhes acerca desses equipamentos (este é o trabalho dos manuais), mas apenas evidenciar os principais pontos.} este distanciamento entre a teoria e a prática, vamos agora apresentar e descrever os equipamentos que nos permitiram realizar as medidas dos efeitos Hall e Shubnikov-de Haas.	 
+		
+	Conforme vimos no capítulo~\ref{cap:tecnicas}, as análises das medidas dos efeitos Hall e Shubnikov-de Haas são feitas com base nos gráficos de $V_{BE}\times B$ e $V_{BC}\times B$, respectivamente. Isto significa que, sob a óptica das instalações necessárias, essas duas técnicas diferem apenas pela direção na qual medimos a diferença de potencial: Perpendicularmente à corrente aplicada no primeiro caso, e paralelamente no segundo. Assim, podemos utilizar a mesma instalação para medir qualquer um dos dois fenômenos. De fato, a figura~\ref{fig:esquema} é um esquema simplificado dessa instalação e podemos observar que somente a posição da chave \textsc{ch3} diferencia essas duas técnicas. Deste modo, o que fizemos foi manter esta chave na posição \texttt{SdH} enquanto aumentávamos a intensidade do campo magnético (desde zero até \unit{10}{\tesla}), e na posição \texttt{Hall} enquanto a reduzíamos de volta a zero.
+
+	\begin{figure}[htb]
+			\centering
+			\centering
+			\psfrag{A}[r][r]{\LARGE\unit{1}{\micro\ampere}}
+			\psfrag{B}[l][l]{\LARGE\shortstack{Amostra\\($\sim\kilo\ohm$)}}
+			\psfrag{C}[l][l]{\LARGE\colorbox{white}{\shortstack{\unit{1}{\volt} \\ \unit{11}{\hertz}}}}
+			\psfrag{D}[r][r]{\LARGE\rotatebox{90}{\unit{1}{\mega\ohm}}}
+			\psfrag{E}[l][l]{\LARGE\rotatebox{90}{\unit{10}{\mega\ohm}}}
+			\psfrag{F}[][]{\LARGE\unit{1,4}{\kelvin}}
+			\psfrag{G}[][]{\LARGE$\times 10$}
+			\psfrag{H}[][]{\LARGE\foreign{Lock-in}}
+			\psfrag{I}[][]{\LARGE\textsc{adc}}
+			\psfrag{J}[][]{\LARGE\shortstack{Gerador\\de campo}}
+			\psfrag{K}[l][l]{\LARGE\textsc{led}}
+			\psfrag{L}[][]{\Large SdH}
+			\psfrag{M}[r][r]{\Large Hall}
+			\psfrag{N}[][]{\LARGE\textsc{ch2}}
+			\psfrag{O}[][]{\LARGE\textsc{ch3}}
+			\psfrag{P}[][]{\LARGE\textsc{ch1}}
+			\psfrag{Q}[r][r]{\Large$A$}
+			\psfrag{R}[r][r]{\Large$B$}
+			\psfrag{S}[r][r]{\Large$C$}
+			\psfrag{T}[r][r]{\Large$D$}
+			\psfrag{U}[l][l]{\Large$E$}
+			\resizebox{0.7\textwidth}{!}{\includegraphics{figuras/aparato-TR-esquema}}	
+			\caption{\label{fig:esquema}\footnotesize Esquema simplificado das interligações dos equipamentos mostrados na figura~\ref{fig:foto}, página~\pageref{fig:foto}.}
+	\end{figure}	
+	
+	As amostras são medidas uma após a outra, individualmente, e durante as diversas medidas de uma mesma amostra, esta é incessantemente percorrida por uma corrente de \unit{1}{\micro\ampere}, fornecida por uma fonte de tensão alternada de \unit{1}{\volt} (\textsc{rms}, \foreign{root mean square}) e regulada por um resistor de \unit{1}{\mega\ohm} em série com a amostra. Em verdade, como a \enfase{maior} resistência (medida diretamente com um ohmímetro) observada entre os pontos $A$ e $D$ (fig.~\ref{fig:esquema}) foi de aproximadamente \unit{50}{\kilo\ohm},\footnote{Amostra \unit{2,5}{\monocamadas}, a \unit{1,4}{\kelvin} no escuro (veja o capítulo seguinte).} a corrente é ligeiramente inferior (no mínimo):
+	$$
+	\frac{\unit{1}{\volt}}{\unit{1}{\mega\ohm}+\unit{50}{\kilo\ohm}} \approx \unit{0,95}{\micro\ampere},
+	$$
+	correspondendo a um erro \enfase{máximo} de $5\%$. Além disso, a impedância dos equipamentos acoplados é, pelo menos, cem vezes maior que a resistência deste ramo, de modo que podemos ignorá-los. Por conta disto, daqui para frente desconsideraremos este erro e diremos que a corrente é \enfase{constante} e \enfase{igual} a \unit{1}{\micro\ampere}.
+
+	Ao invés do resistor de \unit{1}{\mega\ohm}, podemos mudar a posição da chave \textsc{ch2} e regular a corrente através do resistor de \unit{10}{\mega\ohm}, reduzindo-a para \unit{0,1}{\micro\ampere}. Isto serve para verificarmos o comportamento ôhmico (ou linearidade) da amostra: Devido à primeira lei de Ohm, ao reduzirmos a corrente por um fator de $10$, a tensão entre os pontos $A$ e $D$ da amostra também diminui pelo mesmo fator. Caso isto não ocorra, a amostra \enfase{não} obedece às leis de Ohm e, portanto, é não-linear. Assim, utilizamos a chave \textsc{ch2} apenas para averiguar a linearidade (nenhuma medida foi feita com \unit{0,1}{\micro\ampere}). Isto é importante por que a análise de dados desenvolvida no capítulo anterior pressupõe que conhecemos $R_{BC}$ (tanto para as medidas do efeito Hall, equação~\eqref{eq:mobil-H}, quanto para as do efeito Shubnikov-de Haas, equação~\eqref{eq:rho}); não $V_{BC}$ (que realmente medimos). Como nossas amostras são lineares, $V_{BC}=R_{BC}\,I$ e medir a tensão ou a resistência entre os pontos $B$ e $C$ é equivalente, posto que $I$ é conhecida; Mas se elas não fossem, precisaríamos antes determinar a curva $V_{BC}\times I$ nas imediações de $I=\unit{1}{\micro\ampere}$ para cada valor de campo magnético aplicado e tomar $R_{BC}(I,B)=\partial V_{BC}(I,B)/\partial I$.
+
+	\index{Lock-in}
+	\index{ADC}
+	\index{Conversor analogico-digital@Conversor analógico-digital}
+	Acompanhemos o esquema da figura~\ref{fig:esquema} para que possamos compreendê-lo: O objetivo é medir $V_{BC}$ ou $V_{BE}$ (dependendo da posição da chave \textsc{ch3}) em função do campo magnético aplicado, e tudo o mais está lá apenas para melhorar os resultados. Então vejamos: Inicialmente, suponha que $B=0$. A diferença de potencial $V_{BC}$ (ou $V_{BE}$) é analogicamente amplificada (\textsc{eg \& g instruments 5186}) em dez vezes (\unit{20}{\text{dB}}) e, em seguida, avaliada por um \foreign{lock-in} (grosso modo, um multímetro melhorado). Este resultado é digitalizado (conversor analógico-digital --- \textsc{adc} --- \textsc{hp 34401a}) e enviado ao computador, onde é armazenado em um arquivo de texto puro pelo \foreign{software} de coleta de dados. Ao receber esta informação, este mesmo \foreign{software} (desenvolvido no próprio grupo) envia ao gerador de campo uma solicitação de campo magnético, digamos \unit{0,1}{\tesla}, ao que este responde, gerando na região da amostra um campo magnético com esta intensidade. Agora, devido à influência de $B\ne0$ sobre os portadores de carga na amostra, $V_{BC}$ (e $V_{BE}$) muda (conforme o que discutimos no capítulo anterior) e uma nova medição é feita, seguindo os mesmos passos acima descritos. 
+		
+	Este processo se repete $M=1500$ vezes, enquanto $B\in [B_\text{mín},B_\text{máx}]$, sendo $B_\text{mín}=0$ e $B_\text{máx}=\unit{10}{\tesla}$ dois parâmetros determinados pelo usuário (os valores numéricos são aqueles que utilizamos). Assim, temos uma medida de $V_{BC}$ (ou $V_{BE}$) a cada $(B_\text{máx}-B_\text{mín})/(M-1)\approx\unit{0,007}{\tesla}$, de sorte que o arquivo contendo o resultado dessas medidas assemelha-se a (exceto pela coluna $j$, que não existe no arquivo):
+	
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{ccc}
+		$j$ & $B_j$ (\tesla) & $V_j$\\
+		\hline
+		$1$ & $0$ & $V_1$ \\
+		$2$ & $0,007$ & $V_2$ \\
+		$3$ & $0,014$ & $V_3$ \\
+		$\vdots$ & $\vdots$ & $\vdots$\\
+		$1500$ & $10$ & $V_{1500}$ \\
+		\hline
+		\end{tabular}
+		\caption{\footnotesize Exceto pela primeira coluna ($j$), este é um exemplo do formato do arquivo texto que contém as medidas de $V_j$. Note que $V_j=V_{BC}$ ou $=V_{BE}$, dependendo do que estamos medindo: efeito Shubnikov-de Haas ou Hall, respectivamente.}
+	\end{table}
+	
+	\index{Saturacao@Saturação}
+	Assim que terminamos uma medida SdH e Hall,\footnote{Daqui para frente referir-nos-emos a ``uma medida SdH'' ou ``Hall'' como todas as $M$ avaliações de $V_j$ em função de $B$.} irradiamos a amostra com fótons de aproximadamente \unit{2}{\electronvolt} por alguns segundos e voltamos a fazer uma medida SdH e outra Hall. Esses fótons são emitidos por um \textsc{led} (próximo da amostra) alimentado por uma fonte de corrente contínua (\textsc{keithley} 224) ajustada em \unit{1}{\micro\ampere} (não confunda com a corrente que percorre a amostra), promovendo a concentração de portadores no \textsc{2deg} e facilitando a sua detecção (dentre outros efeitos). O porquê disto ficará claro no capítulo seguinte e todo o procedimento acima é repetido até que duas medidas SdH e Hall sucessivas \enfase{não} difiram significativamente, situação que chamamos de \novotermo{saturação}.
+	
+	\index{Lock-in}
+	\index{Sinal de referencia@Sinal de refência}
+	\index{Portadora}
+	Um detalhe a ser notado pelo leitor na figura~\ref{fig:esquema} é que a fonte que alimenta a amostra está representada em vermelho, assim como o \foreign{lock-in}. Fizemos isso por que, em verdade, essa fonte faz parte do \foreign{lock-in} (\textsc{eg \& g princeton applied research} 5210): é o seu \termo{sinal de referência}. O \foreign{lock-in} é um voltímetro especialmente desenvolvido para ampliar a relação sinal/ruído de um sinal ruidoso em várias dezenas de decibéis. Para fazer isso, ele precisa receber em sua entrada o sinal de interesse modulado por um outro, alternado e de freqüência conhecida, chamado \termo{portadora} (veja o apêndice~\ref{ap:CFT}) ou, especificamente no caso do \foreign{lock-in}, \novotermo{sinal de referência}. Assim, para cada valor de campo magnético aplicado, $V_{BC}$ e $V_{BE}$ são senoidais de freqüência \unit{11}{\hertz} (fig.~\ref{fig:esquema}) e cujo valor \textsc{rms} é o desejado.
+	
+	\index{Fase}
+	Outra característica do \foreign{lock-in} é a sua capacidade de medir a fase entre o sinal medido e o de referência. No nosso caso, verificamos que ela era sempre zero, evidenciando a característica puramente resistiva da amostra (veja, \eg, o capítulo 8 da referência~\cite{faissler}). Isso endossa a análise inteiramente resistiva da corrente que percorre a amostra, feita no 3º parágrafo.
+	
+	\index{Helio liquido@Hélio líquido}
+	Na figura~\ref{fig:esquema}, o retângulo cinza representa o criostato (\textsc{oxford}) no qual as amostras ficam em contato com hélio-4 líquido a \unit{1,4}{\kelvin}. Esta temperatura pode ser atingida e mantida através da transição de fase (evaporação) do hélio líquido puro sob pressão inferior à atmosférica,\footnote{Sob pressão atmosférica, o $^4$He evapora a \unit{4,2}{\kelvin}.} \ie, durante todo o processo de medição, mantemos a amostra imersa em hélio líquido numa câmara (\termo{da amostra}) isolada do meio-ambiente e a bombeamos mecanicamente (bomba \textsc{leybold}) para reduzir a pressão ali. Deste modo, enquanto houver hélio nesta câmara, ele estará em transição de fase e a temperatura será mantida em \unit{1,4}{\kelvin}.
+	
+	Há duas razões para trabalharmos em temperaturas tão baixas: Primeiro por que, conforme a condição $\hbar\Omega_s\gg\boltzmann T$ apresentada na seção~\ref{sec:efeito-SdH}, as oscilações SdH só são visíveis nessas baixíssimas temperaturas (em verdade, podemos ver na equação~\eqref{eq:rho} que a amplitude das oscilações caem rapidamente à medida que aumentamos a temperatura do \textsc{2deg}); Segundo, por que queremos utilizar o fenômeno da \termo{fotocondutividade persistente} (próximo capítulo), existente em baixas temperaturas, para nos auxiliar nas análises.
+	
+	O campo magnético é gerado por um solenóide supercondutor no interior do criostato, alimentado por uma fonte específica para este fim (\textsc{oxford ips \unit{120}{\ampere}-\unit{10}{\volt}}, capaz de gerar campos de até \unit{16}{\tesla}). A uniformidade do campo, geralmente especificada num volume esférico de \unit{1}{\centi\metre} de diâmetro \enfase{na região da amostra}, supera facilmente uma parte em $1000$~\cite{oxford}. No entanto, campos desta magnitude só podem ser atingidos quando as diversas partes da bobina (em especial, o solenóide) trabalham em regime de supercondutividade, a baixíssimas temperaturas.
+					
+	\begin{figure}[htb]
+			\centering
+			\psfrag{a}[][]{\Huge\colorbox{white}{1}}
+			\psfrag{b}[][]{\Huge\colorbox{white}{2}}
+			\psfrag{c}[][]{\Huge\colorbox{white}{3}}
+			\psfrag{d}[][]{\Huge\colorbox{white}{4}}
+			\psfrag{e}[][]{\Huge\colorbox{white}{5}}
+			\psfrag{f}[][]{\Huge\colorbox{white}{6}}
+			\psfrag{g}[][]{\Huge\colorbox{white}{7}}
+			\psfrag{h}[][]{\Huge\colorbox{white}{8}}
+			\psfrag{i}[][]{\Huge\colorbox{white}{9}}
+			\psfrag{j}[][]{\Huge\colorbox{white}{10}}
+			\psfrag{k}[][]{\Huge\colorbox{white}{11}}
+			\psfrag{l}[][]{\Huge\colorbox{white}{12}}
+			\psfrag{m}[][]{\Huge\colorbox{white}{13}}
+			\psfrag{o}[][]{\Huge\colorbox{white}{14}}
+			\psfrag{p}[][]{\Huge\colorbox{white}{15}}
+			\resizebox{\textwidth}{!}{\includegraphics{figuras/aparato-TR-foto}}
+			\caption{\label{fig:foto}\footnotesize À esquerda, indicadores de (1) nível de nitrogênio, hélio e (2) de temperatura na câmara da amostra (longe da amostra); (3) \foreign{lock-in} e chave \textsc{ch2} (imediatamente abaixo do rótulo); (4) Chave \textsc{ch3}; (5) Indicador de temperatura na amostra (termopar); (6) Fonte de corrente que alimenta o \textsc{led}; (7) gerador do campo magnético; (8) Amplificador analógico e (9) conversor analógico-digital. À direita vemos (10) todos os equipamentos da figura à esquerda, (11) a mangueira de transferência de hélio líquido, (12) o criostato (sua maior parte fica abaixo do nível do chão), (13) a mangueira de transferência de nitrogênio líquido, (14) o sistema de vácuo e (15) a bomba mecânica. O computador fica à esquerda e não está na fotografia.}
+	\end{figure}		
+		
+	Existem muitos outros detalhes, como o sistema de vácuo, as medidas de temperatura e de níveis do nitrogênio e do hélio líquidos, as transferências de hélio e os padrões de comunicação entre os dispositivos, dentre muitos outros. No entanto, o que expusemos aqui vai além do que é necessário para a compreensão das medidas e das análises que seguem e, por isso, pararemos aqui.

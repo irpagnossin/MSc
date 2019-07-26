@@ -1,0 +1,210 @@
+		
+		\index{Epicamada}
+		\index{Descasamento}
+		\index{Misfit|see{Descasamento}}
+		\index{Litografia!Foto-}
+		\index{Litografia!Eletro-}
+		As primeiras tentativas de se produzir estruturas com confinamento tridimensional de elétrons (pontos-quânticos) utilizaram técnicas de fotolitografia e eletrolitografia de alta resolução, bem como crescimento sobre substratos pré-gravados. Contudo, essas técnicas mostraram-se incapazes de produzir \textsc{qd}s com dimensões controladas ou pequenos o suficiente para garantir os efeitos do confinamento. Além disso, as estruturas produzidas por essas técnicas apresentavam má qualidade cristalina, com altas densidades de impurezas e defeitos estruturais provenientes dos tratamentos químicos. Estes problemas foram resolvidos na década de 1980 com a descoberta do processo de auto-formação e organização dos pontos-quânticos durante o crescimento epitaxial por \textsc{mbe} de camadas tensionadas mecanicamente pelo descasamento (\foreign{misfit}) entre os parâmetros de rede da camada em crescimento (\novotermo{epicamada}) e do substrato, em torno de 10\% (regime de crescimento Stranski-Krastanov, \textsc{sk}~\cite{mike}). Especificamente no nosso caso (capítulo~\ref{cap:amostras}), onde os \textsc{qd}s são de InAs ($a_\text{InAs}=\unit{6,058}{\angstrom}$) e utilizamos um substrato de GaAs ($a_\text{GaAs}=\unit{5,653}{\angstrom}$), este descasamento ($(a_\text{InAs}-a_\text{GaAs})/a_\text{GaAs}$) é de 7\%.						
+
+		\setbox0 = \hbox{\Large\textbf{\textsc{mbe}}}
+		\section[A técnica \textsc{mbe}]{A técnica \box0}
+		
+		\index{Epicamada}
+		\index{Substrato}
+		A epitaxia por feixe molecular é apenas uma das chamadas técnicas de crescimento epitaxial\footnote{Técnicas correlatas são a \textsc{mocvd} (\foreign{metalorganic chemical vapour deposition}) e a \textsc{cbe} (\foreign{chemical beam epitaxy}).} e caracteriza-se principalmente pela capacidade de produzir filmes monocristalinos ultra-finos com precisão atômica. A palavra ``epitaxia'' é um hibridismo do prefixo grego ``epi'' (acima) com o radical latino ``axis'' (eixo) e procura representar a idéia de que a camada cristalina em crescimento (epicamada) tende a seguir a orientação cristalográfica da camada imediatamente abaixo (substrato); Já o termo ``feixe molecular'' refere-se ao regime molecular dos elementos químicos direcionados para o substrato. Assim, a técnica \textsc{mbe} consiste em incidir um feixe \enfase{molecular} de átomos ou moléculas sobre um substrato cristalino (previamente produzido por alguma outra técnica) e, com isso, produzir mais uma camada atômica estruturalmente idêntica à anterior, e assim sucessivamente para as camadas seguintes (veja a figura~\ref{fig:crescimento}).
+		
+		\begin{figure}[htb]
+			\begin{minipage}[c]{0.56\textwidth}
+				\centering
+				\psfrag{a}[r][r]{\colorbox{white}{\LARGE\shortstack{\hfill Feixe\\molecular}}}
+				\psfrag{b}[l][l]{\colorbox{white}{\LARGE\shortstack{Sítio\hfill\\da rede}}}
+				\psfrag{c}[r][r]{\rotatebox{90}{\LARGE epicamada}}
+				\psfrag{d}[l][l]{\rotatebox{90}{\LARGE substrato}}
+				\resizebox{\textwidth}{!}{\includegraphics{figuras/rede.eps}}
+			\end{minipage}\hfill
+			\begin{minipage}[c]{0.40\textwidth}
+				\centering
+				\caption{\footnotesize\label{fig:crescimento} Ao incidir sobre o substrato, os átomos ou moléculas do feixe molecular tendem a se posicionar nos sítios da rede. Deste modo, o crescimento segue a estrutura cristalina do substrato, pois é assim que a energia total é minimizada. Situações como aquelas representadas pelos círculos (átomos) vermelhos são possíveis, embora menos freqüentes. Os átomos amarelos podem ou não ser diferentes daqueles do substrato, dependendo do que se quer obter.}
+			\end{minipage}
+		\end{figure}
+		
+		\index{Camara@Câmara!de crescimento}
+		\index{Camara@Câmara!de entrada}
+		\index{Celula de knudsen@Célula de Knudsen}
+		\index{Obturador}	
+		\index{Laboratorio@Laboratório!de Novos Materiais Semicondutores}
+		\index{DFMT|{Departamento!de Fisica dos Materiais e Mecanica@de Física dos Materiais e Mecânica}}
+		\index{Universidade de Sao Paulo@Universidade de São Paulo}
+		A figura~\ref{fig:MBE-1} é uma representação das partes principais de um equipamento de \textsc{mbe} genérico e a figura~\ref{fig:MBE-2} é uma fotografia do equipamento utilizado para crescer as amostras deste trabalho.\footnote{No Laboratório de Novos Materiais Semicondutores (\textsc{lnms}) do Departamento de Física dos Materiais e Mecânica (\textsc{dfmt}) do Instituto de Física (\textsc{if}) da Universidade de São Paulo (\textsc{usp}).} O equipamento é constituído de duas câmaras de vácuo independentes (sistemas de vácuo independentes) e conectadas por uma válvula gaveta, específica para ambientes de ultra-alto-vácuo. A primeira delas (\termo{câmara de entrada}) não está representada na figura~\ref{fig:MBE-1} por que tem pouco interesse para a compreensão do método propriamente dito: Ela é utilizada para manusear as amostras e, por isso, freqüentemente exposta à atmosfera-ambiente (daí a necessidade de essas duas câmaras possuirem sistemas de vácuo independentes). É na segunda \novotermo{câmara} (\novotermo{de crescimento}), acima da válvula gaveta (fig.~\ref{fig:MBE-1}), que o crescimento ocorre: O substrato é fixado no centro (porta-amostras) e para ele estão apontadas as \novotermo{células de Knudsen}, cada qual contendo um bloco de elemento químico sólido puro, e somente ele. No nosso caso, as células contém As (arsênio), Al (alumínio), In (índio), Ga (gálio) e Si (silício, usado nas dopagens). O feixe molecular é obtido pela sublimação desses elementos e seu fluxo é controlado pela temperatura de cada célula. Entre o substrato e cada célula existe um obturador pneumático que interrompe ou não a incidência desse fluxo sobre o substrato, conforme o interesse. Então, \eg, se quisermos jogar apenas alumínio no substrato, abrimos o obturador da célula de Al e fechamos os das outras. A quantidade de átomos que incide sobre o substrato é diretamente proporcional ao tempo de abertura do obturador. Deste modo, manipulando as temperaturas das células de Knudsen e os tempos de exposição (do substrato às células) podemos atingir taxas de crescimento tão baixas quanto \unit{1}{\micro\metre\per\hour} (ou alguns angströns por segundo).
+		
+	\begin{figure}[htb]
+		\centering
+		\subfigure{
+			\psfrag{a}[][]{\Large\shortstack{Células de\\Knudsen}}
+			\psfrag{b}[][]{\Large\shortstack{Canhão de\\elétrons\\(\textsc{rheed})}}
+			\psfrag{c}[][]{\Large\shortstack{Janela de\\observação}}
+			\psfrag{d}[][]{\Large\shortstack{Válvula\\gaveta}}
+			\psfrag{e}[][]{\Large\shortstack{Braço\\mecânico}}
+			\psfrag{f}[][]{\Large\shortstack{Feixe de\\elétrons}}
+			\psfrag{g}[][]{\Large\shortstack{Anteparos\\frios}}
+			\psfrag{h}[][]{\Large\shortstack{Tela\\fosforescente}}
+			\psfrag{i}[][]{\Large Obturador}
+			\psfrag{j}[][]{\Large Porta-amostras}
+			\resizebox{0.4\textwidth}{!}{\includegraphics{figuras/MBE-1.eps}}	
+			\label{fig:MBE-1}}\hfill
+		\subfigure{
+			\psfrag{a}[][]{\Large\colorbox{white}{\shortstack{Células de\\Knudsen}}}
+			\psfrag{b}[][]{\Large\colorbox{white}{\shortstack{Câmara de\\crescimento}}}
+			\psfrag{c}[][]{\Large\colorbox{white}{\shortstack{Válvula\\Gaveta}}}
+			\psfrag{d}[][]{\Large\colorbox{white}{\shortstack{Janela de\\observação}}}
+			\psfrag{e}[][]{\Large\colorbox{white}{Câmera}}
+			\psfrag{f}[][]{\Large\colorbox{white}{\shortstack{Tela\\fosforescente}}}
+			\resizebox{0.45\textwidth}{!}{\includegraphics{figuras/MBE-2.eps}}					
+			\label{fig:MBE-2}}\hfill
+		\caption{\footnotesize (a) Esquema genérico de um sistema \textsc{mbe} (visto de cima). (b) Fotografia do equipamento \textsc{mbe} do laboratório \textsc{lnms} no Instituto de Física da Universidade de São Paulo (\foreign{campus} SP). A câmera (na parte inferior) capta os padrões de difração que aparecem na tela fosforescente e envia-os para um monitor. O leitor pode ter uma noção do tamanho do equipamento observando o filtro-de-linha na parte inferior direita da figura.}		
+	\end{figure}		
+	
+		\index{Reflection high-energy electron diffraction}
+		\index{RHEED|see{Reflection high-energy electron diffraction}}
+		\index{Monocamada}
+		\index{MC|see{Monocamada}}
+		O canhão de elétrons e a tela fluorescente na figura~\ref{fig:MBE-1} são necessários para monitorar o crescimento através de uma técnica chamada \novotermo{\textsc{rheed}} (\foreign{reflection high-energy electron diffraction}): Basicamente, o canhão de elétrons incide sobre a superfície da amostra em crescimento um feixe rasante ($\sim \unit{1}{\degree}$ com a superfície) de elétrons altamente energéticos (\unit{8}{\kilo\electronvolt} no nosso caso), projetando na tela fluorescente o padrão de difração produzido pelo feixe na superfície da amostra. Então suponha que temos uma superfície perfeitamente lisa. Como a incidência é rasante, o feixe é totalmente refletido e difratado pelas camadas mais superficiais (1 a \unit{5}{\novotermo\monocamadas}).\footnote{Chamamos de monocamada (MC) a distância entre dois planos sucessivos de átomos da mesma espécie numa estrutua cristalina. Especificamente no nosso caso, onde a estrutura é do tipo \foreign{zinc-blend}~\cite{ashcroft,kittel} e a orientação cristalográfica é $(001)$, $\unit{1}{\monocamadas}=a/2$, onde $a$ é o parâmetro de rede.} Assim, o padrão de difração observado é um conjunto de listras, característico de uma estrutura bidimensional (a área de incidência). Inversamente, suponha agora que temos uma superfície rugosa. Neste caso o feixe será fortemente bloqueado pela rugosidade. Agora, o feixe de elétrons tem de atravessar as rugosidades e quando isto acontece as condições de difração são associadas a um arranjo tridimensional de átomos. Isto implica que o padrão de difração, nesta situação, é um conjunto de pontos, característico de uma estrutura tridimensional (rugosidade da superfície). A figura~\ref{fig:rheed} ilustra essas duas situações.
+		
+		Embora o crescimento por \textsc{mbe} seja praticamente isento de defeitos, ele não ocorre camada por camada atômica exatamente. A figura~\ref{fig:crescimento} ilustra isso: Cada linha horizontal de átomos (círculos) é uma monocamada. O leitor pode reparar que a primeira monocamada acima do substrato (círculos amarelos) ainda não está completa, embora a segunda (imediatamente acima) já tenha começado a se formar. Essa figura mostra uma situação em que a rugosidade é alta, mas dentro em breve a primeira camada acima do substrato estará completa e a segunda (acima) ainda estará em formação. Quando isto ocorrer a rugosidade terá reduzido. O crescimento ocorre desta maneira: A rugosidade da superfície oscila, e é isso que a técnica \textsc{rheed} mede. Quando uma monocamada está completa, a rugosidade é mínima e a difração do feixe eletrônico é característico de uma estrutura bidimensional (conjunto de listras). Mas quando só metade de uma monocamada está completa, a rugosidade é máxima e o padrão de difração é o de uma estrutura tridimensional (conjunto de pontos). A figura~\ref{fig:rheed} mostra uma foto dessas duas situações e as referências~\cite{mike} e~\cite{sandro} explicam pormenorizadamente a técnica.
+		
+		\begin{figure}[htb]
+			\centering
+			\resizebox{0.8\textwidth}{!}{\includegraphics{figuras/rheed}}
+			\caption{\footnotesize\label{fig:rheed} À esquerda vemos o padrão de difração característico de uma estrutura bidimensional (veja o texto); À direita, o padrão é devido à rugosidade da superfície (aglomerados tridimensionais de átomos), indicando que a monocamada mais superficial ainda não está completa. O ponto intenso no centro é a parte do feixe que não sofreu difração.}
+		\end{figure}		
+		
+		A técnica \textsc{rheed} também é utilizada para verificar a formação dos pontos-quânticos: Conforme veremos na próxima seção, os \textsc{qd}s são pequenos aglomerados tridimensionais de átomos e, por isso, produzem um padrão de difração característico de uma estrutura tridimensional.
+		
+		\index{Crescedor}
+		Vamos ver com mais detalhes como é que se cresce uma estrutura simples (um \textsc{qw} com uma dopagem delta ao lado, por exemplo): Primeiramente o crescedor\footnote{Crescedor é a pessoa responsável por manipular a máquina \textsc{mbe} e construir as estruturas desejadas.} precisa determinar as taxas de crescimento que lhe interessam. Isto é feito manipulando as temperaturas das células de Knudsen e monitorando o crescimento de uma amostra de referência através da técnica \textsc{rheed}. Com isso ele pode definir, \eg, que a taxa de crescimento da liga GaAs (naquelas temperaturas) é \unit{0,704}{\monocamadas\per\second}, e a da liga InGaAs, \unit{0,998}{\monocamadas\per\second}. Perceba que essas taxas são definidas previamente ao crescimento e passadas ao programa através do comando \verb!rate!; Este comando não faz nada além de definir uma constante que armazena a taxa de crescimento da liga. Agora tudo corre automaticamente: O comando \verb!grow! diz ao equipamento para crescer \unit{500}{\angstrom} da liga GaAs, a barreira anterior do \textsc{qw} de InGaAs. 
+
+		\begin{verbatim}
+		begin               // Inicia o programa
+		rate GaAs 0.704     // Define a taxa de crescimento da liga GaAs...
+		rate InGaAs 0.998   // ... em MC/s (monocamadas por segundo)
+		grow GaAs 500       // Cresce 500 angströns de GaAs
+		open Si             // Abre o obturador da célula de silício
+		wait 10             // Aguarda por 10 segundos (não faz nada)
+		close Si            // Fecha o obturador da célula de silício
+		grow GaAs 70
+		grow InGaAs 100
+		grow GaAs 80
+		end                 // Finaliza o programa
+		\end{verbatim}
+		
+		Em seguida (as três linhas seguintes), o equipamento cresce uma dopagem do tipo delta. Para fazer isso ele simplesmente abre o obturador do silício (\verb!open Si!), espera 10 segundos (\verb!wait 10!) e fecha-o (\verb!close Si!). O tempo que o obturador fica aberto define a concentração da dopagem, que também é determinada com base no crescimento de uma amostra de referência.
+		
+		\index{Camada de!espacamento@espaçamento}
+		\index{Spacer-layer|see{Camada de!espacamento@espaçamento}}
+		Agora o sistema \textsc{mbe} cresce outros 70 angströns: É a \novotermo{camada de espaçamento} (\novotermo{\foreign{spacer-layer}}), responsável por \enfase{separar} a dopagem delta do poço-quântico de InGaAs (\unit{100}{\angstrom} de espessura) que vem logo em seguida (comando \verb!grow InGaAs 100!). Finalmente a barreira posterior é crescida (\verb!grow GaAs 80!) e o programa, finalizado (\verb!end!).
+		
+		Na realidade, o comando \verb!grow! é uma sub-rotina baseada nos comandos \verb!open!, \verb!wait! e \verb!close! que calcula automaticamente o tempo de exposição (comando \verb!wait!) necessário para que se cresça a espessura desejada. Tomemos, \eg, o caso do poço-quântico, de \unit{100}{\angstrom} de espessura. A taxa de crescimento desta liga foi definida como \unit{0,998}{\monocamadas\per\second}, ou ainda, sabendo que uma monocamada de InGaAs corresponde a meio parâmetro de rede da liga,\footnote{Considerando a liga de \especie{In_yGa_{1-y}As} utilizada neste trabalho, onde $\text{y}=16,534\%$.} \unit{2,844}{\angstrom\per\second}. Isto significa que precisamos manter as células de In, Ga e As abertas por $100/2,844 =\unit{35,16}{\second}$. Portanto o comando \verb!grow InGaAs 100! acima é equivalente a
+		\begin{verbatim}
+		open  In,Ga,As
+		wait 35.16
+		close In,Ga,As
+		\end{verbatim}
+		
+		O uso de um programa como este que acabamos de apresentar é opcional. Essencialmente, ele é utilizado apenas para melhorar o controle do tempo de exposição, das aberturas e dos fechamentos dos obturadores.
+		
+		\index{Adsorcao@Adsorção}
+		\index{Difusao@Difusão}
+		\index{Incorporacao@Incorporação}
+		\index{Desadsorcao@Desadsorção}
+		\index{Dissociacao@Dissociação}
+		\index{Processos de superficie@Processos de superfície}
+		\index{Forca@Força ou interação!de Van der Waals}
+		O feixe molecular obtido da sublimação dos elementos químicos nas células de Knudsen incide sobre o substrato a uma taxa que varia de \power{10}{18} até \power{10}{20} átomos por metro quadrado e por segundo. Ao atingir a superfície, esses átomos sofrem uma enorme variedade de trocas energéticas antes de entrarem em equilíbrio termodinâmico com o substrato e, só então, serem efetivamente incorporados na amostra\footnote{Para uma taxa de crescimento típica, de \unit{1}{\monocamadas\per\second}, um átomo de gálio sobre um substrato de GaAs a \unit{600}{\degreecelsius} pode realizar aproximadamente \power{10}{6} interações antes de ser efetivamente incorporado pelo cristal~\cite{sandro}.} (isto ocorre por que as temperaturas do substrato e a das células de Knudsen não são a mesma). Essas trocas energéticas ocorrem através de cinco maneiras, ou fenômenos, distintos (basicamente): \novotermo{Adsorção}, \novotermo{difusão} e \novotermo{incorporação}; \novotermo{desadsorção} e \novotermo{dissociação}. Um átomo ou molécula \enfase{adsorvido} está simplesmente em contato com a superfície do substrato, mantido ali por intermédio de interações de Van der Waals (sem troca de elétrons). Esse é, geralmente, o primeiro estado pelo qual os átomos ou moléculas do feixe incidente passam. A partir daí, eles podem ``passear'' (\enfase{difundir}) pela supefície trocando energia até se ligarem quimicamente (com troca de elétrons) a algum átomo da superfície, o que corresponde à \enfase{incorporação} no cristal propriamente dita. A desadsorção e a dissociação são os antônimos da adsorção e da incorporação, respectivamente.
+		
+		\index{Dangling bonds}
+		A incorporação de um átomo ou molécula no cristal é o estado final desejado e geralmente ocorre \enfase{junto} de defeitos, impurezas ou ligações químicas incompletas (ou insaturadas: \novotermo{\foreign{dangling bonds}}) na superfície pois eles propiciam uma menor variação da energia livre do substrato~\cite{sandro}. Mas isto não significa que a incorporação \enfase{gere} os defeitos, contrariando o que dissemos no início deste capítulo: Observe, por exemplo, a figura~\ref{fig:crescimento}. Numa situação como esta, a incorporação ocorrerá mais provavelmente no degrau (que é um defeito) formado pelo substrato e pela epicamada, mas ainda assim seguindo a orientação cristalográfica da região.
+		
+		\index{Adsorcao@Adsorção}
+		\index{Difusao@Difusão}
+		\index{Incorporacao@Incorporação}
+		\index{Desadsorcao@Desadsorção}
+		\index{Dissociacao@Dissociação}
+		\index{Processos de superficie@Processos de superfície}
+		\index{Forca@Força ou interação!de Van der Waals}
+		\index{Substrato!Rugosidade do}
+		Para que a incorporação ocorra eficientemente (o que dá origem a amostras de melhor qualidade), os átomos ou moléculas adsorvidos precisam ter liberdade para difundirem-se pela superfície do substrato até encontrarem o sítio da rede mais apropriado para a incorporação. Se a superfície do substrato for muito rugosa (de má qualidade), os átomos ou moléculas adsorvidos não terão energia para transpor os aglomerados tridimensionais de átomos (já incorporados à superfície) e trocarão energia nas imediações da região onde incidiram. Assim, eles não poderão se difundir e acabarão sendo incorporados ali mesmo, prejudicando a qualidade da amostra. Por outro lado, se a superfície da amostra for lisa, haverá poucos obstáculos e os átomos ou moléculas poderão se difundir apreciavelmente, melhorando a qualidade da amostra. Portanto, a rugosidade inicial do substrato é um parâmetro que influencia fortemente a qualidade da amostra crescida; A temperatura é outro: Em baixas temperaturas, a adsorção é promovida (em detrimento da desadsorção) mas a difusão não; Em altas, a difusão melhora mas a adsorção não (a desadsorção melhora). Com efeito, os processos pelos quais os átomos ou moléculas do feixe incidente e os do substrato interagem são, por si só, extremamente complexos e um sem número de trabalhos procura abordá-los. O leitor interessado em maiores detalhes pode começar, por exemplo, pelas excelentes referências~\cite{mike} e~\cite{sandro}.
+		
+		A condição de vácuo ultra-alto tem importância fundamental pois não só garante o regime molecular do feixe de átomos oriundos das células de Knudsen como também minimiza a contaminação da amostra em crescimento: Para se ter uma idéia, a câmara de crescimento é mantida em \unit{\power{10}{-10}}{torr} (ultra-alto-vácuo) e, nesta pressão, o tempo necessário para que uma monocamada de impureza se forme numa superfície qualquer é da ordem de 28 horas; Em $10^{-6}$ torricelli (alto-vácuo), no entanto, esse tempo cai para cinco minutos! Com efeito, o crescimento epitaxial por feixe molecular não seria possível sem a atual tecnologia de vácuo.
+		
+		\section{A formação dos pontos-quânticos}\label{sec:QD}
+		
+		\index{Pontos-quanticos@Pontos-quânticos} 
+		\index{Crescimento!coerente}
+		\index{Crescimento!Frank-van der Merwe}
+		Quando o filme epitaxial (epicamada) e o substrato sobre o qual ele é crescido possuem a mesma estrutura cristalina e um parâmetro de rede muito parecido (o caso do AlGaAs sobre GaAs) ou idêntico (GaAs sobre GaAs), o crescimento é coerente, \ie, o material depositado adota \enfase{naturalmente} o mesmo parâmetro de rede que o do substrato e o filme cresce camada por camada (fig.~\ref{fig:crescimento}). Este regime de crescimento é conhecido como Frank-van der Merwe (\textsc{fm})~\cite{mike} e é o principal modo de crescimento em sistemas isentos de tensões (a seguir). No entanto, quando o material sublimado (na célula de Knudsen) tem um parâmetro de rede consideravelmente diferente daquele do substrato (InAs sobre GaAs, como no nosso caso, por exemplo), a camada em crescimento (epicamada) é \enfase{forçada} a assumir o parâmetro de rede do substrato. Isto significa que a energia potencial contida nas ligações químicas da epicamada não é mínima por que o parâmetro de rede do filme não é o seu natural. Neste caso, surge uma tensão mecânica que aumenta conforme aumentamos a quantidade (ou camadas) de material depositado. Mesmo assim o crescimento ainda é coerente e a epicamada é cristalograficamente perfeita; idêntica ao substrato. Mas esta situação não prossegue indefinidamente: Existe uma espessura crítica a partir da qual a tensão não pode mais ser contida pelas camadas epitaxiais. Quando isso acontece, os átomos das camadas recém-depositadas se deslocam e se aglutinam para formarem pequenas ilhas tridimensionais \enfase{tensionadas} (ditas \enfase{coerentes}). Essas ilhas são chamadas de \novotermo{pontos-quânticos} e são literalmente pequenos ``montes'' (aglomerados) de átomos arranjados numa estrutura cristalina cujo parâmetro de rede ainda é o do substrato (por isso dita coerente), mas com um leve relaxamento em suas bordas (ou seja, à medida que nos afastamos do centro de um \textsc{qd} e nos aproximamos de sua superfície, o parâmetro de rede tende ao seu valor natural). Veja a figura~\ref{fig:crescimento-QD}.
+		
+		\begin{figure}[htb]
+			\centering
+			\psfrag{a}[][]{\LARGE (a)}
+			\psfrag{b}[][]{\LARGE (b)}
+			\psfrag{c}[][]{\LARGE (c)}
+			\psfrag{d}[][]{\LARGE (d)}
+			\psfrag{e}[l][l]{\LARGE Pontos-quânticos}
+			\psfrag{f}[][]{\rotatebox{90}{\LARGE\foreign{wetting-layer}}}
+			\psfrag{g}[][]{\colorbox{white}{\huge Substrato}}
+			\psfrag{h}[][]{\LARGE Cobertura}
+			\psfrag{i}[r][r]{\rotatebox{90}{\Large\shortstack{Epicamada \\ tensa}}}
+			\resizebox{0.9\textwidth}{!}{\includegraphics{figuras/crescimento-QD}}
+			\caption{\footnotesize\label{fig:crescimento-QD} Em (a) apresentamos separadamente uma representação das ligas do substrato (círculos pretos) e do filme epitaxial (círculos amarelos) que queremos crescer sobre ele, ilustrando a diferença entre seus respectivos parâmetros de rede (distâncias entre círculos vizinhos). (b) Ao crescermos um filme epitaxial cujo parâmetro de rede difere daquele do substrato, o filme fica mecanicamente tensionado. Mesmo assim, a estrutura cristalina do filme ainda é igual à do substrato. Este é o regime de crescimento Frank-van der Merwe (\textsc{fm}). (c) Quando o filme atinge uma espessura crítica, a tensão se torna tão grande que não pode mais ser contida por ele. Quando isto acontece, os átomos da epicamada tensa se rearranjam e formam pequenas ilhas tensionadas (ou seja, com o parâmetro de rede do \enfase{substrato}). Essas ilhas são chamadas de pontos-quânticos e o regime de crescimento é agora conhecido como Stranski-Krastanov (\textsc{sk}). Abaixo dos \textsc{qd}s é comum restar um filme ultra-fino (de \unit{1}{\monocamadas} aproximadamente) conhecido por \foreign{wetting-layer}. (d) Depois de formados os \textsc{qd}s, é comum retomarmos o crescimento da liga do substrato, \enfase{cobrindo} os pontos-quânticos, daí o nome ``cobertura.$\!$''}
+		\end{figure}		
+		
+		\index{Wetting-layer}
+		O restante das camadas epitaxiais recém-depositadas que não é utilizado para formar os pontos-quânticos fica sob a forma de um filme ultra-fino de aproximadamente \unit{1}{\monocamadas} de espessura chamado \novotermo{\foreign{wetting-layer}} (camada molhada) logo abaixo dos \textsc{qd}s. Este nome visa representar a idéia de que esta camada se espalha por toda a superfície da amostra, ``molhando-a.$\!$''
+				
+		\index{Crescimento!Stranski-Krastanov}
+		\index{SK|see{Crescimento!Stranski-Krastanov}}
+		À medida que o crescimento prossegue, novos pontos-quânticos são formados e os já existentes crescem~\cite{celso}, elevando drasticamente a rugosidade da superfície. Por isso, o crescimento deixa de ser bidimensional (camada por camada) e passa a ocorrer tridimensionalmente: É o chamado regime \novotermo{Stranski-Krastanov} (\textsc{sk})~\cite{mike}. 
+		
+		\index{Transicao@Transição!FMSK@FM$\to$SK ou 2D$\to$3D}
+		\index{Pontos-quanticos@Pontos-quânticos!Familias de@Famílias de}
+		O gráfico da figura~\ref{fig:ramachandran} ilustra a concentração de \textsc{qd}s de arseneto de índio (nosso caso) em função da quantidade nominal (em monocamadas) de InAs depositada, obtida por Ramachandran \etal\ em 1997~\cite{ramachandran}. Como podemos ver, a densidade de pontos-quânticos cresce abruptamente logo após a espessura crítica (transição \textsc{fm}$\to$\textsc{sk} ou \textsc{2d}$\to$\textsc{3d}), mas tem um valor máximo próximo de \unit{\power{10}{11}}{\centi\rpsquare\metre}. Além disso, o crescimento não é homogêneo e na superfície da amostra coexistem \textsc{qd}s com dimensões distintas. Em verdade, geralmente os pontos-quânticos se agrupam em \novotermo{famílias}, cada qual com uma distribuição gaussiana de tamanhos (altura, raio ou volume) em torno de um valor médio (figura~\ref{fig:QD-familias}) que caracteriza essa família. Para um estudo mais detalhado sobre a formação e a evolução dos pontos-quânticos recomendamos ao leitor as referências~\cite{celso}, \cite{mike} e~\cite{ramachandran}.
+		
+		\index{Q3D|see{Quasi three-dimensional}}
+		\index{Quasi three-dimensional}		
+		A despeito de a concentração de pontos-quânticos crescer abruptamente após a espessura crítica (aproximadamente \unit{1,6}{\monocamadas}), o processo de remanejamento dos átomos da epicamada tensa parece iniciar-se um pouco antes e um pouco menos drasticamente com a formação de imensos platôs com dimensões de $\sim\unit{400}{\angstrom}$ paralelamente ao plano do crescimento e de \unit{2-3}{\monocamadas} ($\sim\unit{7}{\angstrom}$) perpendicularmente. Aparentemente este é o primeiro passo na formação dos pontos-quânticos e o fato de esses platôs ainda não serem ilhas tridimensionais renderam-lhes o nome de \textsc{q3d}s (\foreign{quasi-three dimensional}). Ainda existe muita controvérsia a respeito desse fenômeno, especialmente por que --- até onde sabemos --- somente dois trabalhos no mundo conseguiram observá-los experimentalmente:~\cite{celso} e~\cite{heitz}, o primeiro deles realizado neste laboratório (\textsc{lnms}).
+		
+		\begin{figure}[htb]
+			\centering
+			\subfigure[\label{fig:ramachandran} A concentração de \textsc{sqd}s cresce drasticamente a partir de aproximadamente \unit{1,6}{\monocamadas} de InAs depositadas, ilustrando a transição \textsc{2d}$\to$\textsc{3d} (ou \textsc{fm}$\to$\textsc{sk}, Frank-van der Merwe para Stranski-Krastanov): É neste momento que a tensão acumulada na epicamada não pode mais ser contida e formam-se os QDs, a forma encontrada pela estrutura para reduzir esta tensão.]%
+				{%
+				\psfrag{x}[][]{$d_\text{InAs}$ ($\monocamadas$)}
+				\psfrag{y}[][]{\rule[-15pt]{0pt}{15pt}Concentração de \textsc{qd}s (\unit{\power{10}{8}}{\centi\rpsquare\metre})}
+				\resizebox{0.47\textwidth}{!}{\includegraphics{figuras/ramachandran}}
+				}%
+			\hfill
+			\subfigure[\label{fig:QD-familias} A evolução dos \textsc{sqd}s ocorre através de ``famílias'' de pontos-quânticos, caracterizadas pelas suas dimensões. Aqui podemos ver claramente a existência de duas dessas famílias, uma com altura média de \unit{45}{\angstrom}, e outra com  \unit{75}{\angstrom}. A figura inserida no gráfico é uma imagem obtida através de \textsc{afm} (seção~\ref{sec:AFM}), e é a partir desta figura que contamos os \textsc{qd}s e medimos suas dimensões.]%
+				{%
+				\centering
+				\psfrag{a}[][]{\colorbox{white}{\unit{1}{\micro\metre}}}
+				\psfrag{b}[r][r]{\shortstack{$0$\\$\nano\metre$}}
+				\psfrag{c}[r][r]{$15$}
+				\psfrag{d}[r][r]{$30$}
+				\psfrag{e}[][]{2\textordfeminine\ família}
+				\psfrag{f}[][]{1\textordfeminine\ família}
+				\psfrag{x}[][]{Altura ($\angstrom$)}
+				\psfrag{y}[][]{\rule{0pt}{15pt}Concentração de \textsc{qd}s (\rule{0pt}{15pt}$\micro\rpsquare\metre$)}
+				\resizebox{0.47\textwidth}{!}{\includegraphics{figuras/QD-Familias}}
+				}%
+			\label{fig:QD-conc+familias}
+			\caption{\footnotesize Em (a) apresentamos a concentração de pontos-quânticos auto-organizados em função da espessura nominal de InAs depositado. Este resultado foi obtido por Ramachandran \etal\ em 1997~\cite{ramachandran}. Já em (b), ilustramos a existência de ``famílias'' de \textsc{sqd}s, caracterizadas pelas suas dimensões. Este resultado foi obtido por Duarte \etal\ em 2002~\cite{celso}.}
+		\end{figure}
+		
+		Embora a formação dos pontos-quânticos represente uma redução na tensão mecânica acumulada durante o crescimento, ainda assim esta configuração não está completamente relaxada, haja vista que as ilhas tridimensionais possuem o parâmetro de rede do substrato, e não o seu natural. Destarte, à medida que o crescimento prossegue e os \textsc{qd}s crescem em quantidade e tamanho, a tensão também aumenta. Novamente, existe um tamanho máximo dos pontos-quânticos acima do qual a tensão não pode mais ser contida por eles. Neste momento as ilhas tensas relaxam, assumindo seu parâmetro de rede natural, e o crescimento deixa o modo \textsc{sk}, dando origem a inúmeros defeitos estruturais indesejáveis. De fato, qualquer aplicação atual de pontos-quânticos utilizando esta técnica de crescimento sempre permanece no regime \textsc{sk}, até por que as dimensões e a concentração dos \textsc{qd}s neste regime são controláveis através da quantidade de material depositado (dentre outros parâmetros), embora este controle não seja tão preciso quanto se gostaria. 
+
+		\index{Quantum-!dot!Self-organized}
+		\index{SQD|see{Quantum-!dot!Self-organized}}
+		Resumindo, o fenômeno de auto-formação e organização dos pontos-quânticos consiste na reoganização espontânea de parte da camada epitaxial tensa durante o crescimento para diminuir sua energia total, e os \textsc{qd}s crescidos desta maneira são comumente conhecidos como \novotermo{pontos-quânticos auto-organizados} (\textsc{sqd}s, \foreign{self-organized quantum-dots}).
+
+		É interessante, importante e instrutivo observar que, grosso modo, não há diferenças morfológicas entre uma superfície repleta de pontos-quânticos e outra simplesmente rugosa: Ambas são formadas por ``ondulações.$\!$'' Dito de outra forma, tanto os \textsc{qd}s como as ondulações numa superfície rugosa são aglomerados de átomos. Em verdade, a diferença essencial reside no fato de que os pontos-quânticos são formados por uma liga diferente da do substrato, enquanto as ondulações numa superfície rugosa não. Isto significa que o \foreign{gap} de energia na região do ponto-quântico é diferente daquele no substrato. Então, \eg, no caso de \textsc{qd}s de arseneto de índio crescido sobre um substrato de GaAs, o \foreign{gap} do InAs é menor e a região do \textsc{qd} se torna um \textsc{qw} tridimensional. Todavia, o conceito de banda proibida (\foreign{gap}) tem origem na teoria de Bloch e não pode ser aplicado aqui indiscriminadamente pois a estrutura cristalina dos pontos-quânticos não é infinita, como requer esta teoria. De fato, uma das discussões a respeito dos QDs é justamente que tipo de centro espalhador ele é: atrativo~\cite{sakaki} ou repulsivo~\cite{ribeiro}. Esta é uma das questões que procuraremos abordar no capítulo~\ref{cap:resultados}.
+		
+		A técnica de crescimento \textsc{mbe} fornece pontos-quânticos praticamente isentos de defeitos, além de oferecer um confinamento muito mais efetivo do que aquele obtido por litografia, por exemplo. Contudo, devido à espontaneidade da formação dos \textsc{qd}s, o controle de suas características é limitado. Particularmente, a aleatoriedade de tamanho e da distribuição espacial dos pontos-quânticos sobre a superfície da amostra são desvantagens com relação a outras técnicas. Com efeito, atualmente a principal dificuldade em se aplicar os \textsc{qd}s em dispositivos eletrônicos e opto-eletrônicos reside aí.

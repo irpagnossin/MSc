@@ -1,0 +1,94 @@
+size 20 20
+
+set lwidth 0.015
+set hei 0.4
+
+
+
+amove 0 0
+begin graph
+ 	size 10 10
+	nobox
+
+	xticks length 0.15
+	xtitle "a"
+	xaxis min 20 max 80 dticks 10 dsubticks 5
+
+	yticks length 0.15
+	ytitle "b"
+	yaxis min 0 max 15 dticks 5 dsubticks 2.5
+
+	data 3micrometro-diametroXaltura.dat
+	d1 marker dot !circle
+!	d1 msize 0.1
+end graph
+
+amove 0 7
+begin graph
+	size 10 10
+	nobox
+	
+	xticks length 0.15
+	xlabels off
+	xaxis min 20 max 80 dticks 10 dsubticks 5
+
+	yticks length 0.15
+	ytitle "d"
+	yaxis min -1 max 12 dticks 5 dsubticks 1
+
+	data 3micrometro-diametro.dat
+	bar d1 width 0.4 color grey10 fill grey10
+end graph
+
+amove 7 0
+begin rotate 270
+  begin scale -1 1
+    begin graph
+	size 10 10
+	nobox
+	
+	xticks length 0.15
+	xlabels off
+	xaxis min 0 max 15 dticks 5 dsubticks 1
+
+	yticks length 0.15
+	ylabels off
+	yaxis min -1 max 12 dticks 5 dsubticks 1
+
+	data 3micrometro-altura.dat
+	bar d1 width 0.1 color grey10 fill grey10
+    end graph
+  end scale
+end rotate
+
+set hei 0.3
+
+amove 9 1.15
+text 0
+
+amove 11.7 1.15
+text 5
+
+amove 14.34 1.15
+text 10
+
+amove 12 0.8
+text c
+
+set lwidth 0.02
+
+amove 9.2 9.2
+TIFF 3micrometro.tif 6 6
+rmove 0 -0.2
+save ponto1
+rline 6 0
+save ponto2
+join ponto1 <-> ponto2
+
+rmove -3.1 -0.15
+text e
+
+set lwidth 0.04
+amove 14.05 12.9
+circle 0.4
+

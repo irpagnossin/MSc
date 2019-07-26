@@ -1,0 +1,72 @@
+size 10 10
+
+set lwidth 0.015
+set hei 0.4
+
+!include regua.gle
+
+amove 0 0
+begin graph
+ 	size 10 10
+	nobox
+	xticks length 0.15
+	yticks length 0.15
+
+	xtitle "\rule{0pt}{1.5\em}x"
+	!ytitle "\rule{1.5\em}{0pt}y"
+
+	xaxis min  25 max 130
+	yaxis min  0 max  40
+
+	ylabels off
+	y2labels on
+	y2title "\rule{1.5\em}{0pt}y"
+
+	data Familias.dat
+	bar d1 fill grey10
+end graph
+
+amove 5.25 5.25
+TIFF 2MC.tif 3 3
+
+rmove +0.00 -0.20
+save ponto1
+rmove +3.00 +0.00
+save ponto2
+join ponto1 <-> ponto2
+rmove +0.00 +0.10
+rline +0.00 -0.20
+rmove -3.00 +0.00
+rline +0.00 +0.20
+
+rmove +1.50 -0.30
+text a
+
+amove 4.6125 6.25
+TIFF EscalaDeCor.tif 0.2727 2
+
+rmove -0.10 +0.00
+rline +0.00 +2.00
+rline -0.10 +0.00
+rmove +0.00 -1.00
+rline +0.10 +0.00
+rmove +0.00 -1.00
+rline -0.10 +0.00
+
+rmove -0.30 -0.10
+text b
+rmove +0.00 +1.00
+text c
+rmove +0.00 +1.00
+text d
+
+amove 7 3.75
+aline 5.75 3.25 arrow end
+amove 7 3.85
+text e
+
+amove 2.5 7
+aline 3 6 arrow end
+amove 2.4 7.1
+text f
+

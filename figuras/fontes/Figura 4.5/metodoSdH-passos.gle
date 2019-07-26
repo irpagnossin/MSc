@@ -1,0 +1,159 @@
+!----------------------------------------------------
+! Essa ilustração do método de obtenção das mobilidades
+! quânticas a partir de medidas do efeito Shubnikov-
+! de Haas foi feita utilizando os dados da amostra
+! referência na saturação (de iluminação), arquivo
+! TR267.DAT.
+!
+! Autor:   Ivan Ramos Pagnossin
+! Data:    13-12-2003
+! Projeto: Tese de mestrado
+!----------------------------------------------------
+size 20 20						! Determina o tamanho, em cm, do arquivo completo
+
+!------------------- PASSO 0 ------------------------
+amove 0 7.5						! move o cursor para a posição (0,7.5) (em cm)
+begin graph
+ 	size 10 10					! Determina o tamanho do gráfico, em cm
+	nobox						! Não circunda o gráfico com um retângulo
+
+	data passo0.dat					! Lê o arquivo passo0.dat e armazena os dados no conjunto "d1"
+	d1 line smooth 					! Desenha o gráfico do conjunto "d1" ligando os pontos por
+							!   linhas e atenua suas descontinuidades
+
+	!--------------------------------------------
+	xticks  length 0.15				! Especifica o comprimento, em cm, dos traços de escala
+	x2ticks length 0.15
+	yticks  length 0.15
+	y2ticks length 0.15
+
+	xaxis min -0.1 max 10.1 dticks 2 dsubticks 1 	! Especifica o domínio do eixo "x"
+	xlabels off					! Não apresenta os valores numéricos do eixo "x" em baixo
+	x2labels on					! Apresenta os valores numéricos do eixo "x" em cima
+	x2title "b"					! Associa o nome "b" ao eixo "x" (isso será, mais tarde, alterado
+							!   com o auxílio do pacote "psfrag" (LaTeX).
+
+	yaxis min 0.6 max 2.2 dticks 0.5 dsubticks 0.25
+	ytitle "a"
+end graph
+
+set font rm hei 0.4
+amove 2 15.3
+text p
+
+!------------------- PASSO 1 ------------------------
+amove 7.5 7.5
+begin graph
+ 	size 10 10
+	nobox
+
+	data passo1.dat
+	d1 line smooth 
+
+	!--------------------------------------------
+	xticks  length 0.15
+	x2ticks length 0.15
+	yticks  length 0.15
+	y2ticks length 0.15
+
+	xaxis min 0.09 max 1 dticks 0.2 dsubticks 0.1 
+	xlabels off
+	x2labels on
+	x2title "c"
+
+	yaxis min -10 max 15
+	ylabels off
+	y2labels on
+	y2title "d"
+end graph
+
+amove 15.3 15.3
+text q
+
+!------------------- PASSO 2 ------------------------
+amove 0 0
+begin graph
+ 	size 10 10
+	nobox
+
+	data FFT1.dat
+	data FFT2.dat
+	data FFT3.dat
+	data FFT4.dat
+	data FFT5.dat
+
+	d1 line smooth color black
+	d2 line smooth color red
+	d3 line smooth color green
+	d4 line smooth color blue
+	d5 line smooth color yellow
+
+	!--------------------------------------------
+	xticks  length 0.15
+	x2ticks length 0.15
+	yticks  length 0.15
+	y2ticks length 0.15
+
+	xtitle "g"
+	xaxis min -0.2 max 2.2 dticks 1 dsubticks 0.5 
+
+	ytitle "h"
+	yaxis min -5 max 180 dticks 40 dsubticks 20
+end graph
+
+amove 2.5 4
+begin key						! Faz a legenda do gráfico
+	nobox
+	hei 0.4						! Especifica o tamanho da fonte utilizada
+	offset 0.1 0.1					
+	text "i" line color black			! Legenda
+	text "j" line color red
+	text "k" line color green
+	text "l" line color blue
+	text "m" line color yellow
+end key
+
+amove 6.5 7.5
+
+text n
+
+amove 3.35 2
+text o
+
+amove 2 7.7
+text r
+
+!------------------- PASSO 3 ------------------------
+amove 7.5 0
+begin graph
+ 	size 10 10
+	nobox
+
+	xticks  length 0.15
+	x2ticks length 0.15
+	yticks  length 0.15
+	y2ticks length 0.15
+
+	data passo3.dat
+	let d2 = logefit d1 from 0.05 to 0.35		! Atribui ao conjunto "d2" a regressão linear do conjunto "d1"
+							!   em escala logarítmica (natural), desde x=0.05 até 0.35
+
+	d1 marker fcircle msize 0.3			! Desenha o gráfico do conjunto "d1" como um conjunto de círculos preenchidos
+	d2 line color blue
+
+	!--------------------------------------------
+	xtitle  "f"
+	xaxis min 0.05 max 0.35 dticks 0.1 dsubticks 0.05
+
+	!--------------------------------------------
+	y2title "e"
+	yaxis min 50 max 210 log grid
+	yticks 	  lstyle 2
+	ysubticks lstyle 2
+	ylabels off
+	y2labels hei 0.4
+	y2labels on
+end graph
+
+amove 15.3 7.7
+text s

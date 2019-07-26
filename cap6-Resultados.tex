@@ -1,0 +1,713 @@
+%---------------------------------------------------------
+% Arquivo: 	cap6-Resultados.tex
+% Autor:	 	Ivan Ramos Pagnossin
+%	obs.:			Parte do projeto TeseMS.tex
+%---------------------------------------------------------	
+
+	Uma vez apresentadas a arquitetura das amostras (capítulo~\ref{cap:amostras}) e as técnicas que nos possibilitam obter informações acerca delas (capítulos~\ref{cap:tecnicas} e~\ref{cap:instalacoes}), partamos para a análise dos resultados experimentais.
+	
+	No caso das medidas de transporte, que compreendem os efeitos Hall e Shubnikov-de Haas, as informações que queremos limitam-se às concentrações e mobilidades dos portadores envolvidos no transporte elétrico. Isto por que são essas duas propriedades do \textsc{2deg} que caracterizam esse transporte de cargas através das amostras, como podemos ver pela equação~\eqref{eq:jx}. Por outro lado, a Fotoluminescência e a Microscopia de Força Atômica fornecem-nos informações complementares sobre a estrutura dos níveis da região-ativa e sobre a morfologia dos pontos-quânticos, respectivamente. Mais que isso, veremos que essas informações são essenciais para a compreensão das medidas de transporte e, por este motivo, apresenta-la-emos em primeiro lugar.
+
+	\setbox1 = \hbox{\Large\textbf{\textsc{afm}}}
+	\section[das medidas de \textsc{afm}]{das medidas de \box1}\label{sec:resultados-AFM}
+
+	As medidas de \textsc{afm} deste trabalho foram executadas no Laboratório de Física de Plasmas do Instituto de Física da Universidade de São Paulo. Somente uma amostra, com \unit{2,5}{\monocamadas} (veja o capítulo~\ref{cap:amostras}), foi medida. Começamos apresentando uma imagem em perspectiva da medida com varredura $\unit{1}{\micro\metre} \times \unit{1}{\micro\metre}$ na figura~\ref{fig:AFM-persp},  com intuito ilustrativo apenas. As ondulações observadas são os pontos-quânticos.
+	
+	\begin{figure}[htb]
+		\centering
+		\psfrag{a}[][]{\Large$0,2$}
+		\psfrag{b}[][]{\Large$0,4$}
+		\psfrag{c}[][]{\Large$0,6$}
+		\psfrag{d}[][]{\Large$0,8$}
+		\psfrag{e}[][]{\Large\unit{1}{\micro\metre}}
+		\psfrag{f}[r][r]{\Large$20$}
+		\psfrag{g}[r][r]{\Large\unit{40}{\nano\metre}}					
+		\resizebox{0.7\textwidth}{!}{\includegraphics{figuras/AFM-1mmX1mm-Persp.eps}}
+		\caption{\footnotesize\label{fig:AFM-persp}Vista em perspectiva de uma imagem \textsc{afm} de uma superfície repleta de pontos-quânticos (ondulações). As regiões claras estão associadas às elevações, enquanto as escuras representam as depressões. Note, no entanto, que a escala vertical está deveras ampliada. A altura desses pontos-quânticos é de aproximadamente \unit{67}{\angstrom}.}
+	\end{figure}		
+	
+	A figura~\ref{fig:QD-AR}, por outro lado, apresenta um vista em planta da medida com varredura $\unit{3}{\micro\metre} \times \unit{3}{\micro\metre}$ e os histogramas de altura e diâmetro obtidos desta imagem através do \foreign{software} \foreign{\textsc{spm} Image Magic}, específico para este tipo de estudo. Da contagem de pontos-quânticos desta imagem concluimos que existem \unit{3\times\power{10}{10}} {\centi\rpsquare\metre} pontos-quânticos de altura média igual a \unit{67}{\angstrom}. O histograma dos diâmetros, por outro lado, chama a atenção para a possível presença de duas famílias de pontos-quânticos: A primeira com diâmetro de \unit{480}{\angstrom} e a segunda, com \unit{540}{\angstrom}. A existência de uma segunda família concorda com os espectros de fotoluminescência, apresentados na próxima seção. Contudo, é possível que haja uma terceira família de \textsc{qd}s com diâmetro médio de \unit{360}{\angstrom}.
+
+	Finalmente, observe que esta amostra já começa a apresentar coalescências, identificadas na figura~\ref{fig:QD-AR} pelas circunferências na imagem \textsc{afm}. Estas estruturas podem vir a prejudicar as mobilidades dos elétrons do \textsc{2deg}.
+
+	\begin{figure}[tbp]
+			\centering
+			\psfrag{a}[][]{\large Diâmetro (\nano\metre)}
+			\psfrag{b}[][]{\large\rotatebox{90}{Altura (\nano\metre)}}
+			\psfrag{c}[][]{\large Densidade superficial (\unit{\power{10}{8}}{\centi\rpsquare\metre})}
+			\psfrag{d}[][]{\large \rotatebox{90}{Densidade superficial (\unit{\power{10}{8}}{\centi\rpsquare\metre})}}
+			\psfrag{e}[][]{\large\unit{3}{\micro\metre}}
+			\psfrag{f}[][]{\small2ª família}
+			\psfrag{g}[][]{\small\colorbox{white}{3ª família (?)}}
+			\psfrag{h}[l][l]{\small\shortstack{Família\\principal}}			
+			\resizebox{0.9\textwidth}{!}{\includegraphics{figuras/QD-AR}}	
+			\caption{\footnotesize\label{fig:QD-AR} Histogramas das alturas e diâmetros dos pontos-quânticos da amostra \unit{2,5}{\monocamadas}, determinados a partir da contagem dos \textsc{qd}s presentes na imagem \textsc{afm} (à direita, em cima). Perceba o início da formação de coalescências, destacadas pelas circunferências.}
+	\end{figure}		
+
+	\section{das medidas de Fotoluminescência}\label{sec:resultados-PL}
+
+	Na figura~\ref{fig:resultados-PL} apresentamos os espectros de fotoluminescência das amostras analisadas neste trabalho, obtidos na temperatura \unit{2}{\kelvin} com alta potência de excitação (\unit{150}{\milli\electronvolt}). Em todos os espectros observamos um pico em \unit{1,515}{\electronvolt} associado com a recombinação do éxciton livre em GaAs e outro pico em \unit{1,493}{\electronvolt} relacionado com o processo de recombinação de elétrons livres com impurezas residuais de carbono. Na amostra-referência podemos ainda observar um terceiro pico, com energia \unit{1,522}{\electronvolt}, relacionado com o processo de recombinação banda-banda de elétrons e buracos fotogerados em GaAs. Além destes três picos, observamos ainda uma banda larga, com pico em aproximadamente \unit{1,32}{\electronvolt}, associada com o processo de recombinação dos elétrons do gás com buracos fotogerados.  A largura a meia altura (\textsc{fwhm}, \foreign{full width at half maximum}) desta banda é igual a \unit{40}{\milli\electronvolt}.
+	
+	\begin{figure}[thp]
+		\centering
+		\psfrag{a}[][]{\footnotesize\shortstack{Amostra-referência\\(transporte)}}
+		\psfrag{b}[][]{\footnotesize\amostra{1}}
+		\psfrag{c}[][]{\footnotesize\amostra{1,5}}
+		\psfrag{d}[][]{\footnotesize$\epsilon_F$}
+		\psfrag{e}[][]{\footnotesize\amostra{1,75}}
+		\psfrag{f}[][]{\footnotesize\amostra{2}}
+		\psfrag{g}[][]{\footnotesize\amostra{2,5}}
+		\psfrag{h}[][]{\footnotesize\shortstack{Amostra-\\referência (\textsc{pl})}}
+		\psfrag{i}[][]{\small\textsc{2deg}}
+		\psfrag{j}[][]{\small\textsc{q3d}s}
+		\psfrag{k}[][]{\small\textsc{qd}s}
+		\psfrag{l}[][]{\small C$^0$}
+		\psfrag{m}[][]{\small GaAs}
+		\psfrag{n}[][]{\small\textsc{gqd}s}
+		\psfrag{o}[][]{\small\textsc{pqd}s}
+		\psfrag{x}[][]{$E$ (\electronvolt)}
+		\psfrag{y}[][]{\rotatebox{90}{Intensidade \textsc{pl} (u.a.)}}
+		\resizebox{0.8\textwidth}{!}{\includegraphics{figuras/espectros-PL}}	
+		\caption{\footnotesize\label{fig:resultados-PL} Espectros de fotoluminescência a \unit{1,4}{\kelvin} das amostras utilizadas neste trabalho.}
+	\end{figure}	
+	
+	Na amostra \amostra{1} observamos uma banda com forma semelhante à da referência (aspecto triangular) e que possui a mesma largura à meia altura (\unit{40}{\milli\electronvolt}) que a referência (transporte). Isto indica que em ambos os casos (da amostra-referência e da amostra \amostra{1}) a banda larga está associada apenas com o processo de recombinação do \textsc{2deg}.  Não encontramos sinais de emissão da camada de InAs ou de pontos quânticos na amostra \amostra{1}. Espectros de fotoluminescência obtidos por diversos autores dividem-se no que concerne à observação de emissões provenientes da camada de InAs: Uns detectam intensos~\cite{kamiya,fafard3} ou fracos~\cite{sanguinetti,Hlee} sinais desta camada tensionada, enquanto que outros não observam sinal algum~\cite{xu}. Considerando que a camada de InAs é um poço-quântico de largura bem menor que as dimensões dos pontos-quânticos, suas emissões luminescentes ocorrem em energias superiores às dos \textsc{qd}s. Em geral, quando a emissão desta camada é observada para amostras com \unit{1}{\monocamadas} de InAs, a energia do pico ocorre em torno de \unit{1,48}{\electronvolt}~\cite{celso,celsoAD}. Isto indica que os níveis de confinamento eletrônico da camada de InAs estão localizados acima do nível de Fermi, pois as emissões luminescentes do \textsc{2deg} terminam em aproximadamente em \unit{1,40}{\electronvolt}, como podemos observar nos espectros de \textsc{pl} das amostras referência e \amostra{1}. Em resumo, a amostra com \unit{1}{\monocamadas} de InAs não contém pontos-quânticos e o poço-quântico associado com a camada de InAs não pode capturar elétrons do \textsc{2deg} uma vez que seu estado eletrônico fundamental está acima do nível de Fermi.
+
+	A amostra \amostra{1,5} apresenta uma banda larga com pico em \unit{1,33}{\electronvolt} mas com largura à meia altura igual a \unit{79}{\milli\electronvolt}, muito maior (o dobro) do que aquela associada ao \textsc{2deg} nas amostras anteriores. Nossas análises indicam que este pico é resultado da composição das emissões do \textsc{2deg} e de pontos-quânticos. Mais especificamente, que o lado de alta energia desta banda está associado com as emissões dos precursores dos pontos-quânticos, isto é, com os \textsc{q3d}s. As emissões dos \textsc{q3d}s foram observadas por apenas dois grupos de pesquisadores e elas ocorrem em aproximadamente \unit{1,32}{\electronvolt}~\cite{heitz,celsoAD}. A largura de linha da emissão de um único ponto-quântico é da ordem de \unit{100}{\micro\electronvolt}. Entretanto, grandes larguras dos picos relacionados com as emissões dos pontos-quânticos são geralmente observadas nos espectros de \textsc{pl} em virtude da distribuição não uniforme de tamanho e forma destas estruturas. Cada ponto quântico individualmente luminesce em uma energia de acordo com o confinamento que seu tamanho e forma impõem sobre os portadores e, no conjunto, o resultado é um pico largo que reflete a distribuição não homogênea do tamanho dos pontos-quânticos. Se o lado de alta energia da banda larga da amostra \amostra{1,5} esta de fato associada com as emissões dos \textsc{q3d}s, em nossas amostras estas estruturas têm dimensões menores do que aquelas observadas nos trabalhos de Duarte~\cite{celso} e Heitz~\cite{heitz} pois elas ocorrem ao redor de \unit{1,37}{\electronvolt}.  Portanto, para esta amostra já temos estruturas que podem capturar elétrons do \textsc{2deg}, dada a proximidade em energia destas emissões. 
+	
+	Nas amostras com maiores quantidades de InAs, as emissões dos pontos-quânticos dominam os espectros de \textsc{pl}. Observe, entretanto, que as emissões do \textsc{2deg} ainda podem ser detectadas na mesma região do espectro (aproximadamente \unit{1,32}{\electronvolt}), com a mesma forma triangular, mas com uma intensidade muito mais fraca quando comparada com as emissões dos pontos-quânticos. Além disso, na amostra com \unit{2}{\monocamadas}, onde as emissões do gás são mais evidentes, a \textsc{fwhm} é \unit{35}{\milli\electronvolt}. Este decréscimo na largura da banda do \textsc{2deg} pode estar associada com a captura de elétrons do gás pelos pontos-quânticos. 
+
+	Os espectros das amostras com $d_\text{InAs}\ge 1,75$ mostram também a evolução de tamanho dos pontos quânticos. O espectro da amostra \amostra{1,75} pode ser decomposto em duas distribuições gaussianas, relacionadas com a presença de duas famílias de pontos quânticos: aquela contendo os menores \textsc{qd}s, denominados \textsc{pqd}s (pequenos \textsc{qd}s), e a outra família com dimensões maiores, denominada \textsc{gqd}s (grandes \textsc{qd}s). Com o aumento da espessura da camada de InAs, ocorre um aumento do tamanho dos pontos-quânticos. Com isso, a densidade de \textsc{pqd}s diminui enquanto a densidade de \textsc{gqd}s aumenta.  Na amostra \amostra{2} as densidades destas duas famílias de pontos-quânticos são comparáveis. Na amostras \amostra{2,5} as emisssões da família de grandes pontos-quânticos domina o espectro de \textsc{pl}. Observe que os pontos-quânticos luminescem em energias menores do que o \textsc{2deg} e, portanto, que são centros com energias de confinamento menores do que aquelas do \textsc{2deg}. Logo, capturam elétrons do gás, ou seja, estão carregados de elétrons.
+	
+	Estas informações sobre a morfologia das amostras, extraídas das medidas ópticas serão utilizadas na interpretação dos nossos resultados de transporte. Como mostraremos, a possibilidade de captura de elétrons do gás pelos pontos-quânticos é quem determina o comportamento da mobilidade dos portadores nas amostras analisadas neste trabalho.
+
+	\section*{das medidas de transporte}
+	
+	Nas medidas de transporte as amostras foram imersas em $^4\text{He}$ líquido a \unit{1,4}{\kelvin} em uma região de campo magnético uniforme e perpendicular ao plano de crescimento. Então, fazemos percorrer-lhes uma corrente \textsc{ac} de aproximadamente \unit{1}{\micro\ampere} (veja o capítulo~\ref{cap:instalacoes}) e, {\bfseries (I) no escuro}, medimos as diferenças de potencial paralela $V_{BC}$ (efeito Shubnikov-de Haas) e perpendicular $V_{BE}$ (efeito Hall) a essa corrente (veja a figura~\ref{fig:barra-Hall}) à medida que variamos o campo magnético de zero até dez tesla. Em seguida, {\bfseries (II)} iluminamos a amostra através de um \textsc{led} por alguns segundos, desligamo-lo e retornamos ao passo {\bfseries (I)}. Executamos alternadamente os passos {\bfseries (I)} e {\bfseries (II)} várias vezes até a \novotermo{saturação},\index{saturação} situação na qual duas medidas consecutivas não apresentam diferenças apreciáveis. 
+	
+	Levando em conta este procedimento, daqui para frente os termos \termo{escuro}, \enfase{antes da iluminação} e seus sinônimos referir-se-ão à situação inicial das medidas de transporte, na qual o passo {\bfseries (II)} não fora executado nenhuma vez, \ie, na qual a amostra ainda não fora exposta ao \textsc{led}. Similarmente, com \termo{claro}, \enfase{após a iluminação} e seus sinônimos referir-nos-emos à situação de saturação (aproximadamente \unit{75}{\second} de iluminação em todas as amostras). Contudo, note que o uso da palavra ``claro'' não significa que a amostra fora exposta à luz \enfase{enquanto} mediamos, mas apenas que fora exposta.
+	
+	Para simplificar a notação e poupar o leitor de remeter-se à figura~\ref{fig:barra-Hall} constantemente, a partir de agora vamos utilizar $V_{xx}$ no lugar de $V_{BC}$ e $V_{xy}$ ao invés de $V_{BE}$. O primeiro índice denota a direção da corrente elétrica aplicada (eixo $x$ na figura~\ref{fig:barra-Hall}) e o segundo, a direção na qual medimos a diferença de potencial: $x$ para o efeito Shubnikov-de Haas (paralelamente à corrente) e $y$ para o efeito Hall (perpendicularmente). Os gráficos de $V_{xx}$ e $V_{xy}$ em função do campo magnético aplicado ($B$) são chamados de \novotermo{traços} SdH e Hall, respectivamente.
+	
+	Vale mencionar novamente que estamos preocupados com o \textsc{2deg}, não com os \textsc{qd}s. Por duas razões: Primeiro por que é monitorando as propriedades do gás de elétrons que iremos compreender os pontos-quânticos; E segundo por que queremos direcionar este estudo para as aplicações em dispositivos eletrônicos, onde o \textsc{2deg} é responsável por conduzir a corrente elétrica. Daí a sua importância.
+	
+	\section{das medidas do efeito Shubnikov-de Haas}\label{sec:resultados-SdH}
+		
+	Apenas para simplificar a apresentação dos resultados e das análises a seguir, vamos dividí-los em duas seções: Na primeira discutiremos os efeitos do processo de iluminação sobre as amostras e, na segunda, a influência da camada de InAs (com e sem pontos-quânticos). Os símbolos \Obs{1}, \Obs{2}, \foreign{et cetera}, enumeram as observações ou conclusões mais importantes. 
+		
+	\subsection{Os efeitos da iluminação}\label{sec:resultados-SdH-iluminacao}
+
+	A figura~\ref{fig:tracos-SdH} apresenta os traços SdH, gráficos de $V_{xx}\times B$, no \termo{escuro} e no \termo{claro}, obtidos diretamente das medidas do efeito Shubnikov-de Haas e sem tratamento algum. Já a partir deles é possível extraírmos algumas informações qualitativas. São elas:
+	
+	As oscilações de magnetoresistividade no \termo{escuro} são monotônicas, \obs\ indicando que apenas uma sub-banda contribui visivelmente para o efeito Shubnikov-de Haas neste caso. Por outro lado, no \termo{claro} é possível identificarmos um leve batimento (mais perceptível entre $4$ e \unit{8}{\tesla}) que evidencia a contribuição de uma nova \enfase{freqüência} para o traço, conforme a equação~\eqref{eq:rho}. Ou seja, \textbf{o processo de iluminação introduziu uma nova sub-banda ou incrementou a sua participação nas oscilações da magnetoresistividade}.
+			
+\begin{figure}[t]
+		\centering
+		\psfrag{a}[l][l]{(a) \termo{Escuro}}
+		\psfrag{b}[l][l]{(b) \termo{Claro}}
+		\psfrag{c}[][]{\unit{1}{\monocamadas}}
+		\psfrag{d}[][]{\unit{1,5}{\monocamadas}}
+		\psfrag{e}[][]{\unit{2,5}{\monocamadas}}
+		\psfrag{f}[][]{\colorbox{white}{\unit{0}{\monocamadas}}}
+		\psfrag{g}[][]{\colorbox{white}{\unit{1,75}{\monocamadas}}}
+		\psfrag{h}[][]{\colorbox{white}{\unit{2}{\monocamadas}}}
+		\psfrag{x}[][]{$B (T)$}
+		\psfrag{y}[][]{$V_{xx}$ ($\milli\volt$) ou $\rho$ ($\kilo\ohm\per\Box$)}
+		\resizebox{0.9\textwidth}{!}{\includegraphics{figuras/tracos-SdH}}
+		\caption{\footnotesize\label{fig:tracos-SdH} Traços SdH no (a) \termo{escuro} e no (b) \termo{claro} das cinco amostras com $d_\text{InAs}\ne0$ e da amostra-referência (sem camada de InAs, $d_\text{InAs}=0$).}	
+	\end{figure}	
+	
+	Além disso, a iluminação dobra a condutividade \enfase{média} de \enfase{todas} as amostras,\obs\ posto que $\rho=1/\sigma$ (observe os eixos verticais dos traços). E como a condutividade é proporcional ao produto da concentração de portadores pela mobilidade de transporte, ambas efetivas (veja a equação~\eqref{eq:jx} e a seção~\ref{sec:conc-mobil-ef}), podemos concluir que \textbf{\enfase{ou} $n_\text{ef}$ \enfase{ou} $\bar\mu_\text{ef}$ aumentou; \enfase{ou} ambos}. 
+	
+	Realmente, existem mais oscilações de resistividade no \termo{claro} do que no \termo{escuro}, ou seja, a freqüência das oscilações de magnetoresistividade cresceu ao iluminarmos as amostras. Isto significa que \textbf{a concentração de portadores de \enfase{alguma} sub-banda (não sabemos qual) aumentou},\obs\ já que $n_s\propto \nu_s$: equação~\eqref{eq:conc-SdH}. Outrossim, a figura~\ref{fig:tracos-SdH} mostra também que o início das oscilações desloca-se de $2$ (no \termo{escuro}) para \unit{1}{\tesla} (no \termo{claro}), indicando que \obs\ \textbf{houve também aumento na mobilidade quântica de alguma sub-banda}. Vejamos o porquê disto: Na seção~\ref{sec:efeito-SdH} vimos que uma das condições necessárias para que o efeito Shubnikov-de Haas ocorra é que o tempo de espalhamento ($\tau_s$) dos elétrons da sub-banda $s$ do \textsc{2deg} seja maior que o período ciclotrônico deles ($2\pi/\Omega_s$) ou, equivalentemente, que $\mu_s\,B\gg 1$. Em palavras, quanto maior for $\tau_s$, menor é a intensidade do campo magnético necessária para que as oscilações ocorram. Então, como no \termo{claro} passamos a ver as oscilações para intesidades menores do campo magnético aplicado, podemos imediatamente inferir que $\tau_s$ e, conseqüentemente, $\mu_s$ cresceram (lembre-se de que $\mu_s\propto\tau_s$).
+		
+	Vamos fazer melhor: Podemos dizer que as oscilações ocorrem sempre que $\mu_s\,B$ supera um determinado valor, digamos $\Pi_s$. Ou seja, ao invés de $\mu_s\,B\gg1$ podemos escrever $\mu_s\,B\gtrsim\Pi_s$. Então, se $\Pi_s$ não depender do tempo de iluminação ($t_\odot$),
+	$$
+	\mu_s^e\,B^e \approx \mu_s^c\,B^c \Rightarrow \frac{\mu_s^c}{\mu_s^e} \approx \frac{B^e}{B^c} = \frac{\unit{2}{\tesla}}{\unit{1}{\tesla}} = 2.
+	$$
+	
+	Os índices ``$e$'' e ``$c$'' indicam as situações \termo{escuro} e \termo{claro}, respectivamente. $B^e=\unit{2}{\tesla}$ é a intensidade do campo magnético a partir da qual observamos as oscilações no \termo{escuro} e analogamente para $B^c=\unit{1}{\tesla}$.
+	
+	Destarte, concluímos que $\mu_s^c/\mu_s^e\approx 2$, indicando que a mobilidade quântica da sub-banda que mais contribui para as oscilações dobra com o processo de iluminação (veremos logo mais que esta estimativa concorda muito bem para a segunda sub-banda), ou seja: Também as mobilidades são alteradas ao iluminarmos as amostras.
+			
+	\begin{center}
+		\rule{0.5\textwidth}{0.1pt}
+	\end{center}				
+	
+	Conforme expusemos na seção~\ref{sec:efeito-SdH}, o passo seguinte da análise consiste em efetuarmos as transformadas discretas de Fourier dos gráficos de $\rho''\times\tfrac{1}{B}$, sendo $\rho''$ a derivada segunda da magnetoresistividade com relação ao recíproco do campo magnético ($B$). Fizemos isto através do algorítmo \textsc{fft} (\foreign{fast Fourier transform}) disponibilizado pelo \foreign{software} de análise de dados \texttt{Microcal Origin}$^\text\textregistered$ e obtivemos os espectros de freqüências apresentados na figura~\ref{fig:espectros-SdH}, também nas situações \termo{escuro} e \termo{claro}.
+	
+	Estes espectros são aqueles obtidos com a maior largura da janela Hanning, $\Delta = t_N - t_1 = \unit{0,9}{\reciprocal\tesla}$, onde  $t_1 = 1/(\unit{10}{\tesla})$ e $t_N = 1/(\unit{1}{\tesla})$ são os limites inferior e superior da janela. O número de pontos utilizados na \textsc{dft} ($N$) foi feito igual a $2^{12}=4096$ interpolando linearmente os pontos medidos entre $t_1$ e $t_N$.\footnote{É uma exigência do algorítmo da \textsc{fft} que $N$ seja uma potência de $2$~\cite{recipes,smith}.} O limite superior da janela Hanning foi fixado em \unit{1}{\reciprocal\tesla} por que é só a partir deste valor de campo que as oscilações são observáveis (fig.~\ref{fig:tracos-SdH}).
+	
+	Assim, observando a figura~\ref{fig:espectros-SdH} e considerando válidos os rótulos dados aos picos (o porquê deles ficará claro com o docorrer dos parágrafos seguintes) podemos verificar que \obs\ em ambas as situações estão presentes os picos $n_2$ e $n_2'$. O primeiro deles está associado à segunda sub-banda, enquanto o segundo representa seu segundo \novotermo{harmônico}.	$n_2'$ não indica a presença de um outra sub-banda e isto nós podemos demonstrar assim: Suponha que associemos a este pico uma sub-banda verídica. Através dos espectros apresentados na figura~\ref{fig:espectros-SdH} verificamos que $n_2'=2n_2$ independentemente da amostra e do tempo de iluminação ($t_\odot$). Portanto, $n_2'=0$ quando $n_2=0$, indicando que ambas as sub-bandas começam a ser populadas simultaneamente. Mas isto só é possível quando $\epsilon_2'=\epsilon_2$ ($\epsilon_s$ é a energia do fundo da $s$-ésima sub-banda), o que não é permitido pois $\epsilon_s$ são os autovalores do poço-quântico de InGaAs.\footnote{Na realidade, $\epsilon_s$ são os autovalores da região-ativa. Neste caso, os cálculos autoconsistentes~\cite{ademir,ikai-lo} mostram que isto não é possível.}
+
+	\begin{figure}[t]
+		\centering
+		\psfrag{a}[l][l]{(a) Escuro}
+		\psfrag{b}[l][l]{(b) Claro}
+		\psfrag{c}[l][l]{$n_2$}
+		\psfrag{d}[][]{$n_2'$}
+		\psfrag{e}[][]{\unit{0}{\monocamadas}}
+		\psfrag{f}[][]{\unit{1}{\monocamadas}}
+		\psfrag{g}[][]{$n_3$}
+		\psfrag{h}[][]{\unit{1,75}{\monocamadas}}
+		\psfrag{i}[][]{\unit{2}{\monocamadas}}
+		\psfrag{j}[][]{$\times 10$}
+		\psfrag{k}[][]{\unit{1,5}{\monocamadas}}
+		\psfrag{l}[][]{\unit{2,5}{\monocamadas}}
+		\psfrag{m}[][]{$|F_H(n)|$}
+		\psfrag{n}[][]{$|F_H(n)|$}
+		\psfrag{x}[][]{$n$ ($\unit{\terad}{\centi\rpsquare\metre}$)}
+		\psfrag{w}[][]{$\nu$ (\tesla)}
+		\resizebox{0.9\textwidth}{!}{\includegraphics{figuras/espectros-SdH}}		
+		\caption{\footnotesize\label{fig:espectros-SdH} Espectros de freqüências ($\nu$) ou de concentrações ($n=0,04836\,\nu$, equação~\eqref{eq:conc-SdH}) no (a) \termo{escuro} e no (b) \termo{claro} das oscilações de magnetoresistividades (traços SdH apresentados na figura anterior). Para facilitar a visualização, estes espectros foram normalizados, de modo que suas amplitudes não podem ser comparadas.}	
+	\end{figure}
+	
+	Em verdade, os harmônicos têm origem na conjugação do caráter discreto das transformadas de Fourier (equação~\eqref{eq:def-DFT}) com fenômenos espúrios tais como ruídos, flutuações de temperatura, etc~\cite{smith}. Eles são freqüentemente encontrados e já foram relatados em vários trabalhos, tais como~\cite{ademir} e \cite{shaw}. Nós iremos ignorá-los daqui para frente por que não trazem nenhuma informação adicional.
+	
+	Agora, observando a posição dos picos, vemos que $n_2$ varia de $0,64$ até $1,25\times\terad$ elétrons por centímetro quadrado em \enfase{média}, desde o \termo{escuro} até o \termo{claro}. Destarte, \obs\ \textbf{a \enfase{iluminação} acresce a concentração de portadores da \enfase{segunda} sub-banda}. Diferentemente da conclusão obtida da figura~\ref{fig:tracos-SdH}, note que agora nós sabemos \enfase{qual} foi a sub-banda que teve sua concentração aumentada e sabemos também de \enfase{quanto} ela foi aumentada: $0,61\times\terad$ elétrons por centímetro quadrado. Além disso, como a amplitude de $n_2$ é \enfase{muito} maior que a das outras componentes, as oscilações de magnetoresistividade devem-se majoritariamente à segunda sub-banda. Logo, podemos concluir que o tempo de espalhamento ou, equivalentemente, \obs\ \textbf{a mobilidade quântica, dos elétrons desta sub-banda é maior que das outras sub-bandas, tanto no \termo{escuro} como no \termo{claro}}.
+
+	\begin{figure}[t]
+		\centering
+		\psfrag{a}[][]{$n_3$}
+		\psfrag{b}[][]{$n_2$}
+		\psfrag{c}[][]{$n_1$}
+		\psfrag{d}[][]{$n_2'$}
+		\psfrag{e}[][]{$n_1'$}
+		\psfrag{f}[][]{(a)}
+		\psfrag{g}[][]{(b)}
+		\psfrag{x}[][]{$n$ (\unit{\terad}{\centi\rpsquare\metre})}
+		\psfrag{y}[][]{\rotatebox{90}{$|F_H(n)|$}}		
+		\resizebox{0.9\textwidth}{!}{\includegraphics{figuras/localizando-n1}}
+		\caption{\footnotesize\label{fig:localizando-n1} Espectro de freqüências da magnetoresistividade da amostra \amostra{1} após $t_\odot\approx\unit{17}{\second}$ de iluminação utilizando janela (a) Hanning e (b) retangular. Esta foi a única situação em que a primeira sub-banda pôde ser vista claramente nos espectros calculados. A partir deste resultado pudemos identificar $n_1$ em meio aos ruídos na maioria dos outros espectros utilizados neste trabalho.}
+	\end{figure}
+	
+	Efetivamente, nós só podemos assegurar esta conclusão por que a amplitude de $n_2$ é deveras maior que a de $n_3$, ao ponto de podermos ver claramente na figura~\ref{fig:tracos-SdH} que as oscilações da segunda sub-banda realmente dominam as da terceira ($n_3$): O método apresentado na seção~\ref{sec:mobil-SdH} é recente e, antes dele, costumava-se avaliar as mobilidades quânticas pelas amplitudes dos picos nos espectros de freqüências (ou de concentrações). Isto podia ser feito por que, utilizando-se janela retangular para calcular esses espectros, $\mu_s$ torna-se proporcional à amplitude do pico $s$ (veja o apêndice~\ref{ap:CFT}). Entrementes, nós utilizamos janela Hanning para calcular os espectros da figura~\ref{fig:espectros-SdH} e, por isso, não podemos usar a amplitude como forma de avaliar as mobilidades quânticas. Fizemos isto por dois motivos: Primeiro, por que o método desenvolvido na seção~\ref{sec:mobil-SdH} necessita dela; Segundo, por que a janela Hanning supera enormemente a retangular em termos de redução de ruídos nos espectros: Veja a figura~\ref{fig:localizando-n1}.
+	
+	Os espectros apresentados na figura~\ref{fig:espectros-SdH} não contemplam situações intermediárias do processo de iluminação, mas apenas os extremos \termo{escuro} e \termo{claro}. Por este motivo o pico $n_3$ associado à terceira sub-banda apresenta-se ``apenas'' no \termo{claro} (em \unit{0,50\times\terad}{\centi\rpsquare \metre}). Contudo, nossas medidas compreendem um conjunto deveras mais completo, contendo os traços SdH e seus derivados em intervalos de alguns poucos segundos de iluminação, conforme ilustramos na figura~\ref{fig:evolucao} para a amostra \amostra{1,75}. Com isto, vemos que terceira sub-banda distingue-se dos ruídos após alguns poucos segundos de iluminação (tipicamente $t_\odot=\unit{5}{\second}$) em todas as amostras, de modo que também podemos acompanhar sua evolução. Mais que isso: A concentração de portadores desta sub-banda é suficientemente previsível para que possamos estimar, por extrapolação, sua concentração no \termo{escuro}: Concluímos que \obs\ \textbf{$n_3$ também é promovida com a iluminação, de $\boldsymbol{0,25}$ até $\boldsymbol{\unit{0,50\times\terad}{\centi\rpsquare\metre}}$} (em média).
+	
+	\begin{figure}[Ht]
+		\centering
+		\psfrag{a}[][]{\footnotesize\rotatebox{90}{$\rho$ ($\kilo\ohm\per$) ou $V_{xx}$ (\milli\volt)}}
+		\psfrag{b}[][]{\footnotesize$B$ ($\tesla$)}
+		\psfrag{c}[][]{\footnotesize$n$ (\unit{\terad}{\centi\rpsquare\metre})}
+		\psfrag{d}[][]{\footnotesize\rotatebox{90}{$|F_H(n)|$}}
+		\psfrag{e}[][]{\footnotesize\rotatebox{90}{Mobilidade quântica, $\mu_s$ (\squaren\metre\per\volt\cdot\second)}}
+		\psfrag{f}[][]{\footnotesize$t_\odot$ (\second)}
+		\psfrag{g}[][]{\footnotesize\rotatebox{90}{Concentração, $n_s$ (\unit{\terad}{\centi\rpsquare\metre})}}
+		\psfrag{h}[][]{\footnotesize$n_1$}
+		\psfrag{i}[][]{\footnotesize$n_2$}
+		\psfrag{j}[][]{\footnotesize$n_3$}
+		\psfrag{k}[][]{\footnotesize$\mu_2$}
+		\psfrag{l}[][]{\footnotesize$\mu_3$}
+		\psfrag{m}[r][r]{\footnotesize$t_\odot=\unit{0}{\second}$}
+		\psfrag{n}[r][r]{\footnotesize\unit{40}{\second}}
+		\psfrag{o}[][]{\footnotesize\shortstack{$n_3$\\$\times10$}}
+		\psfrag{p}[][]{\footnotesize$n_2$}
+		\psfrag{q}[][]{\footnotesize$n_2'$}
+		\psfrag{r}[][]{\footnotesize\rotatebox{90}{Iluminação}}
+		\psfrag{s}[][]{\footnotesize\textbf{(a)}}
+		\psfrag{t}[][]{\footnotesize\textbf{(b)}}
+		\psfrag{u}[][]{\footnotesize\textbf{(c)}}
+		\psfrag{v}[][]{\footnotesize\textbf{(d)}}
+		\resizebox{0.8\textwidth}{!}{\includegraphics{figuras/evolucao}}
+		\caption{\footnotesize\label{fig:evolucao} Apresentamos nesta figura a evolução (a) dos traços SdH, (b) dos espectros, (c) das concentrações e (d) das mobilidades quânticas da amostra \amostra{1,74} devido à iluminação. As mobilidades em (d) foram obtidas segundo o método apresentado na seção~\ref{sec:mobil-SdH}.} 	
+	\end{figure}
+		
+	Outro detalhe: Considerando que as massas efetivas dos elétrons em cada uma das sub-bandas do \textsc{2deg} são similares e sabendo que $\epsilon_s<\epsilon_{s+1}$, podemos afirmar que $n_s>n_{s+1}$ e isto isto explica por que o pico que identifica a terceira sub-banda ($n_3$) está à esquerda daquele que identifica a segunda ($n_2$) na figura~\ref{fig:espectros-SdH}.
+
+	\begin{figure}[t]
+		\centering
+		\psfrag{a}[][]{$\delta$-Si}
+		\psfrag{b}[][]{\textsc{bc}}
+		\psfrag{c}[][]{GaAs}
+		\psfrag{d}[][]{InGaAs}
+		\psfrag{e}[][]{InAs}
+		\psfrag{f}[][]{Iluminação}
+		\psfrag{g}[][]{\shortstack{Recobrimento\\no \termo{claro}}}
+		\psfrag{h}[][]{\shortstack{Recobrimento\\no \termo{escuro}}}
+		\psfrag{i}[][]{$\psi_3^*\psi_3^{\text{\phantom{*}}}$}
+		\psfrag{j}[r][r]{$\psi_1^*\psi_1^{\text{\phantom{*}}}$}
+		\psfrag{k}[r][r]{$\psi_2^*\psi_2^{\text{\phantom{*}}}$}
+		\psfrag{l}[r][r]{$\psi_3^*\psi_3^{\text{\phantom{*}}}$}
+		\psfrag{m}[][]{$z$ (\angstrom)}
+		\psfrag{n}[r][r]{$g(z)$}
+		\psfrag{o}[][]{\textsc{bv}}
+		\psfrag{p}[l][l]{$z$}
+		\psfrag{q}[][]{(a)}
+		\psfrag{r}[][]{(b)}
+		\resizebox{0.9\textwidth}{!}{\includegraphics{figuras/bandas}}		
+		\caption{\footnotesize\label{fig:bandas} (a) Representação das bandas de condução (\textsc{bc}) e de valência (\textsc{bv}) e das funções de distribuição eletrônica ($|\psi_s|^2$, $s=1,2,3$) da região-ativa no \termo{escuro} (preto) e no \termo{claro} (vermelho). (b) O processo de iluminação desloca $|\psi_3|^2$ em direção à superfície, elevando a integral de sobreposição  (equação~\eqref{eq:sobreposicao}) e prejudicando a mobilidade dos elétrons da terceira sub-banda. $g(z)$ é a função que descreve o perfl da distribuição de átomos dopantes na direção do crescimento. Tanto o perfil de potencial como as funções de probabilidade foram obtidas adequando \textbf{qualitativamente} os cálculos autoconsistentes da referência~\cite{ademir} ao nosso caso.}
+	\end{figure}	
+
+	Falta o estado fundamental, $n_1$. Ele não aparece em nenhum dos espectros apresentados na figura~\ref{fig:espectros-SdH} por que a mobilidade dos elétrons desta sub-banda é muito pequena: Ao estudar as propriedades de transporte de gases bidimensionais de elétrons confinados em poços-quânticos de InGaAs próximos ($\sim\unit{70}{\angstrom}$) a dopagens planares do tipo-n (GaAs:Si, com $n_\text{Si} = \unit{4\times\terad}{\centi\rpsquare\metre}$), Cavalheiro \cite{ademir} \etal\ \cite{ademir1,ademir2} mostraram, através de cálculos autoconsistentes, que três sub-bandas são ocupadas e que os elétrons no estado fundamental encontram-se majoritariamente localizados sobre o plano da dopagem (figura~\ref{fig:bandas}). Esta região é densamente populada por centros espalhadores coulombianos (os íons de silício) e eles se encarregam de prejudicar $\mu_1$ ao ponto de não a identificarmos nos espectros de $\rho''\times\tfrac{1}{B}$.
+	
+	Na realidade, baseado no espectro de freqüências apresentado na figura~\ref{fig:localizando-n1}, a única situação onde $n_1$ aparece claramente, pudemos identificar a concentração da primeira sub-banda em vários outros espectros e estimá-la em várias outras situações. Disto concluimos que $n_1$ também cresce com a iluminação, de $0,91$ até \unit{1,65\times\terad}{\centi\rpsquare\metre} em média (os valores encontrados para cada uma das amostras no \termo{escuro} e no \termo{claro} serão apresentados na seção~\ref{sec:resultados-SdH-dInAs}, onde analisaremos os efeitos da camada de InAs).
+	
+	Assim, tomando $n_T=\sum_{s=1}^3 n_s$ como a concentração total de portadores do \textsc{2deg}, concluimos que \textbf{o processo de iluminação traz, em média, $\boldsymbol{1,60\times\terad}$ elétrons por centímetro quadrado para a região-ativa} (tabela~\ref{tab:conc-medias}).
+
+	\begin{table}[htb]
+		\vspace{5mm}
+		\centering
+		\caption{\footnotesize\label{tab:conc-medias}Concentrações \enfase{médias} das sub-bandas $s=1$, $2$ e $3$ do \textsc{2deg} no \termo{escuro} e no \termo{claro}.}		
+		\vspace{5mm}
+		\begin{tabular}{rcccc}
+		& $n_1$ & $n_2$ & $n_3$ & $n_T=\sum_{s=1}^3 n_s$\AlturaLinha\\
+		\hline
+		\rowcolor[gray]{0.9} \termo{Escuro}		& $0,91$ & $0,64$ & $0,25$ & $1,80$\AlturaLinha \\
+												 \termo{Claro}		& $1,65$ & $1,25$ & $0,50$ & $3,40$\AlturaLinha \\
+		\hline
+		\end{tabular}
+		\vspace{5mm}
+	\end{table}	
+	
+	Note que a concentração total de portadores na região-ativa ($n_T$) é sempre menor que $n_\text{Si} = \unit{4\times\terad} {\centi\rpsquare\metre}$. Isto ocorre por que a distribuição espacial dos elétrons extrínsecos nas amostras não é aquela que impomos durante o crescimento através da dopagem planar, mas sim \enfase{alguma} que minimiza a energia total da heteroestrutura. É esta transferência de cargas que deforma os perfís das bandas de condução e de valência, conforme ilustrado na figura~\ref{fig:bandas}, e propicia a ocupação das três sub-bandas (\textsc{2deg}) e de outros estados, a saber~\cite{ademir,ademir1,ademir2}:
+	\begin{compactitem}
+		\item	Níveis aceitadores devidos a impurezas residuais como o carbono;
+		\item	Centros profundos produzidos por defeitos estruturais nas amostras;
+		\item	Estados de superfície formados pelas ligações químicas insaturadas dos átomos na superfície (\foreign{dangling-bonds});
+		\item	Camada de InAs ou pontos-quânticos.
+	\end{compactitem}
+	
+	Ao iluminarmos as amostras, os elétrons \novotermo{armadilhados} nestes estados absorvem fótons e são transferidos para a banda de condução e, dali, para o \textsc{2deg} devido à termalização e à presença do campo elétrico gerado pelo desbalanceamento de cargas (derivada de $V(z)$ na figura~\ref{fig:bandas}, a banda de condução). A contribuição de cada um desses estados depende das estruturas envolvidas, mas Cavalheiro~\cite{ademir} mostrou que são os centros profundos e os estados de superfície que mais fornecem elétrons para a região-ativa (figuras~\ref{fig:modelo-CentrosProfundos} e~\ref{fig:modelo-EstadosSuperficie}). De fato, ele mostrou, através de simulações numéricas, que as impurezas aceitadoras contribuem com não mais do que $\sim\unit{0,05\times\terad}{\centi\rpsquare\metre}$. 
+	
+	\begin{figure}[ht]
+		\centering
+		\psfrag{a}[][]{\Large\termo{Escuro}}
+		\psfrag{b}[][]{\Large\termo{Claro}}
+		\psfrag{c}[][]{\Large$\delta$-Si}
+		\psfrag{d}[][]{\Large InAs}
+		\psfrag{e}[][]{\Large$\epsilon_F$}
+		\psfrag{f}[][]{\Large\colorbox{white}{$\varphi$}}
+		\psfrag{g}[][]{\Large InGaAs}
+		\psfrag{h}[][]{\Large\rotatebox{90}{Superfície}}		
+		\psfrag{i}[][]{\Large\textsc{2deg}}
+		\psfrag{j}[][]{\Large\rotatebox{90}{InAs}}
+		\psfrag{k}[][]{\Large$\varphi$}
+		\psfrag{l}[][]{\Large BC}
+		\psfrag{m}[][]{\Large\colorbox{white}{$\sim\epsilon_g/2$}}
+		\psfrag{n}[][]{Centros profundos}		
+		\resizebox{0.8\textwidth}{!}{\includegraphics{figuras/modelo-CentrosProfundos}}
+		\caption{\footnotesize\label{fig:modelo-CentrosProfundos} Representação simplificada da banda de condução apresentada na figura~\ref{fig:bandas} ilustrando a transferência de elétrons ({\color{red}$\bullet$}) dos centros profundos para o \textsc{2deg}.}
+		\vspace{5mm}
+		\resizebox{0.8\textwidth}{!}{\includegraphics{figuras/modelo-EstadosSuperficie}}
+		\caption{\footnotesize\label{fig:modelo-EstadosSuperficie} Representação da banda de condução ilustrando a transferência de elétrons dos estados de superfície para o \textsc{2deg}: A quantidade de elétrons armadilhados neles é proporcional a $\varphi$, o \novotermo{potencial de superfície}. De acordo com os cálculos autoconsistentes de Cavalheiro~\cite{ademir}, $\varphi\approx\unit{750}{\milli\electronvolt}$ no \termo{escuro} e $\approx\unit{200}{\milli\electronvolt}$ no \termo{claro}.}
+	\end{figure}
+	
+	\vspace{-0.5ex}	
+	\begin{center}
+		\rule{0.5\textwidth}{0.1pt}
+	\end{center}				
+		
+	Portanto, um dos efeitos da iluminação é incrementar a concentração de \enfase{todas} as sub-bandas do \textsc{2deg}. Mas isto não é tudo: À medida que mais e mais elétrons são trazidos para a região-ativa, eles se aproximam dos íons de silício no plano da dopagem (especialmente aqueles da primeira sub-banda, cuja função de onda está majoritariamente localizada sobre ele: figura~\ref{fig:bandas}), favorecendo a formação de dipolos elétricos. Este processo se chama \novotermo{blindagem} (ou \novotermo{\foreign{screening}}) e diz-se que os elétrons \termo{blindam} os íons (de Si). Acontece que o potencial elétrico de um íon \novotermo{nu} é de longo alcance ($\propto1/|\vetor r|$) e, por isso, monopolos elétricos são centros espalhadores por excelência; Mas quando sofrem \foreign{screening}, eles se transformam em dipolos elétricos, cujos potenciais são de curto alcance ($\propto1/\vetor r^2$).	Desta forma, como conseqüência do aumento na concentração de portadores na região-ativa, os tempos de espalhamento ($\tau_s$) e de relaxação ($\bar\tau_s$) aumentam, contribuindo para melhores mobilidades quânticas ($\mu_s$) e de transporte ($\bar\mu_s$).
+
+	{
+	\setlength{\abovecaptionskip}{0.5cm}
+	\setlength{\belowcaptionskip}{0.5cm}
+	\begin{table}[p]
+		\begin{minipage}[c]{\textwidth}
+			\centering
+			\caption{\footnotesize Mobilidades quânticas da segunda e terceira sub-bandas em função da espessura nominal de InAs depositada nas situações \termo{escuro} e \termo{claro}. Estes valores foram obtidos através do método exposto na seção~\ref{sec:mobil-SdH} e as incertezas estatísticas foram avaliadas em $0,01$ e \unit{0,05}{\squaren\metre\per\volt\cdot\second} para a segunda e terceira sub-bandas, respectivamente.}
+			\begin{tabular}{c>{\columncolor[gray]{0.9}}c>{\columncolor[gray]{0.9}}ccc}
+							& \multicolumn{4}{c}{$\mu_s$ (\squaren\metre\per\volt\cdot\second)} \AlturaLinha\\
+				\hline											
+				$d_\text{InAs}$ (\monocamadas) & $\mu_2^e$ & $\mu_3^e$ & $\mu_2^c$ & $\mu_3^c$ \AlturaLinha\\
+				\hline
+				0			&	0,434	& 0,299	& 0,734	& 0,255	\AlturaLinha\\
+				1			&	0,350	& 0,245	& 0,637	& 0,231	\AlturaLinha\\
+				1,5		&	0,395	& 0,267	& 0,656	& 0,211	\AlturaLinha\\
+				1,75	&	0,435	& 0,336	& 0,766	& 0,207	\AlturaLinha\\
+				2			&	0,419	& 0,285	& 0,798	& 0,200	\AlturaLinha\\
+				2,5		&	0,362	& 0,261	& 0,752	& 0,226	\AlturaLinha\\
+				\hline
+							& \multicolumn{2}{>{\columncolor[gray]{0.9}}c}{\termo{Escuro}} & \multicolumn{2}{c}{\termo{Claro}}	\AlturaLinha\\
+				\hline
+			\end{tabular}
+		\end{minipage}\vspace{5mm}		
+		\begin{minipage}[c]{\textwidth}
+			\centering
+			\psfrag{a}[][]{\huge\colorbox{white}{$\mu_3$}}
+			\psfrag{b}[][]{\huge\colorbox{white}{$\mu_2$}}
+			\psfrag{c}[][]{\huge\rotatebox{90}{Iluminação}}
+			\psfrag{d}[][]{\huge\colorbox{white}{\textsc{2d}}}
+			\psfrag{e}[][]{\huge$d_c$}
+			\psfrag{f}[][]{\huge\colorbox{white}{\textsc{3d}}}
+			\psfrag{x}[][]{\huge$d_\text{InAs}$ (\monocamadas)}		
+			\psfrag{y}[][]{\huge\rotatebox{90}{Mobilidade quântica, $\mu_s$ (\squaren\metre\per\volt\cdot\second)}}								
+			\resizebox{0.7\textwidth}{!}{\includegraphics{figuras/mobilXd-SdH}}
+			\captionof{figure}{\footnotesize\label{fig:mobilXd-SdH} Mobilidades quânticas da segunda e terceira sub-bandas em função da espessura nominal de InAs depositada nas situações \termo{escuro} e \termo{claro}. As linhas que ligam os pontos são guias para os olhos e as duas linhas traço-ponto horizontais representam a mobilidade da amostra-referência ($d_\text{InAs}=0$), no \termo{escuro} e no \termo{claro} para uma estrutura similar à amostra-referência.}
+		\end{minipage}
+	\end{table}
+	}
+	
+	A figura~\ref{fig:mobilXd-SdH} ilustra as mobilidades quânticas da segunda e terceira sub-bandas no \termo{escuro} e no \termo{claro} para todas as amostras, obtidas através do método exposto na seção~\ref{sec:mobil-SdH} e a partir dos espectros de concentrações da figura~\ref{fig:espectros-SdH}. Com relação ao processo de iluminação (as variações em função de $d_\text{InAs}$ serão deixadas para a próxima seção) podemos observar que \obs\ \textbf{a mobilidade quântica da segunda sub-banda cresceu}, de $0,2$ até \unit{0,362}{\squaren\metre\per\volt \cdot\second} em \enfase{média}, devido ao \foreign{screening} dos íons de silício no plano da dopagem, conforme discutimos há pouco. No entanto, \obs\ \textbf{a mobilidade quântica da terceira sub-banda caiu} de $0,094$ até \unit{0,074} {\squaren \metre \per \volt \cdot \second} em \enfase{média}. Basicamente, as mobilidades quânticas e de transporte dependem de dois fatores:
+	\begin{compactitem}
+		\item Da velocidade dos elétrons no nível de Fermi ($\mu_s \propto v_s$, equação~\eqref{eq:jx}). Neste caso, \enfase{qualquer} incremento na concentração de portadores contribui para melhorá-la, pois $v_s^2=2\,\pi\,\hbar^2 n_s/(\meff_s)^2$;\footnote{Lembrando que, numa banda parabólica, $k_{F,s}^2=2\,\pi\,n_s$ e	$\meff_s\, v_s = p_s = \hbar\,k_{F,s}$}
+		\item Da \novotermo{sobreposição} (\novotermo{\foreign{overlap}}) dos elétrons aos potenciais de espalhamento: Quanto maior a sobreposição, mais freqüentes são os espalhamentos (maiores são $1/\tau_s$ e $1/\bar\tau_s$) e, por conseguinte, menores as mobilidades (e vice-versa). Matematicamente \cite{henriques},
+		\begin{equation}\label{eq:sobreposicao}
+			\frac{1}{\mu_s} \propto \int\limits_{-\infty}^{\infty} |\psi_s(z)|^2\,g(z)\,dz,
+		\end{equation}
+		onde $g(z)$ é a função que descreve o perfil da distribuição de átomos dopantes na direção do crescimento.
+	\end{compactitem}
+	
+	Neste último caso, $n_s$ pode contribuir positiva e/ou negativamente. O exemplo mais imediato é o \foreign{screening}, introduzido há pouco: O aumento na concentração de portadores devido à iluminação modifica o potencial de espalhamento dos íons de silício no plano da dopagem de monopolos para dipolos elétricos, reduzindo a sobreposição e, conseqüentemente, aumentando a mobilidade da segunda sub-banda. Por outro lado, ao acrescer a quantidade de elétrons, esta mesma modificação no potencial dos íons de silício promove o deslocamento das funções de distribuição eletrônicas em direção à superfície~\cite{ademir}. 
+	
+	No caso da segunda sub-banda, este deslocamento influi pouco por que $\psi_2^*\psi_2^\text{\phantom{*}}$ está bem localizada no poço-quântico de InGaAs. No entanto, para a terceira sub-banda este deslocamento é crítico. De fato, é ele que explica a queda em $\mu_3$: De acordo com os cálculos autoconsistentes de Cavelheiro~\cite{ademir}, $\psi_3^*\psi_3^\text{\phantom{*}}$ no \termo{escuro} possui um de seus nós sobre o $\delta$-Si (veja a figura~\ref{fig:bandas}). Quando as amostras são iluminadas, a função de distribuição eletrônica da terceira sub-banda é deslocada em direção à superfície e, conseqüentemente, o nó que estava sobre a dopagem é afastado, dando lugar para uma região mais significativa de $\psi_3^*\psi_3^\text{\phantom{*}}$. Com isso, a sobreposição dos elétrons da terceira sub-banda aos íons de silício aumenta, acrescendo os espalhamentos e prejudicando a mobilidade.
+	
+	Resumindo esta seção, concluimos que o processo de iluminação 
+	\begin{compactitem}
+		\item[$1\cdot$] acresce a concentração de portadores de \enfase{todas} as três sub-bandas da região-ativa, trazendo elétrons armadilhados em centros profundos, estados de superfície e impurezas. Como conseqüência, 
+		\item[$2\cdot$] a mobilidade quântica da segunda sub-banda é melhorada devido, principalmente, ao \foreign{screening} dos íons de silício no plano da dopagem. Por outro lado, 
+		\item[$3\cdot$] a da terceira é degradada por causa do deslocamento de $\psi_3^*\psi_3^\text{\phantom{*}}$, que incrementa a sobreposição dos elétrons desta sub-banda com os íons de silício.
+	\end{compactitem}	
+				
+	\subsection{Os efeitos da camada de InAs}\label{sec:resultados-SdH-dInAs}
+
+	Vejamos agora como se comportam as concentrações e as mobilidades quânticas do \textsc{2deg} à medida que introduzimos e incrementamos a camada de InAs, localizada a \unit{70}{\angstrom} do poço-quântico de InGaAs (fig.~\ref{fig:heteroestrutura}). 
+	
+	\subsubsection*{Concentração total no \termo{escuro}}
+	
+	Começaremos pela concentração total: A figura~\ref{fig:nTXd} apresenta o gráfico de $n_T\times d_\text{InAs}$ (concentração total versus espessura nominal da camada de InAs) antes ($\blacklozenge$) e após ($\lozenge$) a iluminação. Com relação à amostra-referência ($d_\text{InAs}=0$), vemos que \obs\ ao introduzirmos uma monocamada de InAs a concentração total do \textsc{2deg} cai de \unit{0,16\times\terad} {\centi\rpsquare\metre} e \obs\ recupera-se daí até $d_\text{InAs}=1,75$, chegando mesmo a superar a concentração inicial (linha traço-ponto). Depois disso, \obs\ $n_T$ volta a sofrer uma queda bastante acentuada de \unit{0,50\times\terad}{\centi\rpsquare\metre}.
+
+	{
+	\setlength{\abovecaptionskip}{0.5cm}
+	\setlength{\belowcaptionskip}{0.5cm}
+	\begin{table}[p]
+		\begin{minipage}[c]{\textwidth}
+			\centering
+			\caption{\footnotesize Concentração total de portadores na região-ativa no \termo{escuro} e no \termo{claro}. Estes valores foram obtidos segundo o método exposto na seção~\ref{sec:conc-SdH} e a incerteza estatística (superestimada) foi avaliada em \unit{0,05\times\terad}{\centi\rpsquare\metre} (aproximadamente igual à dimensão vertical dos símbolos).}
+			\begin{tabular}{c>{\columncolor[gray]{0.9}}cc}
+							& \multicolumn{2}{c}{$n_T$ (\unit{\terad}{\centi\rpsquare\metre})} \AlturaLinha\\
+				\hline
+				$d_\text{InAs}$ (\monocamadas)	& \termo{Escuro} & \termo{Claro}	\AlturaLinha\\
+				\hline
+				0			& 1,84		& 3,60		\AlturaLinha\\
+				1			& 1,68		& 3,10		\AlturaLinha\\
+				1,5		&	1,85		& 3,41	  \AlturaLinha\\
+				1,75	&	1,97		& 3,42		\AlturaLinha\\
+				2 		& 1,84		& 2,96		\AlturaLinha\\
+				2,5		& 1,61		& 2,93		\AlturaLinha\\
+				\hline
+			\end{tabular}
+		\end{minipage}\vspace{5mm}		
+		\begin{minipage}[c]{\textwidth}
+			\centering
+			\psfrag{a}[][]{\footnotesize\rotatebox{90}{Iluminação}}
+			\psfrag{b}[][]{\footnotesize $d_c$}
+			\psfrag{c}[][]{\footnotesize 2D}
+			\psfrag{d}[][]{\footnotesize 3D}		
+			\psfrag{x}[][]{\footnotesize $d_\text{InAs}$ (MC)}
+			\psfrag{y}[][]{\rotatebox{90}{\footnotesize Concentração total, $n_T$ (\unit{\terad}{\centi\rpsquare\metre})}}							
+			\resizebox{0.7\textwidth}{!}{\includegraphics{figuras/nTXd}}	
+			\captionof{figure}{\footnotesize\label{fig:nTXd} Concentração total de portadores na região-ativa no \termo{escuro} e \termo{claro}. O crescimento ocorre no modo Frank-van der Merwe até que $d_\text{InAs}$ atinja a espessura crítia, $d_c$ (região branca). Neste ponto, a tensão mecânica acumulada no filme de InAs não pode mais ser contida e, conseqüentemente, formam-se os pontos-quânticos. A partir daí o crescimento segue o modo Stranski-Krastanov (região cinza). As linhas cheias que ligam os pontos são guias para os olhos e as linhas vermelhas pontilhadas ilustram a influência da \enfase{espessura} da camada de InAs em $n_T$.}		
+		\end{minipage}
+	\end{table}
+	}
+
+	À primeira vista, poderíamos atribuir a queda na concentração de portadores do \textsc{2deg} (observação~\Obs{11}) à captura deles pela camada de InAs. No entanto, Duarte~\cite{celso}~\etal~\cite{celsoAD} observaram que a emissão de fotoluminescência desta camada é de \unit{1,48} {\electronvolt} (\unit{2}{\kelvin}) e vimos na seção~\ref{sec:resultados-PL} que a emissão do gás de elétrons em nossa amostra com \unit{1}{\monocamadas} termina em \unit{1,40}{\electronvolt} (figura~\ref{fig:resultados-PL}), indicando que o nível de Fermi situa-se ali. Portanto, esta camada não captura elétrons\footnote{A probabilidade de que esta camada esteja ocupada é da ordem de $\exp\left[-(1,48-1,40)/\boltzmann\,T\right]$, onde $T=\unit{1,5}{\kelvin}$ é a temperatura e $\boltzmann=\unit{8,617\times\power{10}{-5}}{\electronvolt \per\kelvin}$ é a constante de Boltzmann.} e não podemos atribuir a ela a queda na concentração total.
+
+	Por outro lado, estudando as propriedades de transporte elétrico de um \textsc{2deg} em heteroestruturas bastante similares à nossa amostra-referência (sem camada de InAs), Cavalheiro~\cite{ademir}~\etal~\cite{ademir1,ademir2} mostraram que existe uma correlação entre a concentração de portadores na região-ativa e o potencial de superfície $\varphi$: $n_T$ é tão menor quanto maior for $\varphi$, e vice-versa. Esta correspondência está associada à troca de elétrons entre o \textsc{2deg} e os estados de superfície (veja a figura~\ref{fig:modelo-EstadosSuperficie}).
+		
+	Para compreendermos isto, consideremos a estrutura representada na figura~\ref{fig:band-edge}: Por simplicidade, ela consiste apenas de um \foreign{bulk} com dopagem planar do tipo-n. (a) Inicialmente, a densidade volumétrica de cargas em todo o material é nula e os perfís das bandas de condução e de valência (\novotermo{\foreign{band-edge}}) são horizontais. Contudo, (b) se houver transferência de elétrons para os estados de superfície, o plano da dopagem adquire carga elétrica líquida positiva, dando origem a um campo elétrico que deforma as bandas e eleva o potencial de superfície, e vice-versa.
+
+	\begin{figure}[t]
+		\centering
+		\psfrag{a}[][]{\small BC}	
+		\psfrag{b}[][]{\small BV}	
+		\psfrag{c}[][]{$\epsilon_F$}	
+		\psfrag{d}[][]{$\varphi$}	
+		\psfrag{e}[][]{\small \rotatebox{90}{Superfície}}	
+		\psfrag{f}[][]{\small Dopagem}	
+		\psfrag{g}[][]{\small \shortstack{Nível\\doador}}
+		\psfrag{h}[][]{\small (a)}
+		\psfrag{i}[][]{\small (b)}
+		\resizebox{\textwidth}{!}{\includegraphics{figuras/band-edge}}		
+		\caption{\footnotesize\label{fig:band-edge} Representação da correlação entre o potencial de superfície $\varphi$ e a concentração de elétrons na região-ativa: (a) Quando não há transferência de elétrons da região de dopagem para a superfície, a amostra permanece neutra. Neste caso, o perfl das bandas de condução e valência (\foreign{band-edge}) é horizontal e o potencial de superfície é a energia de ligação do nível doador. (b) Mas quando ocorre a transferência, a região da dopagem (superfície) adquire carga líquida positiva (negativa), dando origem a um campo elétrico que deforma os perfís das bandas e eleva o potencial de superfície.}
+	\end{figure}
+	
+	Na realidade, não é necessário que a superfície receba os elétrons perdidos pelo plano da dopagem, mas apenas que ocorra o desbalanceamento pontual de cargas. De fato, veremos logo mais que ocorre transferência de elétrons para a camada de InAs e vice-versa, alterando significativamente as bandas de condução e de valência.
+
+	Assim, podemos concluir que a \enfase{introdução} da camada de InAs implica numa reorganização das cargas tal que os \unit{0,16\times\terad}{\centi\rpsquare\metre} (observação~\Obs{11}) ausentes no \textsc{2deg} (amostra \amostra{1}) foram transferidos para os estados de superfície. A razão pela qual isto ocorre, entrementes, não é clara e não podemos compreender este processo como uma simples evolução da amostra-referência. Ao invés disso, devemos entender que as amostras com $d_\text{InAs}\ne 0$ são estruturas deveras distintas daquela com $d_\text{InAs}=0$. A figura~\ref{fig:nsXd} evidencia isto: Ela apresenta as concentrações de portadores de cada uma das três sub-bandas do \textsc{2deg} em função da espessura nominal de InAs. Podemos ver que (no \termo{escuro}), enquanto $n_1$ e $n_2$ diminuem ao irmos de $d_\text{InAs}=0$ até \unit{1}{\monocamadas}, $n_3$ cresce. Este é um comportamento anômalo para um gás bidimensional de elétrons por que a densidade de estados da sub-banda $s$ é constante e proporcional à massa efetiva. Deste modo, a menos que tenha ocorrido uma alteração na massa efetiva da terceira sub-banda, ela também deveria ter sua concentração reduzida.
+	
+	\begin{figure}[t]
+		\centering
+		\psfrag{a}[][]{\small$d_\text{InAs}$ (MC)}
+		\psfrag{b}[][]{\scriptsize\rotatebox{90}{Concentração de portadores, $n_s$ (\unit{\terad}{\centi\rpsquare\metre})}}
+		\psfrag{c}[][]{\small\colorbox{white}{$n_1$}}
+		\psfrag{d}[][]{\small\colorbox{white}{$n_2$}}
+		\psfrag{e}[][]{\small\colorbox{white}{$n_3$}}
+		\psfrag{f}[][]{\termo{Escuro}}
+		\psfrag{g}[][]{\termo{Claro}}
+		\resizebox{\textwidth}{!}{\includegraphics{figuras/nsXd}}
+		\caption{\footnotesize\label{fig:nsXd} Concentrações das três sub-bandas do \textsc{2deg}. No \termo{escuro}, a introdução da camada de InAs causa uma queda em $n_1$ e $n_2$, mas não em $n_3$, evidenciando a profunda perturbação que ela causa na estrutura.}		
+	\end{figure}	
+	
+	Vejamos agora o intervalo $1 \le d_\text{InAs} \le 1,75$ (observação~\Obs{12}). Para esta região a concentração total de portadores no \textsc{2deg} cresce de \unit{0,29\times\terad}{\centi\rpsquare\metre}. Um comportamento semelhante a este foi observado por Sakaki~\etal~\cite{sakaki} ao estudarem os efeitos de uma camada de InAs tensionada a \unit{150}{\angstrom} de um \textsc{2deg} confinado numa heterojunção de GaAs/AlGaAs. Naquele trabalho, os elétrons extrínsecos eram fornecidos por uma dopagem planar a \unit{800}{\angstrom} do gás de elétrons e os autores entenderam que o incremento de $d_\text{InAs}$ modificava os perfís das bandas de condução e valência de alguma forma (não discutida) tal que a transferência de elétrons desde o plano da dopagem até o \textsc{2deg} era promovida, explicando o aumento observado.
+	
+	Todavia, nas nossas amostras a dopagem localiza-se a apenas \unit{80}{\angstrom} do \textsc{2deg} e pudemos identificar que a concentração dos elétrons neste plano ($n_1$) também cresce ao aumentarmos $d_\text{InAs}$ (figura~\ref{fig:nsXd}), mostrando claramente que os elétrons transferidos para o \textsc{2deg} \enfase{não} provêm da dopagem. 
+	
+	Por outro lado, conforme vimos na seção~\ref{sec:resultados-PL}, as energias das emissões de fotoluminescência da camada de InAs diminuem à medida que $d_\text{InAs}$ cresce, indicando que as energias de seus níveis de confinamento decrescem com o acréscimo de InAs (figura~\ref{fig:resultados-PL}). Especificamente, para a amostra \amostra{1,5} as emissões sobrepõem-se às do \textsc{2deg} (\unit{1,40} {\electronvolt}) e isto significa que os níveis da camada de InAs atingiram as imediações do nível de Fermi. Portanto, a partir daí (pelo menos) elétrons são transferidos para esta região. Ao fazê-lo, esta região torna-se negativamente carregada e dá origem a um campo elétrico que modifica os perfís das bandas de condução e de valência de modo oposto àquele que vimos há pouco, \enfase{reduzindo} $\varphi$ e propiciando a transferência de elétrons da superfície para o \textsc{2deg}. A figura~\hbox{\ref{fig:resumo-nT}(a)} ilustra os diferentes perfís de potencial das diferentes amostras aqui analisadas.
+	
+	Mas isto não ocorre indefinidamente: À medida que elétrons deixam a superfície, esta fica cada vez menos negativamente carregada e dá origem a um campo elétrico que opõe-se a esta transferência. Assim, a partir de aproximadamente \unit{1,75}{\monocamadas} ela cessa, conforme ilustra a linha vermelha na figura~\ref{fig:nTXd}. Esta linha representa a influência da camada de InAs sobre os estados de superfície apenas e o porquê dela ficará mais claro na próxima seção.
+		
+	No intervalo $1,5 \le d_\text{InAs} \le 1,75$ ocorre a formação dos pontos-quânticos e a sua densidade superficial cresce rapidamente (fig.~\ref{fig:ramachandran}). Mesmo assim, a ocupação dos estados eletrônicos dos \textsc{qd}s pelos elétrons nesta situação é quase desprezível quando comparada ao aumento de $n_T$. O mesmo não é verdade para $d_\text{InAs} > 1,75$, onde podemos observar uma queda abrupta de $n_T$ (observação \Obs{13}) devida justamente à ocupação dos estados eletrônicos dos \textsc{qd}s. Não obstante, nesta região a variação na concentração de pontos-quânticos é quase nula, mostrando-nos que o crescimento abrupto na quantidade de elétrons capturados pelos pontos-quânticos (a partir de \unit{1,75}{\monocamadas}) não é devido à formação de novos \textsc{qd}s, mas sim à evolução das dimensões dos já existentes: Em $d_\text{InAs}=2$ existem tipicamente três famílias, enquanto que em \unit{2,5}{\monocamadas} observa-se apenas uma~\cite{celsoAD}.
+	
+	De fato, à medida que a dimensão dos pontos-quânticos aumenta as energias de seus estados diminuem, trazendo cada vez mais estados para baixo do nível de Fermi e aumentando a quantidade de elétrons que cada \textsc{qd} pode acomodar. Wójs~\etal\ mostraram teórica~\cite{wojs1} e experimentalmente~\cite{wojs2} que os autoestados dos pontos-quânticos podem ser aproximados pelos chamados níveis de Fock-Darwin, que basicamente descrevem os estados energéticos de um poço-quântico tridimensional parabólico. Neste modelo, o nível $q$ possui degenerescência $2q$ (o fator $2$ decorre da degenerescência de \foreign{spin} do elétron). Assim, como observamos uma queda de \unit{0,36\times\terad}{\centi\rpsquare\metre} em $n_T$ (\Obs{13}) e como as medidas de \textsc{afm} nos mostraram que temos $3\times\power{10}{10}$ pontos-quânticos por centímetro quadrado na amostra \amostra{2,5} (seção~\ref{sec:resultados-AFM}), estimamos que cada \textsc{qd} desta amostra comporta aproximadamente $12$ elétrons ($=0,36\times\terad/3\times\power{10}{10}$). Conseqüentemente, os pontos-quânticos da amostra \amostra{2,5} possuem três níveis ($\sum_{q=1}^3 (2q) = 2 + 4 + 6 = 12$) ocupados.
+
+	\begin{figure}[p]
+			\centering
+			\psfrag{a}[][]{$d_\text{InAs}=0$}
+			\psfrag{b}[][]{\unit{1}{\monocamadas}}
+			\psfrag{c}[][]{\unit{1,5}{\monocamadas}}
+			\psfrag{d}[][]{$d_\text{InAs} \ge 1,75$}
+			\psfrag{e}[][]{\colorbox{white}{$\epsilon_F$}}
+			\psfrag{f}[][]{\colorbox{white}{$\varphi$}}
+			\psfrag{g}[][]{\rotatebox{90}{Superfície}}
+			\psfrag{h}[][]{$\delta$-Si}
+			\psfrag{i}[][]{InAs}
+			\psfrag{j}[l][l]{InGaAs (\textsc{qw})}
+			\psfrag{k}[][]{Iluminação}
+			\psfrag{l}[][]{\rotatebox{90}{\termo{Escuro}}}
+			\psfrag{m}[][]{\rotatebox{90}{\termo{Claro}}}
+			\psfrag{n}[l][l]{\rotatebox{90}{\shortstack{Par\\fotogerado}}}
+			\psfrag{o}[][]{Recombinação}
+			\psfrag{p}[][]{\textsc{2deg}}
+			\psfrag{q}[][]{\large(a)}
+			\psfrag{r}[][]{\large(b)}
+			\psfrag{s}[][]{\large(c)}
+			\resizebox{\textwidth}{!}{\includegraphics{figuras/resumo-nT}}		
+			\caption{\footnotesize\label{fig:resumo-nT} Representação qualitativa das bandas de condução e de valência das amostras deste trabalho no (a) \termo{escuro}, (b) durante a iluminação e (c) no \termo{claro}, ou ainda: Percorrendo a figura na direção horizontal, ilustramos o efeito da camada de InAs (diferentes amostras; diferentes $d_\text{InAs}$), ao passo que na direção vertical mostramos o efeito da iluminação: Devido ao campo elétrico gerado pelo plano da dopagem, na amostra-referência ($d_\text{InAs}=0$) todos os elétrons fotogerados deslocam-se para o \textsc{2deg}, aumentando sua concentração total. O mesmo também é verdadeiro para a amostra \amostra{1} pois a camada de InAs ainda não contém elétrons. No entanto, para as amostras com $d_\text{InAs} \ge 1,5$, existem elétrons na camada de InAs e, por isso, um campo elétrico oposto àquele gerado pela dopagem é criado. Com isso, esta região se torna energeticamente favorável aos buracos. Assim, com a iluminação, eles deslocam-se até lá e recombinam-se com os elétrons capturados, descarregando a região. Ao final do processo, a camada de InAs volta a ficar neutra e os perfís das bandas de condução e de valência, semelhante àquele da amostra \amostra{1}.}
+	\end{figure}
+	%\clearpage
+
+	\subsubsection*{Concentração total no \termo{claro}}
+
+	Analisemos agora como se comporta a concentração total de portadores do \textsc{2deg} no \termo{claro}, representada pelos símbolos $\lozenge$ na figura~\ref{fig:nTXd}: As observações~\Obs{11} e~\Obs{12} ainda são válidas. De fato, $n_T\times d_\text{InAs}$ no \termo{claro} é similar àquela no \termo{escuro}, exceto para $d_\text{InAs}\ge 2$, onde \obs\ não vemos a acentuada queda na concentração de portadores.
+	
+	Novamente, o porquê deste comportamento está ligado aos perfís das bandas de condução e de valência, modificados pela distribuição de cargas nas amostras: Como já dissemos, à medida que $d_\text{InAs}$ cresce, os níveis da camada de InAs aproximam-se do de Fermi e elétrons são capturados (no \termo{escuro}). Com isso, a região do InAs torna-se negativamente carregada e produz um campo elétrico que deforma os perfís das bandas de forma oposta àquela produzida pela dopagem (veja a figura~\ref{fig:capacitor} para mais detalhes), tornando esta região do InAs energeticamente favorável aos \enfase{buracos}, conforme ilustram as situações $d_\text{InAs}=1,5$ e $\ge \unit{1,75}{\monocamadas}$ da figura~\ref{fig:resumo-nT}.
+	
+	\begin{figure}[t]
+			\centering
+			\psfrag{a}[][]{$\epsilon_F$}
+			\psfrag{b}[][]{\small $\text{BC}\equiv V(z)$}
+			\psfrag{c}[][]{\small BV}
+			\psfrag{d}[][]{$\varphi$}
+			\psfrag{e}[][]{$\vetor E$}
+			\resizebox{0.5\textwidth}{!}{\includegraphics{figuras/capacitor}}		
+			\caption{\footnotesize\label{fig:capacitor} Ao capturar elétrons, a camada de InAs torna-se negativamente carregada e deforma os perfís das bandas de condução e de valência de modo inverso àquela produzida pela dopagem. É mais fácil entender esta idéia interpretando a dopagem e o poço-quântico como um capacitor de placas paralelas. Assim, como a camada de InAs está negativamente carregada, as linhas do campo elétrico $\vetor E$ digirem-se para ela, e afastam-se da dopagem, que tem carga líquida positiva. Em termos do potencial escalar, isto equivale às mudanças na derivada de $V(z)$.}
+	\end{figure}
+	
+	Deste modo, ao criarmos pares elétron-buraco através da iluminação, os buracos gerados entre o plano da dopagem e a superfície deslocam-se até a região do InAs devido ao campo elétrico e recombinam-se com os elétrons ali acomodados, neutralizando a região. Por outro lado, os elétrons fotogerados correspondentes deslocam-se para o \textsc{2deg} ou para a superfície, também devido ao $\vetor E$, o que equivale a dizermos que os elétrons da camada de InAs foram transferidos para o \textsc{2deg} e para a superfície. 
+		
+	Note que este mecanismo ocorre a partir de \unit{1,5}{\monocamadas}, onde já temos elétrons na camada de InAs. No entanto, este processo torna-se crítico somente a partir de \unit{1,75}{\monocamadas} por que é a partir daí que vemos uma brusca variação na ocupação dos estados da camada de InAs (observação~\Obs{13}). Além disso, como não há acúmulo de cargas na região do InAs, $n_T\times d_\text{InAs}$ no \termo{claro} reflete apenas a influência de $d_\text{InAs}$ sobre $n_T$. Por isso os pontos medidos e a linha vermelha coincidem.
+	
+	Após a iluminação, os elétrons no \textsc{2deg} não conseguem retornar à camada de InAs devido também ao campo elétrico gerado pelo plano da dopagem, mantendo neutra a região. É por esta razão que os perfís das bandas de condução e de valência ilustradas na figura~\ref{fig:resumo-nT} assemelham-se àquele da amostra \amostra{1}.
+	
+	Finalmente, note que a concentração total no \termo{claro} para todas as amostras com $d_\text{InAs}\ne 0$ é sempre inferior à da amostra-referência. Este efeito é comumente observado e geralmente associado à captura de elétrons pelos pontos-quânticos, como em~\cite{yusa}. Contudo, nossa análise mostrou que, em nossas amostras, não só (\texttt{i}) os pontos-quânticos não capturam elétrons no \termo{claro} como também (\texttt{ii}) a queda observada decorre da transfência de elétrons do \textsc{2deg} para a \enfase{superfície}.
+	
+	\textbf{Resumindo}, existem dois mecanismos distintos e dependentes de $d_\text{InAs}$ que competem entre si: O primeiro deles é a redução do potencial de superfície, que favorece a transição de elétrons da superfície para o \textsc{2deg}; O outro é a captura de elétrons pela camada de InAs. No \termo{escuro}, o primeiro domina o segundo na região $d_\text{InAs} \le 1,75$ e por isso vemos o crescimento de $n_T$. No entanto, quando $d_\text{InAs}$ torna-se maior que \unit{1,75}{\monocamadas}, a evolução nas dimensões dos pontos-quânticos eleva drasticamente a captura de elétrons pelos pontos-quânticos e o segundo mecanismo domina, resultando na queda de $n_T$.
+	
+	Por outro lado, devido à existência de elétrons na camada de InAs, que ocorre desde \unit{1,5}{\monocamadas}, gera-se um campo elétrico que deforma os perfís das bandas de condução e de valência, tornando a região do InAs favorável à ocupação por buracos. Decorre daí que, no \termo{claro}, os elétrons capturados são transferidos tanto para o \textsc{2deg} como para a superfície e, consequentemente, não há elétrons capturados pela camada de InAs. Destarte, neste caso somente o primeiro mecanismo acima está presente e, por isso, vemos apenas o crescimento e a saturação de $n_T$, representado pela linha vermelha na figura~\ref{fig:nTXd}.	
+			
+	\subsubsection*{As mobilidades quânticas no \termo{escuro} e no \termo{claro}}
+	
+	Vejamos agora quais são os efeitos da camada de InAs sobre as mobilidades quânticas. Começaremos pelo gráfico~\ref{fig:mobilXd-SdH} (página~\pageref{fig:mobilXd-SdH}), observando a semelhança no comportamento de $\mu_2$ antes e após a iluminação: \obs\ Ambas degradam com relação a amostra-referência na região em que o filme de InAs ainda é uma camada tensa (crescimento \textsc{fm}), \obs\ recuperam-se na região de transição \textsc{2d}$\to$\textsc{3d} (\textsc{fm}$\to$\textsc{sk}) e \obs\ voltam a cair. Este comportamento nos incita a acreditar que os mecanismos de espalhamento envolvidos tenham alguma independência da iluminação. Apesar dessa similaridade, há uma diferença notória: No \termo{escuro}, o maior valor de $\mu_2$ ocorre quando $d_\text{InAs}=0$, ou seja, quando não incluímos a camada de InAs. Este resultado é compatível com aqueles obtidos na literatura científica~\cite{sakaki,ribeiro} e baseia-se na idéia de que os \textsc{qd}s, ao capturarem elétrons, tornam-se centros espalhadores coulombianos, prejudicando a mobilidade do \textsc{2deg}. Entrementes, no \obs\ \termo{claro} a mobilidade dos portadores da segunda sub-banda é maior justamente na região onde sabemos existir \textsc{qd}s (linha traço-ponto)! Este é um fato notável e, até onde sabemos, há apenas mais um outro trabalho na literatura que relate algo parecido: \cite{zhukov}.
+	
+	Observe também que \obs\ $\mu_3$ no \termo{escuro} é similar a $\mu_2$, o que nos permite dizer que a camada de InAs influi de maneira parecida na segunda e na terceira sub-bandas. O mesmo já não podemos dizer no \termo{claro} pois \obs\ $\mu_3$ é praticamente constante. Isto ocorre por que, como vimos, a iluminação prejudica a mobilidade da terceira sub-banda através do deslocamento de $\psi_3^*\psi_3^\text{\phantom{*}}$. Com isso, os efeitos da camada de InAs são atenuados a tal ponto que nosso método (seção~\ref{sec:mobil-SdH}) não é capaz de identificar o perfil de $\mu_3$ no \termo{claro}.
+	
+	Assim, por conta destas similaridades (que, \enfase{possivelmente}, valem para $\mu_1$) limitar-nos-emos a analisar o comportamento de $\mu_2\times d_\text{InAs}$, supondo que os argumentos a seguir sejam também válidos para a terceira sub-banda (e, \enfase{talvez}, para a primeira).
+	
+	Compare os gráficos de $n_T\times d_\text{InAs}$ (fig.~\ref{fig:nTXd}) e $\mu_2\times d_\text{InAs}$ (fig.~\ref{fig:mobilXd-SdH}) no \termo{escuro}. A semelhança entre eles é inegável e instiga-nos a acreditar que o comportamento da mobilidade quântica é devido (quase) exclusivamente às variações em $n_T$, de modo que (quase) todo o comportamento tem origem nos espalhamentos devido aos íons de silício no $\delta$-Si e aos elétrons capturados na camada de InAs. Assim: Ao introduzirmos a camada de InAs (amostra \amostra{1}), $n_T$ cai e o \foreign{screening} dos íons de silício reduz, intensificando o potencial espalhador e prejudicando as mobilidades. Em seguida, o acréscimo na espessura nominal da camada de InAs traz elétrons da superfície para a região-ativa, elevando $n_T$ e melhorando o \foreign{screening} e as mobilidades na região $1 \le d_\text{InAs} \le 1,75$. Por outro lado, a partir de \unit{1,5}{\monocamadas} a camada de InAs passa a retirar elétrons do \textsc{2deg}, prejudicando o \foreign{screening} e, adicionalmente, agindo como centro espalhador. O resultado desta competição é o gráfico da figura~\ref{fig:mobilXd-SdH} para $d_\text{InAs} > 1$.
+	
+	No \termo{claro} o comportamento se repete, exceto para $d_\text{InAs} > 1,75$: Nesta região, $\mu_2$ continua a mostrar a queda que apresentara no \termo{escuro}, embora não $n_T$, já que a camada de InAs fora descarregada pelo processo de iluminação e os elétrons ali capturados, devolvidos para o \textsc{2deg}. Isto mostra que não podemos atribuir às variações de $n_T$ o comportamento de $\mu_2$, ao menos nesta região. Este problema pode ser resolvido se assumirmos que o mecanismo de espalhamento devido à camada de InAs carregada é fracamente dependente da concentração de elétrons capturados. Com isso, concluimos que a camada de InAs não está \enfase{totalmente} descarregada no \termo{claro} e que o espalhamento dos elétrons do \textsc{2deg} varia pouco com a iluminação.
+	
+	Como a dúvida reside na influência que a concentração de portadores pode ter sobre as mobilidades, precisamos excluir de $\mu_2\times d_\text{InAs}$ a influência de $n_2$.\footnote{O procedimento análogo para $n_T$ não levou a resultados esclarecedores.} Podemos fazer isto da seguinte maneira: À exemplo da figura~\ref{fig:evolucao}, nós temos as curvas de $n_2$ e $\mu_2$ em função do tempo de iluminação ($t_\odot$) para todas as amostras, o que nos permite desenhar o gráfico $\mu_2\times n_2$. Com ele, podemos tomar (\eg) a concentração média de portadores da segunda sub-banda no \termo{escuro} e \enfase{estimar} a mobilidade correspondente para cada uma das amostras (cada $d_\text{InAs}$), criando um novo gráfico de $\mu_2\times d_\text{InAs}$ que \enfase{não} contém a influência de $n_2$ (pois o mantivemos constante). Dito de outra forma, \enfase{estaremos recriando a curva de $\mu_2$ em função de $d_\text{InAs}$ para um valor fixo de $n_2$}.
+
+	\begin{figure}[tb]
+		\centering
+		\psfrag{a}[][]{\rotatebox{90}{Iluminação}}
+		\psfrag{b}[][]{$n_2=\unit{1,22\times\terad}{\centi\rpsquare\metre}$}
+		\psfrag{c}[][]{$n_2=\unit{0,66\times\terad}{\centi\rpsquare\metre}$}
+		\psfrag{x}[][]{$d_\text{InAs}$ (\monocamadas)}
+		\psfrag{y}[][]{\rotatebox{90}{Mobilidade quântica, $\mu_2$ (\squaren\metre\per\volt\cdot\second)}}
+		\resizebox{0.7\textwidth}{!}{\includegraphics{figuras/mobilidade-corrigida}}
+		\caption{\footnotesize\label{fig:mobilidade-corrigida} Mobilidade quântica da segunda sub-banda com (preto) e sem (vermelho) a influência das variações da concentração de portadores ($n_2$). Note que os resultados coincidem exatamente para a amostra \amostra{1,75}. Isto ocorre por que foi esta a amostra escolhida como referência, ou seja, $n_2=0,66$ é a concentração da amostra \amostra{1,75} no \termo{escuro}, enquanto $n_2=1,22$ é a sua concentração no \termo{claro}. Ambas obtidas diretamente das medidas do efeito Shubnikov-de Haas.}
+	\end{figure}
+	 
+	 Na verdade, ao invés da concentração média, nós utilizamos o maior (menor) valor de $n_2\times d_\text{InAs}$ no \termo{escuro} (\termo{claro}) para evitarmos extrapolar alguma das curvas $\mu_2\times n_2$: Considere a concentração de portadores da segunda sub-banda da amostra \amostra{1,75} na figura~\ref{fig:nsXd}. Seu menor valor ocorre no \termo{escuro}: \unit{0,66\times\terad} {\centi\rpsquare\metre}. Assim, o domínio da curva $\mu_2\times n_2$ construída começa em $n_2=0,66$. Se fixássemos $n_2$ na concentração média, $0,64$, precisaríamos extrapolar $\mu_2\times n_2$ obtida até este valor, o que não é bom. Ao invés disso, se escolhermos $n_2=0,66$, que é o maior valor de concentração no \termo{escuro} (em função da camada de InAs), estaremos assegurando que este valor esteja dentro do domínio de $\mu_2\times n_2$ de todas as amostras, excluindo a necessidade da extrapolação. Situação análoga ocorre no \termo{claro}.
+	
+	A figura~\ref{fig:mobilidade-corrigida} apresenta esses resultados: Fixamos $n_2$ em \unit{0,66\times\terad}{\centi\rpsquare\metre} no \termo{escuro} e em $1,22\times\terad$ no \termo{claro}. Exceto para $d_\text{InAs} = 0$ no \termo{escuro}, em ambas as situações a curva calculada ({\color{red}$\medbullet$} e {\color{red}$\medcirc$}) assemelha-se àquela medida ($\medbullet$ e $\medcirc$). Ora, se para $n_2$ fixo ainda assim obtivemos um comportamento de $\mu_2$ similar ao anterior (figura~\ref{fig:nsXd}), isto significa que não podemos atribuir \enfase{somente} às variações de $n_2$ o comportamento de $\mu_2\times d_\text{InAs}$.
+		
+	Realmente, existe uma outra explicação para o comportamento de $\mu_2$ (lembre-se: e de $\mu_3$ e, \enfase{possivelmente}, $\mu_1$) baseada na tensão mecânica acumulada durante o crescimento: Sabeendo que a tensão mecânica deforma o parâmetro de rede nas vizinhanças da epicamada~\cite{mike}, podemos supor que sua intensificação prejudique a mobilidade dos portadores ao danificar a periodicidade da rede cristalina nas vizinhanças da epicamada. Assim, podemos entender que, à medida que acrescemos a espessura da camada de InAs, a tensão mecânica acumulada também cresce e, de alguma maneira, prejudica a mobilidade dos elétrons do \textsc{2deg}. A partir de \unit{1,5}{\monocamadas} a tensão começa a ser aliviada com a formação dos pontos-quânticos (ou de seus precursores) e a mobilidade rapidamente se recupera. Depois, ela volta a cair por que (i) a tensão volta a crescer\footnote{Lembre-se (capítulo~\ref{cap:MBEeQD}) de que, embora a formação dos pontos-quânticos alivie a tensão produzida durante o crescimento, eles são apenas o primeiro estágio da camada de InAs no sentido de relaxar completamente a tensão introduzida pelo descasamento de parâmetros de rede. Depois de formados, a evolução dos \textsc{qd}s em concentração e tamanho elevam a tensão até o aparecimento de deslocações.} e (ii) também por que agora existem elétrons capturados na camada de InAs agindo como centros espalhadores.
+	
+	Contudo, o processo de iluminação descarrega a região da camada de InAs, eliminando ou reduzindo o mecanismo (ii) acima. Com isso, a mobilidade pode crescer ainda mais. De fato, é exatamente isto que vemos na região $1,75 \le d_\text{InAs} \le 2,5$! Resultado similar a este foi obtido por Zhukov~\etal~\cite{zhukov} ao estudarem as propriedades de transporte de elétrons confinados numa heterointerface de GaAs/AlGaAs a \unit{400}{\angstrom} de pontos-quânticos de InAs. Naquele trabalho, os elétrons extrínsecos foram fornecidos por uma dopagem modular de silício sobre AlGaAs e os autores atribuiram à captura de elétrons pelos \textsc{qd}s a melhora na mobilidade (justamente o oposto do que estamos sugerindo). O argumento utilizado foi que, ao serem capturados pelos pontos-quânticos (durante a iluminação), os elétrons melhoravam a distribuição de centros espalhadores coulombianos da dopagem, reduzindo a desordem e promovendo a mobilidade. 
+		
+	 Existem trabalhos que tratam da influência da tensão mecânica sobre as bandas de condução e de valência, sobre as massas efetivas de elétrons e buracos e sobre a estrutura cristalina~\cite{bimberg,jain}, mas nenhum que analise seus efeitos sobre a mobilidade de portadores. A inexistência de algum outro trabalho sobre o assunto é a única desvantagem deste modelo.
+	
+	\section{das medidas do efeito Hall}\label{sec:resultados-Hall}
+
+	\begin{figure}[tb]
+		\centering
+		\psfrag{a}[][]{\Huge$B$ (\tesla)}
+		\psfrag{b}[][]{\Huge\rotatebox{90}{$V_{xy}$ (\milli\volt)}}
+		\psfrag{c}[][]{\Huge\colorbox{white}{\shortstack{Amostra-\\referência}}}
+		\psfrag{d}[][]{\Huge\unit{2}{\monocamadas}}
+		\psfrag{e}[][]{\Huge\colorbox{white}{\unit{2,5}{\monocamadas}}}
+		\psfrag{f}[l][l]{\Huge\unit{1,5}{\monocamadas} e \unit{1,75}{\monocamadas}}
+		\psfrag{g}[l][l]{\Huge\unit{1}{\monocamadas}}				
+		\resizebox{\textwidth}{!}{\includegraphics{figuras/tracos-Hall}}
+		\caption{\footnotesize\label{fig:tracos-Hall}Traços Hall no (a) \termo{escuro} e no (b) \termo{claro} das cinco amostras com $d_\text{InAs}\ne0$ e da amostra-referência (sem camada de InAs, $d_\text{InAs}=0$).}
+	\end{figure}
+	
+	A figura~\ref{fig:tracos-Hall} apresenta os traços Hall, gráficos de $V_{xy}\times B$ para $0 \le B \le \unit{1}{\tesla}$,\footnote{Em verdade, nossas medidas contemplam a região $0\le B \le \unit{10}{\tesla}$, mas o tratamento matemético desenvolvido na seção~\ref{sec:efeito-Hall} só é válido para baixos campos, onde $V_{xy} \propto B$. Quando $B > \unit{1}{\tesla}$, passamos a observar as oscilações de resistividade decorrentes do efeito Shubnikov-de Haas. É instrutivo notar que delas podemos obter as concentrações e mobilidades quânticas de cada uma das sub-bandas, exatamente da mesma maneira como fizemos com os traços SdH. Isto ocorre por que $V_{xx}$ e $V_{xy}$ estão relacionadas através do tensor de condutividade, equação~\eqref{eq:tensor-condutividade}.} no \termo{escuro} e no \termo{claro}, obtidos diretamente das medidas do efeito Hall clássico e sem tratamento algum. Aplicando a estes gráficos o método exposto na seção~\ref{sec:efeito-Hall} obtivemos a concentração ($n_\text{ef}$) e a mobilidade ($\bar\mu_\text{ef}$) efetivas em função da espessura nominal da camada de InAs: Figura~\ref{fig:conc+mobil-Hall}.
+	
+	Se em nossas amostras a condução elétrica fosse efetuada por apenas uma sub-banda, estes resultados seriam precisamente a concentração de portadores desta sub-banda e a mobilidade de transporte associada a eles. Entrementes, vimos nas seção~\ref{sec:resultados-SdH} que em todas as nossas amostras os elétrons extrínsecos populam três sub-bandas. Por esta forma, $n_\text{ef}$ e $\bar\mu_\text{ef}$ são a concentração e a mobilidade de transporte ``médias'' destas sub-bandas --- conforme discutimos na seção~\ref{sec:conc-mobil-ef} --- e relacionam-se com as concentrações e mobilidades de cada sub-banda através das equações~\eqref{eq:conc+mobil-eff}.
+	
+	{
+	\begin{table}[tb]
+		\begin{minipage}[c]{\textwidth}
+			\centering
+		\caption{\footnotesize\label{tab:conc+mobil-Hall}Concentrações e mobilidades efetivas no \termo{escuro} e \termo{claro} de todas as amostras analisadas neste trabalho, obtidas das medidas do efeito Hall clássico através do método exposto na seção~\ref{sec:efeito-Hall}.}
+		\vspace{0.5ex}
+		\begin{tabular}{c|>{\columncolor[gray]{0.9}}cc|>{\columncolor[gray]{0.9}}cc}
+			$d_\text{InAs}$ & 
+							\multicolumn{2}{|c|}{$n_\text{ef}$ (\unit{\terad}{\centi\rpsquare\metre})} & 
+							\multicolumn{2}{|c}{$\bar\mu_\text{ef}$ ($\squaren\metre\per\volt\cdot\second$)} \\
+			\hline
+			$0$			&	$1,41$	&	$2,16$	&	$0,547$	&	$1,092$	\\
+			$1$			&	$1,44$	&	$2,01$	&	$0,203$	&	$0,657$	\\
+			$1,5$		&	$1,53$	&	$2,15$	&	$0,230$	&	$0,495$	\\
+			$1,75$	&	$1,54$	&	$2,06$	&	$0,556$	&	$1,326$	\\
+			$2$			&	$1,52$	&	$2,02$	&	$0,489$	&	$1,321$	\\
+			$2,5$		&	$1,63$	&	$2,12$	&	$0,283$	&	$0,791$	\\
+			\hline
+							& \termo{Escuro}	&	\termo{claro}	&	&
+		\end{tabular}		
+		\end{minipage}\vspace{5mm}		
+		\begin{minipage}[c]{\textwidth}
+			\centering
+			\psfrag{a}[][]{\huge\rotatebox{90}{Iluminação}}
+			\psfrag{x}[][]{\huge$d_\text{InAs}$ (\monocamadas)}
+			\psfrag{y}[][]{\huge\rotatebox{90}{Mobilidade, $\bar\mu_\text{ef}$ (\squaren\metre\per\volt\cdot\second)}}
+			\psfrag{z}[][]{\huge\rotatebox{90}{Concentração, $n_\text{ef}$ (\unit{\terad}{\centi\rpsquare\metre})}}
+			\resizebox{0.9\textwidth}{!}{\includegraphics{figuras/conc+mobil-Hall}}
+			\captionof{figure}{\footnotesize\label{fig:conc+mobil-Hall}Concentrações e mobilidades efetivas no \termo{escuro} e \termo{claro} de todas as amostras analisadas neste trabalho, obtidas das medidas do efeito Hall clássico através do método exposto na seção~\ref{sec:efeito-Hall}.}
+		\end{minipage}
+	\end{table}
+	}
+	
+	Por este motivo, o gráfico $n_\text{ef}\times d_\text{InAs}$ sozinho acrescenta pouca ou nenhuma informação. Nós o utilizaremos em breve apenas para calcular a razão entre as mobilidades de transporte e quântica da segunda e terceira sub-bandas. Mesmo assim, é oportuno observar que o contínuo crescimento de $n_\text{ef}$ no \termo{escuro} combina com as medidas de Sakaki~\etal~\cite{sakaki}, o qual os autores atribuiram à melhoria na transferência de elétrons desde a dopagem, um processo que mostramos não ocorrer em nossas amostras (seção~\ref{sec:resultados-SdH}).
+	
+	Agora, observe a semelhança entre os comportamentos de $\bar\mu_\text{ef}$ e de $\mu_2$ e $\mu_3$ (compare as figuras \ref{fig:mobilXd-SdH} e~\ref{fig:conc+mobil-Hall}). Isto não é óbvio por que $\mu_2$ e $\mu_3$ são mobilidades \enfase{quânticas}, ao passo que $\bar\mu_\text{ef}$ é uma mobilidade \enfase{de transporte}; elas possuem significados distintos: A mobilidade quântica é uma medida de todos os espalhamentos sofridos pelos elétrons de condução, enquanto a mobilidade de transporte é uma medida de todos os espalhamentos que \enfase{prejudicam} o transporte elétrico. Um espalhamento que não altere a velocidade dos elétrons de condução, \eg, não perturba a condução elétrica e, por isso, não é considerado pela mobilidade de transporte. Mas a mobilidade quântica o contabiliza indiscriminadamente (veja a figura~\ref{fig:espalhamento} e a seção~\ref{sec:mobil-SdH}).
+		
+	Vejamos isto com um pouco mais de detalhes: No caso de espalhamentos elásticos (como o nosso), o mecanismo de espalhamento $W_{\vetor k,\vetor k'}$ passa a depender apenas do ângulo $\cos\theta = \hat{\vetor k}\cdot\hat{\vetor k}'$ (supondo simetria azimutal sobre $\vetor k$) e do módulo de $\vetor k$. Destarte, utilizando a equação~\eqref{eq:def-tau} podemos escrever (lembre-se de que $\bar\mu\propto\bar\tau\,$):
+	\begin{equation}\tag{\ref{eq:def-tau}}
+		\frac{1}{\bar\mu_\text{ef}} \propto \int W_{\vetor k,\vetor	k'}\,\left(1-\hat{\vetor k}\cdot\hat{\vetor k}'\right)\,d\vetor k' 
+			\propto \int_0^\pi	W_{\vetor k,\vetor	k'}(\theta)\,\left(1-\cos\theta\right)\,\sen\theta\,d\theta,
+	\end{equation}
+	lembrando que $d\vetor k' = \delta(k' - k)\,(k')^2\,\sen\theta\,d\theta\,d\phi\,dk$ em coordenadas esféricas.	Portanto, $\bar\mu_\text{ef}$ será tão maior quanto mais freqüentes forem os espalhamentos com $\theta\approx 0$. Por outro lado, a mobilidade quântica (lembre-se de que $\mu\propto\tau$),
+	\begin{equation}\tag{\ref{eq:def-tau}}
+		\frac{1}{\mu} \propto \int W_{\vetor k,\vetor	k'}\,d\vetor k' 
+					\propto \int_0^\pi	W_{\vetor k,\vetor	k'}(\theta)\,\sen\theta\,d\theta,
+	\end{equation}
+	não dá preferência a ângulo algum. Assim, para que $\bar\mu_\text{ef}$ e $\mu_s$ comportem-se similarmente, precisamos garantir que todos os espalhamentos existentes (ou, pelo menos, os mais significativos) sejam contabilizados por ambas as mobilidades. E isto só pode ser feito se $W_{\vetor k,\vetor	k'}(\theta)$ for mais significativo para $\theta$ pequenos.
+	
+	Portanto, podemos dizer que \obs\ os mecanismos de espalhamento dominantes envolvidos no transporte elétrico privilegiam pequenos ângulos de espalhamento. Com efeito, comportamentos desta natureza geralmente são associados a centros espalhadores localizados nas \enfase{vizinhanças} dos elétrons de condução, ou seja, do \textsc{2deg}~\cite{sarma}, como é o caso dos íons de silício em nossas amostras. Logo, podemos dizer que as mobilidades de transporte e quânticas são determinadas principalmente por eles. 
+	
+	Perceba que esta conclusão não explica as variações de $\bar\mu_\text{ef}$ e $\mu_s$ devido a $d_\text{InAs}$, mas apenas que os \enfase{valores} das mobilidades (de transporte e quânticas) são devidos aos espalhamentos pelos íons de silício. Além disso, note que não partilhamos com os pontos-quânticos a tarefa de explicá-las. Fizemos isto por que, conforme veremos, a influência deles não é tão simples como a dos íons de silício.
+	
+	Finalmente, veja na figura~\ref{fig:conc+mobil-Hall} como a iluminação eleva o valor médio de $\bar\mu_\text{ef}$, da mesma maneira como ocorreu para $\mu_s$. Ademais, observe também que $\bar\mu_\text{ef}$ das amostras \amostra{1,75} e \amostra{2} no \termo{claro} supera a da amostra-referência. Estas duas observações também foram constatatas para as mobilidades quânticas, revelando novamente a íntima relação entre elas: Como os íons de silício estão nas vizinhanças do \textsc{2deg}, a melhora do \foreign{screening} é enxergada tanto pelas mobilidades de transporte como pelas quânticas, já que tanto no \termo{claro} como no \termo{escuro} os espalhamentos têm uma forte componente para $\theta$ pequenos. Mais ainda: Como os pontos-quânticos também estão nas vizinhanças do gás de elétrons, a liberação dos elétrons ali capturados durante a iluminação ameniza o potencial de espalhamento deles, e esta mudança novamente é contabilizada por ambas as mobilidades (quânticas e de transporte).
+	
+	Resumindo, o fato de observarmos comportamentos parecidos das mobilidades quânticas e de transporte decorre da localização marginal dos principais agentes espalhadores: Os íons de silício e os pontos-quânticos.
+
+	\begin{center}
+		\rule{0.5\textwidth}{0.1pt}
+	\end{center}					
+	
+	Nós ainda não explicamos o perfil de $\bar\mu_\text{ef}\times d_\text{InAs}$. Vamos fazê-lo com o auxílio de um outro gráfico: o da razão entre as mobilidades de transporte e quântica ($\beta_s = \bar\mu_s/\mu_s$) em função da espessura nominal da camada de InAs. Como vimos na seção~\ref{sec:mobil-SdH}, esta razão pode nos trazer mais algumas informações sobre os mecanismos de espalhamento que determinam o transporte de cargas em nossas amostras.
+	
+	A figura~\ref{fig:razao-mobilidades} apresenta estes resultados, obtidos da aplicação do método exposto no apêndice \ref{ap:razao-mobilidades} aos resultados das medidas dos efeitos Hall e Shubnikov-de Haas. Convém informar que, quanto maior $\beta_s$, menor o ângulo médio ($\cos\media\theta \doteq 1/\beta_s$) de espalhamento.
+	
+	Antes de prosseguirmos, façamos uma pequena digressão que facilitará a apresentação dos argumentos a seguir: Considere que a expressão
+	\begin{equation}\label{eq:W}
+		W_{\vetor k,\vetor k'}(\theta) = 
+		\begin{cases}
+			\Lambda(1+\Xi\cos\theta), & 0\le \theta \le \theta_0 \\
+			0													& \theta_0 \le \theta \le \pi
+		\end{cases} \qquad\qquad \cos\theta_0=-\frac{1}{\Xi}
+	\end{equation}
+	representa algum mecanismo de espalhamento \enfase{fictício}. $\Lambda$ e $\Xi$ são seus parâmetros. Através das equações \eqref{eq:def-tau} e da definição de $\beta$, podemos mostrar que 
+	\begin{compactitem}
+		\item $\beta\doteq\bar\mu/\mu$ depende apenas de $\Xi$, ainda que
+		\item $\bar\mu$ e $\mu$ sejam funções tanto de $\Lambda$ como de $\Xi$.
+	\end{compactitem}
+
+	\begin{figure}[tb]
+		\centering
+		\psfrag{a}[][]{\huge$d_\text{InAs}$ (\monocamadas)}
+		\psfrag{b}[][]{\huge\rotatebox{90}{$\beta_2$}}
+		\psfrag{c}[][]{\huge\rotatebox{90}{$\beta_3$}}
+		\psfrag{d}[][]{\huge\colorbox{white}{\rotatebox{90}{Iluminação}}}
+		\psfrag{e}[][]{\huge$\vetor k$}
+		\psfrag{f}[][]{\huge$\vetor k'$}
+		\psfrag{g}[l][l]{\huge$W_{\vetor k,\vetor k'}(\theta)$}		
+		\resizebox{\textwidth}{!}{\includegraphics{figuras/razao-mobilidades}}
+		\caption{\footnotesize\label{fig:razao-mobilidades}Razão entre as mobilidades quântica e de transporte da segunda e terceira sub-bandas do \textsc{2deg}, obtidas através do método exposto no apêndice~\ref{ap:razao-mobilidades}. As ``cardióides'' ilustram os efeitos das variações em $\beta_s$ sobre um mecanismo de espalhamento fictício, equação~\eqref{eq:W}.}
+	\end{figure}
+	
+	Então, embora $\Lambda$ altere as mobilidades quântica e de transporte, a razão $\beta$ não pode ser modificada por este parâmetro. Isto ocorre por que $\Lambda$ não determina a \enfase{forma} de $W_{\vetor k,\vetor k'}(\theta)$, cabendo ao parâmetro $\Xi$ esta tarefa. Na figura~\ref{fig:W} desenhamos a equação~\eqref{eq:W} para ilustrar esta idéia: Quando variamos $\Lambda$, caminhamos da curva preta para a vermelha, e vice-versa; quando variamos $\Xi$, caminhamos da figura da esquerda para a da direita, e vice-versa.
+	
+	Com estes conceitos em mente, vejamos a figura~\ref{fig:razao-mobilidades}: Primeiramene, observamos que $\beta_s$ varia à medida que acrescemos a espessura da camada de InAs, indicando-nos que \obs\ $d_\text{InAs}$ influi na forma de $W_{\vetor k,\vetor k'}(\theta)$. Por outro lado, o perfil $\beta_s\times d_\text{InAs}$ permanece praticamente inalterado ao irmos do \termo{escuro} para o \termo{claro}, o que significa que \obs\ a iluminação é pouco eficiente em alterar a forma de $W_{\vetor k,\vetor k'}(\theta)$, embora reduza os espalhamentos (pois amplia as mobilidades quânticas e de transporte). Em termos do mecanismo~\eqref{eq:W}, a iluminação altera somente $\Lambda$, enquanto $d_\text{InAs}$ modifica $\Xi$ (e, possivelmente, também $\Lambda$).\footnote{Mantenha em mente que a expressão~\eqref{eq:W} é apenas ilustrativa.}
+	
+	\begin{figure}[tb]
+		\centering
+		\psfrag{a}[][]{\small$\theta$}
+		\psfrag{b}[][]{\small$\vetor 0$}
+		\psfrag{c}[][]{\small$\vetor k$}
+		\psfrag{d}[][]{\small$\vetor k'$}
+		\psfrag{e}[][]{\small\termo{Claro}}
+		\psfrag{f}[][]{\small\termo{Escuro}}
+		\psfrag{g}[][]{\small$W_{\vetor k,\vetor k'}(\theta)$}
+		\psfrag{h}[][]{\small$\media\theta = \unit{60}{\degree}$}
+		\psfrag{i}[][]{\small$\media\theta = \unit{30}{\degree}$}
+		\psfrag{j}[][]{\small$\beta_s$ cresce neste sentido}
+		\resizebox{0.8\textwidth}{!}{\includegraphics{figuras/W}}
+		\caption{\footnotesize\label{fig:W} Exemplo qualitativo de um mecanismo de espalhamento que privilegia ângulos pequenos no \termo{escuro} (preto) e no \termo{claro} (vermelho). Note que o processo de iluminação não modifica a forma de $W_{\vetor k,\vetor k'}$, embora o reduza como um todo. Isto explica o fato de $\beta_s$ não variar com a iluminação. Os ângulos médios de espalhamento, $\media\theta$, são apenas ilustrativos.}
+	\end{figure}
+	
+	
+	Na realidade, a iluminação causa uma pequena redução tanto em $\beta_2$ quanto em $\beta_3$ (apesar de a incerteza em $\beta_3$ não nos permitir garantir isto para esta sub-banda), um resultado que opõe-se ao que normalmente esperaríamos, já que a iluminação promove as mobilidades. Isto nos sugere a existência de um terceiro agente espalhador (além dos íons de silício e dos pontos-quânticos) que não depende da iluminação. Deste modo, a iluminação enalteceria os efeitos deste terceiro mecanismo ao reduzir os espalhamentos --- dominantes --- devidos aos íons de silício. Podemos representar isto acrescentando um terceiro parâmetro à equação~\eqref{eq:W}:
+	\begin{equation}\label{eq:W2}
+		W_{\vetor k,\vetor k'}(\theta) = \Lambda(1+\Xi\,\cos\theta) + \Gamma.
+	\end{equation}
+	
+	Assim, no \termo{escuro} $\Lambda \gg \Gamma$ e a expressão~\eqref{eq:W2} tende a~\eqref{eq:W}. Todavia, a iluminação reduz $\Lambda$ e, com isso, $\Gamma$ torna-se significativo no \termo{claro}, aumentando o ângulo médio de espalhamento ou, equivalentemente, reduzindo $\beta_s$.
+	
+	Além disso, atine que o acréscimo na concentração de portadores do \textsc{2deg} devido à iluminação é aproximadamente dez vezes maior que aquele devido a $d_\text{InAs}$ (veja as figuras~\ref{fig:nTXd}, \ref{fig:nsXd} e~\ref{fig:conc+mobil-Hall}). Ora, se esta alteração não teve efeito sobre $\beta_s$ (pois $\beta_s$ no \termo{escuro} e no \termo{claro} --- quase --- coincidem), não podemos esperar que as variações de $n_s$ decorrentes de $d_\text{InAs}$ o façam. Logo, não podemos atribuir às variações na concentração de portadores o perfil do gráfico de $\beta_s\times d_\text{InAs}$. Mas, conforme vimos nas seção~\ref{sec:resultados-SdH}, essas variações influem fortemente nos espalhamentos devidos aos íons de silício e aos elétrons capturados pela camada de InAs através do \foreign{screening}, do deslocamento das funções de distribuição eletrônica e da introdução/retirada de elétrons da camada de InAs. Por conseguinte, o perfil de $\beta_s\times d_\text{InAs}$ não deve ser atribuido à dopagem nem aos pontos-quânticos!
+
+	Realmente: observe na figura~\ref{fig:nTXd} (página~\pageref{fig:nTXd}) que a concentração total de portadores do \textsc{2deg} no \termo{claro} para $d_\text{InAs} \ge 1,5$ permanece constante. Mesmo assim, $\beta_s$ varia nesta região, ou seja, $\beta_s$ mantém o seu comportamento havendo (\termo{escuro}) ou não (\termo{claro}) elétrons na camada de InAs: $\beta_s$ não depende da concentração de elétrons acomodados nos pontos-quânticos. Melhor ainda: atente para a brusca variação de $\beta_s$ quando $d_\text{InAs} \approx d_c \approx \unit{1,5}{\monocamadas}$, a despeito da ínfima mudança em $n_T$ (e $n_s$). 
+	
+	Em $d_c$ ocorre a formação dos pontos-quânticos, processo através do qual a tensão mecânica acumulada na camada de InAs é parcialmente relaxada. Desta forma, todas estas constatações nos levam novamente a crer que a tensão mecânica prejudica a mobilidade dos portadores do \textsc{2deg}. Mais que isso, elas mostram que este é o mecanismo de espalhamento que mais sofre variações à medida que introduzimos InAs na estrutura, chegando mesmo a sobrepujar a influência dos elétrons na camada de InAs. 
+	
+	Mesmo assim, estes dados \enfase{necessitam} dos pontos-quânticos e da concentração de portadores para explicá-los: Por não haver camada de InAs na amostra-referência, não há tensão mecânica acumulada nela e, por conseguinte, não podemos atribur a ela a redução de $\beta_s$ desta amostra. Isto mostra que, embora a tensão esteja presente, ela não age sozinha.
+	
+	Existem outros agentes espalhadores e para cada um deles, uma razão pela qual não podem explicar os resultados observados:
+ 
+ 	\textbf{Impurezas aceitadoras e centros profundos:} Ambos dependem da iluminação e, por isto, não explicam a estabilidade do perfil de $\beta_s\times d_\text{InAs}$ na presença da iluminação;
+ 	
+	\textbf{Defeitos estruturais na camada de InAs:} Para $d_\text{InAs} < d_c$, as emissões de fotoluminescência da camada de InAs apresentam-se como picos delgados~\cite{celsoAD}, indicando alta qualidade cristalina. Quando $d_\text{InAs} > d_c$, os defeitos estruturais podem contribuir para a degradação das mobilidades, especialmente quando $d_\text{InAs} \ge 2,5$, onde começamos a ver a formação de coalescências. Este fenômeno não pode, contudo, explicar a recuperação das mobilidades nas imediações da espessura crítica;
+	
+	\textbf{Tensão mecânica devido ao \textsc{qw} de InGaAs e defeitos nas interfaces:} Estes mecanismos são aproximadamente os mesmos em todas as amostras, haja vista que todas possuem a mesma estrutura (a menos da camada de InAs, comentada no item anterior).
+		
+	\section{Resumo geral}
+	
+		\subsection{Concentrações}
+	
+		Vimos neste capítulo que a introdução da camada de InAs na heteroestrutura leva a uma troca de elétrons entre o \textsc{2deg}, a camada de InAs (a partir de \unit{1,5}{\monocamadas}) e os estados de superfície. Esta troca incorre num desbalanceamento pontual de cargas por toda a heteroestrutura que deforma o perfil do pontencial das bandas de condução e de valência, e vice-versa. Além disso, a iluminação devolve para o \textsc{2deg} os elétrons armadilhados em centros profundos, impurezas e estados de superfície, elevando a concentração de portadores em todas as três sub-bandas. Além disso, devido aos perfís das bandas de condução e de valência, a iluminação libera os elétrons capturados pelos pontos-quânticos, levando-os para o \textsc{2deg} e para os estados de superfície.
+		
+		\subsection{Mobilidades quânticas e de transporte}
+	
+		Os íons de silício no plano da dopagem são os principais centros espalhadores e são eles que determinam a magnitude das mobilidades quânticas e de transporte tanto no \termo{escuro} como no \termo{claro}. De fato, ao iluminarmos as amostras, o aumento na concentração de portadores no \textsc{2deg} eleva o \foreign{screening}, melhorando em muito as mobilidades. Além disso, este mecanismo é fracamente dependente da quantidade de InAs depositada e favorece os espalhamentos com ângulos pequenos, posto que localiza-se à margem das bandas $2$ e $3$, que mais contribuem para a condução elétrica.
+		
+		A tensão mecânica e o espalhamento pelos elétrons capturados pelos pontos-quânticos são os principais responsáveis pelas variações nas mobilidades em função da quantidade de InAs depositada: Durante o crescimento Frank-van der Merwe ($d_\text{InAs} < d_c$), a tensão mecânica acumulada na camada de InAs cresce e prejudica as mobilidades; Na transição \textsc{fm}$\to$\textsc{sk} ocorre a formação dos pontos-quânticos e a tensão é liberada, promovendo as mobilidades; Depois, durante o crescimento Stranski-Krastanav, a tensão volta a crescer e, adicionalmente, os pontos-quânticos passam a agir como centros espalhadores. Estes dois mecanismos explicam a queda observada nas mobilidades.
+		
+		Finalmente, com a iluminação os elétrons capturados pelos pontos-quânticos são liberados, neutralizando a região e, conseqüentemente, reduzindo o efeito deles sobre as mobilidades. O resultado é uma melhora inusitada das mobilidades no \termo{claro}.

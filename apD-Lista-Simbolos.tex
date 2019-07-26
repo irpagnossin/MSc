@@ -1,0 +1,365 @@
+	
+	Nesta lista de símbolos, apresentamos somente aqueles aos quais agregamos um conceito ou valor que se mantém por todo o trabalho, isto é, não apresentamos variáveis auxiliares utilizadas localmente (como a variável $\xi$ utilizada no apêndice~\ref{ap:metodo-SdH}, por exemplo). Além disso, muitos desses símbolos representam propriedades que dependem da sub-banda em questão e, por isso, possuem um índice $s$. Deste modo, para evitarmos repetições desnecessárias, consideraremos subentendido que, quando este índice estiver presente, a grandeza descrita estará associada à $s$-ésima sub-banda. Eventualmente, contudo, a referência à sub-banda se torna desnecessária (como no caso da seção~\ref{sec:efeito-Hall}) e, nestes casos, o índice poderá ser omitido.
+	
+
+\hspace{-\parindent}\rule{2.5cm}{0cm}
+\begin{list}{}
+	{
+	\setlength\leftmargin{2.5cm}
+	\setlength\labelwidth{2.5cm}
+	\setlength\labelsep{0.5cm}
+	\setlength\parsep{0.5ex plus 0.2ex minus 0.1ex}
+	\setlength\itemsep{0cm}
+	\setlength\itemindent{0cm}
+	}
+
+
+	\item[$a$]
+		Parâmetro de rede;
+
+	\item[$\alpha_s$]
+		$=\pi s/\mu_s$. Fator de amortecimento das oscilações de resistividade;
+		
+	\item[$\vetor A$]
+		Potencial vetor associado ao campo magnético: $\vetor B=\vetor\nabla\times\vetor A$;
+
+	\item[$\beta_s$]
+		$=\bar\mu_s/\mu_s$. Razão entre as mobilidades de transporte ($\bar\mu_s$) e quântica ($\mu_s$);
+
+	\item[$b$]
+		$=\Delta/2$. Semi-largura da janela Hanning;
+
+	\item[$B=|\vetor B|$]
+		Campo magnético aplicado;
+	
+	\item[$B_j$]
+		$j$-ésimo valor do campo magnético aplicado;
+
+	\item[$B_\text{mín}$, $B_\text{máx.}$]
+		Limites inferior e superior da intensidade do campo magnético numa medida de transporte;
+		
+	\item[$C_F$]
+		Constante de normalização da transformada de Fourier, usualmente igual a $1/\sqrt{2\pi}$ para transformadas contínuas;
+
+%	\item[$\tensor d$]
+%		Tensor de acoplamento piezoelétrico;
+
+	\item[$D$]					
+		Degenerescência dos níveis de Landau;
+
+	\item[$d_c$]
+		Espessura nominal crítica da camada de InAs, a partir da qual ocorre a formação dos pontos-quânticos;
+
+	\item[$d_\text{InAs}$]
+		Espessura nominal da camada de InAs;
+
+	\item[$\delta(x)$]
+		Função delta de Dirac;
+
+	\item[$\Delta$]
+		Largura da janela Hanning ($\doteq t_N-t_1$) ou tamanho de pixel;
+
+	\item[$\Delta t$]
+		$\doteq t_j-t_{j-1}$. Intervalo da amostragem utilizada na transformada discreta de Fourier;
+		
+	\item[$\media{\Delta z_s}$]
+		$=\sqrt{\media{z_s^2}-\media{z_s}^2}$. Extensão espacial da função de onda;
+ 
+	\item[$\cargaeletron$]
+		Carga do elétron (\unit{1,602\times\power{10}{-19}}{\coulomb});
+
+	\item[$E=|\vetor E|$]
+		Campo elétrico;
+
+	\item[$E_H$]
+		Campo Hall;
+
+	\item[$\epsilon_g$]
+		Extensão energética da banda proibida ou \foreign{gap};
+
+	\item[$\epsilon\doteq\epsilon(\vetor k)$]	
+		Energia do elétron no orbital (estado) $\vetor k$;
+
+	\item[$\epsilon_F$]			
+		Energia de Fermi;\footnote{Devido à baixa temperatura utilizada neste trabalho (\unit{1,4}{\kelvin}), não fizemos distinção entre energia de Fermi e potencial químico.}
+
+	\item[$\epsilon_s$]
+		Energia do fundo da banda $s$;
+		
+	\item[$f,f^0$]			
+		Distribuições de Fermi-Dirac perturbada e não perturbada, respectivamente;	
+
+	\item[$f(t)$]
+		Função genérica associada a $V_{BC}''$ (efeito Shubnikov-de Haas) ou $V_{BE}''$ (Hall);
+	
+	\item[$f_j\doteq f(t_j)$]
+		$j$-ésima amostragem de $f(t)$;
+
+	\item[$\vetor F$]
+		Força de Lorentz e de Van der Waals;
+
+	\item[$F_H$]
+		$=\mathscr F[\rho^{(r)}h(t)]$. Transformada de Fourier da magnetoresistividade ($\rho$) com janela Hanning;
+
+	\item[$F_J$]
+		$=\mathscr F[f(t)\,J(t)]$. Transformada de Fourier de $f(t)$ com janela $J(t)$;
+		
+	\item[$F_\ell \doteq F(\omega_\ell)$]
+		$\ell$-ésima amostragem de $F(\omega)$, transformada de Fourier de $f(t)$;
+
+	\item[$\phi$]
+		Potencial escalar associado ao campo elétrico: $\vetor E=-\vetor\nabla \phi$;
+
+	\item[$\phi_s$]
+		Fase das oscilações de magnetoresistividade;
+	
+	\item[$\varphi$]
+		Potencial de superfície;
+
+	\item[$\mathscr F$]
+		Operador transformada de Fourier;
+						
+	\item[$h=2\pi\hbar$]
+		Constante de Planck (\unit{6,626\times\power{10}{-34}}{\joule\cdot\second});
+	
+	\item[$h(t)$]
+		$=\tfrac{1}{2}\left[1-\cos(\omega_\bullet\,t+\theta_\bullet)\right]$. Janela Hanning;
+	
+	\item[$h_j\doteq h(t_j)$]
+		$j$-ésima amostragem da janela Hanning, definida como $\tfrac{1}{2}\left[1-\cos(2\pi j/N)\right]$;
+	
+	\item[$H(\omega)$]
+		 $\doteq\mathscr F[h(t)]$. Transformada de Fourier da janela Hanning. $\omega$ é a freqüência angular, variável independente no domínio das freqüências;	
+
+	\item[$\mathcal H_0$]
+		Operador Hamiltoniano devido a campos elétricos e magnéticos;
+	
+	\item[$i$]					
+		Número complexo $\sqrt{-1}$;	
+
+	\item[$I$] 
+		Corrente elétrica que percorre a amostra (fixada em \unit{1}{\micro\ampere});
+	
+	\item[$j$]
+		Índice de ordenação do conjunto experimental $\{(B_j,V_j)\}$ e $\{(B_j,V_j'')\}$;
+		
+	\item[$\vetor j$]
+		Densidade de corrente, $I=\int\limits_{\Sigma} \vetor j\cdot d\vetor\Sigma$;		
+
+	\item[$J(t)$]
+		Função janela genérica;
+
+	\item[$J_j$]
+		$j$-ésima amostragem da janela $J(t)$, utilizada na transformada discreta de Fourier;
+
+	\item[$\vetor k$]		
+		Estado, orbital ou vetor de onda de um elétron;
+		
+	\item[$k_B$]
+		Constante de Boltzmann (\unit{1,381\times\power{10}{-23}}{\joule\per\kelvin});
+
+	\item[$\vetor k_B$]
+		Vetor que define os limites da primeira zona de Brillouin;
+		
+	\item[$\vetor k_F$]
+		Vetor de onda de Fermi;
+	
+	\item[$k_x,k_y,k_z$]
+		Componentes cartesianos de $\vetor k$;
+
+	\item[$l$]					
+		Índice de identificação do $l$-ésimo nível de Landau;
+
+	\item[$l_x$, $l_y$, $l_z$]
+		Dimensões da região de interesse nas direções $x$, $y$ e $z$, respectivamente;
+
+	\item[$L$]
+		Largura da varredura;
+
+	\item[$\lambda=h/p$] 
+		Comprimento de onda de de Broglie;
+
+	\item[$\ell$]
+		Índice que identifica a $\ell$-ésima amostragem de uma função representada no domínio das freqüências;
+
+	\item[$\mathscr L$]
+		Operador transformada de Laplace;
+
+	\item[$m_0$]
+		Massa de repouso do elétron (\unit{9,109\times\power{10}{-31}}{\kilo\gram});
+
+	\item[$\meff_s$]
+		Massa efetiva do elétron;
+
+	\item[$\mu_s$]
+		Mobilidade quântica;
+	
+	\item[$\bar\mu_s$]
+		Mobilidade de transporte;
+
+	\item[$\bar\mu_\text{ef}$]
+		Mobilidade de transporte efetiva;
+
+	\item[$M$]
+		Quantidade de pares experimentias $(B_j,V_j)$ \enfase{medidos};
+
+	\item[$n_\text{3D}$]
+		Concentração volumétrica de portadores;
+
+	\item[$n_d$]
+		Concentração volumétrica de dopantes na cobertura (\unit{\power{10}{17}}{\centi\rpcubic\metre});
+		
+	\item[$n_\text{ef}$]
+		Concentração bidimensional efetiva de portadores;
+
+	\item[$n_s$]
+		Concentração bidimensional de portadores;
+	
+	\item[$n_s^0$]
+		Concentração bidimensional de portadores após $t_0$ segundos de iluminação;
+		
+	\item[$n_s^\infty$]
+		Concentração bidimensional máxima de portadores (saturação);
+
+	\item[$n_\text{Si}$]
+		Concentração bidimensional de dopantes no $\delta$-Si ($\unit{4\times\terad}{\centi\rpsquare\metre}$);
+		
+	\item[$n_T$]
+		$\doteq\sum_s n_s$. Concentração bidimensional total de portadores;
+				
+	\item[$N$]
+		Quantidade de pares experimentais $(B_j,V_j)$ \enfase{utilizados} na transformada discreta de Fourier ou de linhas medidas numa varredura \textsc{spm};
+		
+	\item[$\eta$]				
+		Fator de preenchimento dos níveis de Landau;		
+		
+	\item[$\omega$]
+		Variável independente no domínio das freqüências;		
+		
+	\item[$\omega_\ell=2\pi\nu_\ell$]
+		$\ell$-ésima amostragem da freqüência $\omega$ (ou $\nu$), variável independente no domínio das freqüências;
+		
+	\item[$\omega_s=2\pi\nu_s$]
+		Freqüência das oscilações de magnetoresistividade;
+
+	\item[$\omega_\bullet$]
+		$=2\pi/(t_N-t_1)$. Freqüência angular da janela Hanning;
+				
+	\item[$\Omega_s=eB/\meff_s$]
+		Freqüência ciclotrônica;		
+				
+	\item[$\otimes$]
+		Operador de convolução;		
+	
+	\item[$\vetor v$, $\vetor p$]
+		Velocidade e momento do elétron;
+
+	\item[$\psi_s$]
+		Função de onda do elétron na sub-banda $s$;				
+
+	\item[$r$]
+		Ordem da derivação aplicada na magnetoresistividade: $\rho^{(r)}$;
+
+	\item[$r_s$]
+		Raio de Larmor;
+				
+	\item[$\vetor r$]
+		Vetor de posição;
+
+	\item[$R_{BC}$]
+		Resistência entre os pontos $B$ e $C$ da região de interesse (fig.~\ref{fig:barra-Hall});
+		
+	\item[$R_H$]
+		Coeficiente Hall;
+		
+	\item[$\rho$]
+		Resistividade ($B=0$) ou magnetoresistividade ($B\ne0$);
+
+	\item[$\rho_\text{n-osc}$]
+		Parcela não-oscilatória da magnetoresistividade;
+
+	\item[$s$]					
+		Índice de identificação da $s$-ésima sub-banda;
+
+	\item[$\vetor s$]
+		Vetor de deslocamento da ponta-de-provas de um microscópio \textsc{spm};
+
+	\item[$\sigma$]
+		Condutividade;
+
+	\item[$\sigma_{xx}$, $\sigma_{xy}$, $\ldots$, $\sigma_{zz}$]
+		Tensor de condutividade;
+
+	\item[$t$]
+		$\doteq\tfrac{1}{B}$. Variável independente (da magnetoresistividade) no domínio do tempo;
+
+	\item[$t_j$]
+		$j$-ésima amostragem de $t$, variável independente no domínio do tempo;
+
+	\item[$t_1,t_N$]
+		Limites inferior e superior da janela Hanning, respectivamente;
+
+	\item[$\bar t$]
+		$=(t_1+t_N)/2$. Posição média da janela Hanning;
+
+	\item[$\theta_\bullet$]
+		$=-\omega_\bullet t_1$. Fase da janela Hanning;
+
+	\item[$\tau_s$]
+		Tempo de espalhamento;
+		
+	\item[$\bar\tau_s$]
+		Tempo de relaxação;
+		
+	\item[$t_\odot$]
+		Tempo de iluminação;
+
+	\item[$T$]
+		Temperatura ou período de varredura;
+
+	\item[$\theta$]
+		Ângulo entre os vetores $\vetor k$ e $\vetor k'$ ou, equivalentemente, ângulo de espalhamento;
+		
+	\item[$\theta_s$]
+		Fase da derivada das oscilações de magnetoresistividade;		
+				
+	\item[$\uptau_j$]
+		$j$-ésimo valor de $t$ \enfase{medido};
+		
+	\item[$\tau_j$]		
+		$j$-ésimo valor de $t$ \enfase{utilizado} na transformada discreta de Fourier;
+
+	\item[$V_{BC}$, $V_{BE}$]
+		Diferença de potencial entre os pontos $B$ e $C$ e $B$ e $E$ da região de interesse, respectivamente (fig.~\ref{fig:barra-Hall});
+		
+	\item[$V_H$]
+		Tensão Hall ($\doteq V_{BE}$ ou $V_{xx}$ no equilíbrio);
+
+	\item[$V_j$]
+		$j$-ésima medida de $V_{BC}$ ou $V_{BE}$;
+		
+	\item[$V_{xx}$, $V_{xy}$]
+		Diferença de potencial paralela e perpendicular à corrente elétrica, respectivamente;
+	
+	\item[$\nu$]
+		Taxa de leitura ou freqüência de varredura;
+		
+	\item[$\nu_s$]
+		Freqüência das oscilações de magnetoresistividade;
+		
+	\item[$W_{\vetor k,\vetor k'}$]
+		Probabilidade (por unidade de tempo e de volume do espaço recíproco) de um elétron transitar para um orbital $\vetor k'$ acessível  (desde $\vetor k$);		
+			
+	\item[$x$, $y$, $z$]
+		Componentes cartesianos de $\vetor r$;
+
+	\item[$y$]
+		Proporção atômica da liga \especie{In_yGa_{1-y}As} (fixada em $16,534\%$);
+
+	\item[$\zeta$]
+		Potencial químico ($\approx\epsilon_F$);
+		
+	\item[$\media{z_s}$]
+		$=\langle\psi_s|z_s|\psi_s\rangle$, Distância média entre a função de onda e o plano de dopagem.
+		
+\end{list}

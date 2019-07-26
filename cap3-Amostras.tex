@@ -1,0 +1,191 @@
+	\index{Pontos-quanticos@Pontos-quânticos!auto-organizados}	
+	No capítulo~\ref{cap:introducao} vimos que o desenvolvimento e o aprimoramento das técnicas de crescimento epitaxial vêm estimulando o estudo e a aplicação de novas estruturas semicondutoras onde o confinamento dos portadores ocorre em uma ou mais direções do espaço. Dentre essas estruturas, provavelmente as mais interessantes e difíceis de se obter atualmente de maneira controlada sejam aquelas que contenham pontos-quânticos auto-organizados: Elas são \enfase{interessantes} por que diversas aplicações práticas têm sido previstas, seja sobrepujando as anteriores, seja introduzindo novas (capítulo~\ref{cap:introducao}); E são \enfase{difíceis} de se obter de maneira controlada por que o principal método utilizado para forjar os \textsc{qd}s é através do fenômeno de auto-formação e organização durante o crescimento epitaxial de camadas mecanicamente tensionadas, um processo espontâneo (capítulo~\ref{cap:MBEeQD}).
+	
+	\index{Efeito!bottleneck}
+	Com relação aos aspectos fundamentais da Física Moderna, muito esforço tem sido dedicado na obtenção de informações sobre o processo de formação dos \textsc{sqd}s, sua estrutura eletrônica e diversos outros processos como a relaxação de portadores fotogerados, que dá origem ao efeito \foreign{bottleneck}, a influência das tensões mecânicas e das deformações da estrutura cristalina devido a essa tensão sobre os portadores, e também o papel dos \textsc{qd}s como centros espalhadores.
+	
+	\index{Poco-quantico@Poço-quântico}
+	Visando contribuir para este cenário, neste trabalho vamos estudar as influências de uma camada tensa de InAs (crescida sobre um substrato de GaAs com orientação cristalográfica $(001)$) sobre um gás bidimensional de elétrons confinado num poço-quântico de InGaAs próximo a ela (figura~\ref{fig:heteroestrutura} na página~\pageref{fig:heteroestrutura}). Cada amostra terá uma espessura \enfase{nominal} de InAs diferente, desde nenhuma deposição até \unit{2,5}{\monocamadas}. Assim poderemos averiguar o comportamento desse \textsc{2deg} em cada fase da evolução dos \textsc{sqd}s, desde absolutamente nenhum \textsc{qd} até grandes concentrações deles, e passando pelos \textsc{q3d}s. Perceba que nossa preocupação será o \textsc{2deg}, não os \textsc{qd}s. Faremos isso por que estamos interessados nas aplicações dos \textsc{qd}s em dispositivos eletrônicos, particularmente em fotodetectores de infravermelho~\cite{ryzhii,lee}.
+	
+	\index{Wetting-layer}
+	Estudos sobre a formação dos \textsc{qd}s mostram que eles são efetivamente formados quando a camada de InAs depositada atinge aproximadamente \unit{1,6}{\monocamadas} de espessura nominal (figura~\ref{fig:ramachandran})~\cite{ramachandran}, embora já tenhamos observado, através de medidas de fotoluminescência e de microscopia de força atômica (seção~\ref{sec:AFM}), pontos-quânticos com apenas \unit{1,5}{\monocamadas} de InAs depositadas~\cite{celso}. Além disso, esse filme epitaxial de InAs reduz sua espessura para cerca de \unit{1,2}{\monocamadas} após contribuir com parte de seu contento para a formação dos pontos-quânticos. Essa camada ultra-fina remanescente é comumente chamada de \foreign{wetting-layer}. Prosseguindo com o crescimento, o InAs depositado passa a contribuir para a formação de novos pontos-quânticos e para o aumento das dimensões dos já existentes (crescimento \textsc{sk}). A evolução no tamanho desses \textsc{qd}s é limitada e a relaxação das ilhas coerentes (pontos-quânticos) ocorre quando a espessura nominal depositada atinge cerca de \unit{3,4}{\monocamadas}~\cite{mike}. Todas as amostras deste trabalho limitam-se a espessuras nominais inferiores a esta e, por isso, as ilhas tridimensionais são todas coerentes, \ie, tensas: têm o parâmetro de rede do substrato.
+
+	%-------------------------------------------------------------------------------------
+	%	Descrição das amostras
+	%-------------------------------------------------------------------------------------	
+
+	\section{Descrição das amostras}\label{sec:amostras-descricao}
+	
+	As várias amostras utilizadas neste trabalho diferem entre si pelo estágio evolutivo em que os pontos-quânticos se encontram e referir-nos-emos a esse estágio em termos da espessura nominal de InAs ($d_\text{InAs}$) depositada durante o crescimento das amostras. Desta forma, poderemos abranger todos os estágios evolutivos dos \textsc{qd}s (capítulo~\ref{cap:MBEeQD}), desde as primeiras estruturas precursoras (\textsc{q3d}s) até a sua completa formação, quando já apresentam grande regularidade de tamanho e forma. Utilizaremos cinco amostras com espessuras nominais de \unit{1,00}{\monocamadas}, \unit{1,50}{\monocamadas}, \unit{1,75}{\monocamadas}, \unit{2,00}{\monocamadas} e \unit{2,50}{\monocamadas}, todas com a seguinte estrutura básica (tabela e figura~\ref{tab:heteroestrutura}):
+
+	\index{Camada de!preenchimento@preenchimento}
+	\index{Camada de!espacamento@espaçamento}
+	\index{Regiao@Região!ativa}
+	\index{Buffer}
+	\index{Spacer-layer|see{Camada de!espacamento@espaçamento}}
+	\index{Delta@$\delta$-Si}
+	\index{Dopagem@Dopagem}
+	\index{Camada de!cobertura}
+	\index{Estados de superficie@Estados de superfície}	
+	\index{Super-redes}
+	\index{Barreira!anterior}
+	\index{Barreira!posterior}
+	\index{Poco-quantico@Poço-quântico}
+	\index{Cobertura}
+	\index{Cap-layer}
+	\index{Deplecao@Depleção}
+	\begin{compactitem}
+		\item	{\bfseries Substrato} comercial semi-isolante de \especie{GaAs} com orientação cristalográfica $\mathrm{(001)}$;
+		\item	{\bfseries \foreign{Buffer}} de \unit{500}{\angstrom} de \especie{GaAs} para melhorar a qualidade da superfície do substrato: O substrato possui rugosidade de algumas centenas de angströns, o que não é bom, pois nosso estudo envolve camadas de apenas alguns angströns. Com esta \novotermo{camada de preenchimento} (\foreign{buffer}) a rugosidade da amostra cai para duas monocamadas aproximadamente;
+		\item	{\bfseries Super-rede} (\textsc{sr}) composta por 10 períodos de \especie{AlAs/GaAs}, cada qual com 5 monocamadas de \especie{AlAs} e 10 de \especie{GaAs}, cuja finalidade é evitar a migração de contaminantes do substrato para a região-ativa (a seguir) da estrutura. Esta camada têm aproximadamente \unit{840}{\angstrom} de espessura;
+		\item A {\bfseries barreira anterior}, com \unit{2000}{\angstrom} de \especie{GaAs}, afasta a região-ativa da região do substrato, além de reduzir ainda mais a rugosidade da amostra;
+		\item	A chamada região-ativa (fig.~\ref{fig:heteroestrutura}) inicia-se com uma monocamada de \especie{GaAs} dopada com silício (camada {\bfseries\boldmath$\delta$-Si}), com concentração nominal ($n_\text{Si}$) de átomos dopantes igual a \unit{4\times\terad}{\centi\rpsquare\metre} (incerteza de 10\%);
+		\item	Segue-se a {\bfseries Camada de espaçamento 1} (\foreign{spacer-layer}), de \unit{70}{\angstrom} de \especie{GaAs}, separando a camada $\delta$-Si do poço-quântico de InGaAs;
+		\item	O {\bfseries poço-quântico} de $\especie{In_yGa_{1-y}As}$ ($\text{y}=16,534\%$, proporção atômica), com espessura de \unit{100}{\angstrom}, constitui o principal canal de condução da heteroestrutura. O índice de proporção atômica ($\text{y}$) será omitido daqui para frente pois é constante em todas as amostras utilizadas. Assim, quando escrevermos InGaAs estaremos, na verdade, querendo dizer $\especie{In_yGa_{1-y}As}$;
+		\item	{\bfseries Camada de espaçamento 2} (\foreign{spacer-layer}), de \unit{80}{\angstrom} de \especie{GaAs}, separando o \textsc{qw} dos pontos-quânticos;
+		\item	Uma camada de InAs com espessura $d_\text{InAs}$ própria para cada amostra (veja a tabela~\ref{tab:heteroestrutura}). É esta camada que contém a \foreign{wetting-layer} e os {\bfseries pontos-quânticos} (ou seus precursores) em diferentes dimensões e concentrações. Aqui termina a região-ativa;
+		\item	A {\bfseries barreira posterior} (\unit{500}{\angstrom} de \especie{GaAs}) separa a camada de InAs da cobertura (a seguir) e da superfície da amostra;
+		\item	Finalmente, a {\bfseries cobertura} consiste numa camada de \unit{100}{\angstrom} de GaAs uniformemente dopada com aproximadamente $1,0\times10^{17}$ átomos de silício por \centi\cubic\metre. Esta camada têm por finalidade evitar a depleção dos portadores da região-ativa: Os elétrons fornecidos por esta dopagem servem para saturar as ligações pendentes na superfície, os chamados \novotermo{estados de superfície}. Caso contrário, os elétrons fornecidos pela camada $\delta$-Si seriam utilizados para isso e o gás de elétrons no poço de InGaAs teria a sua concentração reduzida. Mesmo assim, veremos mais a frente (capítulo~\ref{cap:resultados}) que parte dos elétrons fornecidos pela dopagem delta migram para a superfície.
+	\end{compactitem}
+	
+	A descrição acima é resumida e complementada pela tabela~\ref{tab:heteroestrutura} e graficamente representada pela figura~\ref{fig:heteroestrutura}.\par
+
+{
+\setlength{\abovecaptionskip}{0.5cm}
+\setlength{\belowcaptionskip}{0.5cm}
+\begin{table}[p]
+\begin{minipage}[c]{\textwidth}
+		\footnotesize
+		%\newcommand{\AlturaLinha}{\rule[-.7ex]{0pt}{3ex}}
+		\centering
+		\caption{\footnotesize\label{tab:heteroestrutura} Resumo das características das heteroestruturas utilizadas neste trabalho: Os valores de $d_\text{InAs}$ são \unit{1,0}{\monocamadas}, \unit{1,5}{\monocamadas}, \unit{1,75}{\monocamadas}, \unit{2,0}{\monocamadas} e \unit{2,5}{\monocamadas}, cada um referente a uma amostra (conforme notação apresentada no texto). A temperatura apresentada 	na coluna à direita é aquela utilizada durante o crescimento e as camadas em azul compreendem a {\color{blue} região-ativa}.}
+		\vspace{12pt}
+		\begin{tabular}{c|c|c|c}
+			Camadas	&	Espessuras (\angstrom) & Observações & Temperaturas (\degreecelsius) \\ \hline\hline
+			\AlturaLinha$\mathrm{GaAs}$ & \multicolumn{3}{c}{Substrato semi-isolante $(001)$} \\ \hline
+			\AlturaLinha$\mathrm{GaAs}$	&	500 &	\emph{Buffer}	& 570	\\ \hline
+			\AlturaLinha$\mathrm{[(AlAs)_5(GaAs)_{10}]\times10}$	& 840	& Super-rede (SR) & 585 \\ \hline
+			\AlturaLinha$\mathrm{GaAs}$ & 2\,000 & Barreira anterior & 570 \\ \hline
+			\AlturaLinha$\color{blue}\mathrm{GaAs:Si}$& $\sim\unit{1}{\monocamadas}$& 	
+				$n_\text{\especie{Si}}=\unit{4}{\times\terad\centi\rpsquare\metre}$ &600\\ \hline
+			\AlturaLinha$\color{blue}\mathrm{GaAs}$ & 70 & \emph{Spacer-layer 1} & 520 \\ \hline
+			\AlturaLinha$\color{blue}\mathrm{In_yGa_{1-y}As}$ & 100 & \textsc{qw} ($\mathrm{y}=16,534\%$) & 520 \\ \hline		
+			\AlturaLinha$\color{blue}\mathrm{GaAs}$	& 80 & \emph{Spacer-layer 2} & 520 \\ \hline
+			\AlturaLinha$\color{blue}\mathrm{InAs}$ & $d_\text{InAs}$ (\monocamadas) & \textsc{qd}s & 520 \\ \hline
+			\AlturaLinha$\mathrm{GaAs}$ & 500 & Barreira posterior & 520 \\ \hline
+			\AlturaLinha$\mathrm{GaAs:Si}$ & 100 & $n_d=\unit{1,0\times10^{17}}{\centi\rpcubic\metre}$ & 520 \\ \hline
+		\end{tabular}
+\end{minipage}\vspace{1cm}
+\begin{minipage}[c]{\textwidth}
+		\centering
+		\psfrag{a}[][]{\LARGE\shortstack{Substrato\\ GaAs (001)}}
+		\psfrag{b}[][]{\LARGE\shortstack{\foreign{Buffer}\\ (GaAs)}}
+		\psfrag{c}[][]{\LARGE\shortstack{Super-rede\\ AlAs/GaAs}}
+		\psfrag{d}[][]{\LARGE Barreira}
+		\psfrag{e}[r][r]{\LARGE \foreign{spacer-layers}}
+		\psfrag{f}[r][r]{\colorbox{white}{\LARGE $\delta$-Si}}
+		\psfrag{g}[][]{\colorbox{white}{\LARGE\textsc{qw}}}
+		\psfrag{h}[l][l]{\colorbox{white}{\LARGE\textsc{qd}s}}
+		\psfrag{i}[][]{\colorbox{white}{\LARGE Cobertura}}
+		\psfrag{j}[][]{\colorbox{white}{\LARGE Região-ativa}}
+		\psfrag{k}[][]{\colorbox{white}{\LARGE \unit{1000}{\angstrom}}}
+		\resizebox{0.95\textwidth}{!}{\includegraphics{figuras/heteroestrutura.eps}}	
+  	\captionof{figure}{\footnotesize\label{fig:heteroestrutura} Ilustração da heteroestrutura utilizada neste trabalho. O crescimento se dá da esquerda para a direita e neste sentido todas as camadas estão em escala. No plano perpendicular, as camadas foram ligeiramente  ``desalinhadas'' para que o leitor possa identificá-las com maior facilidade. As camadas em vermelho são as regiões de \especie{GaAs} dopado com silício ($\delta$-Si e a cobertura); o poço-quântico de InGaAs é apresentado em verde, os pontos-quânticos em azul e o padrão de listras a esquerda é a super-rede, tendo cada período aproximadamente \unit{84}{\angstrom}.}
+\end{minipage}
+\end{table}
+}
+	
+	\index{Amostras!referencias@-referências}
+	Além das cinco amostras do conjunto descrito, outras três (amostras-referência) serão analisadas. Elas possuem estruturas idênticas à descrita anteriormente, exceto pelos detalhes que seguem: A primeira não apresenta a camada de InAs, ou seja, essa amostra contém apenas o poço-quântico de InGaAs e a dopagem delta à sua esquerda (veja a figura~\ref{fig:heteroestrutura}). Esta será a amostra-referência das medidas de transporte elétrico (seções~\ref{sec:efeito-Hall} e~\ref{sec:efeito-SdH}) e freqüentemente a citaremos como ``a amostra com zero monocamadas;'' A segunda não apresenta apenas a dopagem, ou seja, não possui elétrons extrínsecos. Ela será utilizada como referência para as medidas de fotoluminescência. Finalmente, a última amostra-referência não apresenta a dopagem delta (não possui elétrons extrínsecos na banda de condução) e seu crescimento foi finalizado na camada de InAs, com $d_\text{InAs}=2,5$\footnote{A unidade da espessura nominal da camada de InAs ($d_\text{InAs}$) será sempre \enfase{monocamadas} (\monocamadas) e, portanto, não haverá ambiguidade quando não apresentarmos explicitamente a unidade junto com o valor numérico. Faremos isso freqüentemente apenas para não poluir visualmente o texto.} (não possui \enfase{barreira posterior} nem \enfase{cobertura}). Por isso, os \textsc{qd}s estão na superfície, o que nos possibilita analisá-los morfologicamente através da microscopia de força atômica (\textsc{afm}, \foreign{atomic force microscopy}; Veja a seção~\ref{sec:AFM}).
+	
+	Daqui para frente, referir-nos-emos a cada uma das amostras utilizadas neste trabalho pela sua espessura nominal de arseneto de índio. Então, por exemplo, quando quisermos citar a amostra que possui $1,50$ monocamadas, diremos apenas ``a amostra \unit{1,50}{\monocamadas}.$\!$'' Com relação às amostras-referência, não haverá dubiedade em dizer apenas ``a amostra-referência'' por que o contexto explicará qual das duas a que nos referimos. Especialmente no caso da amostra-referência das medidas de transporte (aquela com $d_\text{InAs}=0$), poderemos, alternativamente, referirmo-nos a ela por \unit{0}{\monocamadas}. Finalmente, será considerado equivalente dizer, \eg, $1,5$ ou $1,50$ monocamadas: A incerteza na espessura nominal de qualquer monocamada crescida pela técnica \textsc{mbe} em nosso laboratório reside na segunda casa decimal e não nos preocuparemos com isso.
+
+	%-------------------------------------------------------------------------------------
+	%	Preparando as amostras
+	%-------------------------------------------------------------------------------------		
+	\section{Preparando as amostras}\label{sec:amostras-preparo}	
+
+	\index{diamond-cutter|see{Cortador a diamante}}
+	\index{Cortador a diamante}
+	O preparo da amostra destinada ao experimento de \textsc{afm} consiste apenas em fazermos os devidos cortes para que ela caiba no porta-amostras do equipamento utilizado. Esse processo é tão simples quanto interessante: Primeiro, fazemos um pequeno vinco (\unit{1}{\milli\metre} é suficiente) na posição e direção desejadas da amostra (figura~\ref{fig:corte-amostras}) com um cortador a diamante (\foreign{diamond-cutter}). Depois, basta pressionar com, \eg, um palito-de-dentes sobre a linha imaginária dada pelo prolongamento do vinco que a amostra quebrará segundo essa linha. A quebra ocorre desta maneira por que ao fazermos o vinco, fragilizamos a amostra naquela direção. É como quando cortamos um plástico qualquer: Se utilizarmos um estilete para marcar uma direção, o corte se torna mais fácil e regular. 
+
+	\begin{figure}[htb]
+		\begin{minipage}[b]{0.47\textwidth}
+			\centering
+			\psfrag{a}[][]{\LARGE Amostra}
+			\psfrag{b}[][]{\LARGE\shortstack{Vinco\\$\sim\unit{1}{\milli\metre}$}}
+			\psfrag{c}[][]{\LARGE\shortstack{Palito de\\dentes}}
+			\resizebox{\textwidth}{!}{\includegraphics[trim = 30 0 0 0]{figuras/corte-amostras.eps}}
+			\caption{\footnotesize\label{fig:corte-amostras} Os cortes nas amostras são feitos numa direção cristalográfica definida pelo vinco. O palito-de-dentes, usado para pressionar a amostra, é particularmente bom por que não machuca a amostra.}
+		\end{minipage}\hfill
+		\begin{minipage}[b]{0.47\textwidth}
+			\centering
+			\psfrag{A}[][]{\LARGE A}
+			\psfrag{B}[][]{\LARGE B}
+			\psfrag{C}[][]{\LARGE C}
+			\psfrag{D}[][]{\LARGE D}
+			\psfrag{E}[][]{\LARGE E}
+			\psfrag{F}[][]{\LARGE F}
+			\psfrag{1mm}[][]{\LARGE \unit{1}{\milli\metre}}
+			\resizebox{\textwidth}{!}{\includegraphics[trim = 10 10 10 30]{figuras/barra-Hall.eps}}
+			\caption{\footnotesize\label{fig:barra-Hall} Uma vista em planta da barra-Hall. Somente a região interna a ela permite o fluxo de corrente elétrica e a região de interesse (área amarela) é acessada por contatos instalados nas periferias (ponto F). As medidas de tensão são feitas entre B e C para experiências do efeito Hall e entre B e E para Shubnikov-de Haas. A corrente é aplicada através dos terminais em A e D.}
+		\end{minipage}
+	\end{figure}
+
+	\index{barra-Hall}
+	\index{Regiao@Região!de interesse}
+	\index{Van der Pauw}
+	As medidas de transporte (efeitos Hall e Shubnikov-de Haas, seções~\ref{sec:efeito-Hall} e~\ref{sec:efeito-SdH}, respectivamente), por outro lado, exigem uma atenção especial: Neste tipo de experimento, é crucial que conheçamos a geometria da amostra. No nosso caso, por exemplo, precisamos trabalhar numa pequena região onde possamos assumir que a densidade de corrente que percorrerá a amostra seja uniforme, ou seja, que $\vetor j(\vetor r)=\text{constante}$. Uma geometria já bastante difundida neste sentido é a barra-Hall (uma \enfase{alternativa} aos contatos de Van der Pauw), ilustrada em escala na figura~\ref{fig:barra-Hall}: Somente na região em forma de ``I'' é permitido o fluxo de corrente elétrica e, apesar disso, a \novotermo{região de interesse} consiste apenas na área hachurada no centro, medindo $\unit{200}{\micro\metre} \times \unit{500}{\micro\metre}$. A corrente, que será fornecida por uma fonte de tensão, percorre a amostra no sentido \hbox{D$\to$A} (capítulo~\ref{cap:instalacoes}) e as medidas de tensões serão feitas entre B e C para as experiências do efeito Shubnikov-de Haas e entre B e E para o efeito Hall (veja os capítulos~\ref{cap:tecnicas} e~\ref{cap:instalacoes} para maiores detalhes).
+
+
+\begin{figure}[p]
+\centering
+\subfigure[O primeiro passo na instalação da barra-Hall é a limpeza da amostra.]{
+\psfrag{a}[][]{\LARGE Amostra}
+\resizebox{0.46\textwidth}{!}{\includegraphics{figuras/bH-passo1de6.eps}}\label{fig:litografia-passo1de6}}\hfill
+\subfigure[Daí, segue-se a deposição e o espalhamento do \foreign{fotoresist}.]{
+\psfrag{a}[][]{\LARGE\foreign{Fotoresist}}
+\resizebox{0.46\textwidth}{!}{\includegraphics{figuras/bH-passo2de6.eps}}\label{fig:litografia-passo2de6}}
+
+\subfigure[A máscara deixa parte do \foreign{fotoresist} exposto à luz ultra-violeta, sensibilizando-o.]{
+\psfrag{a}[l][l]{\LARGE Máscara}
+\resizebox{0.46\textwidth}{!}{\includegraphics{figuras/bH-passo3de6.eps}}\label{fig:litografia-passo3de6}}\hfill
+\subfigure[Em seguida, a revelação extrai o \foreign{fotoresist} que não foi sensibilizado.]{
+\resizebox{0.46\textwidth}{!}{\includegraphics{figuras/bH-passo4de6.eps}}\label{fig:litografia-passo4de6}}
+
+\subfigure[Agora procede-se o ataque químico, que corroe as regiões desprotegidas.]{
+\resizebox{0.46\textwidth}{!}{\includegraphics{figuras/bH-passo5de6.eps}}\label{fig:litografia-passo5de6}}\hfill
+\subfigure[Finalmente, retira-se o \foreign{fotoresist} e a amostra está pronta para receber os contatos.]{
+\resizebox{0.46\textwidth}{!}{\includegraphics{figuras/bH-passo6de6.eps}}\label{fig:litografia-passo6de6}}
+\caption[\footnotesize O processo litográfico de aplicação da barra-Hall sobre as amostras é o primeiro passo em direção à investigação das propriedades de transporte elétrico. Note o leitor que as camadas da heteroestrutura não estão representadas, e que as dimensões não estão em escala.]{O processo litográfico de aplicação da barra-Hall sobre as amostras é o primeiro passo em direção à investigação das propriedades de transporte elétrico. Note o leitor que as camadas da heteroestrutura não estão representadas, e que as dimensões não estão em escala.}
+\label{fig:litografia}
+\end{figure}
+	
+	\index{Litografia}
+	\index{Fotoresist}
+	\index{Revelador fotosensivel@Revelador fotosensível|see{Fotoresist}}
+	\index{Laboratorio@Laboratório!de microeletronica@de microeletrônica}
+	\index{LME|see{Laboratorio@Laboratório!de microeletronica@de microeletrônica}}
+	\index{Departamento!de Engenharia de Sistemas Eletrônicos}
+	\index{PSI|see{Departamento!de Engenharia de Sistemas Eletrônicos}}
+	\index{Spinner}
+	A implantação da barra-Hall nas amostras foi feita através de um processo litográfico no Laboratório de Microeletrônica (\textsc{lme})\footnote{Parte do Departamento de Engenharia de Sistemas Eletrônicos, \textsc{psi}.} da Escola Politécnica da Universidade de São Paulo, e o ilustramos qualitativamente na figura~\ref{fig:litografia}: Primeiramente devemos limpar a amostra com acetona e secá-la com nitrogênio gasoso (fig~\ref{fig:litografia-passo1de6}); Depois, fixamo-la (a vácuo) pela base (substrato) em uma aparelho chamado \foreign{spinner} (que pode ser grosseiramente comparado a uma centrifugadora), pingamos algumas gotas de revelador fotosensível (\foreign{fotoresist}) e fazemo-la girar durante algum tempo. Este passo deve ser feito sob luz amarela para que o \foreign{fotoresist} não seja sensibilizado incorretamente. Com isso o \foreign{fotoresist} fica espalhado uniformemente pela superfície da amostra (fig.~\ref{fig:litografia-passo2de6}); Em seguida, colocamos a amostra em forno a \unit{80}{\degreecelsius} por vinte minutos; Depois posicionamos a máscara da barra-Hall sobre a amostra (fig.~\ref{fig:litografia-passo3de6}) e incidimo-lhe luz ultra-violeta por \unit{10}{\second}. Deste modo, a parte do \foreign{fotoresist} que não estava protegida pela máscara é sensibilizada; Agora, mergulhamos a amostra no revelador por aproximadamente trinta segundos, imergimo-la em água e a secamos novamente com \hbox{N$_2$}. A revelação extrai o \foreign{fotoresist} não-sensibilizado (figura~\ref{fig:litografia-passo4de6}) e, assim, o ataque químico a seguir não agride a região protegida pelo \foreign{fotoresist} sensibilizado (figura~\ref{fig:litografia-passo5de6}). O tempo do ataque químico depende da amostra e dos objetivos que queremos atingir. No caso de heteroestruturas como a nossa, entretanto, uma regra prática é usar um minuto de ataque para cada \unit{1000}{\angstrom}; Finalmente, retiramos o \foreign{fotoresist}: A barra-Hall está instalada (figura~\ref{fig:litografia-passo6de6}) e a amostra está pronta para receber os contatos.
+	
+	\begin{figure}[htb]
+		\begin{minipage}[c]{0.5\textwidth}
+			\centering
+			\resizebox{0.9\textwidth}{!}{\includegraphics[trim = 10 20 10 20]{figuras/barra-Hall-instalada.eps}}
+		\end{minipage}\hfill
+		\begin{minipage}[c]{0.45\textwidth}
+			\centering
+			\caption{\footnotesize\label{fig:bH-instalada} Representação de como a barra-Hall instalada nos permite controlar a geometria da amostra: Qualquer condução elétrica através da amostra (por qualquer um dos terminais) fica agora limitada ao interior da barra-Hall e, em especial, à região de interesse (fig.~\ref{fig:barra-Hall}).}
+		\end{minipage}			
+	\end{figure}	
+		
+	Uma ilustração representativa de como a barra-Hall se relaciona com as camadas da heteroestrutura pode ser vista na figura~\ref{fig:bH-instalada} (compare-a com a figura~\ref{fig:heteroestrutura}). Note, contudo, que embora a direção do crescimento tenha sido mantida em escala, a direção perpendicular a esta (a do plano de dopagem planar) não o foi.
+	
+	\index{Contatos}
+	Agora precisamos instalar os contatos metálicos para que a heteroestrutura torne-se acessível aos equipamentos de medidas. Para isso, cortamos pequenos pedaços de In (da ordem de \unit{1}{\milli\metre}) e posicionamo-los em cada uma das bordas externas à barra-Hall, o mais longe possível da região de interesse (ponto F na figura~\ref{fig:barra-Hall}). Em seguida, colocamos as amostras numa atmosfera saturada de nitrogênio gasoso e aquecemo-las por 4 minutos à temperatura de \unit{300}{\degreecelsius}. A esta temperatura, a taxa de difusão do índio é tal que em quatro minutos toda a heteroestrutura terá sido atingida por ele (na direção vertical). Assim, um equipamento qualquer que se conecte a esse contato estará também conectado à camada $\delta$-silício, ao poço-quântico de InGaAs e aos \textsc{qd}s (entre outras camadas).
+	
+	\index{Terminais}
+	Finalmente somos capazes de fazer fluir corrente elétrica pela heteroestrutura segundo uma geometria conhecida: a região de interesse. Mas para facilitar o manuseio das amostras e evitarmos tocá-las com freqüência maior que a necessária, instalamos pequenos terminais de cobre, tipicamente de 1 ou 2 centímetros de comprimento. Este passo é bastante crítico por que é feito à mão, com ferro de solda comum: Existe um risco grande de, acidentalmente, espalharmos o índio dos contatos pela superfície, criando curto-circuitos indesejáveis. Além disso, devido às diminutas extensões das amostras, ocasionalmente ocorre de esses terminais não ficarem apropriadamente fixados, podendo originar maus contatos e/ou conexões não puramente ôhmicas (este problema pode ser evitado monitorando a fase entre os sinais aplicado e medido, conforme explicamos no capítulo~\ref{cap:instalacoes}).

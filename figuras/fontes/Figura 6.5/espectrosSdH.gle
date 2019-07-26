@@ -1,0 +1,82 @@
+size 10 20
+
+set lwidth 0.015
+
+!include regua.gle
+
+
+!begin path fill yellow
+!  amove 5.0 7
+!  rline 0 0.5
+!  rline 1.1 0
+!  rline 0 0.25
+!  rline 1.1 -0.5
+!  rline -1.1 -0.5
+!  rline 0 0.25
+!  closepath
+!end path
+!amove 5.85 7.125
+!text i
+
+set hei 0.4
+amove 0 0
+begin graph
+ 	size 10 10
+	nobox
+
+	xticks length 0.1
+	xlabels hei 0.4	
+	xtitle "\rule{0pt}{1\em}x"
+	xaxis min -0.2 max 3.2 dticks 1 dsubticks 0.5
+
+	yticks length 0
+	ylabels off
+	ytitle "m" hei 0.4
+	yaxis min -0.1 max 4 dticks 1 dsubticks 0.5
+	x2labels on
+	x2axis min -4.136 max 66.170 dticks 20 dsubticks 10
+	x2title "w"
+
+	data escuro.dat
+	d1 line smooth color black
+	d2 line smooth color red
+	d3 line smooth color green
+	d4 line smooth color blue
+	d5 line smooth color magenta
+	d6 line smooth color cyan
+end graph
+
+amove 7.2 0
+begin graph
+ 	size 10 10
+	nobox
+
+	xticks length 0.1
+	xlabels hei 0.4
+	xaxis min -0.2 max 3.2 dticks 1 dsubticks 0.5
+
+	yticks length 0
+	ylabels off
+	y2title "n" hei 0.4
+	yaxis min -0.1 max 4 dticks 1 dsubticks 0.5
+	x2labels on
+	x2axis min -4.136 max 66.170 dticks 20 dsubticks 10
+
+	data claro1.dat
+
+	d1 line smooth color black
+	d2 line smooth color red
+	d3 line smooth color green
+	d4 line smooth color blue
+	d5 line smooth color magenta
+	d6 line smooth color cyan
+
+	data claro2.dat
+
+	d7 line smooth color black
+	d8 line smooth color red
+	d9 line smooth color green
+	d10 line smooth color blue
+	d11 line smooth color magenta
+	d12 line smooth color cyan
+end graph

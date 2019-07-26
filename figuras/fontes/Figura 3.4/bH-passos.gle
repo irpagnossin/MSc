@@ -1,0 +1,14 @@
+size 10 10
+!TIFF bHpasso1de6.tif 10 5.771
+!TIFF bHpasso2de6.tif 10 6.769
+TIFF bHpasso3de6.tif 10 5.784
+!TIFF bHpasso4de6.tif 10 6.553
+!TIFF bHpasso5de6.tif 10 6.633
+!TIFF bHpasso6de6.tif 10 5.578
+
+!include regua.gle
+
+amove 0 5.5
+text a
+amove 0.875 5.375
+aline 1.5 4.75 arrow end

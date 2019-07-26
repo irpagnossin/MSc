@@ -1,0 +1,206 @@
+%-------------------------------------------------------------------------------
+% Arquivo: 		IvanMS.tex
+% Autor:			Ivan Ramos Pagnossin
+% Descrição:	Tese de mestrado
+%-------------------------------------------------------------------------------
+\documentclass[a4paper,12pt]{scrbook}										% Sub-classe koma-script
+
+	\raggedbottom
+
+	\usepackage[brazil]{babel}														% Idioma português
+	\usepackage[latin1]{inputenc}													% Caracteres acentuados
+	\usepackage[T1]{fontenc}															% Fontes de 16 bits
+	\usepackage{color}																		% Cores
+	\usepackage[a4paper]{geometry}												% Formatação de página
+	\usepackage{makeidx}																	% Índice remissivo
+	\usepackage[colorlinks=false]{hyperref}								% Hiper-texto
+	\usepackage{graphicx}																	% Figuras
+	\usepackage{indentfirst}															% Indentação do primeiro parágrafo de cada seção
+	\usepackage{psfrag}																		% Manuseio de figuras EPS
+	\usepackage{setspace}																	% Espaçamento entre-linhas
+	\usepackage[squaren,binary]{SIunits}									% Sistema internacional de unidades
+	\usepackage{ccaption}																	%	Captions personalizados
+	\usepackage{capt-of}																	% Junção de figuras e tabelas num único float
+	\usepackage{subfigure}																% Sub-figuras, e.g., fig.1(a), fig.3(c)
+	\usepackage{quotchap}																	% Melhora o visual dos capítulos
+	\usepackage{mathrsfs}																	% Comando \mathscr
+	\usepackage{bbm}																			% Comando \mathbbr
+	\usepackage{textcomp}																	% Comando \textasciicaron
+	\usepackage{stmaryrd}																	% Comandos \llbracket e \rrbracket
+	\usepackage{amsmath}																	% Environments e comandos da American Mathematical Society	
+	\usepackage{upgreek}																	% Símbolo \uptau
+	\usepackage{pifont}																		% Símbolos \ding{172} até \ding{176}
+	\usepackage{txfonts}																	% Símbolos \medbullet e \medcirc
+	\usepackage{amssymb}																	% Símbolos da American Mathematical Society
+	\usepackage{paralist}																	% Environment "compactitem"
+	\usepackage{icomma}																		% Retira o espaço entre a vírgula e a parte decimal de um número
+	\usepackage{colortbl}																	% Cores em tabelas
+			
+	\setlength\textheight{615pt}
+	\setlength\textwidth{435pt}
+	\setlength\oddsidemargin{37pt}%{12pt}
+	\setlength\evensidemargin{-16.54pt}
+	\setlength\marginparwidth{26pt}	
+	
+	%-----------------------------------------------------------------------------
+	% Algumas definições úteis
+	%-----------------------------------------------------------------------------
+	\newcommand\resumo[1]			{\par\vspace{\parindent}{\sffamily\bfseries\upshape\Large #1}\par\vspace{\parindent}}	
+	\newcommand\vetor[1]			{\ensuremath{\boldsymbol{#1}}}
+	\newcommand\tensor[1]			{\ensuremath{\text{\sffamily\bfseries #1}}}
+	\newcommand\meff					{\ensuremath{m^*}}
+	\newcommand\boltzmann			{\ensuremath{k_B}}
+	\newcommand\cargaeletron	{\ensuremath{\mathrm{e}}}
+	\newcommand\massaeletron	{\ensuremath{m_e}}
+	\newcommand\especie[1]		{\ensuremath{\mathrm{#1}}}
+	\newcommand\transicao[1]	{\ensuremath{\mathrm{#1}}}
+	\newcommand\media[1]			{\ensuremath{\langle#1\rangle}}
+	\newcommand\FT[1]					{\ensuremath{\mathscr F\left[#1\right]}}
+	\newcommand\intII					{\ensuremath{\int\limits_{-\infty}^{\infty}}}
+	\newcommand\tmedio				{\ensuremath{\bar t}}
+	\newcommand\res						{\ensuremath{\mathrm{res}}}
+	\newcommand\Int						{\ensuremath{\int\limits_{t_1}^{t_N}}}
+	\newcommand\rhoxx					{\ensuremath{\rho^{(r)}(t)}}
+	\newcommand\cpm						{\ensuremath{{\color{blue}\pm}}}
+	\newcommand\verif					{\ensuremath{\color{red}??}}
+	\newcommand\refer					{\ensuremath{\color{red}REF}}
+	\newcommand\AlturaLinha		{\rule[-.7ex]{0pt}{3ex}}
+	\newcommand\foreign[1]		{\textsl{#1}}
+	\newcommand\novotermo[1]	{\textbf{#1}}
+	\newcommand\enfase[1]			{\textit{#1}}
+	\newcommand\termo[1]			{\textsl{#1}}
+	\newcommand\ie						{\textsl{i.e.}}
+	\newcommand\eg						{\textsl{e.g.}}
+	\newcommand\etal					{\textsl{et al}}
+	\newcommand\etc						{\textsl{etc}}
+	\newcommand\monocamadas		{\text{MC}}
+	\newcommand\amostra[1]		{\unit{#1}{\monocamadas}}
+	\DeclareMathOperator{\sen}{sen}
+	\DeclareMathOperator{\senc}{senc}
+	
+	\newcounter{observacao}
+	\setcounter{observacao}{1}	
+	\newcommand\obs{%
+									{\ensuremath{\boldsymbol{\sharp\theobservacao}}}%
+									\stepcounter{observacao}%
+									}
+	\newcommand\Obs[1]{{\ensuremath{\boldsymbol{\sharp #1}}}}
+	
+	%-----------------------------------------------------------------------------
+	
+  \setstretch{1.3}																							% Espaçamento entre-linhas em 1.3 maior que o normal
+
+	\hyphenation{es-pa-lha-men-tos}
+
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%	Aqui começa o documento propriamente dito.
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\pagenumbering{roman}
+\begin{document}
+
+\input{dedicatoria}\pagebreak
+\input{agradecimentos}\pagebreak
+
+\addcontentsline{toc}{chapter}{Resumo/\foreign{Abstract}}
+\input{Resumo}\pagebreak
+
+\tableofcontents																								% Gera o sumário
+
+\addcontentsline{toc}{chapter}{Lista de figuras}
+\listoffigures
+\addcontentsline{toc}{chapter}{Lista de tabelas}
+\listoftables
+
+%-------------------------------------------------------------------------------
+%	Capítulo 1: Introdução
+%-------------------------------------------------------------------------------
+\pagebreak
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\chapter{Introdução}
+	\label{cap:introducao}
+  \input{cap1-Introducao}	
+  
+%-------------------------------------------------------------------------------
+%	Capítulo 2: Epitaxia por feixe molecular e a formação dos pontos quânticos
+%-------------------------------------------------------------------------------
+\chapter{Epitaxia por feixe molecular e a formação dos pontos quânticos}
+	\label{cap:MBEeQD}
+	\input{cap2-MBEeQD}
+	
+%-------------------------------------------------------------------------------
+%	Capítulo 3: As amostras
+%-------------------------------------------------------------------------------
+\chapter{As amostras}
+	\label{cap:amostras}
+	\input{cap3-Amostras}
+		
+%-------------------------------------------------------------------------------
+%	Capítulo 4: As técnicas utilizadas
+%-------------------------------------------------------------------------------
+{\allowdisplaybreaks
+\chapter{As técnicas utilizadas}
+	\label{cap:tecnicas}
+	\input{cap4-Tecnicas}
+		
+%-------------------------------------------------------------------------------
+%	Capítulo 5: Instalações
+%-------------------------------------------------------------------------------
+\chapter{Instalações}
+	\label{cap:instalacoes}
+	\input{cap5-Instalacoes}
+	
+%-------------------------------------------------------------------------------
+%	Capítulo 6: Resultados experimentais
+%-------------------------------------------------------------------------------
+\chapter{Resultados}
+	\label{cap:resultados}
+	\input{cap6-Resultados.tex}
+	
+%-------------------------------------------------------------------------------
+%	Capítulo 7: Conclusões
+%-------------------------------------------------------------------------------
+\chapter{Conclusões}
+	\label{cap:conclusoes}
+	\input{cap7-Conclusoes}
+
+\appendix
+%-------------------------------------------------------------------------------
+%	Apêndice A: A transformada contínua de Fourier da resistividade
+%-------------------------------------------------------------------------------
+\chapter{A transformada contínua de Fourier de $\rhoxx$}
+	\label{ap:CFT}
+	\input{apA-CFT.tex}
+
+{
+\fontsize{10}{13}
+%-------------------------------------------------------------------------------
+%	Apêndice B:	Dedução da equação eq:mobil-SdH
+%-------------------------------------------------------------------------------
+\chapter{Dedução da equação~\protect\eqref{eq:mobil-SdH}}
+	\label{ap:metodo-SdH}
+	\input{apB-Metodo-SdH.tex}
+
+%-------------------------------------------------------------------------------
+%	Apêndice C: Determinação da razão das mobilidades de transporte e quântica
+%-------------------------------------------------------------------------------
+\chapter{Determinação de $\bar\mu_s/\mu_s$}
+	\label{ap:razao-mobilidades}
+	\input{apC-razao-mobilidades}
+
+%-------------------------------------------------------------------------------
+%	Apêndice D: Lista de símbolos
+%-------------------------------------------------------------------------------
+\chapter{Lista de símbolos}
+	\input{apD-Lista-Simbolos}
+}
+}
+
+\pagebreak
+\addcontentsline{toc}{chapter}{Bibliografia}																		%	Inclui a bibliografia no sumário
+\input{referencias}
+
+\end{document}
+%-------------------------------------------------------------------------------

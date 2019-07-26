@@ -1,0 +1,60 @@
+
+	Na seção~\ref{sec:conc-SdH} afirmamos que a transformada de Fourier da equação~\eqref{eq:rho} é um pico em cada uma das freqüências $\pm\omega_s$,$\!$\footnote{Tratamos $\nu_s$ e $\omega_s$ como equivalentes, dada a relação $\omega_s=2\pi\nu_s$.} sendo daí possível determinar a concentração de portadores da $s$-ésima sub-banda. Isto não é óbvio e pode ser confundido com o fato de a transformada de Fourier de uma função cosseno ser um delta de Dirac em $\pm\omega_s$ (apêndice~\ref{sec:FT-cos}):
+	\begin{equation*}
+	\FT{\cos(\omega_st+\theta_s)}=\sqrt{\frac\pi2}\,\left[e^{i\theta_s}\,\delta(\omega+\omega_s) + e^{-i\theta_s}\,\delta(\omega-\omega_s) \right],
+	\end{equation*}
+
+	Recorde que definimos $t\doteq 1/B$ para \texttt{(i)} não sobrecarregar a notação e também \texttt{(ii)} por que $t$ é a variável independente no domínio do tempo, costumeiramente representada por $t$ nas teorias das transformadas contínua e discreta de Fourier.
+
+	Interessa-nos a transformada de Fourier do produto $e^{-\alpha_st}\cos(\omega_st+\theta_s)$, não a acima. Para calculá-la, recorremos ao teorema da convolução (para o produto no domínio do tempo\footnote{Há outra versão do teorema, no qual o produto é feito no domínio da freqüência e a convolução no domínio do tempo: $\mathcal F[f(t)\otimes g(t)]=F(\omega)\cdot G(\omega)$.}):
+	\begin{equation}\label{eq:convolucao-usual}
+	\FT{f(t)\cdot g(t)} = F(\omega)\otimes G(\omega)
+																		= \frac{1}{\sqrt{2\pi}}\intII F(\omega-\lambda)\,G(\lambda)\,d\lambda,	
+	\end{equation}
+	onde $G(\omega)\doteq\FT{g(t)}$ e $F(\omega)\doteq\FT{f(t)}$.
+	
+	Especificamente no nosso caso,		
+	\begin{equation*}
+		f(t) = \left\{\begin{array}{ll} 0, &\quad t<0 \\ e^{-\alpha_st}, &\quad t\ge 0 \end{array}\right.	\qquad\qquad\text{e}\qquad\qquad
+		g(t) = \cos(\omega_st+\theta_s).
+	\end{equation*}
+	
+	Perceba que o fato de limitarmos o domínio da exponencial \texttt{(i)} não limitará nosso resultado por que $t\doteq\tfrac{1}{B}>0$ sempre e \texttt{(ii)} por que é absolutamente necessário: Caso contrário, ela não teria transformada de Fourier e o problema não poderia ser resolvido desta maneira. Além disso, o fato de utilizarmos \textsc{dft}s como aproximações para a transformada contínua de Fourier faz com que qualquer conjunto de dados $\{(t_j,f_j)\}$ tenha sempre uma transformada.
+	
+	Então vejamos: segundo o apêndice~\ref{sec:FT-exp}, $F(\omega)=1/[\sqrt{2\pi}(\alpha_s-i\omega_s)]$ e, portanto,
+	\begin{align*}
+	F(\omega)\otimes G(\omega) &= \frac{1}{\sqrt{2\pi}}\!\intII 		
+			\left\{\frac{1}{\sqrt{2\pi}}\,\frac{1}{\alpha_s-i(\omega-\lambda)}\right\}\cdot\\
+		&\rule{4cm}{0cm}\cdot\left\{\sqrt{\frac{\pi}{2}}\left[e^{i\theta_s}\delta(\lambda+\omega_s) + 					
+				e^{-i\theta_s}\delta(\lambda-\omega_s)\right]\right\}	\\
+		&= \frac{1}{\sqrt{8\pi}}\left[\frac{e^{i\theta_s}}{\alpha_s-i(\omega+\omega_s)}+\frac{e^{-i\theta_s}}{\alpha_s-i(\omega-\omega_s)}\right]
+	\end{align*}
+
+\begin{figure}[htb]	
+	\centering
+	\psfrag{a}[][]{\footnotesize$\mathscr F[e^{-\alpha_s\, t}]$}
+	\psfrag{b}[][]{\foreign{\footnotesize\shortstack{lower\\sideband}}}
+	\psfrag{c}[][]{\foreign{\footnotesize\shortstack{upper\\sideband}}}
+	\psfrag{d}[][]{Módulo da transformada}
+	\psfrag{e}[][]{$\omega$}
+	\psfrag{f}[][]{\footnotesize$\mathscr F[e^{-\alpha_s\,t}\,\cos(\omega_s\,t)]$}
+	\psfrag{g}[][]{\colorbox{white}{$\omega_s$}}
+	\resizebox{0.7\textwidth}{!}{\includegraphics{figuras/CFT-exp-cos}}
+	\caption{\footnotesize\label{fig:CFT-exp-cos} O módulo da transformada de Fourier da magnetoresistividade (para $\alpha_s=1$ e $\omega_s=10$) tem um comportamento parecido com o de uma seqüência delta (no sentido de que quando $\alpha_s\to0$, $|F(\omega_s)|\to\infty$ e a largura a meia altura ($2\sqrt{3}\,\alpha_s$) tende a zero), embora não seja uma pois $\int_{-\infty}^\infty |F(\omega)|d\omega$ diverge.}	
+\end{figure}
+	
+	Note que este resultado é uma translação de $F(\omega)$ para $\pm\omega_s$ (a menos de uma constante multiplicativa), ou seja, a transformada de Fourier de $e^{-\alpha_st}\cos(\omega_st+\theta_s)$ é simplesmente a transformada de $e^{-\alpha_st}$ deslocada para $\omega=\pm\omega_s$. Acontece que essa transformada é muito parecida com uma função delta de Dirac (veja a figura~\ref{fig:CFT-exp-cos}), conquanto não seja sequer uma seqüência delta (por que $\intII |F(\omega)|d\omega$ não converge). Por isso a confusão.
+
+	Resumindo, embora as transformadas de $e^{-\alpha_st}\cos(\omega_st+\theta_s)$ e $\cos(\omega_st+\theta_s)$ sejam absolutamente diferentes, a posição do pico é a mesma, o que nos permite fazer a afirmação inicial.
+	
+	Se ignorarmos a parte negativa do espectro (primeira parcela), poderemos escrever
+	\begin{equation*}
+		|\FT{f(t)\cdot g(t)}| = \frac{1}{\sqrt{8\pi}}\,\frac{1}{\sqrt{\alpha_s^2+(\omega-\omega_s)^2}},
+	\end{equation*}
+	de modo que $|\FT{f(t)\cdot g(t)}|$ em $\omega=\omega_s$ é $1/(\sqrt{8\pi}\,\alpha_s)$. Como $\alpha_s=\pi\,s/\mu_s$, segue que a amplitude da transformada da magnetoresistividade (equação~\eqref{eq:rho}) em $\omega_s$ é proporcional à mobilidade quântica $\mu_s$. No entanto, não é possível determiná-la a partir disso por que não conhecemos $K_s$ (veja a equação~\eqref{eq:rho}). Por isso utilizamos o método descrito na seção~\ref{sec:mobil-SdH}.
+	
+	\index{Portadora}
+	\index{Lower-sideband}
+	\index{Upper-sideband}
+	É instrutivo observar que este tipo de fenômeno, onde a transformada de uma função sofre uma translação para a frequência $\omega_s$, é o âmago da modulação em amplitude, utilizada em rádio-difusão: Quando se quer enviar um sinal elétrico qualquer (no nosso caso, $e^{-\alpha_st}$) por longas distâncias através de ondas eletromagnéticas, primeiro deve-se multiplicá-lo por uma senóide pura ($\cos(\omega_st+\theta_s)$) chamada \novotermo{portadora} e só então mandar-lhe para a antena. O destinatário se encarregará de extrair o sinal original da composição. Outro fato curioso é que neste tipo de atividade podemos verificar que as freqüências negativas, embora pouco compreensíveis, são reais. Elas são denominadas \novotermo{lower-sideband} (fig.~\ref{fig:CFT-exp-cos}). Analogamente, a parte positiva do espectro recebe o nome de \novotermo{upper-sideband}.
+		
